@@ -3,6 +3,7 @@ import { Fragment } from 'react'
 import Nav from './components/Navbar'
 import Home from './components/pages/Home'
 // Semantic UI css file
+import 'semantic-ui-css/semantic.min.css'
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <div style={{minHeight: '93vh'}} className="p-3">
         <Router>
           <Switch>
-            <Route exact path="/" render={Home} />
+            <Route exact path="/" component={Home} />
           </Switch>
         </Router>
       </div>
