@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { Fragment } from 'react'
-import Nav from './components/Navbar'
-import Home from './components/pages/Home'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Fragment } from 'react';
+import Nav from './components/Navbar';
+import Home from './components/pages/Home';
 // Semantic UI css file
-import 'semantic-ui-css/semantic.min.css'
+import './static/css/master.scss'
 
 function App() {
   return (

@@ -1,0 +1,101 @@
+body {
+    display: gird;
+    background: #367
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+// Member
+    .i {
+        cursor: pointer;
+    }
+    // Profile picture 
+        .thumbnail {
+            border-radius: 25px;
+        }
+    
+    .member {
+        text-align: center;
+        position: relative;
+        color: #fff;
+        padding: .9rem;
+        h5{
+            margin: .6rem 0;
+        }
+        .front {
+            z-index: 1000;
+            hr {
+                width: 30%;
+                margin: auto;
+            }
+        }
+    }
+
+    .muted {
+        color: rgb(165, 165, 165);
+    }
+    .columns {
+        columns: 2;
+        padding: 0 2rem ;
+        column-rule: 1px solid rgba(255, 255, 255, .2);
+        div {
+            text-align: center;
+        }
+    }
+    // Hover effect
+        .member:hover {
+            .back {
+                opacity: 1;
+                transform: scale(1);
+            }
+            .front {
+                transform: translateY(-5rem) scale(0.75);
+            }
+            .info {
+                opacity: 1;
+                transition: 100ms;
+                transform: translateY(-1.5rem);
+            }
+            .name {
+                animation: name-animation 250ms ease;
+            }
+        }
+
+    .front {
+        transition: 150ms;
+    }
+    // Background 
+        .back {
+            opacity: 0;
+            border-radius: 15px;
+            background-color: #234;
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            transform: scale(0.3, 0.75);
+            z-index: -1;
+            transition: 250ms;
+        }
+    // Member hidden info
+        .info {
+            opacity: 0;
+            position: absolute;
+            bottom: 0; right: 0; left: 0;
+            p {
+                font-size: .8rem;
+                font-weight: bold;
+            }
+        }
+    // Member name animation
+        @keyframes name-animation {
+            0% {
+                opacity: 1;
+            }
+            20% {
+                opacity: 0;
+                transform: translateY(0.7rem);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }

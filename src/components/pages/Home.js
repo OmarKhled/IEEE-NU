@@ -1,12 +1,10 @@
 import React from 'react'
-
-import { Button } from 'semantic-ui-react'
+import Members from '../Mmbers'
 
 const Home = () => {
     return (
         <div>
-            <h1>Home Page</h1>
-            <Button color="secondary">Click</Button>
+            <Members />
         </div>
     )
 }
