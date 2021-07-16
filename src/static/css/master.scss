@@ -245,11 +245,13 @@ h1, h2, h3, h4, h5, h6, p {
      a i:hover {
       color: #0F536B;
     }
+    transition: all 400ms;
   }
   
   .copyright {
     background: #0F536B;
     color: white;
+    transition: all 400ms;
   }
   /*End Footer*/
 // Media Quires 

@@ -26,4 +26,7 @@ body {
 .footer  {
     background-color: ${props => props.theme.footerBackground} !important;
 }
+.copyright {
+    background-color: ${props => props.theme.tailFooter}
+}
 `
