@@ -37,7 +37,7 @@ const news = [
     }
 ]
 const NewsContainer = () => 
-  <Container>
+  <Container className="news">
       <h2 className="h1 text-white">
           News
       </h2>
