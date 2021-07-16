@@ -2,9 +2,6 @@ body {
     display: gird;
     background-color: #212529;
 }
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-}
 //Start Navbar
 header {
     background: #1987B8;
@@ -87,23 +84,56 @@ header {
     }
   }
 
-//End Navbar
+//End Navba
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+// Global theme
+    .muted {
+        color: rgb(165, 165, 165);
+    }
+    .columns {
+        column-rule: 1px solid rgba(155, 155, 155, 0.2);
+    }
 // Member
     .i {
         cursor: pointer;
     }
     // Profile picture 
+        .member {
+            max-height: 230px * 2;
+            max-width: 150px * 1.5;
+            margin: auto;
+        }
         .thumbnail {
             border-radius: 25px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
-    
+        .const-aspect-ratio {
+            height: 0;
+            overflow: hidden;
+            padding-top: calc(230 / 150 * 100%);
+            position: relative;
+        }
+        .aspect-ratio-box {
+            max-height: 230px * 1.4;
+            max-width: 150px * 1.3;
+            margin: auto;
+        }
+        
     .member {
+        font-size: 1.15rem;
         text-align: center;
         position: relative;
-        color: #fff;
         padding: .9rem;
         h5{
-            margin: .6rem 0;
+            margin: .6rem 0 .3rem 0;
+            font-weight: bold;
         }
         .front {
             z-index: 1000;
@@ -113,14 +143,9 @@ header {
             }
         }
     }
-
-    .muted {
-        color: rgb(165, 165, 165);
-    }
     .columns {
         columns: 2;
         padding: 0 2rem ;
-        column-rule: 1px solid rgba(255, 255, 255, .2);
         div {
             text-align: center;
         }
@@ -132,12 +157,12 @@ header {
                 transform: scale(1);
             }
             .front {
-                transform: translateY(-5rem) scale(0.75);
+                transform: translateY(-6rem) scale(0.85);
             }
             .info {
                 opacity: 1;
-                transition: 100ms;
-                transform: translateY(-1.5rem);
+                transition: 200ms;
+                transform: translateY(-1rem);
             }
             .name {
                 animation: name-animation 250ms ease;
@@ -151,7 +176,6 @@ header {
         .back {
             opacity: 0;
             border-radius: 15px;
-            background-color: #234;
             position: absolute;
             top: 0; right: 0; bottom: 0; left: 0;
             transform: scale(0.3, 0.75);
@@ -164,7 +188,7 @@ header {
             position: absolute;
             bottom: 0; right: 0; left: 0;
             p {
-                font-size: .8rem;
+                font-size: 1rem;
                 font-weight: bold;
             }
         }
@@ -223,4 +247,81 @@ header {
     color: white;
   }
   /*End Footer*/
-//End Footer
+// Media Quires 
+    @media screen and (min-width: 600px) {
+        .member {
+            h5{
+                margin: .6rem 0 -.1rem 0;
+            }
+        }
+    }
+    @media screen and (max-width: 460px) {
+        .info {
+            p {
+                font-size: .9rem;
+                font-weight: bold;
+            }
+        }
+
+    }
+    @media screen and (max-width: 315px) {
+        .info {
+            p {
+                display: none;
+            }
+        }
+        .member:hover { 
+            .info {
+                opacity: 1;
+                transition: 200ms;
+                transform: translateY(-2rem);
+            }
+        }
+
+    }
+// Carousel    
+    .slide {
+        border-radius: 40px;
+    }
+// Theme toggler
+    .switch {
+        display: inline-block;
+        position: relative;
+        height: 34px;
+        width: 60px;
+        border-radius: 100vw;
+    }
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #333;
+        transition: all 500ms;
+    }
+    .slider::before {
+        content: "";
+        width: 26px;
+        height: 26px;
+        background: #0385ff;
+        position: absolute;
+        left: 4px;
+        bottom: 4px;
+        transition: all 100ms;
+        border-radius: 100vw;
+    }
+    .round {
+        border-radius: 100vw;
+    }
+    .toggled::before {
+        transform: translateX(26px);
+    }
+    .toggled {
+        background-color: #fff;
+    }
