@@ -215,7 +215,7 @@ h1, h2, h3, h4, h5, h6, p {
         border: none; 
         cursor: pointer;
         transition: all .2s;
-        border-radius: 30px;
+        border-radius: 15px;
         overflow: hidden;
     }
     .image {
@@ -281,7 +281,7 @@ h1, h2, h3, h4, h5, h6, p {
     }
 // Carousel    
     .slide {
-        border-radius: 40px;
+        border-radius: 30px;
     }
     .carousel-control-next, .carousel-control-prev {
         z-index: 0;

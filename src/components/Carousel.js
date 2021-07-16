@@ -26,12 +26,12 @@ const Slider = () => {
         <Carousel>
           {slides.map((slide, index)=> (
             <Carousel.Item key={index}>
-            <img
-              className="d-block w-100 slide"
-              src={slide.img}
-              alt={slide.name}
-            />
-          </Carousel.Item>
+              <img
+                className="d-block w-100 slide"
+                src={slide.img}
+                alt={slide.name}
+              />
+            </Carousel.Item>
           ))}
         </Carousel>
         
