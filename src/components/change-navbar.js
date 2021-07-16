@@ -5,7 +5,6 @@ const ChangeNavbar = (props) => {
   const location = useLocation()
   useEffect(() => {
     function onScrollChangeNavbar () {
-      console.log(window.scrollY > 0)
       if (window.scrollY > 0 ) {
         if (!document.querySelector(".navbar").classList.contains("m-0") ) {
           document.querySelector(".navbar").className += " m-0 changeBackground"
