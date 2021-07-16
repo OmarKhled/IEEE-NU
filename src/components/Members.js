@@ -16,6 +16,12 @@ const members = [
        committee: "Technical",
        joined: "2020"
     },
+    {
+        image: mustafa,
+        name: "Mohamed Mustafa",
+        committee: 'Board',
+        joined: "2018"
+    },
     
 ];
 const Members = (props) => {

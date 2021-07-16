@@ -23,4 +23,7 @@ body {
 .name {
     color: ${props => props.theme.nameColorPrimary}
 }
+.footer  {
+    background-color: ${props => props.theme.footerBackground} !important;
+}
 `

@@ -5,8 +5,8 @@ import { Icon } from 'semantic-ui-react'
 
 const news = [
     {
-        link: "https://via.placeholder.com/150/eee/eee",
-        url: "https://via.placeholder.com/150/eee/eee",
+        link: "https://picsum.photos/1920/1080",
+        url: "https://picsum.photos/1920/1080",
         title:"News Title",
         date: "12/5/2021",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet magna quis nunc porta mollis. Praesent feugiat, libero eget fermentum porta.",
@@ -17,8 +17,8 @@ const news = [
     }
     ,
     {
-        link: "https://via.placeholder.com/150/eee/eee",
-        url: "https://via.placeholder.com/150/eee/eee",
+        link: "https://picsum.photos/1920/1080",
+        url: "https://picsum.photos/1920/1080",
         title:"News Title",
         date: "12/5/2021",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet magna quis nunc porta mollis. Praesent feugiat, libero eget fermentum porta.",
@@ -28,8 +28,8 @@ const news = [
       </a>
     },
     {
-      link: "https://via.placeholder.com/150/eee/eee",
-      url: "https://via.placeholder.com/150/eee/eee",
+      link: "https://picsum.photos/1920/1080",
+      url: "https://picsum.photos/1920/1080",
       title:"News Title",
       date: "12/5/2021",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet magna quis nunc porta mollis. Praesent feugiat, libero eget fermentum porta.",
