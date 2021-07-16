@@ -1,6 +1,5 @@
 import { BrowserRouter, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Fragment } from 'react';
-import Nav from './components/Header';
 import Home from './components/pages/Home';
 // Semantic UI css file
 import './static/css/master.scss'
