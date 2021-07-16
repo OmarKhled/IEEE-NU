@@ -1,10 +1,6 @@
-body {
-    display: gird;
-    background-color: #212529;
-}
-//Start Navbar
+// Start Navbar
 header {
-    background: #1987B8;
+    background: #333;
     color: white;
     height: 24px;
   }
@@ -213,6 +209,10 @@ h1, h2, h3, h4, h5, h6, p {
         justify-content: center;
     }
     .card {
+        box-shadow: 0 8px 32px 0 rgba(51, 51, 51, 0.37) !important;
+        backdrop-filter: blur( 4px ) !important;
+
+        border: none; 
         cursor: pointer;
         transition: all .2s;
         border-radius: 30px;
@@ -283,45 +283,34 @@ h1, h2, h3, h4, h5, h6, p {
     .slide {
         border-radius: 40px;
     }
+    .carousel-control-next, .carousel-control-prev {
+        z-index: 0;
+    }
 // Theme toggler
     .switch {
         display: inline-block;
-        position: relative;
-        height: 34px;
-        width: 60px;
+        position: fixed;
+        bottom: 20px;
+        right:20px;
         border-radius: 100vw;
-    }
-    .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-    .slider {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
+        height: 65px;
+        width: 65px;
+        border-radius: 100vw;
+        cursor: pointer;
         background-color: #333;
         transition: all 500ms;
     }
-    .slider::before {
-        content: "";
-        width: 26px;
-        height: 26px;
-        background: #0385ff;
-        position: absolute;
-        left: 4px;
-        bottom: 4px;
-        transition: all 100ms;
-        border-radius: 100vw;
-    }
-    .round {
-        border-radius: 100vw;
-    }
-    .toggled::before {
-        transform: translateX(26px);
-    }
     .toggled {
         background-color: #fff;
+    }
+    .themeIcon {
+        width: 100%;
+        height: 100%;
+        padding: 20%;
+    }
+    .moon {
+        color: #e5e5e5;
+    }
+    .sun {
+        color: #333;
     }

@@ -6,9 +6,10 @@ import {
     Nav,
     NavItem,
     Container,
-  } from "reactstrap";
-  import { NavLink } from "react-router-dom";
- import logo from '../static/images/IEEE-NU-Logo-White.png'
+} from "reactstrap";
+import { NavLink } from "react-router-dom";
+import logo from '../static/images/IEEE-NU-Logo.png'
+import ThemeToggeler from './ThemeToggeler';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +40,7 @@ const Header = () => {
         <Navbar className="fixed-top navbar changeBackground" color="dark" dark expand="lg">
           <div className="glass"></div>
           <Container>
-            <NavLink className="navbar-brand" to="/home">
+            <NavLink className="navbar-brand" to="/">
               <img alt="Logo" src={logo} width="60" />
             </NavLink>
             <NavbarToggler
@@ -49,7 +50,7 @@ const Header = () => {
               <Nav className="sticky" className="mr-auto" navbar>
                 <NavItem>
                   <NavLink
-                    to="/home"
+                    to="/"
                     className="nav-link"
                     activeClassName="active"
                   >
