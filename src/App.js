@@ -14,14 +14,22 @@ import { GlobalStyles } from './components/GlobalStyle';
 import themes from './themes';
 
 function App() {
-  const [themeState, setTheme] = useState('light')
+  const [themeState, setTheme] = useState(localStorage.getItem('theme'))
+  if (themeState == null) {
+    localStorage.setItem('theme', 'light')
+    setTheme(localStorage.getItem('theme'))
+  } else {
+    localStorage.setItem('theme', themeState)
+  }
   const [toggle, setToggle] = useState(false)
   // Theme Toggler switch
   const toggleTheme = () => themeState === 'light' ? setTheme('dark') : setTheme('light')
   const onToggle = () => {
       setToggle(!toggle)
       toggleTheme()
+      localStorage.setItem('theme', themeState)
   }
+
   
   return (
     <BrowserRouter>
