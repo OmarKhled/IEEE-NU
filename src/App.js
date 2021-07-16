@@ -5,7 +5,7 @@ import Home from './components/pages/Home';
 import './static/css/master.scss'
 import Header from './components/Header'
 import ChangeNavbar from './components/change-navbar'
-
+import Footer from './components/Footer'
 function App() {
   return (
     <BrowserRouter>
@@ -22,6 +22,7 @@ function App() {
         </Router>
       </div>
     </Fragment>
+    <Footer/>
     </BrowserRouter>
   );
 }

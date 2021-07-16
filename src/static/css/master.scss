@@ -196,9 +196,31 @@ header {
     }
     .image {
         img {
-
             aspect-ratio: 16/9;
          }      
     }
 }
 //End News
+
+//Start Footer
+.footer {
+    background: #1987B8 !important;
+    border-radius: 0;
+    &,  a {
+      color: white;
+    }
+      i {
+      margin-right: 5px;
+      width: 20px;
+    }
+     a i:hover {
+      color: #0F536B;
+    }
+  }
+  
+  .copyright {
+    background: #0F536B;
+    color: white;
+  }
+  /*End Footer*/
+//End Footer
