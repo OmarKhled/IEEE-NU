@@ -183,7 +183,19 @@ header {
             }
         }
 //Start News
-.news .card .image img {
+.news  {
+    a {
+        width: -webkit-fill-available;
+    }
+    .card {
+        cursor: pointer;
+        transition: all .2s;
+        border-radius: 20px;
+
+    }
+    .image img {
     aspect-ratio: 16/9;
+    border-radius: 20px;
+    }
 }
 //End News

@@ -10,6 +10,7 @@ function App() {
   return (
     <BrowserRouter>
     <ChangeNavbar/>
+    <base target="_blank"/>
       <Header/>
     <Fragment>
       <div style={{minHeight: '93vh', marginTop: '85px'}} >
