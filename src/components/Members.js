@@ -4,7 +4,7 @@ import { FaFacebook, FaLinkedin } from 'react-icons/fa'
 import mustafa from '../static/images/Mohamed.png'
 import omar from '../static/images/Omar.png'
 
-const Mmbers = () => {
+const Members = () => {
     const members = [
         {
             image: mustafa,
@@ -57,4 +57,4 @@ const Mmbers = () => {
     );
 }
 
-export default Mmbers;
+export default Members;
