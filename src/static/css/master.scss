@@ -186,6 +186,7 @@ header {
 .news  {
     a {
         width: -webkit-fill-available;
+        justify-content: center;
     }
     .card {
         cursor: pointer;
@@ -193,9 +194,13 @@ header {
         border-radius: 20px;
 
     }
-    .image img {
-    aspect-ratio: 16/9;
-    border-radius: 20px;
+    .image {
+        border-radius: 20px;
+        img {
+            border-radius: 20px !important;
+
+            aspect-ratio: 16/9;
+         }      
     }
 }
 //End News
