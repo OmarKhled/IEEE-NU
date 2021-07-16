@@ -1,5 +1,5 @@
 import { Col, Container, Jumbotron, Row } from "reactstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 const Footer = () => (
     <>
       <Jumbotron
@@ -35,12 +35,12 @@ const Footer = () => (
             <Col xs={{ size: 12 }} sm={{ size: 6 }}>
               <h5>Contact Us</h5>
               
-              <i class="phone icon"></i>: +852 1234 5678
+              <i className="phone icon"></i>: +852 1234 5678
                 <br />
-                <i class="fax icon"></i>: +852 8765 4321
+                <i className="fax icon"></i>: +852 8765 4321
                 <br />
-                <i class="envelope icon"></i>:{" "}
-                <a href="mailto:confusion@food.net">confusion@food.net</a>
+                <i className="envelope icon"></i>:{" "}
+                <Link to="mailto:confusion@food.net">confusion@food.net</Link>
              
             </Col>
             <Col
@@ -52,39 +52,39 @@ const Footer = () => (
             </Col>
             </Row>
             <div className="text-center">
-                <a
+                <Link
                   className="btn btn-social-icon btn-google"
-                  href="http://google.com/+"
+                  to="http://google.com/+"
                 >
-                  <i class="google icon"></i>
-                </a>
-                <a
+                  <i className="google icon"></i>
+                </Link>
+                <Link
                   className="btn btn-social-icon btn-facebook"
-                  href="http://www.facebook.com/profile.php?id="
+                  to="http://www.facebook.com/profile.php?id="
                 >
-                  <i class="facebook f icon"></i>
-                </a>
-                <a
+                  <i className="facebook f icon"></i>
+                </Link>
+                <Link
                   className="btn btn-social-icon btn-linkedin"
-                  href="http://www.linkedin.com/in/"
+                  to="http://www.linkedin.com/in/"
                 >
-                  <i class="linkedin icon"></i>
-                </a>
-                <a
+                  <i className="linkedin icon"></i>
+                </Link>
+                <Link
                   className="btn btn-social-icon btn-twitter"
-                  href="http://twitter.com/"
+                  to="http://twitter.com/"
                 >
-                  <i class="twitter icon"></i>
-                </a>
-                <a
+                  <i className="twitter icon"></i>
+                </Link>
+                <Link
                   className="btn btn-social-icon btn-google"
-                  href="http://youtube.com/"
+                  to="http://youtube.com/"
                 >
-                  <i class="youtube icon"></i>
-                </a>
-                <a className="btn btn-social-icon" href="mailto:">
-                <i class="envelope icon"></i>
-                </a>
+                  <i className="youtube icon"></i>
+                </Link>
+                <Link className="btn btn-social-icon" to="mailto:">
+                <i className="envelope icon"></i>
+                </Link>
               </div>
         </Container>
       </Jumbotron>

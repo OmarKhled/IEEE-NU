@@ -9,7 +9,6 @@ import {
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import logo from '../static/images/IEEE-NU-Logo.png'
-import ThemeToggeler from './ThemeToggeler';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);

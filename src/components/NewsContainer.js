@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col } from 'reactstrap'
+import { Row, Col } from 'reactstrap'
 import NewsCard from './NewsCard'
 import { Icon } from 'semantic-ui-react'
 
@@ -11,7 +11,7 @@ const news = [
         date: "12/5/2021",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet magna quis nunc porta mollis. Praesent feugiat, libero eget fermentum porta.",
         extra: <a>
-        <Icon name='user' />
+        <Icon name='user' as="i" />
         Ahmed Hamdy
       </a>
     }
@@ -23,7 +23,7 @@ const news = [
         date: "12/5/2021",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet magna quis nunc porta mollis. Praesent feugiat, libero eget fermentum porta.",
         extra: <a>
-        <Icon name='user' />
+        <Icon name='user' as="i" />
         Ahmed Hamdy
       </a>
     },
@@ -34,7 +34,7 @@ const news = [
       date: "12/5/2021",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet magna quis nunc porta mollis. Praesent feugiat, libero eget fermentum porta.",
       extra: <a>
-      <Icon name='user' />
+      <Icon name='user' as="i" />
       Ahmed Hamdy
     </a>
   }
@@ -44,8 +44,8 @@ const NewsContainer = () =>
       <h2>News</h2>
       <hr></hr>
       <Row>
-      {news.map(i => (
-          <Col xs="12" sm="6" md="4" lg="4" className="mw-80 d-flex justify-content-center my-4">
+      {news.map((i, index) => (
+          <Col key={index} xs="12" sm="6" md="4" lg="4" className="mw-80 d-flex justify-content-center my-4">
             <a className="d-flex" href="#">
                 <NewsCard news={i}></NewsCard>
             </a>
