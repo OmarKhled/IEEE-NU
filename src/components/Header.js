@@ -19,7 +19,7 @@ const Header = () => {
         <div>
         
         <header>
-          <Container>
+          <Container className="px-5" style={{maxWidth: "65.125rem"}}>
             <span className="pr-3">
               IEEE.org
             </span>
@@ -39,7 +39,7 @@ const Header = () => {
         </header>
         <Navbar className="fixed-top navbar changeBackground" color="dark" dark expand="lg">
           <div className="glass"></div>
-          <Container>
+          <Container className="px-5" style={{maxWidth: "65.125rem"}}>
             <NavLink className="navbar-brand" to="/">
               <img alt="Logo" src={logo} width="60" />
             </NavLink>
