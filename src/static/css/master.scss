@@ -1,3 +1,30 @@
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+// Global theme
+    .muted {
+        color: rgb(165, 165, 165);
+    }
+    .columns {
+        column-rule: 1px solid rgba(155, 155, 155, 0.2);
+    }
+// Scroll bar
+    ::-webkit-scrollbar {
+        width: .753rem;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: #d1d1d1;
+    }
+    ::-webkit-scrollbar-thumb {
+        border: 2px solid #d1d1d1;
+        background-color: #797979;
+        border-radius: 100vw;
+        margin: 0 3px;
+    }
+    ::-webkit-scrollbar-thumb:active {
+        background-color: #1987B8;
+    }
+
 // Start Navbar
 header {
     background: #333;
@@ -86,128 +113,7 @@ header {
     }
   }
 
-//End Navba
-
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-}
-// Global theme
-    .muted {
-        color: rgb(165, 165, 165);
-    }
-    .columns {
-        column-rule: 1px solid rgba(155, 155, 155, 0.2);
-    }
-// Member
-    .i {
-        cursor: pointer;
-    }
-    // Profile picture 
-        .member {
-            max-height: 230px * 2;
-            max-width: 150px * 1.5;
-            margin: auto;
-        }
-        .thumbnail {
-            border-radius: 25px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .const-aspect-ratio {
-            height: 0;
-            overflow: hidden;
-            padding-top: calc(230 / 150 * 100%);
-            position: relative;
-        }
-        .aspect-ratio-box {
-            max-height: 230px * 1.4;
-            max-width: 150px * 1.3;
-            margin: auto;
-        }
-        
-    .member {
-        font-size: 1.15rem;
-        text-align: center;
-        position: relative;
-        padding: .9rem;
-        h5{
-            margin: .6rem 0 .3rem 0;
-            font-weight: bold;
-        }
-        .front {
-            z-index: 1000;
-            hr {
-                width: 30%;
-                margin: auto;
-            }
-        }
-    }
-    .columns {
-        columns: 2;
-        padding: 0 2rem ;
-        div {
-            text-align: center;
-        }
-    }
-    // Hover effect
-        .member:hover {
-            .back {
-                opacity: 1;
-                transform: scale(1);
-            }
-            .front {
-                transform: translateY(-6rem) scale(0.85);
-            }
-            .info {
-                opacity: 1;
-                transition: 200ms;
-                transform: translateY(-1rem);
-            }
-            .name {
-                animation: name-animation 250ms ease;
-            }
-        }
-
-    .front {
-        transition: 150ms;
-    }
-    // Background 
-        .back {
-            opacity: 0;
-            border-radius: 15px;
-            position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
-            transform: scale(0.3, 0.75);
-            z-index: -1;
-            transition: 250ms;
-        }
-    // Member hidden info
-        .info {
-            opacity: 0;
-            position: absolute;
-            bottom: 0; right: 0; left: 0;
-            p {
-                font-size: 1rem;
-                font-weight: bold;
-            }
-        }
-    // Member name animation
-        @keyframes name-animation {
-            0% {
-                opacity: 1;
-            }
-            20% {
-                opacity: 0;
-                transform: translateY(0.7rem);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+//End Navbar
 //Start News
 .news  {
     a {
@@ -215,7 +121,7 @@ h1, h2, h3, h4, h5, h6, p {
         justify-content: center;
     }
     .card {
-        box-shadow: 0 8px 32px 0 rgba(51, 51, 51, 0.37) !important;
+        box-shadow: 0 8px 32px 0 rgba(51, 51, 51, 0.04) !important;
         backdrop-filter: blur( 4px ) !important;
         border: none; 
         cursor: pointer;
@@ -228,6 +134,10 @@ h1, h2, h3, h4, h5, h6, p {
             aspect-ratio: 16/9;
          }      
     }
+}
+.i {
+    padding-top: 0 !important;
+    margin:0 !important
 }
 //End News
 
@@ -254,38 +164,6 @@ h1, h2, h3, h4, h5, h6, p {
     transition: all 400ms;
   }
   /*End Footer*/
-// Media Quires 
-    @media screen and (min-width: 600px) {
-        .member {
-            h5{
-                margin: .6rem 0 -.1rem 0;
-            }
-        }
-    }
-    @media screen and (max-width: 460px) {
-        .info {
-            p {
-                font-size: .9rem;
-                font-weight: bold;
-            }
-        }
-
-    }
-    @media screen and (max-width: 315px) {
-        .info {
-            p {
-                display: none;
-            }
-        }
-        .member:hover { 
-            .info {
-                opacity: 1;
-                transition: 200ms;
-                transform: translateY(-2rem);
-            }
-        }
-
-    }
 // Carousel    
     .slide {
         border-radius: 30px;
@@ -340,4 +218,59 @@ h1, h2, h3, h4, h5, h6, p {
     }
     .sun {
         color: #333;
+    }
+// Members Card
+    .ui.card {
+        padding-top: 6rem;
+        margin: -6rem 0 0 0;
+        z-index: -1 !important;
+        background: rgba(255, 255, 255, 0.767);
+        box-shadow: 0 8px 32px 0 rgba(110, 110, 110, 0.3) !important;
+        backdrop-filter: blur( 4px ) !important;
+        transition: all 350ms;
+        border-radius: 15px;
+    }
+    .member-container {
+        text-align: center;
+        max-width: 18rem;
+        transition: all 200ms;
+        animation: pop-reverse 500ms;
+    }
+    .circle {
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        max-width: 13rem;
+        max-height: 13rem;
+        box-shadow: 0 8px 32px 0 rgba(110, 110, 110, 0.3) !important;
+        backdrop-filter: blur( 4px ) !important;
+    }
+    .member-container:hover {
+        animation: pop 500ms forwards;
+        transform: perspective(-1px)
+    }
+    .columns {
+        columns: 2;
+        padding: 0 2rem ;
+        div {
+            text-align: center;
+        }
+    }
+    @keyframes pop {
+        from {
+            transform: scale(1);
+        }
+
+        to {
+            transform: scale(1.05);
+        }
+        
+    }
+    @keyframes pop-reverse {
+        from {
+            transform: scale(1.05);
+        }
+        to {
+            transform: scale(1);
+        }
+        
     }
