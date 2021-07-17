@@ -5,6 +5,7 @@ import 'semantic-ui-css/semantic.min.css';
 import Members from '../Members'
 import Carousel from '../Carousel'
 import NewsContainer from '../NewsContainer'
+import PastParteners from '../PastParteners';
 // CSS Stylesheet
 import '../../static/css/master.scss'
 
@@ -15,6 +16,7 @@ const Home = () => {
                     <Carousel />
                     <NewsContainer/>
                     <Members />
+                    <PastParteners />
                 </div>
         </Fragment>
     )

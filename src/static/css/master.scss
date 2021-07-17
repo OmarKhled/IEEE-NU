@@ -235,6 +235,7 @@ header {
         max-width: 18rem;
         transition: all 200ms;
         animation: pop-reverse 500ms;
+        margin: auto;
     }
     .circle {
         border-radius: 50%;
@@ -275,7 +276,39 @@ header {
         
     }
 
-// Fire fox support
+// Past parteners
+    .arrow {
+        border: none;
+        background: none;
+        font-size: 2rem;
+    }
+    .partener {
+        animation: logoPop-reverse 500ms;
+    }
+    .partener:active {
+        animation: forwards logoPop 500ms;
+    }
+    @keyframes logoPop {
+        from {
+            transform: scale(1);
+        }
+
+        to {
+            transform: scale(1.15);
+        }
+        
+    }
+    @keyframes logoPop-reverse {
+        from {
+            transform: scale(1.09);
+        }
+        to {
+            transform: scale(1);
+        }
+        
+    }
+
+// Firefox support
     @-moz-document url-prefix() {
         .glass {
             background-color: rgba(255, 255, 255, .9) !important;
