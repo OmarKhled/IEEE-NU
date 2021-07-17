@@ -4,7 +4,7 @@ import { Card } from 'semantic-ui-react'
 
 const Member = ({ member }) => {
      return (
-        <div className="member-container">
+        <div className="member-container mt-3">
             <img src={member.image} alt={member.name} className="circle"/>
                 <Card>
                     <Card.Content>
