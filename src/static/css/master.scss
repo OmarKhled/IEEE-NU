@@ -234,8 +234,7 @@ header {
     .member-container {
         text-align: center;
         max-width: 18rem;
-        transition: all 200ms;
-        animation: pop-reverse 500ms;
+        transition: all 500ms;
         margin: auto;
     }
     .circle {
@@ -247,7 +246,7 @@ header {
         backdrop-filter: blur( 4px ) !important;
     }
     .member-container:hover {
-        animation: pop 500ms forwards;
+        transform: scale(1.05);
         transform: perspective(-1px)
     }
     .columns {
@@ -257,25 +256,6 @@ header {
             text-align: center;
         }
     }
-    @keyframes pop {
-        from {
-            transform: scale(1);
-        }
-
-        to {
-            transform: scale(1.05);
-        }
-        
-    }
-    @keyframes pop-reverse {
-        from {
-            transform: scale(1.05);
-        }
-        to {
-            transform: scale(1);
-        }
-        
-    }
 
 // Past parteners
     .arrow {
@@ -284,29 +264,10 @@ header {
         font-size: 2rem;
     }
     .partener {
-        animation: logoPop-reverse 500ms;
+        transition: all 450ms;
     }
-    .partener:active {
-        animation: forwards logoPop 500ms;
-    }
-    @keyframes logoPop {
-        from {
-            transform: scale(1);
-        }
-
-        to {
-            transform: scale(1.15);
-        }
-        
-    }
-    @keyframes logoPop-reverse {
-        from {
-            transform: scale(1.09);
-        }
-        to {
-            transform: scale(1);
-        }
-        
+    .partener:hover {
+        transform: scale(1.15);
     }
 
 // Firefox support
