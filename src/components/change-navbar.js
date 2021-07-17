@@ -9,9 +9,13 @@ const ChangeNavbar = (props) => {
         if (!document.querySelector(".navbar").classList.contains("m-0") ) {
           document.querySelector(".navbar").className += " m-0 changeBackground"
           document.querySelector('.navbar').classList.remove("dark")
+          document.querySelector('header').style.opacity = 0
+          document.querySelector('header').style.transform = 'translateY(-1rem)'
         }
       } else {
         document.querySelector('.navbar').classList.remove("m-0")
+        document.querySelector('header').style.opacity = 1
+        document.querySelector('header').style.transform = 'translateY(0)'
         if (!document.querySelector(".navbar").classList.contains("dark")){}
         }
     }
