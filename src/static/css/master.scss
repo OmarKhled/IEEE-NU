@@ -274,3 +274,13 @@ header {
         }
         
     }
+
+// Fire fox support
+    @-moz-document url-prefix() {
+        .glass {
+            background-color: rgba(255, 255, 255, .9) !important;
+        }
+        .ui.card {
+            width: auto !important;
+        }
+      }
