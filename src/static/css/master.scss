@@ -200,11 +200,10 @@ header {
 .ui.divided.items>.item:first-child, .ui.divided.items>.item:last-child , .ui.divided.items>.item{
     padding: 10px 0 !important;
 }
-.ui.divided.items>.item:first-child:hover, .ui.divided.items>.item:last-child:hover , .ui.divided.items>.item:hover{
-    padding: 0 0 !important;
-}
+
 .events {
     display:flex;
+    align-items: flex-end;
     .item {
         &:hover * {
             color: #333 !important;
@@ -229,7 +228,7 @@ header {
             width: 100% !important;
             opacity: 1;
             .image {
-                left: 0;
+                left: 10px;
             }
             .content {
 
@@ -246,6 +245,7 @@ header {
         .content {
 
             padding-left: 0 !important;
+            transition: all 500ms ease-in-out !important;
         }
         .image {
             position: absolute;
@@ -261,7 +261,7 @@ header {
                 aspect-ratio: 1/1 !important;
                 -webkit-aspect-ratio: 1/1 !important;
                 -moz-aspect-ratio: 1/1 !important;
-                border-radius: 15px  0 0 15px!important;
+                border-radius: 15px 15px!important;
                 
             }
 
