@@ -191,9 +191,55 @@ header {
     }
 //Start Events
 .events {
+    display:flex;
     .item {
-        margin-left: 100px;
+        &:hover * {
+            color: #333 !important;
+        }
+        display:flex;
+        margin-left: 50px !important;
+        position: relative;
+        border-radius: 50px !important;
+        transition: all 0.3s;
+        background-color: rgba(255, 255, 255, 0.767) !important;
+        opacity: 0.8;
+        cursor: pointer;
+        text-decoration: none;
+        border-top-left-radius: 160px !important;
+        border-bottom-left-radius: 160px !important;
+        padding-top: 0;
+        
+        &:hover {
+            opacity: 1;
+            .image {
+                left: 0;
+            }
+        }
+        .description {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; 
+            -webkit-box-orient: vertical;
+
+        }
+        .image {
+            position: absolute;
+            left: -48px;
+            margin: auto !important;
+            transition: all 0.3s ease-in-out;
+            img {
+                border-radius: 50% !important;
+
+                 aspect-ratio: 1/1 !important;
+                -webkit-aspect-ratio: 1/1 !important;
+                -moz-aspect-ratio: 1/1 !important;
+                
+            }
+
+        }
     }
+
 }
 //End events
 // Theme toggler

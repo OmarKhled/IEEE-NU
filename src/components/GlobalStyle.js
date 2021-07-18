@@ -35,4 +35,7 @@ body {
 .arrow:disabled {
     color: #9e9e9e
 }
+.events *:hover *{
+    color: ${props => props.theme.nameColorSecondary} !important;
+}
 `
