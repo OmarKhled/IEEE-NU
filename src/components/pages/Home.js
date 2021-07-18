@@ -14,11 +14,13 @@ import '../../static/css/master.scss'
 import { isMobile, mobileModel } from 'react-device-detect'
 
 const Home = () => {
-    const [reveal, setReveal] = useState('reveal')
+    const [reveal, setReveal] = useState('')
     if (localStorage.getItem('revealPop') !== 'off') {
         window.onscroll = function(ev) {
             if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight && reveal == '') {
-                setReveal('reveal')
+                setTimeout(() => {
+                    setReveal('reveal')
+                }, 4000)
             }
         };
     }
