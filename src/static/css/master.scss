@@ -130,6 +130,13 @@ header {
         border-radius: 15px;
         overflow: hidden;
     }
+    a {
+        opacity: 0.8;
+    transition: all 0.3s;
+    &:hover {
+        opacity: 1;
+        text-decoration: none !important;
+    }}
     .image {
         img {
             aspect-ratio: 16/9;
