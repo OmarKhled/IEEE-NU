@@ -210,7 +210,7 @@ header {
             color: #333 !important;
         }
         display:flex;
-        margin-left: 50px !important;
+        margin-left: 10px !important;
         position: relative;
         border-radius: 15px !important;
         transition: all 0.3s;
@@ -218,9 +218,9 @@ header {
         opacity: 0.8;
         text-decoration: none;
         padding: 10px 0 !important;
-        width: calc(100% - 50px) !important;
+        width: calc(100% - 30px) !important;
         box-sizing: border-box;
-        transition: all 700ms !important;
+        transition: all 500ms ease-in-out !important;
         float: none;
         margin-right: 0;
         box-shadow: rgba(110, 110, 110, 0.3) 0px 8px 32px 0px !important;
@@ -231,6 +231,10 @@ header {
             .image {
                 left: 0;
             }
+            .content {
+
+                padding-left: 21px !important;
+            }
         }
         .description {
             overflow: hidden;
@@ -238,16 +242,19 @@ header {
             display: -webkit-box;
             -webkit-line-clamp: 1; 
             -webkit-box-orient: vertical;
+        }
+        .content {
 
+            padding-left: 0 !important;
         }
         .image {
             position: absolute;
-            left: -48px;
-            margin: auto !important;
+            left: -30px;
+            margin-top: auto;
+            margin-bottom: auto;
             transition: all 0.3s ease-in-out;
             height: 100px;
-            width: fit-content;
-            box-shadow: rgba(110, 110, 110, 0.3) 0px 8px 32px 0px !important;
+            width: fit-content !important;
             img {
                 height: 100px !important;
                 width:auto !important;
