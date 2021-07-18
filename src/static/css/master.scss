@@ -310,6 +310,13 @@ h1, h2, h3, h4, h5, h6, p {
     .carousel-item-right {
         transform: translateX(100%);
     }
+//Start Events
+.events {
+    .item {
+        margin-left: 100px;
+    }
+}
+//End events
 // Theme toggler
     .switch {
         z-index: 10000;
