@@ -215,8 +215,14 @@ header {
         border-top-left-radius: 160px !important;
         border-bottom-left-radius: 160px !important;
         padding-top: 0;
-        
+        width: calc(100% - 48px) !important;
+        box-sizing: border-box;
+        transition: all 700ms !important;
+        float: none;
+        margin-right: 0;
         &:hover {
+        margin-left: 0px !important;
+            width: 100% !important;
             opacity: 1;
             .image {
                 left: 0;

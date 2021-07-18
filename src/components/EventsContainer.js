@@ -39,6 +39,7 @@ const EventsContainer = () => (
     <hr/>
     <Item.Group unstackable divided className="events flex-column">
     {Events.map(Event => 
+
         <EventsCard Event={Event} />
     )}
   </Item.Group>
