@@ -15,13 +15,13 @@ import { isMobile, mobileModel } from 'react-device-detect'
 
 const Home = () => {
     const [reveal, setReveal] = useState('reveal')
-    // if (localStorage.getItem('revealPop') !== 'off') {
-    //     window.onscroll = function(ev) {
-    //         if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight && reveal == '') {
-    //             setReveal('reveal')
-    //         }
-    //     };
-    // }
+    if (localStorage.getItem('revealPop') !== 'off') {
+        window.onscroll = function(ev) {
+            if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight && reveal == '') {
+                setReveal('reveal')
+            }
+        };
+    }
     const remove = () => {
         setReveal('')
     }
