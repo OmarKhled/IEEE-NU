@@ -197,6 +197,12 @@ header {
         transform: translateX(100%);
     }
 //Start Events
+.ui.divided.items>.item:first-child, .ui.divided.items>.item:last-child , .ui.divided.items>.item{
+    padding: 10px 0 !important;
+}
+.ui.divided.items>.item:first-child:hover, .ui.divided.items>.item:last-child:hover , .ui.divided.items>.item:hover{
+    padding: 0 0 !important;
+}
 .events {
     display:flex;
     .item {
@@ -206,19 +212,18 @@ header {
         display:flex;
         margin-left: 50px !important;
         position: relative;
-        border-radius: 50px !important;
+        border-radius: 15px !important;
         transition: all 0.3s;
         background-color: rgba(255, 255, 255, 0.767) !important;
         opacity: 0.8;
         text-decoration: none;
-        border-top-left-radius: 160px !important;
-        border-bottom-left-radius: 160px !important;
-        padding-top: 0;
-        width: calc(100% - 48px) !important;
+        padding: 10px 0 !important;
+        width: calc(100% - 50px) !important;
         box-sizing: border-box;
         transition: all 700ms !important;
         float: none;
         margin-right: 0;
+        box-shadow: rgba(110, 110, 110, 0.3) 0px 8px 32px 0px !important;
         &:hover {
         margin-left: 0px !important;
             width: 100% !important;
@@ -231,7 +236,7 @@ header {
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: 3; 
+            -webkit-line-clamp: 1; 
             -webkit-box-orient: vertical;
 
         }
@@ -240,12 +245,16 @@ header {
             left: -48px;
             margin: auto !important;
             transition: all 0.3s ease-in-out;
+            height: 100px;
+            width: fit-content;
+            box-shadow: rgba(110, 110, 110, 0.3) 0px 8px 32px 0px !important;
             img {
-                border-radius: 50% !important;
-
-                 aspect-ratio: 1/1 !important;
+                height: 100px !important;
+                width:auto !important;
+                aspect-ratio: 1/1 !important;
                 -webkit-aspect-ratio: 1/1 !important;
                 -moz-aspect-ratio: 1/1 !important;
+                border-radius: 15px  0 0 15px!important;
                 
             }
 

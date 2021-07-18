@@ -3,7 +3,7 @@ import { Image, Item, Card } from 'semantic-ui-react'
 
 const EventsCard = (props) => (
     
-    <Item  className="mx-0 my-3">
+    <Item  className="mx-0 my-3 py-3">
       <Item.Image src={props.Event.img} />
 
       <Item.Content className="py-3 pr-4">
