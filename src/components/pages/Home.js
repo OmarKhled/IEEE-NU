@@ -11,17 +11,17 @@ import NewsletterPop from '../NewsletterPop';
 // CSS Stylesheet
 import '../../static/css/master.scss'
 
+import { isMobile, mobileModel } from 'react-device-detect'
+
 const Home = () => {
-    const [reveal, setReveal] = useState('')
-    if (localStorage.getItem('revealPop') !== 'off') {
-        window.onscroll = function(ev) {
-            if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight && reveal == '') {
-                setTimeout (() => {
-                    setReveal('reveal')
-                }, 5000)
-            }
-        };
-    }
+    const [reveal, setReveal] = useState('reveal')
+    // if (localStorage.getItem('revealPop') !== 'off') {
+    //     window.onscroll = function(ev) {
+    //         if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight && reveal == '') {
+    //             setReveal('reveal')
+    //         }
+    //     };
+    // }
     const remove = () => {
         setReveal('')
     }
@@ -33,7 +33,7 @@ const Home = () => {
                     <EventsContainer/>
                     <Members />
                     <PastParteners />
-                    <NewsletterPop className={reveal} remove={remove} />
+                    <NewsletterPop className={`${reveal} ${isMobile? 'mobile' : ''}`} remove={remove} />
                 </div>
         </Fragment>
     )
