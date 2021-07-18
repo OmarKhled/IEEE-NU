@@ -4,7 +4,7 @@ import { Card } from 'semantic-ui-react'
 
 const NewsCard = (props) => (
     <>
-  <Card
+  <Card className="i"
     image={props.news.url}
     header={props.news.title}
     meta={props.news.date}

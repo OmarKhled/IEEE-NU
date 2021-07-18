@@ -5,7 +5,11 @@ import 'semantic-ui-css/semantic.min.css';
 import Members from '../Members'
 import Carousel from '../Carousel'
 import NewsContainer from '../NewsContainer'
+<<<<<<< HEAD
 import EventsContainer from '../EventsContainer';
+=======
+import PastParteners from '../PastParteners';
+>>>>>>> 0169b4baa6b7ffb41998394382a320ae81c56b36
 // CSS Stylesheet
 import '../../static/css/master.scss'
 
@@ -16,7 +20,11 @@ const Home = () => {
                     <Carousel />
                     <NewsContainer/>
                     <Members />
+<<<<<<< HEAD
                     <EventsContainer/>
+=======
+                    <PastParteners />
+>>>>>>> 0169b4baa6b7ffb41998394382a320ae81c56b36
                 </div>
         </Fragment>
     )

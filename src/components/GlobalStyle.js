@@ -29,4 +29,10 @@ body {
 .copyright {
     background-color: ${props => props.theme.tailFooter}
 }
+.arrow {
+    color: ${props => props.theme.mainColor};
+}
+.arrow:disabled {
+    color: #9e9e9e
+}
 `
