@@ -393,7 +393,7 @@ header {
          transform: scale(1);
          box-shadow: 0 8px 32px 0 rgba(110, 110, 110, 0.5) !important;
          opacity: 0;
-         transform: translateY(-2rem);
+         transform: translateY(-3rem) scale(0.1);
      }
      .newsletter-btn {
          background: none;
@@ -413,7 +413,7 @@ header {
      }
     .reveal .news-letter {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
     .animate .news-letter {
         animation: wiggle infinite ease-in-out 3000ms;
