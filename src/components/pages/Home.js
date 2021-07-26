@@ -32,17 +32,15 @@ const Home = () => {
   };
   return (
     <Fragment>
-      <div className="px-5" style={{ maxWidth: "65.125rem", margin: "auto" }}>
-        <Carousel />
-        <NewsContainer />
-        <EventsContainer />
-        <Members />
-        <PastParteners />
-        <NewsletterPop
-          className={`${reveal} ${isMobile ? "mobile" : ""}`}
-          remove={remove}
-        />
-      </div>
+      <Carousel />
+      <NewsContainer />
+      <EventsContainer />
+      <Members />
+      <PastParteners />
+      <NewsletterPop
+        className={`${reveal} ${isMobile ? "mobile" : ""}`}
+        remove={remove}
+      />
     </Fragment>
   );
 };
