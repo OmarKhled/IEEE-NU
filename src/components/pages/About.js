@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
+import Slogan from "../Slogan";
 
 const About = () => {
   return (
     <Fragment>
-      About
+      <Slogan />
     </Fragment>
   );
 };

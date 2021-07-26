@@ -47,19 +47,17 @@ function App() {
         <base target="_blank" />
         <Header onToggleTheme={onToggle} toggleTheme={toggle} />
         <Fragment>
-          <div style={{ minHeight: "93vh", marginTop: "8.5rem" }}>
-            <div className="px-5" style={{ maxWidth: "65.125rem", margin: "auto" }}>
-              <Router>
-                <Switch>
-                  <Route path="/about-us">
-                    <About />
-                  </Route>
-                  <Route exact path="/">
-                    <Home />
-                  </Route>
-                </Switch>
-              </Router>
-            </div>
+          <div style={{ minHeight: "93vh", marginTop: "8.5rem", height: "1px" }}>
+            <Router>
+              <Switch>
+                <Route path="/about-us">
+                  <About />
+                </Route>
+                <Route exact path="/"> 
+                  <Home />
+                </Route>
+              </Switch>
+            </Router>
             <ThemeToggeler toggle={toggle} onToggle={onToggle} />
           </div>
         </Fragment>

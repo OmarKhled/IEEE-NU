@@ -31,7 +31,7 @@ const Home = () => {
     setReveal("");
   };
   return (
-    <Fragment>
+    <div className="px-5" style={{ maxWidth: "65.125rem", margin: "auto" }}>
       <Carousel />
       <NewsContainer />
       <EventsContainer />
@@ -41,7 +41,7 @@ const Home = () => {
         className={`${reveal} ${isMobile ? "mobile" : ""}`}
         remove={remove}
       />
-    </Fragment>
+    </div>
   );
 };
 
