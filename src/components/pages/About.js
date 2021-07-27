@@ -5,6 +5,8 @@ const About = () => {
   return (
     <Fragment>
       <Slogan />
+      <div className="px-5" style={{ maxWidth: "65.125rem", minHeight: "40vh", margin: "auto" }}>
+      </div>
     </Fragment>
   );
 };

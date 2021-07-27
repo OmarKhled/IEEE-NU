@@ -57,11 +57,11 @@ function App() {
                   <Home />
                 </Route>
               </Switch>
+              <Footer />
             </Router>
             <ThemeToggeler toggle={toggle} onToggle={onToggle} />
           </div>
         </Fragment>
-        <Footer />
       </ThemeProvider>
     </BrowserRouter>
   );

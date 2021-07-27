@@ -43,11 +43,13 @@ const PastParteners = () => {
         <div className="mb-5">
             <h2>Past parteners</h2>
             <hr />
-            <Carousel itemPadding={[30, 0]} breakPoints={breakPoints} pagination={false} renderArrow={myArrow}>
+            <Carousel itemPadding={[30, 0]} breakPoints={breakPoints} pagination={false} renderArrow={myArrow} enableAutoPlay autoPlaySpeed={1000} initialFirstItem>
                 {items.map(item => (
-                    <img class="partener" width="100" src={item.img}>
-                        {item.title}
-                    </img>
+                    <div class="partener">
+                        <img width="100" src={item.img}>
+                            {item.title}
+                        </img>
+                    </div>
                 ))}
             </Carousel>
         </div>

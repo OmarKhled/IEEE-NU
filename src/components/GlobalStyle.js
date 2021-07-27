@@ -38,7 +38,11 @@ body {
 .events *:hover *{
     color: ${(props) => props.theme.nameColorSecondary} !important;
 }
-.custom-shape-divider-bottom-1627333295 .shape-fill {
+.custom-shape-divider-bottom-1627333295 .shape-fill, .custom-shape-divider-top-1627370705 .shape-fill {
     fill: ${(props) => props.theme.mainBackgroundColor};
+    transition: all 0.25s linear;
+}
+.btn-subscribe {
+    background-color: ${(props) => props.theme.subscribe};  ;
 }
 `;
