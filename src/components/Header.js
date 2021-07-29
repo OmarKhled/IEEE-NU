@@ -24,6 +24,7 @@ const Header = () => {
           <span className="pr-3">IEEE Spectrum</span>
           <span className="pr-3">More Sites</span>
         </Container>
+        <hr></hr>
       </header>
       <Navbar
         className="fixed-top navbar changeBackground"

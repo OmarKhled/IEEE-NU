@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6, p {
 header {
     background: #333;
     color: white;
-    height: 24px;
+    height: 25px;
     transition: all 200ms;
   }
    .navbar-toggler-icon {
@@ -44,7 +44,7 @@ header {
     border: 1px solid #1987B8 !important;
   } 
   .navbar {
-    margin-top: 24px;
+    margin-top: 25px;
     transition: all 0.3s;
     &::before {
         transition: all 0.3s;
@@ -591,5 +591,20 @@ header {
         }
         100% {
             clip-path: ellipse(55% 15% at 50% 100%);
+        }
+    }
+    //Reviews Card
+    .reviews {
+        .card{
+            background-color: rgba(255, 255, 255, 0.767) !important;
+            color: #212529;
+            
+            img {
+                z-index: 2000;
+                border-radius: 50%;
+                background-color: #1988b9;
+                background-position: center;
+                width: -webkit-fill-available;
+            }
         }
     }
