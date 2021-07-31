@@ -1,51 +1,88 @@
-import React from 'react'
-import { Col, Container, Row } from 'reactstrap'
-import { Card } from 'semantic-ui-react'
-import Carousel from 'react-elastic-carousel';
-import Flex from 'react-elastic-carousel';
-import Circle from 'react-elastic-carousel';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
-const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  { width: 362, itemsToShow: 2 },
-  { width: 707, itemsToShow: 2 },
-]
+import React, {Component} from 'react'
+import Slider from "react-slick";
+import ReviewsCard from "./ReviewsCard";
 
-
-const items = [
+const Reviews = [
   {
-    img: "..\\images\\joe.jpg"
+    image: require("../static/images/img/joe.jpg"),
+    name: "Heba",
+    review: "Joe Henderson Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon."
+  },
+  {
+    image: require("../static/images/img/joe.jpg"),
+    name: "Habhob",
+    review: "Joe Henderson Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon."
+  },
+  {
+    image: require("../static/images/img/joe.jpg"),
+    name: "Hebaba",
+    review: "Joe Henderson Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon."
+  },
+  {
+    image: require("../static/images/img/joe.jpg"),
+    name: "Batman",
+    review: "Joe Henderson Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon."
   }
 ]
+const settings = {
+  dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ],
+      appendDots: dots => (
+        <div
+          style={{
+            borderRadius: "10px",
+            padding: "10px"
+          }}
+        >
+          <ul style={{ margin: "0px" }}> {dots} </ul>
+        </div>
+      ),
+    };
+
 const ReviewsCards = (props) => (
   <>
-    <h2>Reviews</h2>
-    <img src="./../images/joe.jpg"></img>
-    <div className="my-5 reviews">
-       {items.map(item => (
-            <Card className="m-0 my-3 bg-dark py-3">
-              <Container>
+    <div>
+        <h2 className="mt-5">Reviews </h2>
+        <hr></hr>
+        <Slider {...settings}>
+          {Reviews.map(review => 
+            <div className="px-4">
+              <ReviewsCard review={review}/>
+            </div>
+        )}
+        </Slider>
+      </div>
+  </>)
 
-                <Row>
-                  <Col xs="5" className="d-flex w-100">
-                    <img src={item.img} className="rounded-circle mw-100 py-3 px-3" />
-                  
-                  </Col>
-                  <Col xs="7" className="d-flex " >
-                  <hr style={{ width: "1px", height: "50px", display: "block", padding: "0px", marginTop: "auto" }}></hr>
-                    <div className="d-flex pl-2 flex-column">
-                        <h4>any text here</h4>
-                        <p>Another paragraph here</p>
-
-                    </div>
-                  </Col>
-                </Row>
-              </Container>
-            </Card>
-        ))}
-    </div>
-
-  </>
-)
 
 export default ReviewsCards

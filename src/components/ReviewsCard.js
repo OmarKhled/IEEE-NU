@@ -1,27 +1,30 @@
 import React from 'react'
-import { Feed, Icon } from 'semantic-ui-react'
-const ReviewsCard = () => {
+import { Feed } from 'semantic-ui-react'
+const ReviewsCard = (props) => { 
+   
     return <>
-    <Feed.Event>
-        <Feed.Label image='./../static/images/joe.jpg' />
-        <Feed.Content>
-            <Feed.Summary>
-                <a>Joe Henderson</a> posted on his page
-                <Feed.Date>3 days ago</Feed.Date>
-            </Feed.Summary>
-            <Feed.Extra text>
-                Ours is a life of constant reruns. We're always circling back to where
-                we'd we started, then starting all over again. Even if we don't run
-                extra laps that day, we surely will come back for more of the same
-                another day soon.
-            </Feed.Extra>
-            <Feed.Meta>
-                <Feed.Like>
-                    <Icon name='like' />5 Likes
-                </Feed.Like>
-            </Feed.Meta>
-        </Feed.Content>
-    </Feed.Event>
+    <Feed className="reviews ">
+        <Feed.Event className="card2 ">
+        <Feed.Label className="mx-auto">
+            <img src={props.review.image.default}/>
+        </Feed.Label>
+       
+            <hr style={{borderLeft: "1px solid #4f4f4f", height:"70%", margin: "auto 15px", display:"flex"}} />
+            <Feed.Content>
+                <Feed.Summary>
+                    {props.review.name}
+                </Feed.Summary>
+                <Feed.Extra text>
+                    <blockquote>
+                        "{props.review.review}"
+                    </blockquote>
+                </Feed.Extra>
+                
+            </Feed.Content>
+        </Feed.Event>
+
+        </Feed>
+    
     </>
 }
 

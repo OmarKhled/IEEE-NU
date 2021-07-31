@@ -581,6 +581,7 @@ header {
         .slogan-logo {
             width: 45%;
         }
+
     }
     @keyframes wave {
         0% {
@@ -594,7 +595,7 @@ header {
         }
     }
     //Reviews Card
-    .reviews {
+   /*  .reviews {
         .card{
             background-color: rgba(255, 255, 255, 0.767) !important;
             color: #212529;
@@ -607,4 +608,62 @@ header {
                 width: -webkit-fill-available;
             }
         }
+    } */
+    .reviews {
+        display: flex;
+        img {
+            margin: auto;
+        }
+        .label {
+            width: 5em !important;
+            display: flex !important;
+        }
+        
+    }
+    .slick-arrow, .slick-arrow::after{
+        display: none !important;
+    }
+    .slick-list {
+        overflow: hidden;
+    }
+    .slick-dots {
+        display: flex;
+	justify-content: center;
+	margin: 0;
+	list-style-type: none;
+    }
+    .slick-dots li button:before {
+        padding-top: 10px;
+        color: #fff !important;
+    }
+    .slick-dots ul {
+        display: flex;
+        align-content: flex-start;
+        justify-content: center;
+        padding-left: 0 !important;
+    }
+    .card2 {
+
+        background-color: rgba(255,255,255, 0.767) !important;
+        backdrop-filter: blur(4px) !important;
+        transition: all 350ms;
+        border-radius: 15px;
+        padding: 20px 25px !important;
+        opacity: 0.8;
+    }
+    .card2:hover {
+        opacity: 1;
+    }
+    @media screen and (max-width: 500px) {
+        .event.card2 {
+            transition: all .3s ease-in-out !important;
+            flex-direction:  column !important;
+            .label {
+                margin-bottom: 15px;
+            }
+            hr {
+                margin-bottom: 10px;
+            }
+        }
+        
     }

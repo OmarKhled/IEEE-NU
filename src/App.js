@@ -17,6 +17,8 @@ import "./static/css/master.scss";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/GlobalStyle";
 import themes from "./themes";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import About from "./components/pages/About";
 
 function App() {
