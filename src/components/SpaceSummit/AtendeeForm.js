@@ -8,6 +8,7 @@ const AtendeeForm = ({ values, onChange, nextStage, prevStage }) => {
       type: "text",
       onChange: onChange("name"),
       value: values.name,
+      required: true,
     },
     {
       name: "email",
@@ -15,6 +16,15 @@ const AtendeeForm = ({ values, onChange, nextStage, prevStage }) => {
       type: "email",
       onChange: onChange("email"),
       value: values.email,
+      required: true,
+    },
+    {
+      name: "age",
+      placeholder: "Age",
+      type: "number",
+      onChange: onChange("age"),
+      value: values.agess,
+      required: true,
     },
     {
       name: "phone",
@@ -22,6 +32,7 @@ const AtendeeForm = ({ values, onChange, nextStage, prevStage }) => {
       type: "text",
       onChange: onChange("phone"),
       value: values.phone,
+      required: true,
     },
     {
       name: "ateendeeUniversty",
@@ -29,6 +40,7 @@ const AtendeeForm = ({ values, onChange, nextStage, prevStage }) => {
       type: "text",
       onChange: onChange("ateendeeUniversty"),
       value: values.ateendeeUniversty,
+      required: true,
     },
     {
       name: "facebook",
@@ -36,6 +48,7 @@ const AtendeeForm = ({ values, onChange, nextStage, prevStage }) => {
       type: "text",
       onChange: onChange("facebook"),
       value: values.facebook,
+      required: true,
     },
     {
       name: "government",
@@ -43,6 +56,7 @@ const AtendeeForm = ({ values, onChange, nextStage, prevStage }) => {
       type: "text",
       onChange: onChange("government"),
       value: values.government,
+      required: true,
     },
   ];
 
@@ -50,7 +64,12 @@ const AtendeeForm = ({ values, onChange, nextStage, prevStage }) => {
     <div className="space-even">
       {fields.map((field) => (
         <div className="form-input">
-          <label htmlFor={field.name}>{field.placeholder} : </label>
+          <label
+            className={`${field.required && "required"}`}
+            htmlFor={field.name}
+          >
+            {field.placeholder} :{" "}
+          </label>
           {"  "}
           <input
             placeholder={field.placeholder}

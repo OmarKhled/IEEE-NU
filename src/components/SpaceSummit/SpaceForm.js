@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-import UserType from "./SpaceSummit/UserType";
-import AtendeeForm from "./SpaceSummit/AtendeeForm";
-import ParticipantForm from "./SpaceSummit/ParticipantForm";
+import UserType from "./UserType";
+import AtendeeForm from "./AtendeeForm";
+import ParticipantForm from "./ParticipantForm";
+import Confirmation from "./Confirmation";
+import Success from "./Success";
 
 const SpaceForm = () => {
   const [stage, setStage] = useState(1);
@@ -47,14 +49,27 @@ const SpaceForm = () => {
   };
 
   const onChange = (input) => (e) => {
-    console.log(e.target.value);
-    setValues({
-      ...values,
-      [input]: e.target.value,
-    });
+    console.log(e.target.checked);
+    if (e.target.type == "checkbox") {
+      setValues({
+        ...values,
+        [input]: e.target.checked ? "confirm" : "",
+      });
+    } else {
+      setValues({
+        ...values,
+        [input]: e.target.value,
+      });
+    }
   };
 
   const nextStage = () => {
+    if (stage == 2) {
+      if (values.type === "atendee") {
+      } else if (values.type === "participant") {
+      } else {
+      }
+    }
     setStage(stage + 1);
   };
   const prevStage = () => {
@@ -85,8 +100,15 @@ const SpaceForm = () => {
               prevStage={prevStage}
             />
           )
+        ) : stage === 3 ? (
+          <Confirmation
+            values={values}
+            onChange={onChange}
+            nextStage={nextStage}
+            prevStage={prevStage}
+          />
         ) : (
-          stage === 3 && <h1> Success </h1>
+          <Success />
         )}
       </div>
     </div>

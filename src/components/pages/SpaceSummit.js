@@ -1,6 +1,6 @@
 import React from "react";
 import poster from "../../static/images/Space.jpg";
-import SpaceForm from "../SpaceForm";
+import SpaceForm from "../SpaceSummit/SpaceForm";
 
 const SpaceSummit = () => {
   return (

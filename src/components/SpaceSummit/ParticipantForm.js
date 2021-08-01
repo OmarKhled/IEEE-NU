@@ -56,7 +56,6 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
       type: "text",
       onChange: onChange("thirdMember"),
       value: values.thirdMember,
-      required: true,
     },
     {
       name: "fourthMember",
@@ -64,7 +63,6 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
       type: "text",
       onChange: onChange("fourthMember"),
       value: values.fourthMember,
-      required: true,
     },
     {
       name: "fifthMember",
@@ -72,7 +70,6 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
       type: "text",
       onChange: onChange("fifthMember"),
       value: values.fifthMember,
-      required: true,
     },
     {
       name: "track",
@@ -101,11 +98,11 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
     },
     {
       name: "solution",
-      placeholder: "Describe your idea/ solution to the challenge. ",
+      placeholder: "Describe your idea / solution to the challenge. ",
       onChange: onChange("solution"),
       value: values.solution,
       type: "text",
-      require: true,
+      required: true,
     },
     {
       name: "motivation",
@@ -113,7 +110,7 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
       onChange: onChange("motivation"),
       value: values.motivation,
       type: "text",
-      require: true,
+      required: true,
     },
     {
       name: "comments",
@@ -124,7 +121,7 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
       required: true,
     },
     {
-      name: "comments",
+      name: "confirmation",
       placeholder:
         "By checking the box below, you agree that all your team members will attend our workshops from — to —.",
       onChange: onChange("confirmation"),
@@ -137,38 +134,48 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
 
   return (
     <div className="space-even">
-      {fields.map((field) => !field.radio ? (
+      {fields.map((field) =>
+        !field.radio ? (
           <div className={`form-input`}>
-          <label className={`${field.required && "required"}`} htmlFor={field.name}>{field.placeholder} : </label>
-          {"  "}
-          <input
-            placeholder={field.placeholder}
-            id={field.name}
-            type={field.type}
-            name={field.name}
-            onChange={field.onChange}
-            value={field.value}
-            required={field.required}
-          />
-        </div>
+            <label
+              className={`${field.required && "required"}`}
+              htmlFor={field.name}
+            >
+              {field.placeholder} :{" "}
+            </label>
+            {"  "}
+            <input
+              placeholder={field.placeholder}
+              id={field.name}
+              type={field.type}
+              name={field.name}
+              onChange={field.onChange}
+              value={field.value}
+              required={field.required}
+              checked={values[field.name] == "confirm"}
+            />
+          </div>
         ) : (
           <div className={`form-input`}>
-          <label className={`${field.required && "required"}`} htmlFor={field.name}>{field.placeholder} : </label>
-          {"  "}
-            {
-              field.options.map(option => (
-                <div className="radio">
-                  <input
-                    type="radio"
-                    onChange={field.onChange}
-                    value={option}
-                    name={field.name}
-                    checked={values[field.name] == option}
-                  />{" "}
-                  <span>{option}</span>
-                </div>
-              ))
-            }
+            <label
+              className={`${field.required && "required"}`}
+              htmlFor={field.name}
+            >
+              {field.placeholder} :{" "}
+            </label>
+            {"  "}
+            {field.options.map((option) => (
+              <div className="radio">
+                <input
+                  type="radio"
+                  onChange={field.onChange}
+                  value={option}
+                  name={field.name}
+                  checked={values[field.name] == option}
+                />{" "}
+                <span>{option}</span>
+              </div>
+            ))}
           </div>
         )
       )}
