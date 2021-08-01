@@ -15,22 +15,22 @@ const SpaceForm = (props) => {
 
   const [values, setValues] = useState({
     type: "atendee",
-    teamName: "RunTiime Terror",
-    universty: "Nile Universty",
-    leaderName: "Omar Khaled",
-    leaderPhoneNumber: "01068405513",
-    teamMembersCount: "2",
-    secondMember: "Hassouna",
+    teamName: "",
+    universty: "",
+    leaderName: "",
+    leaderPhoneNumber: "",
+    teamMembersCount: "",
+    secondMember: "",
     thirdMember: "",
     fourthMember: "",
     fifthMember: "",
-    track: "Communication",
-    hackathonBefore: "Yes",
-    hackathons: "AUC Hackathon",
-    solution: "Example",
-    motivation: "...",
-    comments: "...",
-    confirmation: "confirm",
+    track: "",
+    hackathonBefore: "",
+    hackathons: "",
+    solution: "",
+    motivation: "",
+    comments: "",
+    confirmation: "",
 
     // Ateendee
 
@@ -46,7 +46,7 @@ const SpaceForm = (props) => {
   window.onbeforeunload = () => {
     for (let key in values) {
       console.log(values[key]);
-      if (values[key] !== "" && key !== "type") {
+      if (values[key] !== "" && key !== "type" && stage !== 4) {
         return "Data will be lost if you leave the page, are you sure?";
       }
     }

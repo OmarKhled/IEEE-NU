@@ -198,7 +198,7 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
     <div className="confirmation">
       {values.type === "atendee" ? (
         <form
-          action="https://send.pageclip.co/p2fDIrTtZECnuY4H17cjVabESJVqNILg/Space-Summit-Atendees"
+          action="https://send.pageclip.co/EkGSRbgnXNZfSlDpgwXIMjhNzxA19ZPm/Space-Summit-Atendees"
           method="post"
           className="pageclip-form"
         >
@@ -229,7 +229,7 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
       ) : (
         <form
           target="_self"
-          action="https://send.pageclip.co/p2fDIrTtZECnuY4H17cjVabESJVqNILg/Space-Summit-Participants"
+          action="https://send.pageclip.co/EkGSRbgnXNZfSlDpgwXIMjhNzxA19ZPm/Space-Summit-Participants"
           method="post"
           className="pageclip-form"
         >
