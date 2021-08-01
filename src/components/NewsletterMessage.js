@@ -10,6 +10,7 @@ const NewsletterMessage = ({ remove }) => {
     remove();
   };
   const agree = () => {
+    localStorage.setItem("revealPop", "off");
     remove();
     setModalShow(true);
     setTimeout(() => {
