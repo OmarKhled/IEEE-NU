@@ -34,6 +34,8 @@ const Home = () => {
     <div className="px-5" style={{ maxWidth: "65.125rem", margin: "auto" }}>
       <Carousel />
       <NewsContainer />
+      <h2 className="mt-3">Events</h2>
+      <hr/>
       <EventsContainer />
       <Members />
       <PastParteners />

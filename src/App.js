@@ -20,6 +20,7 @@ import themes from "./themes";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import About from "./components/pages/About";
+import Events from "./components/pages/Events";
 
 function App() {
   const [themeState, setTheme] = useState(localStorage.getItem("theme"));
@@ -54,6 +55,9 @@ function App() {
               <Switch>
                 <Route path="/about-us">
                   <About />
+                </Route>
+                <Route path="/events">
+                  <Events/>
                 </Route>
                 <Route exact path="/"> 
                   <Home />

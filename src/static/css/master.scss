@@ -667,3 +667,16 @@ header {
         }
         
     }
+
+/*Start Calendar*/
+.calendar iframe {
+    border: none;
+    transition: 1s all;
+  }
+  .hide-calendar {
+    height: 0 !important;
+  }
+  .show-calendar {
+    height: 550px;
+  }
+  /*End Calendar*/

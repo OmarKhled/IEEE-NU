@@ -15,11 +15,11 @@ const Reviews = [
   },
   {
     image: require("../static/images/img/joe.jpg"),
-    name: "Hebaba",
+    name: "Hobhob",
     review: "Joe Henderson Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon."
   },
   {
-    image: require("../static/images/img/joe.jpg"),
+    image: require("../static/images/img/download.png"),
     name: "Batman",
     review: "Joe Henderson Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon."
   }
