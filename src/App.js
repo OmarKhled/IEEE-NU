@@ -17,7 +17,7 @@ import "./static/css/master.scss";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/GlobalStyle";
 import themes from "./themes";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import About from "./components/pages/About";
 
@@ -49,13 +49,15 @@ function App() {
         <base target="_blank" />
         <Header onToggleTheme={onToggle} toggleTheme={toggle} />
         <Fragment>
-          <div style={{ minHeight: "93vh", marginTop: "8.5rem", height: "1px" }}>
+          <div
+            style={{ minHeight: "93vh", marginTop: "8.5rem", height: "1px" }}
+          >
             <Router>
               <Switch>
                 <Route path="/about-us">
                   <About />
                 </Route>
-                <Route exact path="/"> 
+                <Route exact path="/">
                   <Home />
                 </Route>
               </Switch>
