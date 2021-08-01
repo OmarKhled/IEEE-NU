@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
@@ -12,6 +12,13 @@ h1, h2, h3, h4, h5, h6, p {
     }
     .columns {
         column-rule: 1px solid rgba(155, 155, 155, 0.2);
+    }
+    .space-even>*+* {
+        margin-top: 1rem;
+    }
+    input:focus, input:active {
+        border: none;
+        outline: none;
     }
 // Scroll bar
     ::-webkit-scrollbar {
@@ -666,4 +673,32 @@ header {
             }
         }
         
+    }
+// Space summit
+    .required::after {
+        content: " *";
+        color: red;
+    }
+    .space-form {
+        display: block;
+        width: 100%;
+        color: black;
+        border-radius: 30px;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.767);
+        box-shadow: 0 8px 32px 0 rgba(110, 110, 110, 0.3) !important;
+    }
+    .space-form>*+* {
+        margin-top: 1rem;
+    }
+    .space-form input[type=text], input[type=email], input[type=number] {
+        display: block;
+        width: 100%;
+        border: none;
+        padding: 0.8rem 1rem;
+        border-radius: 100vw;
+    }
+    .form-input {
+        width: 80%;
+        margin: 1rem auto;
     }

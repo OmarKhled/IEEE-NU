@@ -11,6 +11,7 @@ import Home from "./components/pages/Home";
 import Header from "./components/Header";
 import ChangeNavbar from "./components/change-navbar";
 import Footer from "./components/Footer";
+import SpaceSummit from "./components/pages/SpaceSummit";
 // Custom css stylesheet
 import "./static/css/master.scss";
 // Styled Compnents
@@ -56,6 +57,9 @@ function App() {
               <Switch>
                 <Route path="/about-us">
                   <About />
+                </Route>
+                <Route path="/spaceSummit">
+                  <SpaceSummit />
                 </Route>
                 <Route exact path="/">
                   <Home />
