@@ -23,7 +23,7 @@ const AtendeeForm = ({ values, onChange, nextStage, prevStage }) => {
       placeholder: "Age",
       type: "number",
       onChange: onChange("age"),
-      value: values.agess,
+      value: values.age,
       required: true,
     },
     {

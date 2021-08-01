@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Alert } from "reactstrap";
+import { withRouter } from "react-router-dom";
 
 import UserType from "./UserType";
 import AtendeeForm from "./AtendeeForm";
@@ -6,8 +8,10 @@ import ParticipantForm from "./ParticipantForm";
 import Confirmation from "./Confirmation";
 import Success from "./Success";
 
-const SpaceForm = () => {
+const SpaceForm = (props) => {
   const [stage, setStage] = useState(1);
+
+  const [alerts, setAlerts] = useState([]);
 
   const [values, setValues] = useState({
     type: "atendee",
@@ -48,6 +52,15 @@ const SpaceForm = () => {
     }
   };
 
+  useEffect(() => {
+    if (alerts.length > 0) {
+      document.getElementById("form-begin").scrollIntoView();
+      setTimeout(() => {
+        setAlerts([]);
+      }, 3000);
+    }
+  }, [alerts]);
+
   const onChange = (input) => (e) => {
     console.log(e.target.checked);
     if (e.target.type == "checkbox") {
@@ -64,10 +77,51 @@ const SpaceForm = () => {
   };
 
   const nextStage = () => {
+    console.log("object");
     if (stage == 2) {
       if (values.type === "atendee") {
+        if (
+          !values.name ||
+          !values.age ||
+          !values.email ||
+          !values.phone ||
+          !values.ateendeeUniversty ||
+          !values.facebook ||
+          !values.government
+        ) {
+          setAlerts([
+            ...alerts,
+            {
+              msg: "Please fill all the required fields!",
+              color: "danger",
+            },
+          ]);
+          return;
+        }
       } else if (values.type === "participant") {
-      } else {
+        if (
+          !values.teamName ||
+          !values.universty ||
+          !values.leaderName ||
+          !values.leaderPhoneNumber ||
+          !values.teamMembersCount ||
+          !values.secondMember ||
+          !values.track ||
+          !values.hackathonBefore ||
+          !values.solution ||
+          !values.motivation ||
+          !values.comments ||
+          !values.confirmation
+        ) {
+          setAlerts([
+            ...alerts,
+            {
+              msg: "Please fill all the required fields!",
+              color: "danger",
+            },
+          ]);
+          return;
+        }
       }
     }
     setStage(stage + 1);
@@ -80,8 +134,20 @@ const SpaceForm = () => {
     <div>
       <div className="space-form mt-3">
         <div className="text-center">
-          <h2>Book your place now!</h2>
+          <h2>
+            {stage === 1
+              ? "Book Your Place now!"
+              : stage === 2
+              ? `${values.type.capitalize()} information`
+              : "Confirm submission"}
+          </h2>
         </div>
+        {alerts.length > 0 &&
+          alerts.map((alert) => (
+            <div className="form-input">
+              <Alert color={alert.color}> {alert.msg} </Alert>
+            </div>
+          ))}
         {stage === 1 ? (
           <UserType values={values} onChange={onChange} nextStage={nextStage} />
         ) : stage === 2 ? (
@@ -115,4 +181,4 @@ const SpaceForm = () => {
   );
 };
 
-export default SpaceForm;
+export default withRouter(SpaceForm);

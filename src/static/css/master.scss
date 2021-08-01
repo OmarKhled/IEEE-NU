@@ -689,7 +689,7 @@ header {
         box-shadow: 0 8px 32px 0 rgba(110, 110, 110, 0.3) !important;
         user-select: none;
     }
-    .space-form>*+* {
+    .space-form>*+*, .confirmation>*+* {
         margin-top: 1rem;
     }
     .space-form input[type=text], input[type=email], input[type=number] {
@@ -702,4 +702,10 @@ header {
     .form-input {
         width: 80%;
         margin: 1rem auto;
+    }
+    .confirm-field>*+* {
+        margin-top: 0.6rem;
+    }
+    .confirmation-muted {
+        color: #535353;
     }

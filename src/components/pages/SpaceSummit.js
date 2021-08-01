@@ -17,7 +17,7 @@ const SpaceSummit = () => {
         <div className="d-flex justify-content-center align-items-center">
           <h1>Space Summit</h1>
         </div>
-        <p className="pt-3">
+        <p className="pt-3" id="form-begin">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt
           reiciendis inventore suscipit consectetur quae. Repellat, numquam?
           Nulla assumenda possimus expedita eligendi iusto sunt eos laboriosam
@@ -25,6 +25,7 @@ const SpaceSummit = () => {
           dolorem perspiciatis accusantium id, aspernatur necessitatibus
           debitis. Asperiores facilis blanditiis quia dicta nostrum error nemo.
         </p>
+        <br />
         <SpaceForm />
       </div>
     </div>
