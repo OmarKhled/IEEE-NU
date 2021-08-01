@@ -692,7 +692,7 @@ header {
     .space-form>*+*, .confirmation>*+* {
         margin-top: 1rem;
     }
-    .space-form input[type=text], input[type=email], input[type=number] {
+    .space-form input[type=text], .space-form input[type=email], .space-form input[type=number], .mailLetter-input {
         display: block;
         width: 100%;
         border: none;
@@ -708,4 +708,17 @@ header {
     }
     .confirmation-muted {
         color: #535353;
+    }
+
+    // News Letter Modal
+    .modal-content {
+        background: rgba(255,255,255,0.65);
+        background-size: 100% 100%;
+        backdrop-filter: blur(10px); 
+        padding: 2rem;
+        border-radius: 20PX;
+    }
+    .newsletter-modal {
+        width: 90%;
+        margin: auto;
     }
