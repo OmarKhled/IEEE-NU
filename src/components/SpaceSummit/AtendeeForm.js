@@ -63,7 +63,7 @@ const AtendeeForm = ({ values, onChange, nextStage, prevStage }) => {
   return (
     <div className="space-even">
       {fields.map((field) => (
-        <div className="form-input">
+        <div key={field.name} className="form-input">
           <label
             className={`${field.required && "required"}`}
             htmlFor={field.name}

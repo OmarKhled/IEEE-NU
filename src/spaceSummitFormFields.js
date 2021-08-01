@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import Confirmation from "./components/SpaceSummit/Confirmation";
 
-const Confirmation = ({ values, onChange, prevStage, setStage }) => {
+export const fields = (onChange, values, field) => {
   const atendeeFields = [
     {
       name: "name",
@@ -135,7 +135,7 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
       onChange: onChange("track"),
       value: values.track,
       required: true,
-      type: "text",
+      radio: true,
       options: ["Communication", "Energy", "Agriculture", "General"],
     },
     {
@@ -143,7 +143,6 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
       placeholder: "Has any of you attended hackathon(s) before? ",
       onChange: onChange("hackathonBefore"),
       value: values.hackathonBefore,
-      type: "text",
       required: true,
       radio: true,
       options: ["Yes", "No"],
@@ -179,90 +178,20 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
       type: "text",
       required: true,
     },
+    {
+      name: "confirmation",
+      placeholder:
+        "By checking the box below, you agree that all your team members will attend our workshops from — to —.",
+      onChange: onChange("confirmation"),
+      value: values.confirmation,
+      type: "checkbox",
+      required: true,
+      checkBox: true,
+    },
   ];
-
-  useEffect(() => {
-    var form = document.querySelector(".pageclip-form");
-    window.Pageclip.form(form, {
-      onResponse: (err, response) => {
-        if (err) throw err;
-        setStage(4);
-      },
-      successTemplate: "<span>Thank you!</span>",
-    });
-    // console.log(document.querySelector(".pageclip-form"));
-    // console.log(Pageclip);
-  }, []);
-
-  return (
-    <div className="confirmation">
-      {values.type === "atendee" ? (
-        <form
-          action="https://send.pageclip.co/p2fDIrTtZECnuY4H17cjVabESJVqNILg/Space-Summit-Atendees"
-          method="post"
-          className="pageclip-form"
-        >
-          {atendeeFields.map((field) => (
-            <div key={field.name} className="confirm-field text-center">
-              <input
-                type="text`"
-                value={field.value}
-                name={field.name}
-                style={{ display: "none" }}
-              />
-              <h4>{field.placeholder} :</h4>
-              <p className="confirmation-muted">{field.value}</p>
-            </div>
-          ))}
-          <div className="form-input d-flex justify-content-between">
-            <button onClick={prevStage} className="btn-subscribe">
-              Previous
-            </button>
-            <button
-              type="submit"
-              className="btn-subscribe pageclip-form__submit"
-            >
-              <span>Submit</span>
-            </button>
-          </div>
-        </form>
-      ) : (
-        <form
-          target="_self"
-          action="https://send.pageclip.co/p2fDIrTtZECnuY4H17cjVabESJVqNILg/Space-Summit-Participants"
-          method="post"
-          className="pageclip-form"
-        >
-          {participantFields.map(
-            (field) =>
-              field.value !== "" && (
-                <div key={field.name} className="confirm-field text-center">
-                  <input
-                    type="text`"
-                    value={field.value}
-                    name={field.name}
-                    style={{ display: "none" }}
-                  />
-                  <h4>{field.placeholder} :</h4>
-                  <p className="confirmation-muted">{field.value}</p>
-                </div>
-              )
-          )}
-          <div className="form-input d-flex justify-content-between">
-            <button onClick={prevStage} className="btn-subscribe">
-              Previous
-            </button>
-            <button
-              type="submit"
-              className="btn-subscribe pageclip-form__submit"
-            >
-              <span>Submit</span>
-            </button>
-          </div>
-        </form>
-      )}
-    </div>
-  );
+  if (field == "participant") {
+    return participantFields;
+  } else if (field == "atendee") {
+    return atendeeFields;
+  }
 };
-
-export default Confirmation;

@@ -15,22 +15,22 @@ const SpaceForm = (props) => {
 
   const [values, setValues] = useState({
     type: "atendee",
-    teamName: "",
-    universty: "",
-    leaderName: "",
-    leaderPhoneNumber: "",
-    teamMembersCount: "",
-    secondMember: "",
+    teamName: "RunTiime Terror",
+    universty: "Nile Universty",
+    leaderName: "Omar Khaled",
+    leaderPhoneNumber: "01068405513",
+    teamMembersCount: "2",
+    secondMember: "Hassouna",
     thirdMember: "",
     fourthMember: "",
     fifthMember: "",
-    track: "",
-    hackathonBefore: "",
-    hackathons: "",
-    solution: "",
-    motivation: "",
-    comments: "",
-    confirmation: "",
+    track: "Communication",
+    hackathonBefore: "Yes",
+    hackathons: "AUC Hackathon",
+    solution: "Example",
+    motivation: "...",
+    comments: "...",
+    confirmation: "confirm",
 
     // Ateendee
 
@@ -77,6 +77,7 @@ const SpaceForm = (props) => {
   };
 
   const nextStage = () => {
+    setAlerts([]);
     console.log("object");
     if (stage == 2) {
       if (values.type === "atendee") {
@@ -127,6 +128,7 @@ const SpaceForm = (props) => {
     setStage(stage + 1);
   };
   const prevStage = () => {
+    setAlerts([]);
     setStage(stage - 1);
   };
 
@@ -144,7 +146,7 @@ const SpaceForm = (props) => {
         </div>
         {alerts.length > 0 &&
           alerts.map((alert) => (
-            <div className="form-input">
+            <div key={alert.msg} className="form-input">
               <Alert color={alert.color}> {alert.msg} </Alert>
             </div>
           ))}
@@ -172,6 +174,7 @@ const SpaceForm = (props) => {
             onChange={onChange}
             nextStage={nextStage}
             prevStage={prevStage}
+            setStage={setStage}
           />
         ) : (
           <Success />

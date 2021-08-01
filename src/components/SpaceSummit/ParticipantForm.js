@@ -136,7 +136,7 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
     <div className="space-even">
       {fields.map((field) =>
         !field.radio ? (
-          <div className={`form-input`}>
+          <div key={field.name} className={`form-input`}>
             <label
               className={`${field.required && "required"}`}
               htmlFor={field.name}
@@ -156,7 +156,7 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
             />
           </div>
         ) : (
-          <div className={`form-input`}>
+          <div key={field.name} className={`form-input`}>
             <label
               className={`${field.required && "required"}`}
               htmlFor={field.name}
