@@ -11,16 +11,18 @@ import Home from "./components/pages/Home";
 import Header from "./components/Header";
 import ChangeNavbar from "./components/change-navbar";
 import Footer from "./components/Footer";
+import SpaceSummit from "./components/pages/SpaceSummit";
 // Custom css stylesheet
 import "./static/css/master.scss";
 // Styled Compnents
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/GlobalStyle";
 import themes from "./themes";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import About from "./components/pages/About";
 import Events from "./components/pages/Events";
+import Membership from "./components/pages/Membership";
 
 function App() {
   const [themeState, setTheme] = useState(localStorage.getItem("theme"));
@@ -50,16 +52,29 @@ function App() {
         <base target="_blank" />
         <Header onToggleTheme={onToggle} toggleTheme={toggle} />
         <Fragment>
-          <div style={{ minHeight: "93vh", marginTop: "8.5rem", height: "1px" }}>
+          <div
+            style={{ minHeight: "93vh", marginTop: "8.5rem", height: "1px" }}
+          >
             <Router>
               <Switch>
                 <Route path="/about-us">
                   <About />
                 </Route>
+
                 <Route path="/events">
                   <Events/>
                 </Route>
-                <Route exact path="/"> 
+
+                <Route path="/spaceSummit">
+                  <SpaceSummit />
+                </Route>
+                <Route path="/spaceSummit">
+                  <SpaceSummit />
+                </Route>
+                <Route path="/membership">
+                  <Membership />
+                </Route>
+                <Route exact path="/">
                   <Home />
                 </Route>
               </Switch>
