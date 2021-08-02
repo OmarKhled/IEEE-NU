@@ -12,6 +12,7 @@ import Header from "./components/Header";
 import ChangeNavbar from "./components/change-navbar";
 import Footer from "./components/Footer";
 import SpaceSummit from "./components/pages/SpaceSummit";
+import EmailLetter from "./components/EmailLetter";
 // Custom css stylesheet
 import "./static/css/master.scss";
 // Styled Compnents
@@ -55,6 +56,7 @@ function App() {
           <div
             style={{ minHeight: "93vh", marginTop: "8.5rem", height: "1px" }}
           >
+            <EmailLetter />
             <Router>
               <Switch>
                 <Route path="/about-us">

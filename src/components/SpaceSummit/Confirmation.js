@@ -190,8 +190,6 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
       },
       successTemplate: "<span>Thank you!</span>",
     });
-    // console.log(document.querySelector(".pageclip-form"));
-    // console.log(Pageclip);
   }, []);
 
   return (

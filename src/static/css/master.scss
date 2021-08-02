@@ -133,6 +133,16 @@ header {
         width: -webkit-fill-available;
         justify-content: center;
     }
+    .aspect-ratio-4-3 {
+        aspect-ratio: 4 / 3;
+        position: relative;
+    }
+    .aspect-ratio-4-3 img {
+        position: absolute;
+        top: 0; right: 0; left: 0; bottom: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
     .card {
         box-shadow: 0 8px 32px 0 rgba(51, 51, 51, 0.04) !important;
         backdrop-filter: blur( 4px ) !important;
@@ -150,9 +160,9 @@ header {
         text-decoration: none !important;
     }}
     .image {
-        img {
-            aspect-ratio: 16/9;
-         }      
+        // img {
+        //     aspect-ratio: 16/9;
+        //  }      
     }
 }
 .i {
@@ -241,6 +251,11 @@ header {
 // Carousel    
     .slide {
         border-radius: 30px;
+        // position: absolute;
+        // top: 0; right: 0; left: 0; bottom: 0;
+        aspect-ratio: 16/10;
+        width: 100%;
+        height: 100%;
     }
     .carousel {
         box-shadow: 0 8px 32px 0 rgba(51, 51, 51, 0.37) !important;
@@ -429,16 +444,6 @@ header {
     .partener:hover {
         transform: scale(1.15);
     }
-
-// Firefox support
-    @-moz-document url-prefix() {
-        .glass {
-            background-color: rgba(255, 255, 255, .9) !important;
-        }
-        .ui.card {
-            width: auto !important;
-        }
-      }
 // News letter 
       .character {
         z-index: 1000;
@@ -455,7 +460,7 @@ header {
       }
      .news-letter {
          z-index: 1001;
-         background: rgba(255,255,255,0.3);
+         background: rgba(255,255,255,0.7);
          background-size: 100% 100%;
          backdrop-filter: blur(10px); 
          padding: 1.1rem 1.1rem 1.1rem 1.5rem;
@@ -463,6 +468,7 @@ header {
          width: fit-content;
          border-radius: 15px;
          display: grid;
+         color: #000 !important;
          gap: 1rem;
          position: fixed;
          left: 10.6rem;
@@ -477,10 +483,11 @@ header {
          background: none;
          margin-right: 10px;
          border: none;
-         background-color: #e6e6e6;
+         background-color: #cccccc;
          padding: 0.7rem 2rem;
          border-radius: 7px;
          cursor: pointer;
+        //  color: #fff;
      }
      .newsletter-btn:hover {
         background-color: #cccccc;
@@ -703,7 +710,7 @@ header {
     .space-form>*+*, .confirmation>*+* {
         margin-top: 1rem;
     }
-    .space-form input[type=text], input[type=email], input[type=number] {
+    .space-form input[type=text], .space-form input[type=email], .space-form input[type=number], .mailLetter-input {
         display: block;
         width: 100%;
         border: none;
@@ -720,6 +727,7 @@ header {
     .confirmation-muted {
         color: #535353;
     }
+<<<<<<< HEAD
 //Membership
 .membership {
     .col-12 {
@@ -741,3 +749,33 @@ header {
     }
     
 }
+=======
+
+    // News Letter Modal
+    .modal-content {
+        background: rgba(255,255,255,0.65);
+        background-size: 100% 100%;
+        backdrop-filter: blur(10px); 
+        padding: 2rem;
+        border-radius: 20PX;
+    }
+    .newsletter-modal {
+        width: 90%;
+        margin: auto;
+    }
+    // Firefox support
+    @-moz-document url-prefix() {
+        .glass {
+            background-color: rgba(255, 255, 255, .9) !important;
+        }
+        .ui.card {
+            width: auto !important;
+        }
+        .modal-content {
+            background: rgba(255,255,255,0.9) !important;
+        }
+        .news-letter {
+            background: rgba(255,255,255,0.9) !important;
+        }
+      }
+>>>>>>> e96e2318267f3b8cf6454a4d2d9c710974d35e2d
