@@ -728,6 +728,9 @@ header {
         color: #535353;
     }
 //Membership
+    .expand-card {
+        color: #000 !important;
+    }
 .membership {
     .col-12 {
         height: 380px;
@@ -737,6 +740,7 @@ header {
         border-radius: 20px;
         text-align: center;
         height: 100% !important;
+        color: #000 !important;
     }
     .icon {
         width: 70px;
