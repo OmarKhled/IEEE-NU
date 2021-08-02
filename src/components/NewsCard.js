@@ -3,7 +3,7 @@ import { Card, Image, Icon } from "semantic-ui-react";
 
 const NewsCard = (props) => (
   <>
-    <Card className="i">
+    <Card className="i hover-opacity" as="div">
       <Image
         className="aspect-ratio-4-3"
         src={props.news.url}

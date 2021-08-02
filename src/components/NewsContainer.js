@@ -42,11 +42,9 @@ const NewsContainer = () => (
           sm="6"
           md="4"
           lg="4"
-          className="mw-80 d-flex justify-content-center my-4"
+          className="mw-80 d-flex justify-content-center my-4 hover-opacity"
         >
-          <a className="d-flex" href="#">
-            <NewsCard news={i}></NewsCard>
-          </a>
+          <NewsCard news={i}></NewsCard>
         </Col>
       ))}
     </Row>

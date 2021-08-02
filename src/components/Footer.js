@@ -66,7 +66,7 @@ const Footer = () => {
                 className="pageclip-form footer-newsletter-form"
               >
                 <Input
-                  name="email"
+                  name="Email"
                   type="text"
                   placeHolder="Email"
                   className="email-footer"

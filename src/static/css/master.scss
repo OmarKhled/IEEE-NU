@@ -128,6 +128,13 @@ header {
 
 //End Navbar
 //Start News
+    .hover-opacity {
+        opacity: 0.9 !important;
+        transition: 250ms all ease;
+    }
+    .hover-opacity:hover {
+        opacity: 1 !important;
+    }
 .news  {
     a {
         width: -webkit-fill-available;
@@ -758,6 +765,7 @@ header {
         background: rgba(255,255,255,0.65);
         background-size: 100% 100%;
         backdrop-filter: blur(10px); 
+        color: #000 !important;
         padding: 2rem;
         border-radius: 20PX;
     }
@@ -780,3 +788,15 @@ header {
             background: rgba(255,255,255,0.9) !important;
         }
       }
+    
+    // Not found
+    .notFound {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 70vh;
+        height: 1px;
+    }
+    .notFound img {
+        width: 40%;
+    }

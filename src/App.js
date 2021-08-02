@@ -24,6 +24,7 @@ import "slick-carousel/slick/slick-theme.css";
 import About from "./components/pages/About";
 import Events from "./components/pages/Events";
 import Membership from "./components/pages/Membership";
+import Notfound from "./components/pages/Notfound";
 
 function App() {
   const [themeState, setTheme] = useState(localStorage.getItem("theme"));
@@ -62,13 +63,8 @@ function App() {
                 <Route path="/about-us">
                   <About />
                 </Route>
-
                 <Route path="/events">
-                  <Events/>
-                </Route>
-
-                <Route path="/spaceSummit">
-                  <SpaceSummit />
+                  <Events />
                 </Route>
                 <Route path="/spaceSummit">
                   <SpaceSummit />
@@ -78,6 +74,9 @@ function App() {
                 </Route>
                 <Route exact path="/">
                   <Home />
+                </Route>
+                <Route path="/">
+                  <Notfound />
                 </Route>
               </Switch>
               <Footer />
