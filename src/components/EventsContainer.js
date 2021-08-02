@@ -28,14 +28,10 @@ const Events = [
   },
 ];
 const EventsContainer = () => (
-<<<<<<< HEAD
     <>
-    
-=======
-  <>
+  
     <h2 className="mt-3">Events</h2>
     <hr />
->>>>>>> e96e2318267f3b8cf6454a4d2d9c710974d35e2d
     <Item.Group unstackable divided className="events flex-column">
       {Events.map((Event) => (
         <EventsCard Event={Event} />

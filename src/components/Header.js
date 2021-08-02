@@ -92,7 +92,7 @@ const Header = () => {
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink
-                  to="/section"
+                  to="/membership"
                   className="nav-link"
                   activeClassName="active"
                 >
