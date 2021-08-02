@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { Container, Jumbotron, Row, Input } from "reactstrap";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+import validator from "validator";
+
 const Footer = () => {
   useEffect(() => {
     var form = document.querySelector(".pageclip-form");
@@ -13,6 +15,17 @@ const Footer = () => {
       },
     });
   }, []);
+
+  const validate = (e) => {
+    var email = document.querySelector(".email-footer");
+    console.log(email.value);
+    if (validator.isEmail(email.value)) {
+      return true;
+    } else {
+      e.preventDefault();
+      return false;
+    }
+  };
   return (
     <>
       <Jumbotron
@@ -45,36 +58,44 @@ const Footer = () => {
         <Container>
           <div className="footer-container">
             <div className="footer-content">
-              <form action="">
-                <h2>Subscribe to our news letter!</h2>
-                <form
-                  action="https://send.pageclip.co/EkGSRbgnXNZfSlDpgwXIMjhNzxA19ZPm/News-Letter-Form"
-                  method="post"
-                  className="pageclip-form footer-newsletter-form"
+              <h2>Subscribe to our news letter!</h2>
+              <form
+                action="https://send.pageclip.co/EkGSRbgnXNZfSlDpgwXIMjhNzxA19ZPm/News-Letter-Form"
+                method="post"
+                // onSubmit={validate}
+                className="pageclip-form footer-newsletter-form"
+              >
+                <Input
+                  name="email"
+                  type="text"
+                  placeHolder="Email"
+                  className="email-footer"
+                />
+                <button
+                  onClick={validate}
+                  type="submit"
+                  className="btn-subscribe"
                 >
-                  <Input name="email" type="text" placeHolder="Email" />
-                  <button type="submit" className="btn-subscribe">
-                    Subscribe
-                  </button>
-                </form>
-                <div className="text-center">
-                  <a
-                    className="btn-social-icon"
-                    href="https://www.facebook.com/profile.php?id="
-                  >
-                    <FaFacebook />
-                  </a>
-                  <a className="btn-social-icon" href="https://www.twitter.com">
-                    <FaTwitter />
-                  </a>
-                  <a
-                    className="btn-social-icon"
-                    href="https://www.linkedin.com"
-                  >
-                    <FaLinkedin />
-                  </a>
-                </div>
+                  Subscribe
+                </button>
               </form>
+              <div className="text-center">
+                <a
+                  className="btn-social-icon"
+                  href="https://www.facebook.com/IEEENUSB"
+                >
+                  <FaFacebook />
+                </a>
+                {/* <a className="btn-social-icon" href="https://www.twitter.com">
+                    <FaTwitter />
+                  </a> */}
+                <a
+                  className="btn-social-icon"
+                  href="https://eg.linkedin.com/company/ieeenusb"
+                >
+                  <FaLinkedin />
+                </a>
+              </div>
             </div>
             <div>
               <iframe

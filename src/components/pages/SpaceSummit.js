@@ -1,6 +1,7 @@
 import React from "react";
-import poster from "../../static/images/Space.jpg";
+// import poster from "../../static/images/Space.jpg";
 import SpaceForm from "../SpaceSummit/SpaceForm";
+import poster from "../../static/images/EgyptianSummit.jpeg";
 
 const SpaceSummit = () => {
   return (

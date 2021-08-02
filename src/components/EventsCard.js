@@ -1,7 +1,7 @@
 import React from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
-import { Image, Item, Card } from "semantic-ui-react";
+import { Item } from "semantic-ui-react";
 
 const EventsCard = (props) => (
   <Item className="mx-0 my-3 py-3">
