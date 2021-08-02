@@ -133,6 +133,16 @@ header {
         width: -webkit-fill-available;
         justify-content: center;
     }
+    .aspect-ratio-4-3 {
+        aspect-ratio: 4 / 3;
+        position: relative;
+    }
+    .aspect-ratio-4-3 img {
+        position: absolute;
+        top: 0; right: 0; left: 0; bottom: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
     .card {
         box-shadow: 0 8px 32px 0 rgba(51, 51, 51, 0.04) !important;
         backdrop-filter: blur( 4px ) !important;
@@ -150,9 +160,9 @@ header {
         text-decoration: none !important;
     }}
     .image {
-        img {
-            aspect-ratio: 16/9;
-         }      
+        // img {
+        //     aspect-ratio: 16/9;
+        //  }      
     }
 }
 .i {

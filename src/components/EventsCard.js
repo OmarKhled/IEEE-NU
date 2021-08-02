@@ -10,11 +10,11 @@ const EventsCard = (props) => (
       <Item.Header href={props.Event.url} as="a">
         {props.Event.title}
       </Item.Header>
-      <Item.Meta className="d-flex align-items-center gap-2">
+      <Item.Meta className="d-flex align-items-center gap-1 ">
         <FaCalendarAlt />
         {props.Event.date}
       </Item.Meta>
-      <Item.Meta className="d-flex align-items-center gap-2">
+      <Item.Meta className="d-flex align-items-center gap-1">
         <MdLocationOn />
         {props.Event.place}
       </Item.Meta>
