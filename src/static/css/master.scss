@@ -311,10 +311,7 @@ header {
             .image {
                 left: 10px;
             }
-            .content {
-
-                //padding-left: 21px !important;
-            }
+           
         }
         .description {
             overflow: hidden;
@@ -681,6 +678,20 @@ header {
         }
         
     }
+
+/*Start Calendar*/
+.calendar iframe {
+    border: none;
+    transition: 1s all;
+  }
+  .hide-calendar {
+    height: 0 !important;
+  }
+  .show-calendar {
+    height: 550px;
+  }
+  /*End Calendar*/
+
 // Space summit
     .required::after {
         content: " *";
@@ -716,6 +727,27 @@ header {
     .confirmation-muted {
         color: #535353;
     }
+//Membership
+.membership {
+    .col-12 {
+        height: 380px;
+    }
+    .card {
+        padding: 25px 20px;
+        border-radius: 20px;
+        text-align: center;
+        height: 100% !important;
+    }
+    .icon {
+        width: 70px;
+        height: 70px;
+        padding: 7px;
+        border-radius: 50%;
+        border:rgb(165, 165, 165) 1px solid;
+        margin: 0 auto;
+    }
+    
+}
 
     // News Letter Modal
     .modal-content {

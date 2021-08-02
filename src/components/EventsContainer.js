@@ -28,7 +28,8 @@ const Events = [
   },
 ];
 const EventsContainer = () => (
-  <>
+    <>
+  
     <h2 className="mt-3">Events</h2>
     <hr />
     <Item.Group unstackable divided className="events flex-column">
