@@ -440,13 +440,10 @@ header {
         image-rendering: -moz-crisp-edges; /* Firefox */
         image-rendering: -o-crisp-edges; /* Opera */
         image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+       aspect-ratio: 1 / 1;
     }
-    .partener::after {
-        position: absolute;
-        top: 0; right: 0; left: 0; bottom: 0;
-        padding: 15px;
-        background: white;
-        border-radius: 50%;
+    .partener img {
+       aspect-ratio: 1 / 1;
     }
     .partener:hover {
         transform: scale(1.15);
@@ -799,4 +796,11 @@ header {
     }
     .notFound img {
         width: 40%;
+        filter: gray; /* IE6-9 */
+        -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+        filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+        opacity: 0.8;
+        image-rendering: -moz-crisp-edges; /* Firefox */
+        image-rendering: -o-crisp-edges; /* Opera */
+        image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
     }
