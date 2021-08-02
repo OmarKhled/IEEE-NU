@@ -4,12 +4,14 @@ import { Card, Image, Icon } from "semantic-ui-react";
 const NewsCard = (props) => (
   <>
     <Card className="i hover-opacity" as="div">
-      <Image
-        className="aspect-ratio-4-3"
-        src={props.news.url}
-        wrapped
-        ui={false}
-      />
+      <div className="responsive-item-4-3">
+        <img
+          className="responsive-item"
+          src={props.news.url}
+          wrapped
+          ui={false}
+        />
+      </div>
       <Card.Content>
         <Card.Header>{props.news.title}</Card.Header>
         <Card.Meta>

@@ -5,6 +5,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 * {
     font-family: 'Poppins', sans-serif !important;
+    box-sizing: border-box;
 }
 // Global theme
     .muted {
@@ -19,6 +20,10 @@ h1, h2, h3, h4, h5, h6, p {
     input:focus, input:active {
         border: none;
         outline: none;
+    }
+    img {
+        visibility: visible !important;
+        object-fit: fill;
     }
 // Scroll bar
     ::-webkit-scrollbar {
@@ -140,16 +145,18 @@ header {
         width: -webkit-fill-available;
         justify-content: center;
     }
-    .aspect-ratio-4-3 {
-        aspect-ratio: 4 / 3;
+    .responsive-item-4-3 {
+        padding-top: 75%;
+        height: 0;
         position: relative;
     }
-    .aspect-ratio-4-3 img {
+    .responsive-item {
         position: absolute;
-        top: 0; right: 0; left: 0; bottom: 0;
-        width: 100% !important;
-        height: 100% !important;
+        top: 0; right: 0; bottom: 0; left: 0; 
+        width: 100%;
+        height: 100%;
     }
+
     .card {
         box-shadow: 0 8px 32px 0 rgba(51, 51, 51, 0.04) !important;
         backdrop-filter: blur( 4px ) !important;
@@ -166,11 +173,6 @@ header {
         opacity: 1;
         text-decoration: none !important;
     }}
-    .image {
-        // img {
-        //     aspect-ratio: 16/9;
-        //  }      
-    }
 }
 .i {
     padding-top: 0 !important;
@@ -255,12 +257,20 @@ header {
     transition: all 400ms;
   }
   /*End Footer*/
-// Carousel    
+// Carousel
+    .carousel-item {
+        height: 0;
+        padding-top: 62.5%;
+        position: relative;
+    }
+    .responsive-item-16-10 {
+        position: absolute;
+        top: 0; right: 0; left: 0; bottom: 0;
+    }    
     .slide {
         border-radius: 30px;
-        // position: absolute;
-        // top: 0; right: 0; left: 0; bottom: 0;
-        aspect-ratio: 16/10;
+        // aspect-ratio: 16/10;
+        // object-fit: fill;
         width: 100%;
         height: 100%;
     }
