@@ -20,30 +20,30 @@ const Header = () => {
       <header>
         <ChangeNavbar />
         <Container className="px-5" style={{ maxWidth: "65.125rem" }}>
-          <span className="pr-3" href="https://www.ieee.org/">
+          <a className="header-links pr-3" href="https://www.ieee.org/">
             IEEE.org
-          </span>
-          <span
-            className="pr-3"
+          </a>
+          <a
+            className="header-links pr-3"
             href="https://ieeexplore.ieee.org/Xplore/home.jsp"
           >
             IEEE Explore Digital Library
-          </span>
-          <span
-            className="pr-3"
+          </a>
+          <a
+            className="header-links pr-3"
             href="https://standards.ieee.org/?_ga=2.166069502.1382483501.1627826864-1802152504.1622396110"
           >
             IEEE Standards
-          </span>
-          <span
-            className="pr-3"
+          </a>
+          <a
+            className="header-links pr-3"
             href="https://spectrum.ieee.org/?_ga=2.202702929.1382483501.1627826864-1802152504.1622396110"
           >
             IEEE Spectrum
-          </span>
-          <span className="pr-3" href="https://www.ieee.org/sitemap.html">
+          </a>
+          <a className="header-links pr-3" href="https://www.ieee.org/sitemap.html">
             More Sites
-          </span>
+          </a>
         </Container>
         <hr></hr>
       </header>

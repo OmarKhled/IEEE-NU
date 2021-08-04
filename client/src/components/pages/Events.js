@@ -29,7 +29,7 @@ const Events = () => (
           src="https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/2ddee45b-6a53-4ffe-900f-53894608dca8/cid-20DD564E034F7922/index.html"
         ></iframe>
       </div>
-      <EventsContainer />
+      <EventsContainer full />
     </div>
   </>
 );

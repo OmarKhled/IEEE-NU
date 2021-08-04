@@ -3,6 +3,7 @@ import Member from "./Member";
 import { Row, Col } from "reactstrap";
 import mustafa from "../static/images/Members/Mohamed.png";
 import marwa from "../static/images/Members/marwa.png";
+import kandy from "../static/images/Members/kandy.png";
 const members = [
   {
     image: mustafa,
@@ -17,8 +18,7 @@ const members = [
     faculty: "Computer Science",
   },
   {
-    image:
-      "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200",
+    image: kandy,
     name: "Youssef kandy",
     committee: "Board",
     faculty: "Engineering",

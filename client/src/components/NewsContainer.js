@@ -56,7 +56,7 @@ const NewsContainer = ({ full }) => {
               )
             )}
           </Row>
-          {!full && (
+          {!full && news.length > 3 && (
             <div className="d-flex justify-conent-center">
               <Link
                 style={{ width: "fit-content" }}

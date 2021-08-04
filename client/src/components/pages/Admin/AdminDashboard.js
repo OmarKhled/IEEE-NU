@@ -54,9 +54,10 @@ const AdminDashboard = () => {
         <Alert color="primary">
           <ul style={{ margin: "0" }}>
             {[
-              "This admin dashboard may have some bugs",
-              "if you faced any error just refresh the tab and if required logout and login again and all will be good",
-              "in case of any bug or error discovery please report it",
+              "This admin dashboard is still under development and may have some bugs",
+              "If you faced any error just refresh the tab and if required logout and login again and all will be good",
+              "In case of any bug or error discovery please report it",
+              "Please watch the name of any photo you upload as it shouldn't have any spaces in its name, otherwise photo will be ignored and won't be loaded",
             ].map((alert) => (
               <li style={{ margin: "0" }}>{alert}</li>
             ))}

@@ -4,14 +4,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel2 from "../static/images/CarouselPhotos/2.jpg";
 import Carousel3 from "../static/images/CarouselPhotos/3.jpg";
 import spaceSummit from "../static/images/EgyptianSummit.jpeg";
-import store from "../static/images/store.png";
 
 const slides = [
   {
     img: spaceSummit,
-  },
-  {
-    img: store,
   },
   {
     img: Carousel2,

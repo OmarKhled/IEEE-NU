@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import Carousel from "react-elastic-carousel";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import nile from "../static/images/Parteners/nileuniversty.png";
-import intel from "../static/images/Parteners/intel.png";
 import research from "../static/images/Parteners/research.png";
 import nilepreneurs from "../static/images/Parteners/nilepreneurs.png";
-import microsoft from "../static/images/Parteners/microsoft.png";
+import academy from "../static/images/Parteners/academy.png";
+import auc from "../static/images/Parteners/auc.png";
+import helwan from "../static/images/Parteners/helwan.jpg";
+import nokia from "../static/images/Parteners/nokia.png";
+import rim from "../static/images/Parteners/rim.jpeg";
+import st from "../static/images/Parteners/st.png";
+import tico from "../static/images/Parteners/tico.jfif";
+import yard from "../static/images/Parteners/yard.png";
+import Slider from "react-slick";
 
 const PastParteners = () => {
   const items = [
@@ -19,10 +26,28 @@ const PastParteners = () => {
       img: nilepreneurs,
     },
     {
-      img: microsoft,
+      img: nokia,
     },
     {
-      img: intel,
+      img: rim,
+    },
+    {
+      img: st,
+    },
+    {
+      img: tico,
+    },
+    {
+      img: yard,
+    },
+    {
+      img: auc,
+    },
+    {
+      img: helwan,
+    },
+    {
+      img: academy,
     },
   ];
   const breakPoints = [
@@ -48,8 +73,6 @@ const PastParteners = () => {
         breakPoints={breakPoints}
         pagination={false}
         renderArrow={myArrow}
-        enableAutoPlay
-        autoPlaySpeed={1000}
       >
         {items.map((item) => (
           <div key={item.img} className="partener">
