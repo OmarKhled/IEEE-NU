@@ -20,7 +20,6 @@ router.post(
 
     if (!user) {
       res.json({ msg: "Invalid email" });
-      next();
     }
 
     const correctPassword = await bcrypt.compare(password, user.password);
@@ -31,6 +30,7 @@ router.post(
           console.log(err);
           throw err;
         }
+        res.set("Content-Type", "application/json");
         res.json({
           user: {
             _id: user._id,
@@ -44,9 +44,7 @@ router.post(
       res.json({
         msg: "Invalid password",
       });
-      next();
     }
-    next();
   })
 );
 

@@ -35,7 +35,7 @@ app.post(
     const __dirname = path.resolve();
     const file = req.files.file;
     if (process.env.NODE_ENV === "production") {
-      file.mv(`${__dirname}/client/build/public/images/${file.name}`, (err) => {
+      file.mv(`${__dirname}/client/build/images/${file.name}`, (err) => {
         if (err) {
           console.error(err);
           return res.status(500).send({ msg: err });
