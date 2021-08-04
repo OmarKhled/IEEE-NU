@@ -12,6 +12,7 @@ const NewsContainer = ({ full }) => {
   let { news, loading, alerts } = useSelector((state) => state.news);
   news = news.slice(0, 4);
 
+  // eslint-disable-next-line
   useEffect(async () => {
     dispatch(getNews());
   }, []);
@@ -20,30 +21,15 @@ const NewsContainer = ({ full }) => {
     <div className="news mt-5">
       <h2>News</h2>
       <hr></hr>
-      {
-        alerts.length > 0 && (
-          alerts.map((alert) => <Alert color="danger">{alert}</Alert>)
-        )
-      }
+      {alerts.length > 0 &&
+        alerts.map((alert) => <Alert color="danger">{alert}</Alert>)}
       {loading ? (
         <LoadingComponent />
       ) : (
         <>
-        <Row>
-          {news.map((i, index) =>
-            full ? (
-              <Col
-                key={index}
-                xs="12"
-                sm="6"
-                md="4"
-                lg="4"
-                className="mw-80 d-flex justify-content-center my-4 hover-opacity"
-              >
-                <NewsCard news={i}></NewsCard>
-              </Col>
-            ) : (
-              index <= 2 && (
+          <Row>
+            {news.map((i, index) =>
+              full ? (
                 <Col
                   key={index}
                   xs="12"
@@ -54,14 +40,36 @@ const NewsContainer = ({ full }) => {
                 >
                   <NewsCard news={i}></NewsCard>
                 </Col>
+              ) : (
+                index <= 2 && (
+                  <Col
+                    key={index}
+                    xs="12"
+                    sm="6"
+                    md="4"
+                    lg="4"
+                    className="mw-80 d-flex justify-content-center my-4 hover-opacity"
+                  >
+                    <NewsCard news={i}></NewsCard>
+                  </Col>
+                )
               )
-            ) 
+            )}
+          </Row>
+          {!full && (
+            <div className="d-flex justify-conent-center">
+              <Link
+                style={{ width: "fit-content" }}
+                to="/news"
+                className="m-auto btn-subscribe"
+              >
+                See All News
+              </Link>
+            </div>
           )}
-        </Row>
-          {!full && <div className="d-flex justify-conent-center"><Link style={{width: "fit-content"}} to="/news" className="m-auto btn-subscribe">See All News</Link></div>}
-          </>
+        </>
       )}
-      </div>
+    </div>
   );
 };
 

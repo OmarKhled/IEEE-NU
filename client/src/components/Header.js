@@ -9,6 +9,7 @@ import {
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import logo from "../static/images/IEEE-NU-Logo.png";
+import ChangeNavbar from "./change-navbar";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,12 +18,32 @@ const Header = () => {
   return (
     <div>
       <header>
+        <ChangeNavbar />
         <Container className="px-5" style={{ maxWidth: "65.125rem" }}>
-          <span className="pr-3" href="https://www.ieee.org/">IEEE.org</span>
-          <span className="pr-3" href="https://ieeexplore.ieee.org/Xplore/home.jsp">IEEE Explore Digital Library</span>
-          <span className="pr-3" href="https://standards.ieee.org/?_ga=2.166069502.1382483501.1627826864-1802152504.1622396110">IEEE Standards</span>
-          <span className="pr-3" href="https://spectrum.ieee.org/?_ga=2.202702929.1382483501.1627826864-1802152504.1622396110">IEEE Spectrum</span>
-          <span className="pr-3" href="https://www.ieee.org/sitemap.html">More Sites</span>
+          <span className="pr-3" href="https://www.ieee.org/">
+            IEEE.org
+          </span>
+          <span
+            className="pr-3"
+            href="https://ieeexplore.ieee.org/Xplore/home.jsp"
+          >
+            IEEE Explore Digital Library
+          </span>
+          <span
+            className="pr-3"
+            href="https://standards.ieee.org/?_ga=2.166069502.1382483501.1627826864-1802152504.1622396110"
+          >
+            IEEE Standards
+          </span>
+          <span
+            className="pr-3"
+            href="https://spectrum.ieee.org/?_ga=2.202702929.1382483501.1627826864-1802152504.1622396110"
+          >
+            IEEE Spectrum
+          </span>
+          <span className="pr-3" href="https://www.ieee.org/sitemap.html">
+            More Sites
+          </span>
         </Container>
         <hr></hr>
       </header>
@@ -39,7 +60,7 @@ const Header = () => {
           </NavLink>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className="sticky" className="mr-auto" navbar>
+            <Nav className="sticky mr-auto" navbar>
               <NavItem>
                 <NavLink
                   exact

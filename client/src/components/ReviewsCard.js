@@ -6,7 +6,7 @@ const ReviewsCard = (props) => {
       <Feed className="reviews" style={{ height: "100%" }}>
         <Feed.Event className="card2 ">
           <Feed.Label className="mx-auto">
-            <img src={props.review.image.default} />
+            <img alt="ref" src={props.review.image.default} />
           </Feed.Label>
           <hr
             style={{

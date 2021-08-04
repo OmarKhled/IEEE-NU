@@ -13,28 +13,35 @@ export const getUser = (user) => async (dispatch, getState) => {
     type: REQUEST_USER,
   });
 
-  const res = await axios.post("/api/users", user);
-  const data = res.data;
+  try {
+    const res = await axios.post("/api/users", user);
+    const data = res.data;
 
-  if (data.msg) {
+    if (data.msg) {
+      dispatch({
+        type: GET_USER_FAIL,
+        payload: data.msg,
+      });
+      setTimeout(() => {
+        dispatch({
+          type: CLEAR_USER_ALERTS,
+        });
+      }, 3000);
+    } else if (data.user) {
+      dispatch({
+        type: GET_USER_SUCCESS,
+        payload: data.user,
+      });
+
+      const token = getState().user.user.token;
+      localStorage.setItem("token", token);
+    }
+  } catch (err) {
+    console.log(err, err.message);
     dispatch({
       type: GET_USER_FAIL,
-      payload: data.msg,
+      payload: "Server Error",
     });
-
-    setTimeout(() => {
-      dispatch({
-        type: CLEAR_USER_ALERTS,
-      });
-    }, 3000);
-  } else if (data.user) {
-    dispatch({
-      type: GET_USER_SUCCESS,
-      payload: data.user,
-    });
-
-    const token = getState().user.user.token;
-    localStorage.setItem("token", token);
   }
 };
 

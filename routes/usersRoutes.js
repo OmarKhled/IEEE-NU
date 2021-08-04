@@ -27,7 +27,10 @@ router.post(
 
     if (correctPassword) {
       jwt.sign({ id: user._id }, process.env.SECRET, (err, token) => {
-        if (err) throw err;
+        if (err) {
+          console.log(err);
+          throw err;
+        }
         res.json({
           user: {
             _id: user._id,

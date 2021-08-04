@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Row } from "reactstrap";
-import { Card } from "semantic-ui-react";
 
 import logo from "../static/images/IEEE-NU-Logo.png";
 
@@ -11,7 +10,7 @@ const AboutAbout = (props) => (
       <hr></hr>
       <Row>
         <Col xs="12" sm={{ size: 6, order: 2 }} className="my-2">
-          <img className=" w-100" src={logo} />
+          <img className=" w-100" src={logo} alt="logo" />
         </Col>
         <Col xs="12" sm={{ size: 6, order: 1 }} className="my-2">
           <div>

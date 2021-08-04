@@ -12,6 +12,7 @@ const EventsContainer = () => {
 
   useEffect(() => {
     dispatch(getEvents());
+    // eslint-disable-next-line
   }, []);
   return (
     <>
@@ -22,7 +23,7 @@ const EventsContainer = () => {
       ) : (
         <Item.Group unstackable divided className="events flex-column">
           {events.map((Event) => (
-            <EventsCard Event={Event} />
+            <EventsCard key={Event.title} Event={Event} />
           ))}
         </Item.Group>
       )}

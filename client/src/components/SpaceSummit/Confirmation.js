@@ -190,6 +190,7 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
       },
       successTemplate: "<span>Thank you!</span>",
     });
+    // eslint-disable-next-line
   }, []);
 
   return (

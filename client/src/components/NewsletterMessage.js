@@ -1,4 +1,3 @@
-import { Alert } from "bootstrap";
 import React, { useState, useEffect } from "react";
 import { Modal } from "react-bootstrap";
 
@@ -15,44 +14,43 @@ const NewsletterMessage = ({ remove }) => {
     setModalShow(true);
     setTimeout(() => {
       var form = document.querySelector("#form-email-letter");
-        window.Pageclip.form(form, {
-          onResponse: (err, response) => {
-            console.log("object");
-            if (err) throw err;
-            document.getElementById("form-email-letter").innerHTML = `
+      window.Pageclip.form(form, {
+        onResponse: (err, response) => {
+          console.log("object");
+          if (err) throw err;
+          document.getElementById("form-email-letter").innerHTML = `
               <h2>Thanks for your interest</h2>
             `;
-          }
-        });
-    }, 200)
+        },
+      });
+    }, 200);
   };
   const [modalShow, setModalShow] = useState(false);
   const onHide = () => setModalShow(false);
 
-  const [alerts, setAlerts] = useState([])
+  const [alerts, setAlerts] = useState([]);
 
   useEffect(() => {
     if (alerts.length > 0) {
       setTimeout(() => {
-        setAlerts([])
-      }, 2300)
+        setAlerts([]);
+      }, 2300);
     }
-  }, [alerts])
+  }, [alerts]);
 
-  useEffect(() => {
-  }, []);
+  useEffect(() => {}, []);
 
   const validate = (e) => {
-    const email = document.querySelector("#letter-email")
+    const email = document.querySelector("#letter-email");
     if (email.value) {
       if (validator.isEmail(email.value)) {
-        console.log("helo")
-        return true
+        console.log("helo");
+        return true;
       }
     }
-    setAlerts(["Please provide a valid email"])
-    e.preventDefault()
-  }
+    setAlerts(["Please provide a valid email"]);
+    e.preventDefault();
+  };
 
   return (
     <div>
@@ -68,16 +66,30 @@ const NewsletterMessage = ({ remove }) => {
             <h3>Do you want to subscribe to our news letter ?</h3>
           </div>
           <div>
-            {
-              alerts.map(alert => <div className="alert alert-danger" color="danger">{alert}</div>)
-            }
+            {alerts.map((alert) => (
+              <div className="alert alert-danger" color="danger">
+                {alert}
+              </div>
+            ))}
           </div>
-          <form action="https://send.pageclip.co/EkGSRbgnXNZfSlDpgwXIMjhNzxA19ZPm/News-Letter-Form"  method="post" onSubmit={validate} id="form-email-letter" className="pageclip-form space-even mt-4">
+          <form
+            action="https://send.pageclip.co/EkGSRbgnXNZfSlDpgwXIMjhNzxA19ZPm/News-Letter-Form"
+            method="post"
+            onSubmit={validate}
+            id="form-email-letter"
+            className="pageclip-form space-even mt-4"
+          >
             <div>
               <label htmlFor="">
                 <h3> Email:</h3>{" "}
               </label>
-              <input className="mailLetter-input" id="letter-email" placeholder="Email" name="Email" type="email"/>
+              <input
+                className="mailLetter-input"
+                id="letter-email"
+                placeholder="Email"
+                name="Email"
+                type="email"
+              />
             </div>
             <div className="d-flex justify-content-center">
               <input type="submit" className="btn-subscribe" value="Submit" />
