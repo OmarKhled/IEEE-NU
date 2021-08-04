@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Container, Jumbotron, Row, Input } from "reactstrap";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import validator from "validator";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   useEffect(() => {
@@ -107,6 +108,9 @@ const Footer = () => {
                 height="100%"
               ></iframe>
             </div>
+          </div>
+          <div className="d-flex justify-content-center mt-3">
+            <Link to="/admin/dashboard">Admin Panel</Link>
           </div>
         </Container>
       </Jumbotron>

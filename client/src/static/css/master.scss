@@ -25,6 +25,9 @@ h1, h2, h3, h4, h5, h6, p {
         visibility: visible !important;
         object-fit: fill;
     }
+    textarea {
+        min-height: 10rem !important;
+    }
 // Scroll bar
     ::-webkit-scrollbar {
         width: .753rem;
@@ -813,4 +816,17 @@ header {
         image-rendering: -moz-crisp-edges; /* Firefox */
         image-rendering: -o-crisp-edges; /* Opera */
         image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+    }
+
+    .admin-login {
+        display: flex;
+        align-items: center;
+        justify-content: center;   
+    }
+    .login-card {
+        color: #000 !important;
+        width: 50%;
+    }
+    .logo {
+        width: 50px;
     }
