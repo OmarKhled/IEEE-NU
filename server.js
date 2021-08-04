@@ -64,12 +64,12 @@ app.use("/api/users", usersRoutes);
 app.use(errorHandler);
 
 if (process.env.NODE_ENV == "production") {
-  app.use(express.static("client/build"));
+  const __dirname = path.resolve();
+
+  app.use(express.static(path.join(__dirname, "/client/build")));
 
   app.get("*", (req, res) => {
-    const __dirname = path.resolve();
     console.log(path.resolve(__dirname, "client", "build", "index.html"));
-
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
