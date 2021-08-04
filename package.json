@@ -10,7 +10,7 @@
     "clientInstall": "npm install --prefix client",
     "server": "nodemon server",
     "dev": "concurrently \" npm run server \" \" npm run client \"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && CI=false && npm run clientInstall && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false CI=false npm run clientInstall && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
