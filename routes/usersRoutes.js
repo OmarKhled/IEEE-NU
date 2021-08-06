@@ -1,7 +1,6 @@
 import express from "express";
 import User from "../models/userModel.js";
 import bcrypt from "bcrypt";
-import asyncHandler from "express-async-handler";
 import jwt from "jsonwebtoken";
 
 import auth from "../middleware/auth.js";
@@ -11,11 +10,10 @@ const router = express.Router();
 // @desc    Auth User
 // @route   POST /api/users
 // @access  Public
-router.post(
-  "/",
-  asyncHandler(async (req, res, next) => {
-    const { email, password } = req.body;
+router.post("/", async (req, res, next) => {
+  const { email, password } = req.body;
 
+  try {
     const user = await User.findOne({ email });
 
     if (!user) {
@@ -45,8 +43,13 @@ router.post(
         msg: "Invalid password",
       });
     }
-  })
-);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({
+      msg: "Server Error",
+    });
+  }
+});
 
 // @desc    Get User Authorized
 // @route   POST /api/users/auth
@@ -56,17 +59,22 @@ router.get("/auth", auth, async (req, res, next) => {
   if (!user) {
     res.status(401).json({ msg: "Invalid User" });
   }
-  const dbUser = await User.findById({ _id: user.id }).select("-password");
-  if (!dbUser) {
-    res.json({ msg: "Invalid cridintials" });
+  try {
+    const dbUser = await User.findById({ _id: user.id }).select("-password");
+    if (!dbUser) {
+      res.json({ msg: "Invalid cridintials" });
+    }
+    res.json({
+      user: {
+        name: dbUser.name,
+        email: dbUser.email,
+        id: dbUser._id,
+      },
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ msg: "Server Error" });
   }
-  res.json({
-    user: {
-      name: dbUser.name,
-      email: dbUser.email,
-      id: dbUser._id,
-    },
-  });
 });
 
 export default router;

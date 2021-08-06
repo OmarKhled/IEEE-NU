@@ -42,6 +42,11 @@ export const getUser = (user) => async (dispatch, getState) => {
       type: GET_USER_FAIL,
       payload: "Server Error",
     });
+    setTimeout(() => {
+      dispatch({
+        type: CLEAR_USER_ALERTS,
+      });
+    }, 3000);
   }
 };
 

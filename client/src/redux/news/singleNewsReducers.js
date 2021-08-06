@@ -60,12 +60,14 @@ export const singleNewsReducer = (
           description: "",
           date: "",
         },
+        alerts: [],
       };
     case GET_SINGLE_NEWS_SUCCESS:
       return {
         ...state,
         loading: false,
         news: payload,
+        alerts: [],
       };
     case NEWS_UPDATE_FAIL:
     case GET_SINGLE_NEWS_FAIL:

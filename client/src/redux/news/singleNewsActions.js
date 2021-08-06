@@ -20,13 +20,17 @@ export const deleteNews = (id) => async (dispatch) => {
       auth: localStorage.getItem("token"),
     },
   };
-  const res = await axios.delete(`/api/news/${id}`, config);
-  const news = res.data.news;
+  try {
+    const res = await axios.delete(`/api/news/${id}`, config);
+    const news = res.data.news;
 
-  dispatch({
-    type: DELETE_NEWS,
-    payload: news,
-  });
+    dispatch({
+      type: DELETE_NEWS,
+      payload: news,
+    });
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 export const setAlerts = (alerts) => async (dispatch) => {
@@ -81,6 +85,10 @@ export const updateNews = (id, news) => async (dispatch) => {
     });
   } catch (err) {
     console.log(err);
+    dispatch({
+      type: NEWS_UPDATE_FAIL,
+      payload: err.message,
+    });
   }
 };
 
@@ -121,6 +129,10 @@ export const addNews = (news) => async (dispatch) => {
     });
   } catch (err) {
     console.log(err);
+    dispatch({
+      type: ADD_NEWS_FAIL,
+      payload: err.message,
+    });
   }
 };
 
@@ -134,17 +146,26 @@ export const getSingleNews = (id, news) => async (dispatch) => {
       auth: localStorage.getItem("token"),
     },
   };
-  const res = await axios.get(`/api/news/${id}`);
 
-  if (res.data.msg) {
+  try {
+    const res = await axios.get(`/api/news/${id}`);
+
+    if (res.data.msg) {
+      dispatch({
+        type: GET_SINGLE_NEWS_FAIL,
+        payload: res.data.msg,
+      });
+    }
+
+    dispatch({
+      type: GET_SINGLE_NEWS_SUCCESS,
+      payload: res.data.news,
+    });
+  } catch (err) {
+    console.log(err);
     dispatch({
       type: GET_SINGLE_NEWS_FAIL,
-      payload: res.data.msg,
+      payload: err.message,
     });
   }
-
-  dispatch({
-    type: GET_SINGLE_NEWS_SUCCESS,
-    payload: res.data.news,
-  });
 };

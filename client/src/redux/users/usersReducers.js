@@ -25,6 +25,7 @@ export const userAuthReducer = (
         user: payload,
         loading: false,
         isAuthenticated: true,
+        alerts: [],
       };
     case GET_USER_FAIL:
       localStorage.removeItem("token");

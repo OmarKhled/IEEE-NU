@@ -39,17 +39,21 @@ const store = async () => {
         auth: token,
       },
     };
-    const res = await axios.get("/api/users/auth", config);
-    const user = res.data.user;
-    if (user) {
-      initialState = {
-        user: {
-          user: user,
-          loading: false,
-          alerts: [],
-          isAuthenticated: true,
-        },
-      };
+    try {
+      const res = await axios.get("/api/users/auth", config);
+      const user = res.data.user;
+      if (user) {
+        initialState = {
+          user: {
+            user: user,
+            loading: false,
+            alerts: [],
+            isAuthenticated: true,
+          },
+        };
+      }
+    } catch (err) {
+      console.log(err);
     }
     return createStore(
       reducers,

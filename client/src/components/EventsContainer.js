@@ -3,13 +3,14 @@ import { Item } from "semantic-ui-react";
 import EventsCard from "./EventsCard";
 import LoadingComponent from "./Loading";
 import { Link } from "react-router-dom";
+import { Alert } from "reactstrap";
 
 import { useDispatch, useSelector } from "react-redux";
 import { getEvents } from "../redux/events/eventsActions";
 
 const EventsContainer = ({ full }) => {
   const dispatch = useDispatch();
-  const { events, loading } = useSelector((state) => state.events);
+  const { events, loading, alerts } = useSelector((state) => state.events);
 
   useEffect(() => {
     dispatch(getEvents());
@@ -21,6 +22,8 @@ const EventsContainer = ({ full }) => {
       <hr />
       {loading ? (
         <LoadingComponent />
+      ) : alerts.length > 0 ? (
+        alerts.map((alert) => <Alert color="danger">{alert}</Alert>)
       ) : (
         <>
           <Item.Group unstackable divided className="events flex-column">

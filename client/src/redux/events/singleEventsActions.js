@@ -20,13 +20,17 @@ export const deleteEvents = (id) => async (dispatch) => {
       auth: localStorage.getItem("token"),
     },
   };
-  const res = await axios.delete(`/api/events/${id}`, config);
-  const events = res.data.events;
+  try {
+    const res = await axios.delete(`/api/events/${id}`, config);
+    const events = res.data.events;
 
-  dispatch({
-    type: DELETE_EVENTS,
-    payload: events,
-  });
+    dispatch({
+      type: DELETE_EVENTS,
+      payload: events,
+    });
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 export const setAlerts = (alerts) => async (dispatch) => {
@@ -47,7 +51,6 @@ export const updateEvent = (id, event) => async (dispatch) => {
   dispatch({
     type: EVENTS_UPDATE,
   });
-  console.log(event);
 
   const config = {
     headers: {
@@ -63,6 +66,10 @@ export const updateEvent = (id, event) => async (dispatch) => {
       console.log(res);
     } catch (err) {
       if (err) console.log(err, err.message);
+      dispatch({
+        type: EVENTS_UPDATE_FAIL,
+        payload: err.message,
+      });
     }
   }
 
@@ -82,6 +89,10 @@ export const updateEvent = (id, event) => async (dispatch) => {
     });
   } catch (err) {
     console.log(err);
+    dispatch({
+      type: EVENTS_UPDATE_FAIL,
+      payload: err.message,
+    });
   }
 };
 
@@ -122,6 +133,10 @@ export const addEvents = (events) => async (dispatch) => {
     });
   } catch (err) {
     console.log(err);
+    dispatch({
+      type: ADD_EVENTS_FAIL,
+      payload: err.message,
+    });
   }
 };
 
@@ -135,17 +150,26 @@ export const getSingleEvents = (id, events) => async (dispatch) => {
       auth: localStorage.getItem("token"),
     },
   };
-  const res = await axios.get(`/api/events/${id}`);
 
-  if (res.data.msg) {
+  try {
+    const res = await axios.get(`/api/events/${id}`);
+
+    if (res.data.msg) {
+      dispatch({
+        type: GET_SINGLE_EVENTS_FAIL,
+        payload: res.data.msg,
+      });
+    }
+
+    dispatch({
+      type: GET_SINGLE_EVENTS_SUCCESS,
+      payload: res.data.events,
+    });
+  } catch (err) {
+    console.log(err);
     dispatch({
       type: GET_SINGLE_EVENTS_FAIL,
-      payload: res.data.msg,
+      payload: err.message,
     });
   }
-
-  dispatch({
-    type: GET_SINGLE_EVENTS_SUCCESS,
-    payload: res.data.events,
-  });
 };

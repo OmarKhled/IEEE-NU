@@ -60,6 +60,7 @@ export const singleEventsReducer = (
           place: "",
           date: "",
         },
+        alerts: [],
       };
     case GET_SINGLE_EVENTS_SUCCESS:
       return {

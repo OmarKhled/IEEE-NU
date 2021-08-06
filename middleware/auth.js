@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken";
+import User from "../models/userModel.js";
 
 export default (req, res, next) => {
   const token = req.header("auth");
@@ -8,10 +9,15 @@ export default (req, res, next) => {
   }
   try {
     const user = jwt.verify(token, process.env.SECRET);
-    req.user = user;
-    next();
+    const dbUser = User.findById(user.id);
+    if (dbUser) {
+      req.user = user;
+      next();
+    } else {
+      throw new Error("Valid token for invalid user");
+    }
   } catch (err) {
     console.log(err);
-    res.status(400).json({ err: "Invalid token" });
+    res.status(400).json({ msg: "Invalid token" });
   }
 };
