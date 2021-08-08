@@ -468,6 +468,9 @@ h1, h2, h3, h4, h5, h6, p {
     .partener:hover {
         transform: scale(1.15);
     }
+    .rec-slider-container {
+        margin: 0 !important;
+    }
 // News letter 
       .character {
         z-index: 1000;
@@ -837,3 +840,41 @@ h1, h2, h3, h4, h5, h6, p {
     .logo {
         width: 50px;
     }
+    // Popover
+    .popover { 
+        background: rgba(255,255,255,0.65);
+        background-size: 100% 100%;
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        margin-top: 10px;
+        color: #000 !important;
+    }
+    .popover::after, .popover::before {
+        display: none !important;
+    }
+    .popover .arrow {
+        display: none !important;
+    }
+    .popoverHeader {
+        padding: 10px;
+        border-bottom: 1px rgb(211, 211, 211) solid;
+    }
+
+
+    @-moz-document url-prefix() {
+        .glass {
+            background-color: rgba(255, 255, 255, 0.955)!important;
+        }
+        .ui.card {
+            width: auto !important;
+        }
+        .modal-content {
+            background: rgba(255,255,255,0.9) !important;
+        }
+        .news-letter {
+            background: rgba(255,255,255,0.9) !important;
+        }
+        .popover { 
+            background: rgba(255,255,255,0.95);
+        }
+      }

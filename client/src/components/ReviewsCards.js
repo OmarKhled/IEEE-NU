@@ -79,7 +79,7 @@ const ReviewsCards = (props) => (
       <hr></hr>
       <Slider {...settings}>
         {Reviews.map((review) => (
-          <div className="px-4">
+          <div key={review} className="px-4">
             <ReviewsCard style={{ height: "100%" }} review={review} />
           </div>
         ))}

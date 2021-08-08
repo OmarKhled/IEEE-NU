@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import User from "../models/userModel.js";
 
-export default (req, res, next) => {
+export default async (req, res, next) => {
   const token = req.header("auth");
 
   if (!token) {
@@ -9,7 +9,7 @@ export default (req, res, next) => {
   }
   try {
     const user = jwt.verify(token, process.env.SECRET);
-    const dbUser = User.findById(user.id);
+    const dbUser = await User.findById(user.id);
     if (dbUser) {
       req.user = user;
       next();
@@ -18,6 +18,6 @@ export default (req, res, next) => {
     }
   } catch (err) {
     console.log(err);
-    res.status(400).json({ msg: "Invalid token" });
+    res.status(401).json({ msg: "Invalid token" });
   }
 };

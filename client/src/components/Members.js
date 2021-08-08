@@ -28,7 +28,7 @@ const Members = () => {
   return (
     <Fragment>
       <div className="mt-3">
-        <h2>Members</h2>
+        <h2>Board</h2>
         <hr />
       </div>
       <div className="pb-5">

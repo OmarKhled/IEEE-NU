@@ -12,7 +12,6 @@ import rim from "../static/images/Parteners/rim.jpeg";
 import st from "../static/images/Parteners/st.png";
 import tico from "../static/images/Parteners/tico.jfif";
 import yard from "../static/images/Parteners/yard.png";
-import Slider from "react-slick";
 
 const PastParteners = () => {
   const items = [
