@@ -14,13 +14,15 @@ const AboutAbout = (props) => (
         </Col>
         <Col xs="12" sm={{ size: 6, order: 1 }} className="my-2">
           <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut
-            euismod mauris, in placerat felis. Cras id magna sit amet mi
-            porttitor elementum et nec magna. Sed vel ex eleifend, accumsan erat
-            et, gravida ex. Donec et mauris id tellus tempus auctor. Donec nec
-            blandit nibh. Donec enim dui, tincidunt sed lobortis rhoncus,
-            aliquet quis purus. Nunc interdum urna id efficitur semper. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit.
+            IEEE-NU: is the IEEE student branch in Nile University that aims to
+            engage and empower the NU community through technology to develop
+            their students. The main Goal of IEEE-NU is to offer activities that
+            are relevant to electronics and electrical engineering such as
+            workshops - competitions - hands-on - projects - Boot-Camps. <br />
+            It’s extraordinary this year that the new volunteers’ experience is
+            not in the selection criteria, but rather the passion and will to
+            develop. The central theme of the season will be the preparation for
+            the market. 
           </div>
         </Col>
       </Row>
