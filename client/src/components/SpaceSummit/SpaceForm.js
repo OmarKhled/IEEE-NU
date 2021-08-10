@@ -41,6 +41,7 @@ const SpaceForm = (props) => {
     ateendeeUniversty: "",
     facebook: "",
     government: "",
+    comments: "",
   });
 
   window.onbeforeunload = () => {

@@ -58,6 +58,13 @@ const AtendeeForm = ({ values, onChange, nextStage, prevStage }) => {
       value: values.government,
       required: true,
     },
+    {
+      name: "comments",
+      placeholder: "Any Comments?",
+      type: "text",
+      onChange: onChange("comments"),
+      value: values.comments,
+    },
   ];
 
   return (

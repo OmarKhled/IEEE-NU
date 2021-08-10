@@ -58,6 +58,13 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
       value: values.government,
       required: true,
     },
+    {
+      name: "comments",
+      placeholder: "Any Comments?",
+      type: "text",
+      onChange: onChange("comments"),
+      value: values.comments,
+    },
   ];
   const participantFields = [
     {
