@@ -1,29 +1,7 @@
 import React, { Fragment } from "react";
 import Member from "./Member";
 import { Row, Col } from "reactstrap";
-import mustafa from "../static/images/Members/Mohamed.png";
-import marwa from "../static/images/Members/marwa.png";
-import kandy from "../static/images/Members/kandy.png";
-const members = [
-  {
-    image: mustafa,
-    name: "Mohamed Mostafa",
-    committee: "Board",
-    faculty: "Engineering",
-  },
-  {
-    image: marwa,
-    name: "Marwa Mohamed",
-    committee: "Board",
-    faculty: "Computer Science",
-  },
-  {
-    image: kandy,
-    name: "Youssef kandy",
-    committee: "Board",
-    faculty: "Engineering",
-  },
-];
+
 const Members = () => {
   return (
     <Fragment>
