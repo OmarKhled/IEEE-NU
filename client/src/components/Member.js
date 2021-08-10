@@ -2,10 +2,10 @@ import React from "react";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { Card } from "semantic-ui-react";
 
-const Member = ({ member }) => {
+const MemberCard = ({ member }) => {
   return (
     <div className="member-container mt-3">
-      <img src={member.image} alt={member.name} className="circle" />
+      <img src={member.img} alt={member.name} className="circle" />
       <Card>
         <Card.Content>
           <Card.Header>{member.name}</Card.Header>
@@ -18,10 +18,15 @@ const Member = ({ member }) => {
               </div>
               <div className="columns">
                 <div className="i">
-                  <FaFacebook href="facebook.com" />
+                  <a  href={member.facebook}>
+                  <FaFacebook />
+                  </a>
                 </div>
                 <div className="i">
-                  <FaLinkedin href="facebook.com" />
+                  <a href={member.linkedin}>
+                    <FaLinkedin  />
+
+                  </a>
                 </div>
               </div>
             </div>
@@ -32,4 +37,4 @@ const Member = ({ member }) => {
   );
 };
 
-export default Member;
+export default MemberCard;

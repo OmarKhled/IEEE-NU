@@ -7,6 +7,7 @@ import asyncHandler from "express-async-handler";
 import usersRoutes from "./routes/usersRoutes.js";
 import newsRoutes from "./routes/newsRoutes.js";
 import eventsRoutes from "./routes/eventsRoutes.js";
+import membersRoutes from "./routes/membersRoutes.js";
 
 import errorHandler from "./middleware/errorHandler.js";
 import fileUpload from "express-fileupload";
@@ -56,6 +57,7 @@ app.post(
 app.use("/api/news", newsRoutes);
 app.use("/api/events", eventsRoutes);
 app.use("/api/users", usersRoutes);
+app.use("/api/members", membersRoutes);
 
 // app.get("/", (req, res) => {
 //   res.send("Welcome to IEEE NU api");
