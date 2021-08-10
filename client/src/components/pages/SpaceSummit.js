@@ -1,7 +1,7 @@
 import React from "react";
 // import poster from "../../static/images/Space.jpg";
 import SpaceForm from "../SpaceSummit/SpaceForm";
-import poster from "../../static/images/EgyptianSummit.jpeg";
+import poster from "../../static/images/EgyptianSummit.png";
 
 const SpaceSummit = () => {
   return (
@@ -16,15 +16,21 @@ const SpaceSummit = () => {
           className="d-block w-100 slide mb-4"
         />
         <div className="d-flex justify-content-center align-items-center">
-          <h1>Space Summit</h1>
+          <h1>Egyptian Space Summit</h1>
         </div>
         <p className="pt-3" id="form-begin">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt
-          reiciendis inventore suscipit consectetur quae. Repellat, numquam?
-          Nulla assumenda possimus expedita eligendi iusto sunt eos laboriosam
-          eius sit iure incidunt, asperiores quod rem odio eaque. Laborum
-          dolorem perspiciatis accusantium id, aspernatur necessitatibus
-          debitis. Asperiores facilis blanditiis quia dicta nostrum error nemo.
+          The Earth is the cradle of humanity, but mankind cannot stay in the
+          cradle forever." - Konstantin E. Tsiolkovsky.
+          <br />
+          In recent years, the global interest in exploring space has grown.
+          <br />
+          And it is time for Egypt to find its way into the space industry. The
+          Egyptian Space Summit aspires to leave Egypt's mark in the space
+          industry by investing in its youth's creative ideas. IEEENU, in
+          collaboration with the Egyptian Space Agency, gives you the chance to
+          be part of the upcoming space development.
+          <br />
+          You can register as an attendee or participant through the below form.
         </p>
         <br />
         <SpaceForm />
