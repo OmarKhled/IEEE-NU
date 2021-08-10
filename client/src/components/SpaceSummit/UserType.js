@@ -12,7 +12,7 @@ const UserType = ({ values, onChange, nextStage }) => {
           name="type"
           checked={values.type == "atendee"}
         />{" "}
-        <span>Atendee</span>
+        <span>Attendee</span>
       </div>
       <div className="radio">
         <input
