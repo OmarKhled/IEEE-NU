@@ -3,7 +3,7 @@ import ReviewsCard from "./ReviewsCard";
 
 const Reviews = [
   {
-    image: require("../static/images/img/joe.jpg"),
+    image: require("../static/images/hassan.jpeg"),
     name: "Hassaan Ibrahim",
     review:
       "IEEE had a great role forming my personality, teaching me how to bare responsibilities and offered me some great Non-technical skills as planning events with world class companies, leadership skills and communication skills.",

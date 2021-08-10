@@ -22,7 +22,7 @@ const AboutAbout = (props) => (
             It’s extraordinary this year that the new volunteers’ experience is
             not in the selection criteria, but rather the passion and will to
             develop. The central theme of the season will be the preparation for
-            the market. 
+            the market.
           </div>
         </Col>
       </Row>
