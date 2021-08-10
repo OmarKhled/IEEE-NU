@@ -10,6 +10,8 @@ import { getEvents } from "../redux/events/eventsActions";
 
 const EventsContainer = ({ full }) => {
   const dispatch = useDispatch();
+  useSelector((state) => state)
+
   const { events, loading, alerts } = useSelector((state) => state.events);
 
   useEffect(() => {

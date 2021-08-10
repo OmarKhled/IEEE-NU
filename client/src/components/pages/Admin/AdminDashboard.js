@@ -9,6 +9,8 @@ import { getNews } from "../../../redux/news/newsActions";
 import { deleteNews } from "../../../redux/news/singleNewsActions";
 import { getEvents } from "../../../redux/events/eventsActions";
 import { deleteEvents } from "../../../redux/events/singleEventsActions";
+import { getMembers } from "../../../redux/members/membersActions";
+import { deleteMembers } from "../../../redux/members/singleMembersActions";
 
 import LoadingComponent from "../../Loading";
 import { FaPlus, FaTrashAlt } from "react-icons/fa";
@@ -20,6 +22,9 @@ const AdminDashboard = () => {
   const { news, loading: newsLoading } = useSelector((state) => state.news);
   const { events, loading: eventsLoading } = useSelector(
     (state) => state.events
+  );
+  const { members, loading: membersLoading } = useSelector(
+    (state) => state.members
   );
 
   const logout = () => {
@@ -39,10 +44,18 @@ const AdminDashboard = () => {
       dispatch(getEvents());
     }, 500);
   };
+  const delMember = (id) => {
+    console.log(id);
+    dispatch(deleteMembers(id));
+    setTimeout(() => {
+      dispatch(getMembers());
+    }, 500);
+  };
 
   useEffect(() => {
     dispatch(getNews());
     dispatch(getEvents());
+    dispatch(getMembers());
   }, []);
 
   return (
@@ -134,6 +147,40 @@ const AdminDashboard = () => {
                 ))}
               </ListGroup>
               <Link to={`/admin/add/events`} className="btn btn-info mt-2">
+                <FaPlus />
+              </Link>
+            </>
+          )}
+        </div>
+        <div>
+          <h3>Members</h3>
+          <hr />
+          {newsLoading ? (
+            <LoadingComponent />
+          ) : (
+            <>
+              <ListGroup>
+                {members.map((item) => (
+                  <ListGroupItem
+                    key={item._id}
+                    className="d-flex justify-content-between align-items-center"
+                  >
+                    <p>{item.name}</p>
+                    <div className="d-flex gap-2">
+                      <Link
+                        to={`/admin/edit/members/${item._id}`}
+                        className="btn btn-info"
+                      >
+                        <MdEdit />
+                      </Link>
+                      <Button onClick={() => delMember(item._id)} color="danger">
+                        <FaTrashAlt />
+                      </Button>
+                    </div>
+                  </ListGroupItem>
+                ))}
+              </ListGroup>
+              <Link to={`/admin/add/members`} className="btn btn-info mt-2">
                 <FaPlus />
               </Link>
             </>

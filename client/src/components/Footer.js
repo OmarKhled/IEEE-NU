@@ -19,7 +19,7 @@ const Footer = () => {
 
   const validate = (e) => {
     var email = document.querySelector(".email-footer");
-    console.log(email.value);
+    
     if (validator.isEmail(email.value)) {
       return true;
     } else {

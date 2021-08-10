@@ -28,6 +28,8 @@ import AddNews from "./components/pages/Admin/AddNews";
 import News from "./components/pages/News";
 import AddEvent from "./components/pages/Admin/AddEvent";
 import EditEvents from "./components/pages/Admin/EditEvents";
+import EditMembers from "./components/pages/Admin/EditMembers";
+import AddMember from "./components/pages/Admin/AddMember";
 
 function App() {
   const [themeState, setTheme] = useState(localStorage.getItem("theme"));
@@ -72,8 +74,13 @@ function App() {
                 path="/admin/edit/events/:id"
                 component={EditEvents}
               />
+              <PrivateRoute
+                path="/admin/edit/members/:id"
+                component={EditMembers}
+              />
               <PrivateRoute path="/admin/add/news" component={AddNews} />
               <PrivateRoute path="/admin/add/events" component={AddEvent} />
+              <PrivateRoute path="/admin/add/members" component={AddMember} />
               <Route path="/events" component={Events} />
               <Route path="/spaceSummit" component={SpaceSummit} />
               <Route path="/membership" component={Membership} />

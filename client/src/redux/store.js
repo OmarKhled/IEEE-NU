@@ -11,12 +11,18 @@ import { singleNewsReducer } from "./news/singleNewsReducers";
 import { getEventsReducer } from "./events/eventsReducers";
 import { singleEventsReducer } from "./events/singleEventsReducers";
 
+import { getMembersReducer } from "./members/membersReducers";
+import { singleMembersReducer } from "./members/singleMembersReducers";
+
 const reducers = combineReducers({
   user: userAuthReducer,
   news: getNewsReducer,
   singleNews: singleNewsReducer,
   events: getEventsReducer,
   singleEvent: singleEventsReducer,
+  members: getMembersReducer,
+  singleMember: singleMembersReducer,
+
 });
 
 const middleWares = [thunk];
