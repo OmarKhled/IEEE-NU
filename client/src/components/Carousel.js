@@ -9,12 +9,6 @@ const slides = [
   {
     img: Carousel1,
   },
-  {
-    img: Carousel2,
-  },
-  {
-    img: Carousel3,
-  },
 ];
 
 const Slider = () => {
