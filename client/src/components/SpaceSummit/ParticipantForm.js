@@ -123,7 +123,7 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
     {
       name: "confirmation",
       placeholder:
-        "By checking the box below, you agree that all your team members will attend our workshops from — to —.",
+        "By checking the box below, you agree that all your team members will attend our workshops from 29 to 30.",
       onChange: onChange("confirmation"),
       value: values.confirmation,
       type: "checkbox",
