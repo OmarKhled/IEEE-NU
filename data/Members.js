@@ -1,20 +1,20 @@
 export default [
   {
-    image: "/images/Mohamed.png",
+    img: "/images/Mohamed.png",
     name: "Mohamed Mostafa",
-    committee: "Board",
+    role: "Board",
     faculty: "Engineering",
   },
   {
-    image: marwa,
-    name: "/images/marwa.png",
-    committee: "Board",
+    img: "/images/marwa.png",
+    name: "Marwa Mohamed",
+    role: "Board",
     faculty: "Computer Science",
   },
   {
-    image: kandy,
-    name: "/images/kandy.png",
-    committee: "Board",
+    img: "/images/kandy.png",
+    name: "Youssef Kandy",
+    role: "Board",
     faculty: "Engineering",
   },
 ];

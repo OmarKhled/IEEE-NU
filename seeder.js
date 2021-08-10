@@ -5,13 +5,13 @@ import colors from "colors";
 import User from "./models/userModel.js";
 import News from "./models/newsModel.js";
 import Events from "./models/eventsModel.js";
-import Members from "./models/membersModel";
+import Members from "./models/membersModel.js";
 import connectDB from "./config/db.js";
 
 import news from "./data/News.js";
 import users from "./data/Users.js";
 import events from "./data/Events.js";
-import members from "./data/members";
+import members from "./data/Members.js";
 
 dotenv.config();
 connectDB();
