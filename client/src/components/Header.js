@@ -41,7 +41,10 @@ const Header = () => {
           >
             IEEE Spectrum
           </a>
-          <a className="header-links pr-3" href="https://www.ieee.org/sitemap.html">
+          <a
+            className="header-links pr-3"
+            href="https://www.ieee.org/sitemap.html"
+          >
             More Sites
           </a>
         </Container>
@@ -83,7 +86,7 @@ const Header = () => {
 
               <NavItem>
                 <NavLink
-                  to="/gallery"
+                  to="/tecnicalLounge"
                   className="nav-link"
                   activeClassName="active"
                 >
@@ -93,7 +96,7 @@ const Header = () => {
 
               <NavItem>
                 <NavLink
-                  to="/contact-us"
+                  to="/academy"
                   className="nav-link"
                   activeClassName="active"
                 >

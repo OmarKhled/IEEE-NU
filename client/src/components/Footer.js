@@ -19,7 +19,7 @@ const Footer = () => {
 
   const validate = (e) => {
     var email = document.querySelector(".email-footer");
-    
+
     if (validator.isEmail(email.value)) {
       return true;
     } else {
@@ -117,7 +117,7 @@ const Footer = () => {
       <div className="display-flex justify-content-center copyright">
         <Container>
           <div className="">
-            <p className="m-0 py-2 text-center">© Copyright 2020 IEEE NU SB</p>
+            <p className="m-0 py-2 text-center">© Copyright 2021 IEEE NU SB</p>
           </div>
         </Container>
       </div>
