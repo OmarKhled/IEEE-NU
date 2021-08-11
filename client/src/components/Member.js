@@ -1,11 +1,11 @@
 import React from "react";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { Card } from "semantic-ui-react";
-
+import defaultImage from "./../static/images/user.png";
 const MemberCard = ({ member }) => {
   return (
     <div className="member-container mt-3">
-      <img src={member.img} alt={member.name} className="circle" />
+      <img src={member.img} onError={(e) => {e.target.onerror = null; e.target.src=defaultImage}} alt={member.name} className="circle" />
       <Card>
         <Card.Content>
           <Card.Header>{member.name}</Card.Header>

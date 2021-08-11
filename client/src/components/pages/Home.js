@@ -5,13 +5,13 @@ import "semantic-ui-css/semantic.min.css";
 import Members from "../Members";
 import Carousel from "../Carousel";
 import NewsContainer from "../NewsContainer";
-import EventsContainer from "../EventsContainer";
 import PastParteners from "../PastParteners";
 import NewsletterPop from "../NewsletterPop";
 // CSS Stylesheet
 import "../../static/css/master.scss";
 
 import { isMobile, mobileModel } from "react-device-detect";
+import EventsSection from "../EventsSection";
 
 const Home = () => {
   const [reveal, setReveal] = useState("");
@@ -34,7 +34,7 @@ const Home = () => {
     <div className="px-5" style={{ maxWidth: "65.125rem", margin: "auto" }}>
       <Carousel />
       <NewsContainer />
-      <EventsContainer />
+      <EventsSection />
       <Members />
       <PastParteners />
       <NewsletterPop
