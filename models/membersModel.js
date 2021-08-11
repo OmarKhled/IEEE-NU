@@ -27,6 +27,12 @@ const membersModel = new Schema(
     linkedin: {
       type: String,
       required: true,
+    },
+    position :{
+      type:String
+    },
+    description: {
+      type: String
     }
   },
   {

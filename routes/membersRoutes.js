@@ -31,7 +31,9 @@ router.post("/",  async (req, res) => {
       role: req.body.role,
       faculty: req.body.faculty,
       facebook: req.body.facebook,
-      linkedin: req.body.linkedin
+      linkedin: req.body.linkedin,
+      position: req.body.position,
+      description: req.body.description,
     });
 
     await members.save();
@@ -79,6 +81,8 @@ router.put("/:id", auth, async (req, res, next) => {
     if (newMember.faculty) member.faculty = newMember.faculty;
     if (newMember.facebook) member.facebook = newMember.facebook;
     if (newMember.linkedin) member.linkedin = newMember.linkedin;
+    if (newMember.position) member.position = newMember.position;
+    if (newMember.description) member.description = newMember.description;
 
     await member.save();
     res.json(member);

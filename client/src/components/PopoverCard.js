@@ -32,7 +32,7 @@ const PopoverCard = ({
           className="rounded-circle"
           top
           src={img}
-          alt="Card image cap"
+          alt={name}
         />
         <UncontrolledPopover
           style={{ border: "none" }}

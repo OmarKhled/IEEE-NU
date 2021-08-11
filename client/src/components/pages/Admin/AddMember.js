@@ -19,6 +19,8 @@ const AddMembers = ({ history }) => {
   const [faculty, setFaculty] = useState("");
   const [facebook, setFacebook] = useState("");
   const [linkedin, setLinkedin] = useState("");
+  const [position, setPosition] = useState("");
+  const [description, setDescription] = useState("");
   const [file, setFile] = useState("");
   const [filename, setFilename] = useState("");
 
@@ -34,7 +36,7 @@ const AddMembers = ({ history }) => {
 
   const add = () => {
     // console.log(!title || !date || !place || !file || !filename);
-    if (!name || !role || !faculty || !facebook || !linkedin || !file || !filename) {
+    if (!name || !role || !faculty || !facebook || !linkedin || !position || !description || !file || !filename) {
       dispatch(setAlerts("Please Fill all the fields"));
     } else {
       dispatch(
@@ -44,6 +46,8 @@ const AddMembers = ({ history }) => {
           faculty,
           facebook,
           linkedin,
+          position,
+          description,
           img: filename !== "" ? `/images/${filename}` : null,
           file: file !== "" ? file : null,
         })
@@ -76,6 +80,16 @@ const AddMembers = ({ history }) => {
           <Input
             value={role}
             placeholder="Role"
+            onChange={(e) => setRole(e.target.value)}
+          />
+          <Input
+            value={position}
+            placeholder="Position"
+            onChange={(e) => setRole(e.target.value)}
+          />
+          <Input
+            value={description}
+            placeholder="Description"
             onChange={(e) => setRole(e.target.value)}
           />
           <Input
