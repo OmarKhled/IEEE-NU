@@ -17,7 +17,9 @@ const EditMembers = ({
   history,
 }) => {
   const dispatch = useDispatch();
-  const { members, loading, alerts } = useSelector((state) => state.singleMember);
+  const { members, loading, alerts } = useSelector(
+    (state) => state.singleMember
+  );
 
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
@@ -89,22 +91,22 @@ const EditMembers = ({
             placeholder="Role"
             onChange={(e) => setRole(e.target.value)}
           />
-           <Input
-            value={faculty ? faculty : members.faculty}
+          <Input
+            value={faculty}
             placeholder="Faculty"
             onChange={(e) => setFaculty(e.target.value)}
           />
-           <Input
+          <Input
             value={facebook ? facebook : members.facebook}
             placeholder="Facebook"
             onChange={(e) => setFacebook(e.target.value)}
           />
-           <Input
+          <Input
             value={linkedin ? linkedin : members.linkedin}
             placeholder="Linkedin"
             onChange={(e) => setLinkedin(e.target.value)}
           />
-         
+
           <Input type="file" onChange={changeFile} />
           <Button color="primary" onClick={update}>
             Update

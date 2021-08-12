@@ -30,6 +30,7 @@ import AddEvent from "./components/pages/Admin/AddEvent";
 import EditEvents from "./components/pages/Admin/EditEvents";
 import EditMembers from "./components/pages/Admin/EditMembers";
 import AddMember from "./components/pages/Admin/AddMember";
+import SpaceSummitDetails from "./components/pages/SpaceSummitDetails";
 
 function App() {
   const [themeState, setTheme] = useState(localStorage.getItem("theme"));
@@ -85,6 +86,10 @@ function App() {
               <Route path="/spaceSummit" component={SpaceSummit} />
               <Route path="/membership" component={Membership} />
               <Route path="/news" component={News} />
+              <Route
+                path="/competitionDetails"
+                component={SpaceSummitDetails}
+              />
               <Route exact path="/" component={Home} />
               <Route component={Notfound} />
             </Switch>
