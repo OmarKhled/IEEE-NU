@@ -25,6 +25,7 @@ const SpaceForm = (props) => {
     fourthMember: "",
     fifthMember: "",
     track: "",
+    generalTrack: "",
     hackathonBefore: "",
     hackathons: "",
     solution: "",

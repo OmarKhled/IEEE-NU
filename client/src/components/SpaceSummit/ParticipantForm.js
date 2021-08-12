@@ -78,11 +78,23 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
       value: values.track,
       required: true,
       radio: true,
-      options: ["Communication", "Energy", "Agriculture", "General"],
+      options: [
+        "Renewable energy and energy efficiency in space stations",
+        "Communication and Data Transformation in the new space era",
+        "Agriculture for Nutrition and Oxygen production",
+        "General track",
+      ],
+    },
+    {
+      name: "generalTrack",
+      placeholder: "If general track please write your idea..",
+      type: "text",
+      onChange: onChange("generalTrack"),
+      value: values.generalTrack,
     },
     {
       name: "hackathonBefore",
-      placeholder: "Has any of you attended hackathon(s) before? ",
+      placeholder: "Has any of you attended compitition(s) before? ",
       onChange: onChange("hackathonBefore"),
       value: values.hackathonBefore,
       required: true,
@@ -118,17 +130,6 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
       onChange: onChange("comments"),
       value: values.comments,
       type: "text",
-      required: true,
-    },
-    {
-      name: "confirmation",
-      placeholder:
-        "By checking the box below, you agree that all your team members will attend our workshops from 29 to 30.",
-      onChange: onChange("confirmation"),
-      value: values.confirmation,
-      type: "checkbox",
-      required: true,
-      checkBox: true,
     },
   ];
 
