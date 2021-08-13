@@ -52,7 +52,7 @@ const AtendeeForm = ({ values, onChange, nextStage, prevStage }) => {
     },
     {
       name: "government",
-      placeholder: "Government",
+      placeholder: "Governorate",
       type: "text",
       onChange: onChange("government"),
       value: values.government,

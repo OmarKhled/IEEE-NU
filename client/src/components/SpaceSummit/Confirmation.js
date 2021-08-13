@@ -52,7 +52,7 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
     },
     {
       name: "government",
-      placeholder: "Government",
+      placeholder: "Governorate",
       type: "text",
       onChange: onChange("government"),
       value: values.government,
