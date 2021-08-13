@@ -19,11 +19,20 @@ const SpaceForm = (props) => {
     universty: "",
     leaderName: "",
     leaderPhoneNumber: "",
+    leaderEmail: "",
     teamMembersCount: "",
     secondMember: "",
+    secondMemberPhoneNumber: "",
+    secondMemberEmail: "",
     thirdMember: "",
+    thirdMemberPhoneNumber: "",
+    thirdMemberEmail: "",
     fourthMember: "",
+    fourthMemberPhoneNumber: "",
+    fourthMemberEmail: "",
     fifthMember: "",
+    fifthMemberPhoneNumber: "",
+    fifthMemberEmail: "",
     track: "",
     generalTrack: "",
     hackathonBefore: "",
@@ -109,12 +118,12 @@ const SpaceForm = (props) => {
           !values.leaderPhoneNumber ||
           !values.teamMembersCount ||
           !values.secondMember ||
+          !values.secondMemberPhoneNumber ||
+          !values.secondMemberEmail ||
           !values.track ||
           !values.hackathonBefore ||
           !values.solution ||
-          !values.motivation ||
-          !values.comments ||
-          !values.confirmation
+          !values.motivation
         ) {
           setAlerts([
             ...alerts,

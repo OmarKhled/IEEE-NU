@@ -116,11 +116,43 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
       required: true,
     },
     {
+      name: "Second Member Whatsapp Number",
+      placeholder: "Second Member Whatsapp Number",
+      type: "text",
+      onChange: onChange("secondMemberPhoneNumber"),
+      value: values.secondMemberPhoneNumber,
+      required: true,
+    },
+
+    {
+      name: "Second Member Email",
+      placeholder: "Second Member Email",
+      type: "email",
+      onChange: onChange("secondMemberEmail"),
+      value: values.secondMemberEmail,
+      required: true,
+    },
+    {
       name: "thirdMember",
       placeholder: "Team members name #3",
       type: "text",
       onChange: onChange("thirdMember"),
       value: values.thirdMember,
+    },
+    {
+      name: "Third Member Whatsapp Number",
+      placeholder: "Third Member Whatsapp Number",
+      type: "text",
+      onChange: onChange("thirdMemberPhoneNumber"),
+      value: values.thirdMemberPhoneNumber,
+    },
+
+    {
+      name: "Third Member Email",
+      placeholder: "Third Member Email",
+      type: "email",
+      onChange: onChange("thirdMemberEmail"),
+      value: values.thirdMemberEmail,
     },
     {
       name: "fourthMember",
@@ -130,11 +162,39 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
       value: values.fourthMember,
     },
     {
+      name: "Fourth Member Whatsapp Number",
+      placeholder: "Fourth Member Whatsapp Number",
+      type: "text",
+      onChange: onChange("fourthMemberPhoneNumber"),
+      value: values.fourthMemberPhoneNumber,
+    },
+    {
+      name: "Fourth Member Email",
+      placeholder: "Fourth Member Email",
+      type: "email",
+      onChange: onChange("fourthMemberEmail"),
+      value: values.fourthMemberEmail,
+    },
+    {
       name: "fifthMember",
       placeholder: "Team members name #5",
       type: "text",
       onChange: onChange("fifthMember"),
       value: values.fifthMember,
+    },
+    {
+      name: "Fifth Member Whatsapp Number",
+      placeholder: "Fifth Member Whatsapp Number",
+      type: "text",
+      onChange: onChange("fifthMemberPhoneNumber"),
+      value: values.fifthMemberPhoneNumber,
+    },
+    {
+      name: "Fifth Member Email",
+      placeholder: "Fifth Member Email",
+      type: "email",
+      onChange: onChange("fifthMemberEmail"),
+      value: values.fifthMemberEmail,
     },
     {
       name: "track",
@@ -153,7 +213,7 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
     {
       name: "generalTrack",
       placeholder: "If general track please write your idea..",
-      type: "text",
+      type: "textarea",
       onChange: onChange("generalTrack"),
       value: values.generalTrack,
     },
@@ -169,24 +229,24 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
     {
       name: "hackathons",
       placeholder: "if yes, please mention them.",
+      type: "textarea",
       onChange: onChange("hackathons"),
       value: values.hackathons,
-      type: "text",
     },
     {
       name: "solution",
       placeholder: "Describe your idea / solution to the challenge. ",
+      type: "textarea",
       onChange: onChange("solution"),
       value: values.solution,
-      type: "text",
       required: true,
     },
     {
       name: "motivation",
-      placeholder: "What motivates you to participate in the hackathon?",
+      placeholder: "What motivates you to participate in the compitition?",
+      type: "textarea",
       onChange: onChange("motivation"),
       value: values.motivation,
-      type: "text",
       required: true,
     },
     {
@@ -195,7 +255,6 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
       onChange: onChange("comments"),
       value: values.comments,
       type: "text",
-      required: true,
     },
   ];
 

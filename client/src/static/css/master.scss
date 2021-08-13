@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6, p {
     .space-even>*+* {
         margin-top: 1rem;
     }
-    input:focus, input:active {
+    input:focus, input:active, textarea:focus, textarea:active {
         border: none;
         outline: none;
     }
@@ -743,6 +743,14 @@ h1, h2, h3, h4, h5, h6, p {
         border: none;
         padding: 0.8rem 1rem;
         border-radius: 100vw;
+    }
+    .text-area {
+        display: block;
+        width: 100%;
+        border: none;
+        padding: 0.8rem 1rem;
+        border-radius: 15px;
+        overflow:unset;
     }
     .form-input {
         width: 80%;

@@ -51,11 +51,43 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
       required: true,
     },
     {
+      name: "Second Member Whatsapp Number",
+      placeholder: "Second Member Whatsapp Number",
+      type: "text",
+      onChange: onChange("secondMemberPhoneNumber"),
+      value: values.secondMemberPhoneNumber,
+      required: true,
+    },
+
+    {
+      name: "Second Member Email",
+      placeholder: "Second Member Email",
+      type: "email",
+      onChange: onChange("secondMemberEmail"),
+      value: values.secondMemberEmail,
+      required: true,
+    },
+    {
       name: "thirdMember",
       placeholder: "Team members name #3",
       type: "text",
       onChange: onChange("thirdMember"),
       value: values.thirdMember,
+    },
+    {
+      name: "Third Member Whatsapp Number",
+      placeholder: "Third Member Whatsapp Number",
+      type: "text",
+      onChange: onChange("thirdMemberPhoneNumber"),
+      value: values.thirdMemberPhoneNumber,
+    },
+
+    {
+      name: "Third Member Email",
+      placeholder: "Third Member Email",
+      type: "email",
+      onChange: onChange("thirdMemberEmail"),
+      value: values.thirdMemberEmail,
     },
     {
       name: "fourthMember",
@@ -65,11 +97,39 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
       value: values.fourthMember,
     },
     {
+      name: "Fourth Member Whatsapp Number",
+      placeholder: "Fourth Member Whatsapp Number",
+      type: "text",
+      onChange: onChange("fourthMemberPhoneNumber"),
+      value: values.fourthMemberPhoneNumber,
+    },
+    {
+      name: "Fourth Member Email",
+      placeholder: "Fourth Member Email",
+      type: "email",
+      onChange: onChange("fourthMemberEmail"),
+      value: values.fourthMemberEmail,
+    },
+    {
       name: "fifthMember",
       placeholder: "Team members name #5",
       type: "text",
       onChange: onChange("fifthMember"),
       value: values.fifthMember,
+    },
+    {
+      name: "Fifth Member Whatsapp Number",
+      placeholder: "Fifth Member Whatsapp Number",
+      type: "text",
+      onChange: onChange("fifthMemberPhoneNumber"),
+      value: values.fifthMemberPhoneNumber,
+    },
+    {
+      name: "Fifth Member Email",
+      placeholder: "Fifth Member Email",
+      type: "email",
+      onChange: onChange("fifthMemberEmail"),
+      value: values.fifthMemberEmail,
     },
     {
       name: "track",
@@ -88,7 +148,7 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
     {
       name: "generalTrack",
       placeholder: "If general track please write your idea..",
-      type: "text",
+      type: "textarea",
       onChange: onChange("generalTrack"),
       value: values.generalTrack,
     },
@@ -104,24 +164,24 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
     {
       name: "hackathons",
       placeholder: "if yes, please mention them.",
+      type: "textarea",
       onChange: onChange("hackathons"),
       value: values.hackathons,
-      type: "text",
     },
     {
       name: "solution",
       placeholder: "Describe your idea / solution to the challenge. ",
+      type: "textarea",
       onChange: onChange("solution"),
       value: values.solution,
-      type: "text",
       required: true,
     },
     {
       name: "motivation",
-      placeholder: "What motivates you to participate in the hackathon?",
+      placeholder: "What motivates you to participate in the compitition?",
+      type: "textarea",
       onChange: onChange("motivation"),
       value: values.motivation,
-      type: "text",
       required: true,
     },
     {
@@ -137,25 +197,48 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
     <div className="space-even">
       {fields.map((field) =>
         !field.radio ? (
-          <div key={field.name} className={`form-input`}>
-            <label
-              className={`${field.required && "required"}`}
-              htmlFor={field.name}
-            >
-              {field.placeholder} :{" "}
-            </label>
-            {"  "}
-            <input
-              placeholder={field.placeholder}
-              id={field.name}
-              type={field.type}
-              name={field.name}
-              onChange={field.onChange}
-              value={field.value}
-              required={field.required}
-              checked={values[field.name] == "confirm"}
-            />
-          </div>
+          field.type === "textarea" ? (
+            <div key={field.name} className={`form-input`}>
+              <label
+                className={`${field.required && "required"}`}
+                htmlFor={field.name}
+              >
+                {field.placeholder} :{" "}
+              </label>
+              <br />
+              {"  "}
+              <textarea
+                className="text-area"
+                placeholder={field.placeholder}
+                id={field.name}
+                type={field.type}
+                name={field.name}
+                onChange={field.onChange}
+                value={field.value}
+                required={field.required}
+              />
+            </div>
+          ) : (
+            <div key={field.name} className={`form-input`}>
+              <label
+                className={`${field.required && "required"}`}
+                htmlFor={field.name}
+              >
+                {field.placeholder} :{" "}
+              </label>
+              {"  "}
+              <input
+                placeholder={field.placeholder}
+                id={field.name}
+                type={field.type}
+                name={field.name}
+                onChange={field.onChange}
+                value={field.value}
+                required={field.required}
+                checked={values[field.name] == "confirm"}
+              />
+            </div>
+          )
         ) : (
           <div key={field.name} className={`form-input`}>
             <label
@@ -167,14 +250,16 @@ const ParticipantForm = ({ values, onChange, nextStage, prevStage }) => {
             {"  "}
             {field.options.map((option) => (
               <div className="radio">
-                <input
-                  type="radio"
-                  onChange={field.onChange}
-                  value={option}
-                  name={field.name}
-                  checked={values[field.name] == option}
-                />{" "}
-                <span>{option}</span>
+                <label className="d-flex align-items-center gap-2">
+                  <input
+                    type="radio"
+                    onChange={field.onChange}
+                    value={option}
+                    name={field.name}
+                    checked={values[field.name] == option}
+                  />{" "}
+                  <span>{option}</span>
+                </label>
               </div>
             ))}
           </div>
