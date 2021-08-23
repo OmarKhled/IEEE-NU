@@ -69,33 +69,13 @@ const AtendeeForm = ({ values, onChange, nextStage, prevStage }) => {
 
   return (
     <div className="space-even">
-      {fields.map((field) => (
-        <div key={field.name} className="form-input">
-          <label
-            className={`${field.required && "required"}`}
-            htmlFor={field.name}
-          >
-            {field.placeholder} :{" "}
-          </label>
-          {"  "}
-          <input
-            placeholder={field.placeholder}
-            id={field.name}
-            type={field.type}
-            name={field.name}
-            onChange={field.onChange}
-            value={field.value}
-          />
-        </div>
-      ))}
-      <div className="form-input d-flex justify-content-between">
-        <button onClick={prevStage} className="btn-subscribe">
-          Previous
-        </button>
-        <button onClick={nextStage} className="btn-subscribe">
-          Next
-        </button>
-      </div>
+      <p style={{ lineHeight: "1.9rem" }}>
+        Due to the current situation and COVID-19 pandemic we are limited with a
+        certain number of seats. As a result, we regret to inform you that the
+        form is closed due to reaching the required number. However, we are
+        trying hard to add more seats in the upcoming days, so follow the event
+        page for any updates
+      </p>
     </div>
   );
 };
