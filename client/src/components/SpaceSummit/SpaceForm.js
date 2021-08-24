@@ -145,52 +145,52 @@ const SpaceForm = (props) => {
 
   return (
     <div className="space-form mt-3 text-center">
-      {/* <div className="text-center">
-          <h2>
-            {stage === 1
-              ? "Book Your Place now!"
-              : stage === 2
-              ? `${values.type.capitalize()} information`
-              : "Confirm submission"}
-          </h2>
-        </div>
-        {alerts.length > 0 &&
-          alerts.map((alert) => (
-            <div key={alert.msg} className="form-input">
-              <Alert color={alert.color}> {alert.msg} </Alert>
-            </div>
-          ))}
-        {stage === 1 ? (
-          <UserType values={values} onChange={onChange} nextStage={nextStage} />
-        ) : stage === 2 ? (
-          values.type === "atendee" ? (
-            <AtendeeForm
-              values={values}
-              onChange={onChange}
-              nextStage={nextStage}
-              prevStage={prevStage}
-            />
-          ) : (
-            <ParticipantForm
-              values={values}
-              onChange={onChange}
-              nextStage={nextStage}
-              prevStage={prevStage}
-            />
-          )
-        ) : stage === 3 ? (
-          <Confirmation
+      <div className="text-center">
+        <h2>
+          {stage === 1
+            ? "Book Your Place now!"
+            : stage === 2
+            ? `${values.type.capitalize()} information`
+            : "Confirm submission"}
+        </h2>
+      </div>
+      {alerts.length > 0 &&
+        alerts.map((alert) => (
+          <div key={alert.msg} className="form-input">
+            <Alert color={alert.color}> {alert.msg} </Alert>
+          </div>
+        ))}
+      {stage === 1 ? (
+        <UserType values={values} onChange={onChange} nextStage={nextStage} />
+      ) : stage === 2 ? (
+        values.type === "atendee" ? (
+          <AtendeeForm
             values={values}
             onChange={onChange}
             nextStage={nextStage}
             prevStage={prevStage}
-            setStage={setStage}
           />
         ) : (
-          <Success />
-        )} */}
+          <ParticipantForm
+            values={values}
+            onChange={onChange}
+            nextStage={nextStage}
+            prevStage={prevStage}
+          />
+        )
+      ) : stage === 3 ? (
+        <Confirmation
+          values={values}
+          onChange={onChange}
+          nextStage={nextStage}
+          prevStage={prevStage}
+          setStage={setStage}
+        />
+      ) : (
+        <Success />
+      )}
 
-      <p>Registration is closed</p>
+      {/* <p>Registration is closed</p> */}
     </div>
   );
 };
