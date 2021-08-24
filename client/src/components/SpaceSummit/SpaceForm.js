@@ -144,9 +144,8 @@ const SpaceForm = (props) => {
   };
 
   return (
-    <div>
-      <div className="space-form mt-3">
-        <div className="text-center">
+    <div className="space-form mt-3 text-center">
+      {/* <div className="text-center">
           <h2>
             {stage === 1
               ? "Book Your Place now!"
@@ -189,8 +188,9 @@ const SpaceForm = (props) => {
           />
         ) : (
           <Success />
-        )}
-      </div>
+        )} */}
+
+      <p>Registration is closed</p>
     </div>
   );
 };
