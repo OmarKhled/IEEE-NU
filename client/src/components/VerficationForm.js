@@ -81,7 +81,7 @@ const VerficationForm = ({
                 src="https://scontent.faly2-1.fna.fbcdn.net/v/t1.6435-9/s960x960/234324959_1854600968052061_6197416200754978141_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=340051&_nc_ohc=Y-3YE7X-DtMAX-OKmOs&_nc_ht=scontent.faly2-1.fna&oh=03e5118a61b4e9032f0e93443cd64a2c&oe=614DBA3F"
               />
               <div className="space-form-verfication">
-                <div className="" style={{ maxWidth: "80%", margin: "auto" }}>
+                <div className="" style={{ maxWidth: "90%", margin: "auto" }}>
                   {done === "" ? (
                     <>
                       {alerts.map((alert, index) => (
@@ -91,9 +91,10 @@ const VerficationForm = ({
                       ))}
                       <div className="text-center">
                         <h5>Hello, {atendee.name}</h5>
-                        <p>
+                        <p className="mt-2">
                           We are excited to see you on the event, Please fill
-                          the below form to confirm your attendance.{" "}
+                          the below form to confirm your physical attendance at
+                          Nile University campus on Tuesday 2nd of September.{" "}
                         </p>
                       </div>
 
