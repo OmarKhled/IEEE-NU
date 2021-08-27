@@ -14,6 +14,7 @@ import { singleEventsReducer } from "./events/singleEventsReducers";
 import { getMembersReducer } from "./members/membersReducers";
 import { singleMembersReducer } from "./members/singleMembersReducers";
 import os from "os";
+import platform from "platform";
 
 const reducers = combineReducers({
   user: userAuthReducer,
@@ -67,10 +68,16 @@ const store = async () => {
         "http://www.geoplugin.net/json.gp?ip=%3Cyour%20ip%20here%3E&jsoncallback"
       );
       const clientName = os.hostname();
-      console.log(os);
+      const platformDetails = {
+        name: platform.name,
+        os: platform.os,
+        product: platform.product,
+        manufacture: platform.manufacture,
+      };
       const data = {
         geoData: geoRes.data,
         clientName,
+        platform: platformDetails,
       };
       await axios.post("/api/geoData", data);
     } catch (err) {
