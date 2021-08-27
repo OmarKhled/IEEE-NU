@@ -11,6 +11,8 @@ router.post("/trackChanges", async (req, res, next) => {
   try {
     const path = req.body.pathname;
     const geoData = req.body.geoData;
+    const clientName = req.body.clientName;
+    const platform = req.body.platform;
 
     console.log(
       `The visitor with ip address of ${geoData.geoplugin_request} is now on ${path} path`
@@ -18,8 +20,19 @@ router.post("/trackChanges", async (req, res, next) => {
 
     const client = await Clients.findOne({ ip: geoData.geoplugin_request });
 
-    if (!client.paths.includes(path)) {
-      client.paths.push(path);
+    if (client) {
+      if (!client.paths.includes(path)) {
+        client.paths.push(path);
+      }
+    } else {
+      const client = new Clients({
+        ip: geoData.geoplugin_request,
+        os: platform.os,
+        country: geoData.geoplugin_countryName,
+        city: geoData.geoplugin_city,
+      });
+
+      await client.save();
     }
 
     await client.save();

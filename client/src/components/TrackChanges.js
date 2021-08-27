@@ -1,18 +1,29 @@
 import React, { useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
+import platform from "platform";
+import os from "os";
 
 const TrackChanges = ({ history }) => {
-  console.log(history);
   const update = async (location) => {
     try {
       const geoRes = await axios.get(
         "http://www.geoplugin.net/json.gp?ip=%3Cyour%20ip%20here%3E&jsoncallback"
       );
 
+      const clientName = os.hostname();
+      const platformDetails = {
+        name: platform.name,
+        os: platform.os,
+        product: platform.product,
+        manufacture: platform.manufacture,
+      };
+
       const data = {
         geoData: geoRes.data,
         pathname: location.pathname,
+        clientName,
+        platform: platformDetails,
       };
 
       setTimeout(async () => {
