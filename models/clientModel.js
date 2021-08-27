@@ -6,19 +6,19 @@ const clientModel = new Schema(
   {
     ip: {
       type: String,
-      required: true,
+      default: "",
     },
     os: {
       type: Object,
-      required: true,
+      default: {},
     },
     country: {
       type: String,
-      required: true,
+      default: "",
     },
     city: {
       type: String,
-      required: true,
+      default: "",
     },
     paths: {
       type: Array,
