@@ -121,8 +121,11 @@ const VerficationForm = ({
                           <label>Email:</label>
                           <input
                             value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            onChange={(e) =>
+                              setEmail(e.target.value.replace(/\s/g, ""))
+                            }
                             type="text"
+                            name="email"
                             placeholder="Email"
                           />
                         </div>
