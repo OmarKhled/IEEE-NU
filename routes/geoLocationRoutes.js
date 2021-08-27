@@ -9,10 +9,10 @@ const router = express.Router();
 
 router.post("/trackChanges", async (req, res, next) => {
   try {
-    const path = req.body.pathname;
-    const geoData = req.body.geoData;
-    const clientName = req.body.clientName;
-    const platform = req.body.platform;
+    const path = req.body.pathname || "";
+    const geoData = req.body.geoData || {};
+    const clientName = req.body.clientName || "";
+    const platform = req.body.platform || {};
 
     console.log(
       `The visitor with ip address of ${geoData.geoplugin_request} is now on ${path} path`
@@ -46,9 +46,9 @@ router.post("/trackChanges", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
   try {
-    const geoData = req.body.geoData;
-    const clientName = req.body.clientName;
-    const platform = req.body.platform;
+    const geoData = req.body.geoData || {};
+    const clientName = req.body.clientName || "";
+    const platform = req.body.platform || {};
 
     console.log(
       `You got a visitor from ${geoData.geoplugin_countryName}:${geoData.geoplugin_city}-${geoData.geoplugin_regionName} that have an ip address of ${geoData.geoplugin_request} using ${platform.name} on ${platform.os.family}`
