@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ThemeToggeler from "./components/ThemeToggeler";
 // Components
@@ -32,6 +32,7 @@ import EditMembers from "./components/pages/Admin/EditMembers";
 import AddMember from "./components/pages/Admin/AddMember";
 import SpaceSummitDetails from "./components/pages/SpaceSummitDetails";
 import VerficationForm from "./components/VerficationForm";
+import TrackChanges from "./components/TrackChanges";
 
 function App() {
   const [themeState, setTheme] = useState(localStorage.getItem("theme"));
@@ -64,6 +65,7 @@ function App() {
             style={{ minHeight: "93vh", marginTop: "8.5rem", height: "1px" }}
           >
             <EmailLetter />
+            <TrackChanges />
             <Switch>
               <Route path="/about-us" component={About} />
               <AuthRoute path="/admin/login" component={AdminLogin} />

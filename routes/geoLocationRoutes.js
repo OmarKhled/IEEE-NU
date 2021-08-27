@@ -7,6 +7,30 @@ const router = express.Router();
 
 // });
 
+router.post("/trackChanges", async (req, res, next) => {
+  try {
+    const path = req.body.pathname;
+    const geoData = req.body.geoData;
+
+    console.log(
+      `The visitor with ip address of ${geoData.geoplugin_request} is now on ${path} path`
+    );
+
+    const client = await Clients.findOne({ ip: geoData.geoplugin_request });
+
+    if (!client.paths.includes(path)) {
+      client.paths.push(path);
+    }
+
+    await client.save();
+
+    res.status(200).json({ msg: "success" });
+  } catch (err) {
+    res.status(200).json({ msg: "success" });
+    console.log(err);
+  }
+});
+
 router.post("/", async (req, res, next) => {
   try {
     const geoData = req.body.geoData;
@@ -31,9 +55,9 @@ router.post("/", async (req, res, next) => {
     }
 
     res.status(200).json({ msg: "success" });
-  } catch (e) {
+  } catch (err) {
     res.status(200).json({ msg: "success" });
-    console.log(e);
+    console.log(err);
   }
 });
 

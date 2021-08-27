@@ -12,9 +12,15 @@ import "../../static/css/master.scss";
 
 import { isMobile, mobileModel } from "react-device-detect";
 import EventsSection from "../EventsSection";
+import { withRouter } from "react-router-dom";
 
-const Home = () => {
+const Home = ({ history }) => {
   const [reveal, setReveal] = useState("");
+
+  // history.listen((location, action) => {
+  //   console.log(location.pathname);
+  // });
+
   if (localStorage.getItem("revealPop") !== "off") {
     window.onscroll = function (ev) {
       if (
@@ -45,4 +51,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withRouter(Home);

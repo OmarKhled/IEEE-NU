@@ -20,6 +20,10 @@ const clientModel = new Schema(
       type: String,
       required: true,
     },
+    paths: {
+      type: Array,
+      default: [],
+    },
   },
   {
     timestamps: true,
