@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { withRouter, Redirect } from "react-router-dom"
+import { withRouter, Redirect } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import { Input, Button, Alert } from "reactstrap";
@@ -12,9 +12,9 @@ import {
 
 const EditNews = ({
   match: {
-    params: { id }
+    params: { id },
   },
-  history
+  history,
 }) => {
   const dispatch = useDispatch();
   const { news, loading, alerts } = useSelector((state) => state.singleNews);
@@ -22,10 +22,10 @@ const EditNews = ({
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
-  const [file, setFile] = useState('');
-  const [filename, setFilename] = useState('');
+  const [file, setFile] = useState("");
+  const [filename, setFilename] = useState("");
 
-  const changeFile = e => {
+  const changeFile = (e) => {
     if (e.target.files[0]) {
       setFile(e.target.files[0]);
       setFilename(e.target.files[0].name);
@@ -33,26 +33,32 @@ const EditNews = ({
       setFile("");
       setFilename("");
     }
-  }
+  };
 
   useEffect(() => {
-    setTimeout(dispatch(getSingleNews(id)))
+    setTimeout(dispatch(getSingleNews(id)));
   }, []);
 
   useEffect(() => {
-    setTitle(news.title)
-    setDate(news.date)
-    setDescription(news.description)
-  }, [news])
+    setTitle(news.title);
+    setDate(news.date);
+    setDescription(news.description);
+  }, [news]);
 
   const update = () => {
-    dispatch(updateNews(id, {
-      title, date, description, url: filename !== "" ? `/images/${filename}` : null, file: file !== "" ? file : null
-    }));
+    dispatch(
+      updateNews(id, {
+        title,
+        date,
+        description,
+        url: filename !== "" ? `/images/${filename}` : null,
+        file: file !== "" ? file : null,
+      })
+    );
     setTimeout(() => {
-      history.push("/admin/dashboard")
-    }, 300)
-  }
+      history.push("/admin/dashboard");
+    }, 300);
+  };
 
   return (
     <div
@@ -61,18 +67,35 @@ const EditNews = ({
     >
       <h1>Edit news</h1>
 
-      {
-        loading ? <LoadingComponent /> : 
-        alerts.length > 0 ? alerts.map(alert => <Alert color="danger">{alert}</Alert>) :
+      {loading ? (
+        <LoadingComponent />
+      ) : alerts.length > 0 ? (
+        alerts.map((alert) => <Alert color="danger">{alert}</Alert>)
+      ) : (
         <div className="mt-3 space-even">
-          <Input value={title ? title : news.title}  placeholder="Title" onChange={(e) => setTitle(e.target.value)} />
-          <Input value={date ? date : news.date} placeholder="Date" onChange={(e) => setDate(e.target.value)} />
-          <Input type="textarea" height="500" value={description ? description : news.description} placeholder="Description" onChange={(e) => setDescription(e.target.value)} />
+          <Input
+            value={title}
+            placeholder="Title"
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <Input
+            value={date}
+            placeholder="Date"
+            onChange={(e) => setDate(e.target.value)}
+          />
+          <Input
+            type="textarea"
+            height="500"
+            value={description}
+            placeholder="Description"
+            onChange={(e) => setDescription(e.target.value)}
+          />
           <Input type="file" onChange={changeFile} />
-          <Button color="primary" onClick={update}>Update</Button>
+          <Button color="primary" onClick={update}>
+            Update
+          </Button>
         </div>
-      }
-      
+      )}
     </div>
   );
 };

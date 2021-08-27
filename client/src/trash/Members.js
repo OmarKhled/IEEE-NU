@@ -48,7 +48,7 @@ export default [
   },
   {
     name: "Manar Adel",
-    img: "/images/manar-adel.jpeg",
+    img: "/images/manar.png",
     position: "Operations Head",
     linkedin: "https://www.linkedin.com/in/manar-hamed-32b8b6114/",
     description:
@@ -64,7 +64,7 @@ export default [
   },
   {
     name: "Amir Shawky",
-    img: "https://randomuser.me/api/portraits/men/32.jpg",
+    img: "/images/amir.png",
     position: "PR Head",
     facebook: "https://www.facebook.com/amir.shawky.545/",
     linkedin: "https://www.linkedin.com/in/amir-shawky-546a79172/",

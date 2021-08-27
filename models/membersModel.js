@@ -22,18 +22,18 @@ const membersModel = new Schema(
     },
     facebook: {
       type: String,
-      required: true,
+      // required: true,
     },
     linkedin: {
       type: String,
-      required: true,
+      // required: true,
     },
-    position :{
-      type:String
+    position: {
+      type: String,
     },
     description: {
-      type: String
-    }
+      type: String,
+    },
   },
   {
     timestamps: true,

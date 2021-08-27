@@ -15,9 +15,15 @@ import {
 import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const PopoverCard = ({
-  member,
+  name,
+  description,
+  facebook,
+  twitter,
+  linkedin,
+  img,
+  position,
 }) => {
-  const { name, description, facebook, twitter, linkedin, img, position } = member
+  console.log(description);
   return (
     <Col className="mt-4" xs="12" sm="6" md="4" lg="4">
       <Card style={{ background: "none", border: "none" }}>
@@ -29,6 +35,10 @@ const PopoverCard = ({
             marginLeft: "auto",
             marginRight: "auto",
           }}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "/images/unset.jpg";
+          }}
           className="rounded-circle"
           top
           src={img}
@@ -38,28 +48,21 @@ const PopoverCard = ({
           style={{ border: "none" }}
           trigger="hover"
           placement="bottom"
-          target={`UncontrolledPopover${name.split(" ")[0]}${name.split(" ")[1]}`}
+          target={`UncontrolledPopover${name.split(" ")[0]}${
+            name.split(" ")[1]
+          }`}
         >
           <div className="popoverHeader text-center">{name}</div>
           <PopoverBody>
             {description}
             <div className="text-center">
-              <a
-                className="btn btn-social-icon btn-facebook"
-                href={facebook}
-              >
+              <a className="btn btn-social-icon btn-facebook" href={facebook}>
                 <FaFacebook />
               </a>
-              <a
-                className="btn btn-social-icon btn-linkedin"
-                href={linkedin}
-              >
+              <a className="btn btn-social-icon btn-linkedin" href={linkedin}>
                 <FaLinkedin />
               </a>
-              <a
-                className="btn btn-social-icon btn-twitter"
-                href={twitter}
-              >
+              <a className="btn btn-social-icon btn-twitter" href={twitter}>
                 <FaTwitter />
               </a>
             </div>
@@ -82,16 +85,14 @@ const PopoverCard = ({
 };
 
 PopoverCard.defaultProps = {
-  member: {
-    name: "Mohamed Mustafa",
-    img: "https://randomuser.me/api/portraits/men/32.jpg",
-    position: "Member",
-    facebook: "https://facebook.com",
-    twitter: "https://twitter.com",
-    linkedin: "https://linkedin.com",
-    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quo accusamus ducimus quas aspernatur, mollitia, vitae labore alias, rem necessitatibus ut. Repudiandae soluta inventore optio? Totam necessitatibus ex architecto tenetur."
-  }
-  
+  name: "Mohamed Mustafa",
+  img: "https://randomuser.me/api/portraits/men/32.jpg",
+  position: "Member",
+  facebook: "https://facebook.com",
+  twitter: "https://twitter.com",
+  linkedin: "https://linkedin.com",
+  description:
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quo accusamus ducimus quas aspernatur, mollitia, vitae labore alias, rem necessitatibus ut. Repudiandae soluta inventore optio? Totam necessitatibus ex architecto tenetur.",
 };
 
 export default PopoverCard;
