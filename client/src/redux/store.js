@@ -13,6 +13,7 @@ import { singleEventsReducer } from "./events/singleEventsReducers";
 
 import { getMembersReducer } from "./members/membersReducers";
 import { singleMembersReducer } from "./members/singleMembersReducers";
+import os from "os";
 
 const reducers = combineReducers({
   user: userAuthReducer,
@@ -22,7 +23,6 @@ const reducers = combineReducers({
   singleEvent: singleEventsReducer,
   members: getMembersReducer,
   singleMember: singleMembersReducer,
-
 });
 
 const middleWares = [thunk];
@@ -61,6 +61,22 @@ const store = async () => {
     } catch (err) {
       console.log(err);
     }
+
+    try {
+      const geoRes = await axios.get(
+        "http://www.geoplugin.net/json.gp?ip=%3Cyour%20ip%20here%3E&jsoncallback"
+      );
+      const clientName = os.hostname();
+      console.log(os);
+      const data = {
+        geoData: geoRes.data,
+        clientName,
+      };
+      await axios.post("/api/geoData", data);
+    } catch (err) {
+      // console.log("Err");
+    }
+
     return createStore(
       reducers,
       initialState,
