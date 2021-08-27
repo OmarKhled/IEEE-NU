@@ -14,6 +14,9 @@ const Events = () => (
   <>
     <div className="px-5" style={{ maxWidth: "65.125rem", margin: "auto" }}>
       <div className="d-flex">
+        <h2>
+          Events
+        </h2>
         <button
           onClick={toggleCalendar}
           className="toggle-calendar ml-auto btn-1 w-auto px-2 py-1 d-inline-block float-right rounded mt-auto"

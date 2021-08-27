@@ -20,8 +20,7 @@ const EventsContainer = ({ full }) => {
   }, []);
   return (
     <>
-      <h2 className="mt-3">Events</h2>
-      <hr />
+      
       {loading ? (
         <LoadingComponent />
       ) : alerts.length > 0 ? (

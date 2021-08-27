@@ -74,19 +74,19 @@ const EditEvents = ({
       ) : (
         <div className="mt-3 space-even">
           <Input
-            value={title ? title : events.title}
+            value={title}
             placeholder="Title"
             onChange={(e) => setTitle(e.target.value)}
           />
           <Input
-            value={date ? date : events.date}
+            value={date}
             placeholder="Date"
             onChange={(e) => setDate(e.target.value)}
           />
           <Input
             type="textarea"
             height="500"
-            value={place ? place : events.place}
+            value={place}
             placeholder="Place"
             onChange={(e) => setPlace(e.target.value)}
           />

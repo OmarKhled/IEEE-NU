@@ -1,31 +1,38 @@
 import React from "react";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { Card } from "semantic-ui-react";
-
-const MemberCard = ({ member }) => {
+const MemberCard = ({ img, name, position, faculty, facebook, linkedin }) => {
+  console.log(img);
   return (
     <div className="member-container mt-3">
-      <img src={member.img} alt={member.name} className="circle" />
+      <img
+        src={img}
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = "/images/unset.jpg";
+        }}
+        alt={name}
+        className="circle"
+      />
       <Card>
         <Card.Content>
-          <Card.Header>{member.name}</Card.Header>
-          <Card.Meta>{member.committee}</Card.Meta>
+          <Card.Header>{name}</Card.Header>
+          <Card.Meta>{position}</Card.Meta>
           <Card.Description>
             <div className="des">
               <div className="my-2">
                 <h6>Faculty</h6>
-                <span>{member.faculty}</span>
+                <span>{faculty}</span>
               </div>
               <div className="columns">
                 <div className="i">
-                  <a  href={member.facebook}>
-                  <FaFacebook />
+                  <a href={facebook}>
+                    <FaFacebook />
                   </a>
                 </div>
                 <div className="i">
-                  <a href={member.linkedin}>
-                    <FaLinkedin  />
-
+                  <a href={linkedin}>
+                    <FaLinkedin />
                   </a>
                 </div>
               </div>

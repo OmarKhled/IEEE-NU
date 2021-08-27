@@ -3,7 +3,6 @@ export default [
     name: "Mohamed Mustafa",
     img: "/images/Mohamed.png",
     position: "Cahirman",
-    faculty: "Engineering",
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
     linkedin: "https://linkedin.com",
@@ -13,7 +12,6 @@ export default [
   {
     name: "Marwa Mohamed",
     img: "/images/marwa.png",
-    faculty: "Engineering",
     position: "Vice Chairman",
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
@@ -24,7 +22,6 @@ export default [
   {
     name: "Youssef Radwan",
     img: "/images/kandy.png",
-    faculty: "Engineering",
     position: "Secretary",
     facebook: "https://www.facebook.com/yousef.a.radwan.7/",
     linkedin: "www.linkedin.com/in/yousef-radwan-738932178",
@@ -34,7 +31,6 @@ export default [
   {
     name: "Hager Abdelnasser",
     img: "/images/hager.jpg",
-    faculty: "Business",
     position: "Tresaure",
     facebook: "https://www.facebook.com/hager.abdelnasser.142",
     twitter: "https://twitter.com/Hager_Nasser8",
@@ -44,7 +40,6 @@ export default [
   {
     name: "Ahmed El-Sayed",
     img: "/images/ahmed-sayed.jpg",
-    faculty: "Urban Design & Architecture",
     position: "HR Head",
     facebook: "https://www.facebook.com/profile.php?id=100013863490188",
     twitter: "https://twitter.com/AhmedEl87890858?s=08",
@@ -54,7 +49,6 @@ export default [
   {
     name: "Manar Adel",
     img: "/images/manar.png",
-    faculty: "Computer Science",
     position: "Operations Head",
     linkedin: "https://www.linkedin.com/in/manar-hamed-32b8b6114/",
     description:
@@ -64,7 +58,6 @@ export default [
     name: "Mazen Mohamed",
     img: "/images/mazen.jpg",
     position: "Media Head",
-    faculty: "Applied Arts",
     facebook: "https://www.facebook.com/Mazen.M.Saeid",
     description:
       "All I want to do is to design and use colors. Hate to be the quiet guy in the room. Trying to make the most of it and not to miss any chances. Mainly sarcastic and hate worrying about stuff but love to do it smart.",
@@ -74,7 +67,6 @@ export default [
     img: "/images/amir.png",
     position: "PR Head",
     facebook: "https://www.facebook.com/amir.shawky.545/",
-    faculty: ".",
     linkedin: "https://www.linkedin.com/in/amir-shawky-546a79172/",
     description:
       "Although I'm always identified as an introvert by personality tests, people preceive me as an 'extrovert'. I'm always looking for more connections, maybe that's why I'm taking the lead for our public relations, so feel free to contact me.",

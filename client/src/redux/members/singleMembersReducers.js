@@ -21,6 +21,8 @@ export const singleMembersReducer = (
       faculty: "",
       facebook: "",
       linkedin: "",
+      position: "",
+      description: "",
     },
     loading: false,
     alerts: [],
@@ -39,6 +41,8 @@ export const singleMembersReducer = (
           faculty: "",
           facebook: "",
           linkedin: "",
+          position: "",
+          description: "",
         },
       };
     case SET_ALERT:
@@ -65,6 +69,8 @@ export const singleMembersReducer = (
           faculty: "",
           facebook: "",
           linkedin: "",
+          position: "",
+          description: ""
         },
         alerts: [],
       };

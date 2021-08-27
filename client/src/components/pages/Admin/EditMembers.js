@@ -8,6 +8,7 @@ import LoadingComponent from "../../Loading";
 import {
   updateMember,
   getSingleMembers,
+  setAlerts,
 } from "../../../redux/members/singleMembersActions";
 
 const EditMembers = ({
@@ -26,6 +27,8 @@ const EditMembers = ({
   const [faculty, setFaculty] = useState("");
   const [facebook, setFacebook] = useState("");
   const [linkedin, setLinkedin] = useState("");
+  const [description, setDescription] = useState("");
+  const [position, setPosition] = useState("");
   const [file, setFile] = useState("");
   const [filename, setFilename] = useState("");
 
@@ -49,6 +52,8 @@ const EditMembers = ({
     setFaculty(members.faculty);
     setFacebook(members.facebook);
     setLinkedin(members.linkedin);
+    setPosition(members.position);
+    setDescription(members.description);
   }, [members]);
 
   const update = () => {
@@ -59,6 +64,8 @@ const EditMembers = ({
         faculty,
         facebook,
         linkedin,
+        position,
+        description,
         img: filename !== "" ? `/images/${filename}` : null,
         file: file !== "" ? file : null,
       })
@@ -82,12 +89,12 @@ const EditMembers = ({
       ) : (
         <div className="mt-3 space-even">
           <Input
-            value={name ? name : members.name}
+            value={name}
             placeholder="Name"
             onChange={(e) => setName(e.target.value)}
           />
           <Input
-            value={role ? role : members.role}
+            value={role}
             placeholder="Role"
             onChange={(e) => setRole(e.target.value)}
           />
@@ -97,14 +104,24 @@ const EditMembers = ({
             onChange={(e) => setFaculty(e.target.value)}
           />
           <Input
-            value={facebook ? facebook : members.facebook}
+            value={facebook}
             placeholder="Facebook"
             onChange={(e) => setFacebook(e.target.value)}
           />
           <Input
-            value={linkedin ? linkedin : members.linkedin}
+            value={linkedin}
             placeholder="Linkedin"
             onChange={(e) => setLinkedin(e.target.value)}
+          />
+          <Input
+            value={position}
+            placeholder="Position"
+            onChange={(e) => setPosition(e.target.value)}
+          />
+          <Input
+            value={description}
+            placeholder="Description"
+            onChange={(e) => setDescription(e.target.value)}
           />
 
           <Input type="file" onChange={changeFile} />

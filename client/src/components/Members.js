@@ -32,12 +32,12 @@ const Members = ({ full }) => {
               {members.map((member, index) =>
                 full ? (
                   <Col key={index} xs="12" sm="6" lg="4">
-                    <MemberCard member={member} />
+                    <MemberCard {...member} />
                   </Col>
                 ) : (
                   index <= 2 && (
                     <Col key={index} xs="12" sm="6" lg="4">
-                      <MemberCard member={member} />
+                      <MemberCard {...member} />
                     </Col>
                   )
                 )

@@ -374,6 +374,27 @@ h1, h2, h3, h4, h5, h6, p {
     }
 
 }
+@media screen and (max-width: 350px)  {
+    .events .item {
+        margin-left: 0px !important;
+                width: 15rem !important;
+                margin: 10px auto !important;
+                max-width: 100%;
+                opacity: 1;
+                flex-direction: column !important;
+                align-items: center;
+                .image {
+                    left: 0 !important;
+                }
+            }
+            .events .item:hover {
+                width: 15rem !important;
+                max-width: 100%;
+                margin: 10px auto !important;
+
+            }
+    
+}
 //End events
 // Theme toggler
     .switch {
