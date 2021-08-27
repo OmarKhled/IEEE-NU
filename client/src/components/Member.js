@@ -2,7 +2,6 @@ import React from "react";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { Card } from "semantic-ui-react";
 const MemberCard = ({ img, name, position, faculty, facebook, linkedin }) => {
-  console.log(img);
   return (
     <div className="member-container mt-3">
       <img

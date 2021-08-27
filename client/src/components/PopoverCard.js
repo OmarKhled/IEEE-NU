@@ -23,7 +23,6 @@ const PopoverCard = ({
   img,
   position,
 }) => {
-  console.log(description);
   return (
     <Col className="mt-4" xs="12" sm="6" md="4" lg="4">
       <Card style={{ background: "none", border: "none" }}>
