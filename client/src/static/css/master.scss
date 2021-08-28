@@ -940,3 +940,121 @@ h1, h2, h3, h4, h5, h6, p {
         border-radius: 15px;
         overflow:unset;
     }
+
+    // atendees
+    .atendees-table {
+        display: flex;
+        gap: 2rem;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+    }
+    .field {
+        flex: 1;
+    }
+
+    .atendees-table {
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+        }
+        /* Zebra striping */
+        tr:nth-of-type(odd) { 
+          background: #eee;
+          color: #333 !important; 
+        }
+        th { 
+          background: #333; 
+          color: white; 
+          font-weight: bold; 
+        }
+        td, th { 
+          padding: 6px; 
+          border: 1px solid #ccc; 
+          text-align: left; 
+        }
+    
+    
+        @media 
+        only screen and (max-width: 760px),
+        (min-device-width: 768px) and (max-device-width: 1024px)  {
+            table, thead, tbody, th, td, tr { 
+                display: block; 
+            }
+            
+            thead { 
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            
+            tr { border: 1px solid #ccc; }
+            
+            td { 
+                border: none;
+                border-bottom: 1px solid #eee; 
+                position: relative;
+                padding-left: 50%; 
+            }
+            
+            td:before { 
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 45%; 
+                padding-right: 10px; 
+                white-space: nowrap;
+            }
+
+            .cell {
+                p {
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            
+            
+            td:nth-of-type(1):before { content: "Name"; }
+            td:nth-of-type(2):before { content: "Age"; }
+            td:nth-of-type(3):before { content: "Email"; }
+            td:nth-of-type(4):before { content: "Verified"; }
+        }
+    }
+
+// Pagination
+    .pagination {
+        display: block;
+        white-space: nowrap;
+        overflow-x: hidden;
+        .pagination-item {
+            width: 50px;
+            padding: 5px 10px;
+            background: #fff;
+            border: none;
+            border-right: 1px solid #e7e7e7;
+            border-left: 1px solid #e7e7e7;
+        }
+        .active {
+            background:#0059fd;
+            color: #fff;
+        }
+    }
+    .pagination-nav {
+        font-weight: 400;
+        line-height: 1.5rem;
+        font-size: 1.4rem;
+        padding: 5px 10px;
+        background: #fff;
+        color: #0004eb;
+        border: none;
+        border-right: 1px solid #e7e7e7;
+        border-left: 1px solid #e7e7e7;
+    }
+    
+
+        

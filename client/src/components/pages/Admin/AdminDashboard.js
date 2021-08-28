@@ -173,7 +173,10 @@ const AdminDashboard = () => {
                       >
                         <MdEdit />
                       </Link>
-                      <Button onClick={() => delMember(item._id)} color="danger">
+                      <Button
+                        onClick={() => delMember(item._id)}
+                        color="danger"
+                      >
                         <FaTrashAlt />
                       </Button>
                     </div>
@@ -185,6 +188,18 @@ const AdminDashboard = () => {
               </Link>
             </>
           )}
+        </div>
+        <div>
+          <ListGroup>
+            <Link
+              style={{ cursor: "pointer" }}
+              to="/admin/spaceSummit/atendees"
+            >
+              <ListGroupItem>
+                <p>Atendees Form details</p>
+              </ListGroupItem>
+            </Link>
+          </ListGroup>
         </div>
       </div>
     </div>

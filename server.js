@@ -8,7 +8,8 @@ import usersRoutes from "./routes/usersRoutes.js";
 import newsRoutes from "./routes/newsRoutes.js";
 import eventsRoutes from "./routes/eventsRoutes.js";
 import membersRoutes from "./routes/membersRoutes.js";
-import atendeesRoutes from "./routes/verficationRoute.js";
+import verficationRoutes from "./routes/verficationRoute.js";
+import atendeesRoutes from "./routes/SpaceSummit/atendeesRoutes.js";
 import geoLocationRoutes from "./routes/geoLocationRoutes.js";
 
 import errorHandler from "./middleware/errorHandler.js";
@@ -60,8 +61,9 @@ app.use("/api/news", newsRoutes);
 app.use("/api/events", eventsRoutes);
 app.use("/api/users", usersRoutes);
 app.use("/api/members", membersRoutes);
-app.use("/api/spaceSummit", atendeesRoutes);
+app.use("/api/spaceSummit", verficationRoutes);
 app.use("/api/geoData", geoLocationRoutes);
+app.use("/api/atendees", atendeesRoutes);
 
 // app.get("/", (req, res) => {
 //   res.send("Welcome to IEEE NU api");

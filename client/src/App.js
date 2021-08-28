@@ -31,6 +31,7 @@ import EditEvents from "./components/pages/Admin/EditEvents";
 import EditMembers from "./components/pages/Admin/EditMembers";
 import AddMember from "./components/pages/Admin/AddMember";
 import SpaceSummitDetails from "./components/pages/SpaceSummitDetails";
+import SpaceSummitAtendees from "./components/pages/Admin/SpaceSummitAtendees";
 import VerficationForm from "./components/VerficationForm";
 import TrackChanges from "./components/TrackChanges";
 
@@ -72,6 +73,10 @@ function App() {
               <PrivateRoute
                 path="/admin/dashboard"
                 component={AdminDashboard}
+              />
+              <PrivateRoute
+                path="/admin/spaceSummit/atendees"
+                component={SpaceSummitAtendees}
               />
               <PrivateRoute path="/admin/edit/news/:id" component={EditNews} />
               <PrivateRoute
