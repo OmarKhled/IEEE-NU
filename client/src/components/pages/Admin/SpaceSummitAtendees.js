@@ -3,7 +3,7 @@ import axios from "axios";
 import LoadingComponent from "../../Loading";
 import _ from "lodash";
 import Pagination from "../../Pagination";
-import { Form } from "semantic-ui-react";
+import { CSVLink } from "react-csv";
 
 const SpaceSummitAtendees = () => {
   const [atendees, setAtendees] = useState([]);
@@ -11,6 +11,34 @@ const SpaceSummitAtendees = () => {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(0);
   const [verified, setVerified] = useState(false);
+
+  // "valid", "verified", "verficationName", "verficationPhone", "verficationEmail", "_id", "name", "age", "email", "phone", "comments", "facebook", "government", "ateendeeUniversty", "createdAt", "updatedAt", "__v"
+
+  const headers = [
+    { label: "Name", key: "name" },
+    { label: "Age", key: "age" },
+    { label: "Email", key: "email" },
+    { label: "Phone", key: "phone" },
+    { label: "Universty", key: "ateendeeUniversty" },
+    { label: "Valid", key: "valid" },
+    { label: "Verified", key: "verified" },
+    { label: "Verified Name", key: "verficationName" },
+    { label: "Verified Phone", key: "verficationPhone" },
+    { label: "Verified Email", key: "verficationEmail" },
+  ];
+
+  const csvData = {
+    data: visualizedAtendees.map((atendee) => {
+      const returned = {};
+      headers.forEach((header) => {
+        returned[header.key] = atendee[header.key];
+      });
+      console.log(returned);
+      return returned;
+    }),
+    filename: "Atendees.csv",
+    headers,
+  };
 
   useEffect(async () => {
     try {
@@ -52,7 +80,7 @@ const SpaceSummitAtendees = () => {
         <LoadingComponent />
       ) : (
         <>
-          <div className="my-3 d-flex justify-content-between align-items-center">
+          <div className=" d-flex justify-content-between align-items-center">
             <h4>
               You have {atendees.length} atendees in Total -{" "}
               {
@@ -70,6 +98,9 @@ const SpaceSummitAtendees = () => {
                 onChange={() => setVerified(!verified)}
               />
             </label>
+          </div>
+          <div className="d-flex mb-3 justify-content-start">
+            <CSVLink {...csvData}>Download Data</CSVLink>
           </div>
           <div className="atendees-table">
             <table>
