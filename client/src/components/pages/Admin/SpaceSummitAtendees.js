@@ -53,7 +53,15 @@ const SpaceSummitAtendees = () => {
       ) : (
         <>
           <div className="my-3 d-flex justify-content-between align-items-center">
-            <h4>You have {atendees.length} atendees in Total</h4>
+            <h4>
+              You have {atendees.length} atendees in Total -{" "}
+              {
+                Array.from(atendees.slice()).filter(
+                  (atendee) => atendee.verified
+                ).length
+              }{" "}
+              verified
+            </h4>
             <label className="d-flex align-items-center gap-2">
               Verified only ?
               <input
