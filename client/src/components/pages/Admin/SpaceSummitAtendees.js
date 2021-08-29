@@ -15,6 +15,7 @@ const SpaceSummitAtendees = () => {
   // "valid", "verified", "verficationName", "verficationPhone", "verficationEmail", "_id", "name", "age", "email", "phone", "comments", "facebook", "government", "ateendeeUniversty", "createdAt", "updatedAt", "__v"
 
   const headers = [
+    { label: "Id", key: "id" },
     { label: "Name", key: "name" },
     { label: "Age", key: "age" },
     { label: "Email", key: "email" },
@@ -33,7 +34,7 @@ const SpaceSummitAtendees = () => {
       headers.forEach((header) => {
         returned[header.key] = atendee[header.key];
       });
-      console.log(returned);
+      returned.id = atendee._id;
       return returned;
     }),
     filename: "Atendees.csv",
