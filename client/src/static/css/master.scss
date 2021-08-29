@@ -1020,8 +1020,8 @@ h1, h2, h3, h4, h5, h6, p, label {
             
             
             td:nth-of-type(1):before { content: "Name"; }
-            td:nth-of-type(2):before { content: "Age"; }
-            td:nth-of-type(3):before { content: "Email"; }
+            td:nth-of-type(2):before { content: "Email"; }
+            td:nth-of-type(3):before { content: "Phone"; }
             td:nth-of-type(4):before { content: "Verified"; }
         }
     }
