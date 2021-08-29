@@ -24,6 +24,10 @@ const clientModel = new Schema(
       type: Array,
       default: [],
     },
+    in: {
+      type: Boolean,
+      default: true,
+    },
   },
   {
     timestamps: true,

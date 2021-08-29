@@ -51,6 +51,22 @@ const atendeeModel = new Schema(
       type: String,
       default: "",
     },
+    verficationEmailSent: {
+      type: Boolean,
+      default: false,
+    },
+    qrCodeEmailSent: {
+      type: Boolean,
+      default: false,
+    },
+    firstShot: {
+      type: Boolean,
+      default: false,
+    },
+    secondShot: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,

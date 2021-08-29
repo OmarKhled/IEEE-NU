@@ -61,6 +61,8 @@ const VerficationForm = ({
     }
   };
 
+  const date = new Date();
+
   return (
     <div
       style={{ maxWidth: "65.125rem", margin: "auto", minHeight: "93vh" }}
@@ -74,6 +76,12 @@ const VerficationForm = ({
         <>
           {loading ? (
             <LoadingComponent />
+          ) : atendee.firstShot &&
+            date.getDate() > 29 &&
+            date.getDate() >= 7 ? (
+            <div className="text-center">
+              <h5>This form has closed.</h5>
+            </div>
           ) : (
             <>
               <img
