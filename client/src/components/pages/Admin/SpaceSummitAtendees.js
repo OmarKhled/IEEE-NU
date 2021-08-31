@@ -49,7 +49,7 @@ const SpaceSummitAtendees = () => {
         },
       };
       const res = await axios.get("/api/atendees", config);
-      setAtendees(res.data.atendees);
+      setAtendees(res.data.atendees.reverse());
       setLoading(false);
     } catch (err) {
       console.log(err);

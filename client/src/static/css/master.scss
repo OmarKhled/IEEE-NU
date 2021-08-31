@@ -751,8 +751,8 @@ h1, h2, h3, h4, h5, h6, p, label {
         color: black;
         border-radius: 30px;
         padding: 2rem;
-        background: rgba(255, 255, 255, 0.767);
-        box-shadow: 0 8px 32px 0 rgba(110, 110, 110, 0.3) !important;
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 0 8px 32px 0 rgba(110, 110, 110, 0.2) !important;
         user-select: none;
     }
     .space-form>*+*, .confirmation>*+* {
@@ -764,6 +764,9 @@ h1, h2, h3, h4, h5, h6, p, label {
         border: none;
         padding: 0.8rem 1rem;
         border-radius: 100vw;
+        background-color: #fff;
+        margin-top: 8px;
+        // box-shadow: ;
     }
     .text-area {
         display: block;

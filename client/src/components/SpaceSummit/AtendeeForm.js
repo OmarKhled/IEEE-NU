@@ -1,6 +1,6 @@
 import React from "react";
 
-const AtendeeForm = ({ values, onChange, nextStage, prevStage }) => {
+const AtendeeForm = ({ values, onChange, onSubmit }) => {
   const fields = [
     {
       name: "name",
@@ -13,7 +13,7 @@ const AtendeeForm = ({ values, onChange, nextStage, prevStage }) => {
     {
       name: "email",
       placeholder: "E-mail",
-      type: "email",
+      type: "text",
       onChange: onChange("email"),
       value: values.email,
       required: true,
@@ -88,12 +88,9 @@ const AtendeeForm = ({ values, onChange, nextStage, prevStage }) => {
           />
         </div>
       ))}
-      <div className="form-input d-flex justify-content-between">
-        <button onClick={prevStage} className="btn-subscribe">
-          Previous
-        </button>
-        <button onClick={nextStage} className="btn-subscribe">
-          Next
+      <div className="form-input d-flex justify-content-center">
+        <button className="btn-subscribe" onClick={onSubmit}>
+          Submit
         </button>
       </div>
       {/* <p style={{ lineHeight: "1.9rem" }}>

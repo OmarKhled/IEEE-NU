@@ -273,19 +273,15 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
   return (
     <div className="confirmation">
       {values.type === "atendee" ? (
-        <form
-          action="https://send.pageclip.co/EkGSRbgnXNZfSlDpgwXIMjhNzxA19ZPm/Space-Summit-Atendees"
-          method="post"
-          className="pageclip-form"
-        >
+        <>
           {atendeeFields.map((field) => (
             <div key={field.name} className="confirm-field text-center">
-              <input
+              {/* <input
                 type="text`"
                 value={field.value}
                 name={field.name}
                 style={{ display: "none" }}
-              />
+              /> */}
               <h4>{field.placeholder} :</h4>
               <p className="confirmation-muted">{field.value}</p>
             </div>
@@ -294,31 +290,23 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
             <button onClick={prevStage} className="btn-subscribe">
               Previous
             </button>
-            <button
-              type="submit"
-              className="btn-subscribe pageclip-form__submit"
-            >
+            <button className="btn-subscribe">
               <span>Submit</span>
             </button>
           </div>
-        </form>
+        </>
       ) : (
-        <form
-          target="_self"
-          action="https://send.pageclip.co/EkGSRbgnXNZfSlDpgwXIMjhNzxA19ZPm/Space-Summit-Participants"
-          method="post"
-          className="pageclip-form"
-        >
+        <>
           {participantFields.map(
             (field) =>
               field.value !== "" && (
                 <div key={field.name} className="confirm-field text-center">
-                  <input
+                  {/* <input
                     type="text`"
                     value={field.value}
                     name={field.name}
                     style={{ display: "none" }}
-                  />
+                  /> */}
                   <h4>{field.placeholder} :</h4>
                   <p className="confirmation-muted">{field.value}</p>
                 </div>
@@ -328,14 +316,11 @@ const Confirmation = ({ values, onChange, prevStage, setStage }) => {
             <button onClick={prevStage} className="btn-subscribe">
               Previous
             </button>
-            <button
-              type="submit"
-              className="btn-subscribe pageclip-form__submit"
-            >
+            <button className="btn-subscribe">
               <span>Submit</span>
             </button>
           </div>
-        </form>
+        </>
       )}
     </div>
   );

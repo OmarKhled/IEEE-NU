@@ -24,12 +24,15 @@ const atendeeModel = new Schema(
     },
     facebook: {
       type: String,
+      required: true,
     },
     government: {
       type: String,
+      required: true,
     },
     ateendeeUniversty: {
       type: String,
+      required: true,
     },
     valid: {
       type: Boolean,

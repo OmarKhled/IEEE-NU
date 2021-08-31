@@ -19,25 +19,15 @@ connectDB();
 
 const exportData = async () => {
   try {
-    // await News.deleteMany();
-    // await User.deleteMany();
-    // await Events.deleteMany();
-    // await Members.deleteMany();
-    // await Clients.deleteMany();
+    await News.deleteMany();
+    await User.deleteMany();
+    await Events.deleteMany();
+    await Members.deleteMany();
 
-    // await News.insertMany(news);
-    // await User.insertMany(users);
-    // await Events.insertMany(events);
-    // await Members.insertMany(members);
-
-    const clients = await Clients.find({});
-    for (let index = 0; index < clients.length; index++) {
-      const client = clients[index];
-
-      client.in = false;
-
-      await client.save();
-    }
+    await News.insertMany(news);
+    await User.insertMany(users);
+    await Events.insertMany(events);
+    await Members.insertMany(members);
 
     console.log("Data Exported!".green.inverse);
     process.exit();
