@@ -70,7 +70,7 @@ const SpaceSummitAtendees = () => {
     }
   }, [verified]);
 
-  const fields = ["name", "email", "phone", "verified"];
+  const fields = ["name", "email", "phone", "verified", "attended", "tookFood"];
 
   return (
     <div
@@ -118,7 +118,9 @@ const SpaceSummitAtendees = () => {
                       {fields.map((field) => (
                         <td className="cell">
                           <p>
-                            {field === "verified"
+                            {field === "verified" ||
+                            field === "attended" ||
+                            field === "tookFood"
                               ? atendee[field]
                                 ? "True"
                                 : "False"
