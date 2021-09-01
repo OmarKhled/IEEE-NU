@@ -21,7 +21,7 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
-router.get("/attendance/:id", async (req, res, next) => {
+router.post("/attendance/:id", async (req, res, next) => {
   const id = req.params.id;
   const options = req.body.options;
 
