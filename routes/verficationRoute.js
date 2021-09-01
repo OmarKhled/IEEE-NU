@@ -37,7 +37,7 @@ router.post("/attendance/:id", async (req, res, next) => {
       switch (type) {
         case "Attendance": {
           console.log(atendee.attended, "attended");
-          if (atendee.attended) {
+          if (!atendee.attended) {
             atendee.attended = true;
             await atendee.save();
             res.json({ msg: "Attendee marked attended", atendee });
@@ -47,7 +47,7 @@ router.post("/attendance/:id", async (req, res, next) => {
           break;
         }
         case "Food": {
-          if (atendee.tookFood) {
+          if (!atendee.tookFood) {
             console.log(atendee.tookFood, "tookFood");
             atendee.tookFood = true;
             await atendee.save();
