@@ -24,11 +24,9 @@ const atendeeModel = new Schema(
     },
     facebook: {
       type: String,
-      required: true,
     },
     government: {
       type: String,
-      required: true,
     },
     ateendeeUniversty: {
       type: String,
@@ -67,6 +65,14 @@ const atendeeModel = new Schema(
       default: false,
     },
     secondShot: {
+      type: Boolean,
+      default: false,
+    },
+    attended: {
+      type: Boolean,
+      default: false,
+    },
+    tookFood: {
       type: Boolean,
       default: false,
     },
