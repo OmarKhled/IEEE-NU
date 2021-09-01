@@ -25,14 +25,18 @@ router.post("/attendance/:id", async (req, res, next) => {
   const id = req.params.id;
   const options = req.body.options;
 
+  console.log(req.body.options);
   const { type } = options;
 
   try {
     const atendee = await Atendee.findById(id);
 
+    console.log(type);
+
     if (atendee) {
       switch (type) {
-        case "Atendance": {
+        case "Attendance": {
+          console.log(atendee.attended, "attended");
           if (atendee.attended) {
             atendee.attended = true;
             await atendee.save();
@@ -44,6 +48,7 @@ router.post("/attendance/:id", async (req, res, next) => {
         }
         case "Food": {
           if (atendee.tookFood) {
+            console.log(atendee.tookFood, "tookFood");
             atendee.tookFood = true;
             await atendee.save();
             res.json({ msg: "Attendee marked tookFood", atendee });
@@ -54,6 +59,8 @@ router.post("/attendance/:id", async (req, res, next) => {
         }
 
         default:
+          console.log(atendee.attended, "attended");
+          console.log(atendee.tookFood, "tookFood");
           res.json({ msg: "Please specify a valid type", atendee });
           break;
       }
