@@ -34,7 +34,7 @@ router.post("/attendance/:id", async (req, res, next) => {
     console.log(type);
 
     if (atendee) {
-      if (attended.verified) {
+      if (atendee.verified) {
         switch (type) {
           case "Attendance": {
             console.log(atendee.attended, "attended");
