@@ -34,42 +34,70 @@ router.post("/attendance/:id", async (req, res, next) => {
     console.log(type);
 
     if (atendee) {
-      switch (type) {
-        case "Attendance": {
-          console.log(atendee.attended, "attended");
-          if (!atendee.attended) {
-            atendee.attended = true;
-            await atendee.save();
-            res.json({ msg: "Attendee marked attended", atendee });
-          } else {
-            res.json({ msg: "Atendee already attended", atendee });
+      if (attended.verified) {
+        switch (type) {
+          case "Attendance": {
+            console.log(atendee.attended, "attended");
+            if (!atendee.attended) {
+              atendee.attended = true;
+              await atendee.save();
+              res.json({
+                msg: "Attendee marked attended",
+                atendee,
+                type: "success",
+              });
+            } else {
+              res.json({
+                msg: "Atendee already attended",
+                atendee,
+                type: "danger",
+              });
+            }
+            break;
           }
-          break;
-        }
-        case "Food": {
-          if (!atendee.tookFood) {
-            console.log(atendee.tookFood, "tookFood");
-            atendee.tookFood = true;
-            await atendee.save();
-            res.json({ msg: "Attendee marked tookFood", atendee });
-          } else {
-            res.json({ msg: "Atendee already took food", atendee });
+          case "Food": {
+            if (!atendee.tookFood) {
+              console.log(atendee.tookFood, "tookFood");
+              atendee.tookFood = true;
+              await atendee.save();
+              res.json({
+                msg: "Attendee marked tookFood",
+                atendee,
+                type: "success",
+              });
+            } else {
+              res.json({
+                msg: "Atendee already took food",
+                atendee,
+                type: "danger",
+              });
+            }
+            break;
           }
-          break;
-        }
 
-        default:
-          console.log(atendee.attended, "attended");
-          console.log(atendee.tookFood, "tookFood");
-          res.json({ msg: "Please specify a valid type", atendee });
-          break;
+          default:
+            console.log(atendee.attended, "attended");
+            console.log(atendee.tookFood, "tookFood");
+            res.json({
+              msg: "Please specify a valid type",
+              atendee,
+              type: "danger",
+            });
+            break;
+        }
+      } else {
+        res.json({
+          msg: "Atendee didn't verify his attendance",
+          type: "danger",
+          atendee,
+        });
       }
     } else {
-      res.status(200).json({ msg: "Attendee not found" });
+      res.status(200).json({ msg: "Attendee not found", type: "danger" });
     }
   } catch (err) {
     console.log(err);
-    res.status(200).json({ msg: "Please check qr code" });
+    res.status(200).json({ msg: "Please check qr code", type: "danger" });
   }
 });
 
