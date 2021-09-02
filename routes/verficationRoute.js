@@ -61,7 +61,7 @@ router.post("/attendance/:id", async (req, res, next) => {
               atendee.tookFood = true;
               await atendee.save();
               res.json({
-                msg: "Attendee marked tookFood",
+                msg: "Attendee marked Took Food",
                 atendee,
                 type: "success",
               });
