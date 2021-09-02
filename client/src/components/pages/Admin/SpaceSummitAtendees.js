@@ -89,7 +89,19 @@ const SpaceSummitAtendees = () => {
                   (atendee) => atendee.verified
                 ).length
               }{" "}
-              verified
+              verified -{" "}
+              {
+                Array.from(atendees.slice()).filter(
+                  (atendee) => atendee.attended
+                ).length
+              }{" "}
+              Attended -{" "}
+              {
+                Array.from(atendees.slice()).filter(
+                  (atendee) => atendee.tookFood
+                ).length
+              }{" "}
+              Took Food
             </h4>
             <label className="d-flex align-items-center gap-2">
               Verified only ?
