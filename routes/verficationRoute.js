@@ -48,7 +48,7 @@ router.post("/attendance/:id", async (req, res, next) => {
               });
             } else {
               res.json({
-                msg: "Atendee already attended",
+                msg: "Attendee already attended",
                 atendee,
                 type: "danger",
               });
@@ -67,7 +67,7 @@ router.post("/attendance/:id", async (req, res, next) => {
               });
             } else {
               res.json({
-                msg: "Atendee already took food",
+                msg: "Attendee already took food",
                 atendee,
                 type: "danger",
               });
@@ -87,7 +87,7 @@ router.post("/attendance/:id", async (req, res, next) => {
         }
       } else {
         res.json({
-          msg: "Atendee didn't verify his attendance",
+          msg: "Attendee didn't verify his attendance",
           type: "danger",
           atendee,
         });
