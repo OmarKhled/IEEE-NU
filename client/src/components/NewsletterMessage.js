@@ -63,7 +63,7 @@ const NewsletterMessage = ({ remove }) => {
       >
         <div className="newsletter-modal space-even">
           <div className="text-center">
-            <h3>Do you want to subscribe to our news letter ?</h3>
+            <h3>Subscribe to our news letter.</h3>
           </div>
           <div>
             {alerts.map((alert) => (
