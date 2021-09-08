@@ -59,7 +59,7 @@ const Header = () => {
         <div className="glass"></div>
         <Container className="px-5" style={{ maxWidth: "65.125rem" }}>
           <NavLink className="navbar-brand" to="/">
-            <img alt="Logo" src={logo} width="60" />
+            <img alt="IEEENU" src={logo} width="60" />
           </NavLink>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>

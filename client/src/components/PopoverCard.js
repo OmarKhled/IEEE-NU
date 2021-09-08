@@ -7,7 +7,6 @@ import {
   CardTitle,
   CardText,
   UncontrolledPopover,
-  PopoverHeader,
   PopoverBody,
   Col,
 } from "reactstrap";

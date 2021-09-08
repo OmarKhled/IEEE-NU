@@ -17,36 +17,47 @@ const PastParteners = () => {
   const items = [
     {
       img: nile,
+      alt: "Nile Universty",
     },
     {
       img: research,
+      alt: "NU Research Center",
     },
     {
       img: nilepreneurs,
+      alt: "Nile Preneurs",
     },
     {
       img: nokia,
+      alt: "Nokia",
     },
     {
       img: rim,
+      alt: "Rim",
     },
     {
       img: st,
+      alt: "ST Smart",
     },
     {
       img: tico,
+      alt: "Tico",
     },
     {
       img: yard,
+      alt: "Freelance Yard",
     },
     {
       img: auc,
+      alt: "Auc Robotics",
     },
     {
       img: helwan,
+      alt: "IEEE Helwan",
     },
     {
       img: academy,
+      alt: "Research of scientific research and technology",
     },
   ];
   const breakPoints = [
@@ -75,7 +86,7 @@ const PastParteners = () => {
       >
         {items.map((item) => (
           <div key={item.img} className="partener">
-            <img width="100" alt="partner" src={item.img}>
+            <img width="100" alt={item.alt} src={item.img}>
               {item.title}
             </img>
           </div>

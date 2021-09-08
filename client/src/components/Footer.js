@@ -1,6 +1,12 @@
 import { useEffect } from "react";
 import { Container, Jumbotron, Input } from "reactstrap";
-import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaLinkedin,
+  FaMailBulk,
+  FaMailchimp,
+} from "react-icons/fa";
 import validator from "validator";
 import { Link } from "react-router-dom";
 
@@ -95,6 +101,9 @@ const Footer = () => {
                   href="https://eg.linkedin.com/company/ieeenusb"
                 >
                   <FaLinkedin />
+                </a>
+                <a className="btn-social-icon" href="mailto:IEEENU@nu.edu.eg">
+                  <FaEnvelope />
                 </a>
               </div>
             </div>
