@@ -1,5 +1,4 @@
 import express from "express";
-// import news from "../data/News.js";
 import News from "../models/newsModel.js";
 import auth from "../middleware/auth.js";
 

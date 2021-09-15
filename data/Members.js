@@ -2,7 +2,7 @@ export default [
   {
     name: "Mohamed Mustafa",
     img: "/images/Mohamed.png",
-    position: "Cahirman",
+    position: "Chairman",
     faculty: "Engineering",
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
@@ -74,7 +74,7 @@ export default [
     img: "/images/amir.png",
     position: "PR Head",
     facebook: "https://www.facebook.com/amir.shawky.545/",
-    faculty: ".",
+    faculty: "Buisness Adminstration",
     linkedin: "https://www.linkedin.com/in/amir-shawky-546a79172/",
     description:
       "Although I'm always identified as an introvert by personality tests, people preceive me as an 'extrovert'. I'm always looking for more connections, maybe that's why I'm taking the lead for our public relations, so feel free to contact me.",

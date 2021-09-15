@@ -36,13 +36,21 @@ const AddMembers = ({ history }) => {
 
   const add = () => {
     // console.log(!title || !date || !place || !file || !filename);
-    if (!name || !role || !faculty || !facebook || !linkedin || !position || !description || !file || !filename) {
+    if (
+      !name ||
+      !faculty ||
+      !facebook ||
+      !linkedin ||
+      !position ||
+      !description ||
+      !file ||
+      !filename
+    ) {
       dispatch(setAlerts("Please Fill all the fields"));
     } else {
       dispatch(
         addMembers({
           name,
-          role,
           faculty,
           facebook,
           linkedin,
@@ -78,19 +86,14 @@ const AddMembers = ({ history }) => {
             onChange={(e) => setName(e.target.value)}
           />
           <Input
-            value={role}
-            placeholder="Role"
-            onChange={(e) => setRole(e.target.value)}
-          />
-          <Input
             value={position}
             placeholder="Position"
-            onChange={(e) => setRole(e.target.value)}
+            onChange={(e) => setPosition(e.target.value)}
           />
           <Input
             value={description}
             placeholder="Description"
-            onChange={(e) => setRole(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
           />
           <Input
             value={faculty}

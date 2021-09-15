@@ -23,7 +23,6 @@ const EditMembers = ({
   );
 
   const [name, setName] = useState("");
-  const [role, setRole] = useState("");
   const [faculty, setFaculty] = useState("");
   const [facebook, setFacebook] = useState("");
   const [linkedin, setLinkedin] = useState("");
@@ -48,7 +47,6 @@ const EditMembers = ({
 
   useEffect(() => {
     setName(members.name);
-    setRole(members.role);
     setFaculty(members.faculty);
     setFacebook(members.facebook);
     setLinkedin(members.linkedin);
@@ -60,7 +58,6 @@ const EditMembers = ({
     dispatch(
       updateMember(id, {
         name,
-        role,
         faculty,
         facebook,
         linkedin,
@@ -92,11 +89,6 @@ const EditMembers = ({
             value={name}
             placeholder="Name"
             onChange={(e) => setName(e.target.value)}
-          />
-          <Input
-            value={role}
-            placeholder="Role"
-            onChange={(e) => setRole(e.target.value)}
           />
           <Input
             value={faculty}

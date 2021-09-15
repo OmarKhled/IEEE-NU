@@ -13,14 +13,14 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   useEffect(() => {
     var form = document.querySelector(".pageclip-form");
-    window.Pageclip.form(form, {
-      onResponse: (err, response) => {
-        if (err) throw err;
-        document.querySelector(".footer-newsletter-form").innerHTML = `
-          <h2>Thanks for your interest</h2>
-        `;
-      },
-    });
+    // window.Pageclip.form(form, {
+    //   onResponse: (err, response) => {
+    //     if (err) throw err;
+    //     document.querySelector(".footer-newsletter-form").innerHTML = `
+    //       <h2>Thanks for your interest</h2>
+    //     `;
+    //   },
+    // });
   }, []);
 
   const validate = (e) => {
