@@ -34,6 +34,7 @@ import SpaceSummitDetails from "./components/pages/SpaceSummitDetails";
 import SpaceSummitAtendees from "./components/pages/Admin/SpaceSummitAtendees";
 import VerficationForm from "./components/VerficationForm";
 import TrackChanges from "./components/TrackChanges";
+import EEDCompition from "./components/pages/EEDCompition";
 
 function App() {
   const [themeState, setTheme] = useState(localStorage.getItem("theme"));
@@ -69,6 +70,7 @@ function App() {
             <TrackChanges />
             <Switch>
               <Route path="/about-us" component={About} />
+              <Route path="/eedCompetition" component={EEDCompition} />
               <AuthRoute path="/admin/login" component={AdminLogin} />
               <PrivateRoute
                 path="/admin/dashboard"
