@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ThemeToggeler from "./components/ThemeToggeler";
 // Components
@@ -53,6 +53,19 @@ function App() {
     toggleTheme();
     localStorage.setItem("theme", themeState);
   };
+
+  useEffect(() => {
+    const ele = document.getElementById("loading");
+    if (ele) {
+      ele.classList.add("available");
+      setTimeout(() => {
+        ele.outerHTML = "";
+        document
+          .querySelector('link[rel=stylesheet][href~="/styles/styles.css"]')
+          .remove();
+      }, 200);
+    }
+  }, []);
 
   return (
     <BrowserRouter>
