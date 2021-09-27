@@ -13,13 +13,14 @@ import {
   technicalInfo,
 } from "../Bot/data";
 import RecruitmentForm from "../Bot/RecruitmentForm";
+import axios from "axios";
 
 const RegistrationBot = () => {
   const [stage, setStage] = useState(1);
   const [newComerStage, setNewComerStage] = useState(1);
   const [dataStage, setDataStage] = useState(1);
   const [botSrc, setBotSrc] = useState(zaki);
-  const [data, setData] = useState({
+  const initData = {
     newComer: false,
     ...generalInfo,
     ...technicalInfo,
@@ -29,7 +30,12 @@ const RegistrationBot = () => {
     ...mediaInfo,
     ...marketingInfo,
     ...operationsInfo,
-  });
+  };
+  const [data, setData] = useState(
+    localStorage.getItem("recrutmentData")
+      ? JSON.parse(localStorage.getItem("recrutmentData"))
+      : initData
+  );
 
   useEffect(() => {
     if (stage === 2) {
@@ -41,6 +47,10 @@ const RegistrationBot = () => {
     }
   }, [stage]);
 
+  useEffect(() => {
+    localStorage.setItem("recrutmentData", JSON.stringify(data));
+  }, [data]);
+
   const setAngry = () => {
     setBotSrc(angryZaki);
     setTimeout(() => {
@@ -48,8 +58,18 @@ const RegistrationBot = () => {
     }, 2000);
   };
 
-  const onSubmit = () => {
-    console.log(data);
+  const onSubmit = async () => {
+    const res = await axios.post("/api/recruitment", data);
+    if (res.data.application) {
+      setStage(4);
+    } else {
+      console.log(res);
+    }
+  };
+
+  const reset = () => {
+    localStorage.removeItem("recrutmentData");
+    window.location.reload();
   };
   return (
     <div className="px-2" style={{ minHeight: "90vh", margin: "auto" }}>
@@ -77,23 +97,36 @@ const RegistrationBot = () => {
               initStage={dataStage}
               setAngry={setAngry}
             />
+          ) : stage === 3 ? (
+            <>
+              <h3 className="head mb-3">We are all done!</h3>
+              <h5>
+                You've filled all of the required data, go back if you want to
+                edit anything or click submit to finish
+              </h5>
+              <div className="d-flex align-items-center justify-content-between gap-auto mt-3">
+                <button
+                  className="button button-primary"
+                  onClick={() => setStage(2)}
+                >
+                  Back
+                </button>
+                <button className="button button-primary" onClick={onSubmit}>
+                  Submit
+                </button>
+              </div>
+            </>
           ) : (
-            stage === 3 && (
+            stage === 4 && (
               <>
-                <h3 className="head mb-3">We are all done!</h3>
+                <h3 className="head mb-3">Done!</h3>
                 <h5>
-                  You've filled all of the required data, go back if you want to
-                  edit anything or click submit to finish
+                  Your response have been submited. Thanks for your interest in
+                  applying for IEEENU, someone will contact you soon.
                 </h5>
-                <div className="d-flex align-items-center justify-content-between gap-auto mt-3">
-                  <button
-                    className="button button-primary"
-                    onClick={() => setStage(2)}
-                  >
-                    Back
-                  </button>
-                  <button className="button button-primary" onClick={onSubmit}>
-                    Submit
+                <div className="d-flex align-items-center justify-content-center mt-3">
+                  <button className="button button-primary" onClick={reset}>
+                    Submit another resonse
                   </button>
                 </div>
               </>

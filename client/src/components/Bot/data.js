@@ -355,9 +355,9 @@ export const technicalInfo = {
   },
   roboticsExperience: {
     type: "select",
-    label: "Do you have any experience in programming?",
+    label: "Do you have any experience in the robotics field?",
     value: "",
-    name: "programmingExperience",
+    name: "roboticsExperience",
     options: [true, false],
     required: true,
   },
@@ -398,7 +398,7 @@ export const technicalInfo = {
   ifwebDevExp: {
     type: "textarea",
     value: "",
-    label: "Which frameworks/programming languages do you usually use?",
+    label: "What technologies do you use?",
     placeholder: "I use React.js and ...",
     name: "ifwebDevExp",
     prerequisite: true,

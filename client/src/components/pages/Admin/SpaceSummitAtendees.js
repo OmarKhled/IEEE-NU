@@ -115,7 +115,7 @@ const SpaceSummitAtendees = () => {
           <div className="d-flex mb-3 justify-content-start">
             <CSVLink {...csvData}>Download Data</CSVLink>
           </div>
-          <div className="atendees-table">
+          <div className="atendees-table table">
             <table>
               <thead>
                 {fields.map((field) => (

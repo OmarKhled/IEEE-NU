@@ -35,6 +35,8 @@ import VerficationForm from "./components/VerficationForm";
 import TrackChanges from "./components/TrackChanges";
 import EEDCompition from "./components/pages/EEDCompition";
 import RegistrationBot from "./components/pages/RegistrationBot";
+import ApplicantsData from "./components/pages/Admin/Bot/ApplicantsData";
+import Applicant from "./components/pages/Admin/Bot/Applicant";
 
 function App() {
   const [themeState, setTheme] = useState(localStorage.getItem("theme"));
@@ -76,9 +78,7 @@ function App() {
         <base target="_blank" />
         <Header onToggleTheme={onToggle} toggleTheme={toggle} />
         <Fragment>
-          <div
-            style={{ minHeight: "93vh", marginTop: "8.5rem", height: "1px" }}
-          >
+          <div style={{ minHeight: "93vh", marginTop: "7rem", height: "1px" }}>
             <TrackChanges />
             <Switch>
               <Route path="/about-us" component={About} />
@@ -104,6 +104,16 @@ function App() {
               <PrivateRoute path="/admin/add/news" component={AddNews} />
               <PrivateRoute path="/admin/add/events" component={AddEvent} />
               <PrivateRoute path="/admin/add/members" component={AddMember} />
+              <PrivateRoute
+                exact
+                path="/admin/recruitment/applicants"
+                component={ApplicantsData}
+              />
+              <PrivateRoute
+                exact
+                path="/admin/recruitment/applicants/:id"
+                component={Applicant}
+              />
               <Route path="/events" component={Events} />
               <Route
                 exact

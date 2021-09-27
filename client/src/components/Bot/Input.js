@@ -1,10 +1,11 @@
 import React from "react";
 
-const Input = ({ field, outerData, setOuterData }) => {
+const Input = ({ field, outerData, setOuterData, faulty }) => {
   return (
     <div>
       <h3 className="head mb-3">
-        {field.label}{" "}
+        {field.label}
+        {""}
         {outerData[field.key].required && (
           <span style={{ color: "red" }}>*</span>
         )}{" "}
@@ -16,7 +17,7 @@ const Input = ({ field, outerData, setOuterData }) => {
       field.type === "email" ||
       field.type === "number" ? (
         <input
-          className="bot-input"
+          className={`bot-input ${faulty ? "bot-input-error" : ""}`}
           value={outerData[field.key].value}
           name={field.name}
           onChange={(e) =>

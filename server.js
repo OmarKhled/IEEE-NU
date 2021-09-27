@@ -12,6 +12,7 @@ import verficationRoutes from "./routes/verficationRoute.js";
 import atendeesRoutes from "./routes/SpaceSummit/atendeesRoutes.js";
 import geoLocationRoutes from "./routes/geoLocationRoutes.js";
 import newsLetterRoutes from "./routes/newsLetterRoutes.js";
+import recruitmentApplicantsRoutes from "./routes/Recruitment/recruitmentApplicantsRoutes.js";
 
 import errorHandler from "./middleware/errorHandler.js";
 import fileUpload from "express-fileupload";
@@ -66,6 +67,7 @@ app.use("/api/spaceSummit", verficationRoutes);
 app.use("/api/geoData", geoLocationRoutes);
 app.use("/api/atendees", atendeesRoutes);
 app.use("/api/newsletter", newsLetterRoutes);
+app.use("/api/recruitment", recruitmentApplicantsRoutes);
 
 // app.get("/", (req, res) => {
 //   res.send("Welcome to IEEE NU api");

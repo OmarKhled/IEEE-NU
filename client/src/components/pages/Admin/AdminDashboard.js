@@ -190,13 +190,27 @@ const AdminDashboard = () => {
           )}
         </div>
         <div>
+          <h3 className="my-3">Space Summit Atendees</h3>
           <ListGroup>
             <Link
               style={{ cursor: "pointer" }}
               to="/admin/spaceSummit/atendees"
             >
               <ListGroupItem>
-                <p>Atendees Form details</p>
+                <p>Atendees Data</p>
+              </ListGroupItem>
+            </Link>
+          </ListGroup>
+        </div>
+        <div>
+          <h3 className="my-3">FALL21 Recruitment Applicants</h3>
+          <ListGroup>
+            <Link
+              style={{ cursor: "pointer" }}
+              to="/admin/recruitment/applicants"
+            >
+              <ListGroupItem>
+                <p>Applicants Data</p>
               </ListGroupItem>
             </Link>
           </ListGroup>

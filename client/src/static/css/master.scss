@@ -955,8 +955,8 @@ h1, h2, h3, h4, h5, h6, p, label {
         overflow:unset;
     }
 
-    // atendees
-    .atendees-table {
+    // tables
+    .table {
         display: flex;
         gap: 2rem;
         ul {
@@ -970,7 +970,7 @@ h1, h2, h3, h4, h5, h6, p, label {
         flex: 1;
     }
 
-    .atendees-table {
+    .table {
         table { 
             width: 100%; 
             border-collapse: collapse; 
@@ -990,8 +990,8 @@ h1, h2, h3, h4, h5, h6, p, label {
           border: 1px solid #ccc; 
           text-align: left; 
         }
-    
-    
+    }
+    .atendees-table {
         @media 
         only screen and (max-width: 800px),
         (min-device-width: 768px) and (max-device-width: 1024px)  {
@@ -1009,7 +1009,7 @@ h1, h2, h3, h4, h5, h6, p, label {
             
             td { 
                 border: none;
-                border-bottom: 1px solid #eee; 
+                border-bottom: 1px solid rgb(209, 209, 209); 
                 position: relative;
                 padding-left: 50%; 
             }
@@ -1031,14 +1031,61 @@ h1, h2, h3, h4, h5, h6, p, label {
                     text-overflow: ellipsis;
                 }
             }
-            
-            
             td:nth-of-type(1):before { content: "Name"; }
             td:nth-of-type(2):before { content: "Email"; }
             td:nth-of-type(3):before { content: "Phone"; }
             td:nth-of-type(4):before { content: "Verified"; }
             td:nth-of-type(5):before { content: "Attended"; }
             td:nth-of-type(6):before { content: "Took Food"; }
+        }
+    }
+
+    .applicants-table {
+        @media 
+        only screen and (max-width: 700px),
+        (min-device-width: 768px) and (max-device-width: 1024px)  {
+            table, thead, tbody, th, td, tr { 
+                display: block; 
+            }
+            
+            thead { 
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            
+            tr { border: 1px solid #ccc; }
+            
+            td { 
+                border: none;
+                border-bottom: 1px solid rgb(209, 209, 209); 
+                position: relative;
+                padding-left: 50%; 
+            }
+            
+            td:before { 
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 45%; 
+                padding-right: 10px; 
+                white-space: nowrap;
+            }
+
+            .cell {
+                p {
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            td:nth-of-type(1):before { content: "New Comer"; }
+            td:nth-of-type(2):before { content: "Name"; }
+            td:nth-of-type(3):before { content: "Email"; }
+            td:nth-of-type(4):before { content: "Phone"; }
+            td:nth-of-type(5):before { content: "Universty"; }
+            td:nth-of-type(6):before { content: "Faculty"; }
         }
     }
 

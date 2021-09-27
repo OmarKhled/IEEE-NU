@@ -41,11 +41,6 @@ const RecruitmentForm = ({
     }
   };
 
-  const faultyInput = () => {
-    setAngry();
-    buzzer.play();
-  };
-
   return (
     <div>
       {stage === 1 ? (
@@ -56,7 +51,7 @@ const RecruitmentForm = ({
             outerStage={stage}
             {...{ setOuterData, outerData }}
             initStage={formInputsInitStage}
-            faultyInput={faultyInput}
+            setAngry={setAngry}
           />
         </>
       ) : (
@@ -83,7 +78,7 @@ const RecruitmentForm = ({
               outerStage={stage}
               {...{ setOuterData, outerData }}
               initStage={formInputsInitStage}
-              faultyInput={faultyInput}
+              setAngry={setAngry}
             />
           </div>
         )
@@ -99,7 +94,7 @@ const FormGroup = ({
   outerStage,
   data,
   initStage,
-  faultyInput,
+  setAngry,
 }) => {
   const fields = [];
   for (const key in data) {
@@ -108,6 +103,19 @@ const FormGroup = ({
   }
 
   const [stage, setStage] = useState(initStage);
+  const [faulty, setFaulty] = useState(false);
+
+  let faultyTimeOut;
+
+  const faultyInput = () => {
+    clearTimeout(faultyTimeOut);
+    setAngry();
+    buzzer.play();
+    setFaulty(true);
+    faultyTimeOut = window.setTimeout(() => {
+      setFaulty(false);
+    }, 2000);
+  };
 
   const incrementStage = () => {
     if (outerData[fields[stage].key].required) {
@@ -193,7 +201,7 @@ const FormGroup = ({
 
   return (
     <div>
-      <Input field={fields[stage]} {...{ outerData, setOuterData }} />
+      <Input field={fields[stage]} {...{ outerData, setOuterData, faulty }} />
       {/* First value */}
       <div className="d-flex align-items-center justify-content-between gap-auto mt-3">
         <button className="button button-primary" onClick={decrementStage}>
