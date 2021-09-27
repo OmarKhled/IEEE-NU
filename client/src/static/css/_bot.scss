@@ -16,6 +16,9 @@
     @media (min-width: 1200px) {
       width: 50%;
     }
+    @media (max-width: 600px) {
+      width: 100%;
+    }
   }
   .bot-input {
     display: block;
