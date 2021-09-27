@@ -1,9 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 
-import validator from "validator";
+import { useSelector, useDispatch } from "react-redux";
+import { postSubscriber } from "../redux/newsLetter/newsLetterActions";
+import LoadingComponent from "./Loading";
 
 const NewsletterMessage = ({ remove }) => {
+  const dispatch = useDispatch();
+
+  const { loading, alerts } = useSelector((state) => state.newsLetter);
   const turnOff = () => {
     localStorage.setItem("revealPop", "off");
     remove();
@@ -12,44 +17,14 @@ const NewsletterMessage = ({ remove }) => {
     localStorage.setItem("revealPop", "off");
     remove();
     setModalShow(true);
-    setTimeout(() => {
-      var form = document.querySelector("#form-email-letter");
-      window.Pageclip.form(form, {
-        onResponse: (err, response) => {
-          console.log("object");
-          if (err) throw err;
-          document.getElementById("form-email-letter").innerHTML = `
-              <h2>Thanks for your interest</h2>
-            `;
-        },
-      });
-    }, 200);
   };
   const [modalShow, setModalShow] = useState(false);
   const onHide = () => setModalShow(false);
 
-  const [alerts, setAlerts] = useState([]);
+  const [email, setEmail] = useState("");
 
-  useEffect(() => {
-    if (alerts.length > 0) {
-      setTimeout(() => {
-        setAlerts([]);
-      }, 2300);
-    }
-  }, [alerts]);
-
-  useEffect(() => {}, []);
-
-  const validate = (e) => {
-    const email = document.querySelector("#letter-email");
-    if (email.value) {
-      if (validator.isEmail(email.value)) {
-        console.log("helo");
-        return true;
-      }
-    }
-    setAlerts(["Please provide a valid email"]);
-    e.preventDefault();
+  const onSubmit = () => {
+    dispatch(postSubscriber(email));
   };
 
   return (
@@ -63,38 +38,34 @@ const NewsletterMessage = ({ remove }) => {
       >
         <div className="newsletter-modal space-even">
           <div className="text-center">
-            <h3>Subscribe to our news letter.</h3>
+            <h3 className="mb-2">Subscribe to our news letter.</h3>
           </div>
-          <div>
-            {alerts.map((alert) => (
-              <div className="alert alert-danger" color="danger">
-                {alert}
+          {loading ? (
+            <LoadingComponent />
+          ) : (
+            <>
+              {alerts.map((alert, index) => (
+                <div key={index}>{alert.msg}</div>
+              ))}
+              <div className="space-even mt-4">
+                <div>
+                  <input
+                    className="mailLetter-input"
+                    placeholder="Email"
+                    name="email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div className="d-flex justify-content-center">
+                  <button className="btn-subscribe mt-3" onClick={onSubmit}>
+                    Submit
+                  </button>
+                </div>
               </div>
-            ))}
-          </div>
-          <form
-            action="https://send.pageclip.co/EkGSRbgnXNZfSlDpgwXIMjhNzxA19ZPm/News-Letter-Form"
-            method="post"
-            onSubmit={validate}
-            id="form-email-letter"
-            className="pageclip-form space-even mt-4"
-          >
-            <div>
-              <label htmlFor="">
-                <h3> Email:</h3>{" "}
-              </label>
-              <input
-                className="mailLetter-input"
-                id="letter-email"
-                placeholder="Email"
-                name="Email"
-                type="email"
-              />
-            </div>
-            <div className="d-flex justify-content-center">
-              <input type="submit" className="btn-subscribe" value="Submit" />
-            </div>
-          </form>
+            </>
+          )}
         </div>
       </Modal>
       <div className="news-letter">

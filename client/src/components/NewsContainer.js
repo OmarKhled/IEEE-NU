@@ -15,6 +15,7 @@ const NewsContainer = ({ full }) => {
   // eslint-disable-next-line
   useEffect(async () => {
     dispatch(getNews());
+    // eslint-disable-next-line
   }, []);
 
   return (

@@ -20,6 +20,7 @@ const Home = ({ history }) => {
   // history.listen((location, action) => {
   //   console.log(location.pathname);
   // });
+  let revealTimeOut;
 
   if (localStorage.getItem("revealPop") !== "off") {
     window.onscroll = function (ev) {
@@ -27,13 +28,14 @@ const Home = ({ history }) => {
         window.innerHeight + window.scrollY >= document.body.scrollHeight &&
         reveal == ""
       ) {
-        setTimeout(() => {
+        revealTimeOut = window.setTimeout(() => {
           setReveal("reveal");
         }, 4000);
       }
     };
   }
   const remove = () => {
+    clearTimeout(revealTimeOut);
     setReveal("");
   };
   return (

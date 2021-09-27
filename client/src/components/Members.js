@@ -14,6 +14,7 @@ const Members = ({ full }) => {
   // eslint-disable-next-line
   useEffect(async () => {
     dispatch(getMembers());
+    // eslint-disable-next-line
   }, []);
   return (
     <>

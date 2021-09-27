@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ThemeToggeler from "./components/ThemeToggeler";
 // Components
@@ -6,7 +6,6 @@ import Home from "./components/pages/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SpaceSummit from "./components/pages/SpaceSummit";
-import EmailLetter from "./components/EmailLetter";
 import AdminLogin from "./components/pages/Admin/AdminLogin";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -35,6 +34,7 @@ import SpaceSummitAtendees from "./components/pages/Admin/SpaceSummitAtendees";
 import VerficationForm from "./components/VerficationForm";
 import TrackChanges from "./components/TrackChanges";
 import EEDCompition from "./components/pages/EEDCompition";
+import RegistrationBot from "./components/pages/RegistrationBot";
 
 function App() {
   const [themeState, setTheme] = useState(localStorage.getItem("theme"));
@@ -66,7 +66,6 @@ function App() {
           <div
             style={{ minHeight: "93vh", marginTop: "8.5rem", height: "1px" }}
           >
-            <EmailLetter />
             <TrackChanges />
             <Switch>
               <Route path="/about-us" component={About} />
@@ -106,6 +105,7 @@ function App() {
                 component={SpaceSummitDetails}
               />
               <Route exact path="/" component={Home} />
+              <Route exact path="/bot" component={RegistrationBot} />
               <Route component={Notfound} />
             </Switch>
             <Footer />

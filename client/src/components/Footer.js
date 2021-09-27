@@ -1,37 +1,23 @@
-import { useEffect } from "react";
 import { Container, Jumbotron, Input } from "reactstrap";
-import {
-  FaEnvelope,
-  FaFacebook,
-  FaLinkedin,
-  FaMailBulk,
-  FaMailchimp,
-} from "react-icons/fa";
+import { Alert } from "react-bootstrap";
+import { FaEnvelope, FaFacebook, FaLinkedin } from "react-icons/fa";
 import validator from "validator";
 import { Link } from "react-router-dom";
+import Loading from "./Loading";
+
+import { useSelector, useDispatch } from "react-redux";
+import { postSubscriber } from "../redux/newsLetter/newsLetterActions";
+
+import { useState } from "react";
 
 const Footer = () => {
-  useEffect(() => {
-    var form = document.querySelector(".pageclip-form");
-    window.Pageclip.form(form, {
-      onResponse: (err, response) => {
-        if (err) throw err;
-        document.querySelector(".footer-newsletter-form").innerHTML = `
-          <h2>Thanks for your interest</h2>
-        `;
-      },
-    });
-  }, []);
+  const dispatch = useDispatch();
+  const [email, setEmail] = useState("");
+
+  const { loading, alerts } = useSelector((state) => state.newsLetter);
 
   const validate = (e) => {
-    var email = document.querySelector(".email-footer");
-
-    if (validator.isEmail(email.value)) {
-      return true;
-    } else {
-      e.preventDefault();
-      return false;
-    }
+    dispatch(postSubscriber(email));
   };
   return (
     <>
@@ -66,26 +52,31 @@ const Footer = () => {
           <div className="footer-container">
             <div className="footer-content">
               <h2>Subscribe to our news letter!</h2>
-              <form
-                action="https://send.pageclip.co/EkGSRbgnXNZfSlDpgwXIMjhNzxA19ZPm/News-Letter-Form"
-                method="post"
-                // onSubmit={validate}
-                className="pageclip-form footer-newsletter-form"
-              >
-                <Input
-                  name="Email"
-                  type="text"
-                  placeholder="Email"
-                  className="email-footer"
-                />
-                <button
-                  onClick={validate}
-                  type="submit"
-                  className="btn-subscribe"
-                >
-                  Subscribe
-                </button>
-              </form>
+              <div className="footer-newsletter-form">
+                {loading ? (
+                  <Loading />
+                ) : (
+                  <>
+                    {alerts.map((alert) => (
+                      <div className="mb-2">{alert.msg}</div>
+                    ))}
+                    <Input
+                      name="Email"
+                      type="text"
+                      placeholder="Email"
+                      className="email-footer mb-2"
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <button
+                      onClick={validate}
+                      type="submit"
+                      className="btn-subscribe"
+                    >
+                      Subscribe
+                    </button>
+                  </>
+                )}
+              </div>
               <div className="text-center">
                 <a
                   className="btn-social-icon"

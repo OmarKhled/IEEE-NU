@@ -9,6 +9,7 @@ import LoadingComponent from "../Loading";
 const SpaceForm = () => {
   const [alerts, setAlerts] = useState([]);
   const [done, setDone] = useState(false);
+  // eslint-disable-next-line
   const [error, setError] = useState(false);
   const [length, setLength] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -41,6 +42,7 @@ const SpaceForm = () => {
       }, 3000);
     }
   }, [alerts]);
+  // eslint-disable-next-line
   useEffect(async () => {
     try {
       const res = await axios.get("/api/atendees/length");
@@ -50,10 +52,11 @@ const SpaceForm = () => {
     } catch (err) {
       console.log(err);
     }
+    // eslint-disable-next-line
   }, []);
 
   const onChange = (input) => (e) => {
-    if (e.target.type == "checkbox") {
+    if (e.target.type === "checkbox") {
       setValues({
         ...values,
         [input]: e.target.checked ? "confirm" : "",

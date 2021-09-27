@@ -1,6 +1,6 @@
 import axios from "axios";
 import { createStore, combineReducers, applyMiddleware } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
+import { composeWithDevTools } from "redux-devtools-extension/developmentOnly";
 import thunk from "redux-thunk";
 
 import { userAuthReducer } from "./users/usersReducers";
@@ -15,6 +15,7 @@ import { getMembersReducer } from "./members/membersReducers";
 import { singleMembersReducer } from "./members/singleMembersReducers";
 import os from "os";
 import platform from "platform";
+import { newsLetterReducer } from "./newsLetter/newsLetterReducer";
 
 const reducers = combineReducers({
   user: userAuthReducer,
@@ -24,6 +25,7 @@ const reducers = combineReducers({
   singleEvent: singleEventsReducer,
   members: getMembersReducer,
   singleMember: singleMembersReducer,
+  newsLetter: newsLetterReducer,
 });
 
 const middleWares = [thunk];

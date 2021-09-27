@@ -1,0 +1,32 @@
+.bot-container {
+  display: grid;
+  grid-gap: 1rem;
+  .head {
+    text-align: center;
+  }
+  .bot-img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: auto;
+  }
+  .content {
+    margin: auto;
+    width: 80%;
+    @media (min-width: 1200px) {
+      width: 50%;
+    }
+  }
+  .bot-input {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 1rem 1.3rem;
+    border: #a8a8a8 solid 1px;
+    border-radius: 5px;
+  }
+  .bot-input-radio {
+    // width: fit-content;
+    // display: block;
+  }
+}

@@ -1,9 +1,7 @@
 import React, { Fragment } from "react";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Carousel2 from "../static/images/CarouselPhotos/2.jpg";
 import Carousel1 from "../static/images/nile.png";
-import Carousel3 from "../static/images/CarouselPhotos/3.jpg";
 
 const slides = [
   {

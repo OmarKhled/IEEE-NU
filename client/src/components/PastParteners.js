@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Carousel from "react-elastic-carousel";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import nile from "../static/images/Parteners/nileuniversty.png";
