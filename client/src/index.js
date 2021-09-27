@@ -10,10 +10,12 @@ String.prototype.capitalize = function () {
 };
 
 store().then((str) => {
-  ReactDOM.render(
-    <Provider store={str}>
-      <App />
-    </Provider>,
-    document.getElementById("root")
-  );
+  setTimeout(() => {
+    ReactDOM.render(
+      <Provider store={str}>
+        <App />
+      </Provider>,
+      document.getElementById("root")
+    );
+  }, 700);
 });
