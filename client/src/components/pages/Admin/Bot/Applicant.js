@@ -29,10 +29,6 @@ const Applicant = ({
     }
   }, []);
 
-  useEffect(() => {
-    console.log(applicant);
-  }, [applicant]);
-
   return (
     <div
       className="px-5"
