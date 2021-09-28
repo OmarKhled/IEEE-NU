@@ -1,7 +1,6 @@
 import logo from "../../../static/images/IEEE-NU-Logo.png";
 import { Card, Input, Button } from "reactstrap";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { Alert } from "reactstrap";
 
 import { useDispatch, useSelector } from "react-redux";
