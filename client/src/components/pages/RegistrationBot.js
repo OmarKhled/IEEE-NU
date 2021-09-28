@@ -134,6 +134,12 @@ const RegistrationBot = () => {
           )}
         </div>
       </div>
+      <img
+        style={{ display: "none", width: "2px" }}
+        src={angryZaki}
+        alt="IEEENU Personal Assistant"
+        className="bot-img"
+      />
     </div>
   );
 };
