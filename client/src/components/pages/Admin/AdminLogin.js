@@ -36,12 +36,14 @@ const AdminLogin = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
+            name="email"
           />
           <Input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
+            name="password"
           />
           <div className="d-flex align-items-center justify-content-center">
             <Button onClick={login} color="success">
