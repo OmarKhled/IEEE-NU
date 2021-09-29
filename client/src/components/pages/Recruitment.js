@@ -131,7 +131,7 @@ const Recruitment = () => {
                   className="i-input mt-2"
                 >
                   {fields[key].options.map((option, index) => (
-                    <option selected={index == 0} key={index} value={option}>
+                    <option key={index} value={option}>
                       {option}
                     </option>
                   ))}
