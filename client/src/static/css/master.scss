@@ -20,7 +20,10 @@ h1, h2, h3, h4, h5, h6, p, label {
     .space-even>*+* {
         margin-top: 1rem;
     }
-    input:focus, input:active, textarea:focus, textarea:active {
+    .space-even-2>*+* {
+        margin-top: 1.4rem;
+    }
+    input:focus, input:active, textarea:focus, textarea:active, select:active, select:focus {
         outline: none;
     }
     img {
@@ -766,6 +769,16 @@ h1, h2, h3, h4, h5, h6, p, label {
         box-shadow: 0 8px 32px 0 rgba(110, 110, 110, 0.2) !important;
         user-select: none;
     }
+    .showcase {
+        display: block;
+        width: 100%;
+        color: black;
+        border-radius: 30px;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 0 8px 32px 0 rgba(110, 110, 110, 0.2) !important;
+        user-select: none;
+    }
     .space-form>*+*, .confirmation>*+* {
         margin-top: 1rem;
     }
@@ -1119,5 +1132,12 @@ h1, h2, h3, h4, h5, h6, p, label {
         border-left: 1px solid #e7e7e7;
     }
     
-
-        
+    .i-input {
+        display: block;
+        width: 100% !important;
+        border: none !important;
+        padding: 1rem 1.2rem !important;
+        border: #a8a8a8 solid 1px !important;
+        // border-radius: 5px !important;
+        border-radius: 100vw;
+    }

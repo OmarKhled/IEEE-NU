@@ -37,6 +37,8 @@ import EEDCompition from "./components/pages/EEDCompition";
 import RegistrationBot from "./components/pages/RegistrationBot";
 import ApplicantsData from "./components/pages/Admin/Bot/ApplicantsData";
 import Applicant from "./components/pages/Admin/Bot/Applicant";
+import RecruitmentForm from "./components/Bot/RecruitmentForm";
+import Recruitment from "./components/pages/Recruitment";
 
 function App() {
   const [themeState, setTheme] = useState(localStorage.getItem("theme"));
@@ -120,6 +122,7 @@ function App() {
                 path="/spaceSummit/:id"
                 component={VerficationForm}
               />
+              <Route exact path="/recruitmentForm" component={Recruitment} />
               <Route exact path="/spaceSummit" component={SpaceSummit} />
               <Route exact path="/membership" component={Membership} />
               <Route exact path="/news" component={News} />

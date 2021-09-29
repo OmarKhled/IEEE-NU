@@ -22,11 +22,11 @@
   }
   .bot-input {
     display: block;
-    width: 100%;
-    border: none;
-    padding: 1rem 1.3rem;
-    border: #a8a8a8 solid 1px;
-    border-radius: 5px;
+    width: 100% !important;
+    border: none !important;
+    padding: 1rem 1.3rem !important;
+    border: #a8a8a8 solid 1px !important;
+    border-radius: 5px !important;
   }
   .bot-input-error {
     border: #ff0000 solid 2px;
