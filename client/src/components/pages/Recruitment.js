@@ -40,7 +40,6 @@ const Recruitment = () => {
       placeholder: "Faculty",
       label: "Faculty",
       value: "",
-      required: true,
     },
     id: {
       type: "text",
