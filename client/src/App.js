@@ -39,6 +39,7 @@ import ApplicantsData from "./components/pages/Admin/Bot/ApplicantsData";
 import Applicant from "./components/pages/Admin/Bot/Applicant";
 import RecruitmentForm from "./components/Bot/RecruitmentForm";
 import Recruitment from "./components/pages/Recruitment";
+import IEEEDay from "./components/pages/IEEEDay";
 
 function App() {
   const [themeState, setTheme] = useState(localStorage.getItem("theme"));
@@ -123,6 +124,7 @@ function App() {
                 component={VerficationForm}
               />
               <Route exact path="/recruitmentForm" component={Recruitment} />
+              <Route exact path="/IEEEDay" component={IEEEDay} />
               <Route exact path="/spaceSummit" component={SpaceSummit} />
               <Route exact path="/membership" component={Membership} />
               <Route exact path="/news" component={News} />

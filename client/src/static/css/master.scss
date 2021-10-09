@@ -42,6 +42,9 @@ h1, h2, h3, h4, h5, h6, p, label {
     .space-even>*+* {
         margin-top: 0.3rem;
     }
+    .pageclip-form__success {
+        z-index: 0 !important;
+    }
 // Scroll bar
     ::-webkit-scrollbar {
         width: .753rem;
