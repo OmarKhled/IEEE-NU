@@ -34,15 +34,7 @@ const IEEEDay = () => {
       value: "",
       required: true,
     },
-    faculty: {
-      type: "text",
-      name: "school",
-      placeholder: "School",
-      label: "School",
-      value: "",
-      required: true,
-    },
-    schoold: {
+    school: {
       type: "select",
       name: "School",
       label: "School",
