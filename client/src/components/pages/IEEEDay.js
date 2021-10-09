@@ -42,6 +42,13 @@ const IEEEDay = () => {
       value: "",
       required: true,
     },
+    schoold: {
+      type: "select",
+      name: "School",
+      label: "School",
+      options: ["ITCS", "EAS", "Business", "Biotechnology"],
+      required: "true",
+    },
     id: {
       type: "text",
       name: "NuId",
@@ -84,13 +91,27 @@ const IEEEDay = () => {
                   <span style={{ color: "red" }}>*</span>
                 )}
               </h5>
-              <input
-                required={fields[key].required}
-                className="i-input mt-2"
-                type={fields[key].type}
-                name={fields[key].name}
-                placeholder={fields[key].placeholder}
-              />
+              {fields[key].type === "select" ? (
+                <select
+                  required={fields[key].required}
+                  name={fields[key].name}
+                  className="i-input mt-2"
+                >
+                  {fields[key].options.map((option, index) => (
+                    <option key={index} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              ) : (
+                <input
+                  required={fields[key].required}
+                  className="i-input mt-2"
+                  type={fields[key].type}
+                  name={fields[key].name}
+                  placeholder={fields[key].placeholder}
+                />
+              )}
             </div>
           ))}
           <div className="d-flex justify-content-center mt-3">
