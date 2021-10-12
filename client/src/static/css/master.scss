@@ -231,8 +231,17 @@ h1, h2, h3, h4, h5, h6, p, label {
     padding: 10px 20px;
     border-radius: 5px;
     color: white;
+    color: #fff !important;
+    text-decoration: none !important;
     transition: all 250ms linear;
+    &:hover {
+        opacity: 0.9;
+    }
+    &:active {
+        transform: scale(0.9);
+    }
 }
+
 .btn-social-icon {
     margin: 10px;
     font-size: large;
