@@ -41,6 +41,7 @@ import RecruitmentForm from "./components/Bot/RecruitmentForm";
 import Recruitment from "./components/pages/Recruitment";
 import IEEEDay from "./components/pages/IEEEDay";
 import Vr from "./components/pages/Vr";
+import EEDPlatform from "./components/pages/EEDPlatform";
 
 function App() {
   const [themeState, setTheme] = useState(localStorage.getItem("theme"));
@@ -87,6 +88,7 @@ function App() {
             <Switch>
               <Route path="/about-us" component={About} />
               <Route path="/eedCompetition" component={EEDCompition} />
+              <Route path="/eedEventPlatform" component={EEDPlatform} />
               <AuthRoute path="/admin/login" component={AdminLogin} />
               <PrivateRoute
                 path="/admin/dashboard"
