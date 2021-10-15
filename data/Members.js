@@ -62,7 +62,7 @@ export default [
   },
   {
     name: "Mazen Mohamed",
-    img: "/images/mazen.jpg",
+    img: "/images/mazen.png",
     position: "Media Head",
     faculty: "Applied Arts",
     facebook: "https://www.facebook.com/Mazen.M.Saeid",
