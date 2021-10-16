@@ -68,7 +68,7 @@ const IEEEDay = () => {
   return (
     <div className="px-5" style={{ minHeight: "90vh", margin: "auto" }}>
       <div className="showcase mt-3 m-auto" style={{ maxWidth: "50rem" }}>
-        <form
+        {/* <form
           action="https://send.pageclip.co/EkGSRbgnXNZfSlDpgwXIMjhNzxA19ZPm/IEEE-Day"
           method="post"
           className="mt-3 pageclip-form"
@@ -109,7 +109,10 @@ const IEEEDay = () => {
           <div className="d-flex justify-content-center mt-3">
             <input type="submit" className="btn-subscribe" />
           </div>
-        </form>
+        </form> */}
+        <div className="d-flex justify-content-center my-3">
+          <h5>This form doesn't accept responses anymore</h5>
+        </div>
       </div>
     </div>
   );
