@@ -90,13 +90,7 @@ const Input = ({ field, outerData, setOuterData, faulty }) => {
             >
               <input
                 checked={outerData[field.key].value.includes(option)}
-                type="checkbox"
-                name={field.name}
-                id={option}
-                value={option}
-              />
-              <label
-                onClick={() => {
+                onChange={() => {
                   outerData[field.key].value.includes(option)
                     ? setOuterData({
                         ...outerData,
@@ -117,10 +111,13 @@ const Input = ({ field, outerData, setOuterData, faulty }) => {
                         },
                       });
                 }}
-                key={index}
-                htmlFor={option}
-              >
-                <span>{option}</span>
+                type="checkbox"
+                name={field.name}
+                id={option}
+                value={option}
+              />
+              <label key={index} htmlFor={option}>
+                {option}
               </label>
             </div>
           ))}
