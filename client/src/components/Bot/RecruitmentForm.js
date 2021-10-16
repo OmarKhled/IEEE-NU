@@ -6,7 +6,6 @@ import {
   mediaInfo,
   operationsInfo,
   prInfo,
-  secretaryInfo,
   technicalInfo,
 } from "./data";
 import Input from "./Input";
@@ -61,8 +60,6 @@ const RecruitmentForm = ({
               data={
                 outerData.committee.value === "HR committee"
                   ? hrInfo
-                  : outerData.committee.value === "Secretary"
-                  ? secretaryInfo
                   : outerData.committee.value === "PR committee"
                   ? prInfo
                   : outerData.committee.value === "Media committee"

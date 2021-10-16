@@ -70,6 +70,14 @@ export const generalInfo = {
     placeholder: "What do you expect to add to our community?",
     required: true,
   },
+  ieeeHoursDedication: {
+    type: "number",
+    value: "",
+    label: "How many hours (per week) can you dedicate to IEEE NU",
+    name: "ieeeHoursDedication",
+    placeholder: "I can dedicate ... hours",
+    required: true,
+  },
   ieeeAcceptance: {
     type: "textarea",
     value: "",
@@ -84,7 +92,6 @@ export const generalInfo = {
     label: "Which committee are you applying for?",
     options: [
       "HR committee",
-      "Secretary",
       "PR committee",
       "Media committee",
       "Marketing committee",
@@ -129,6 +136,23 @@ export const hrInfo = {
     name: "workforce",
     placeholder: "Workforce development is ...",
     required: true,
+  },
+  hrPrevExp: {
+    type: "select",
+    value: "",
+    label: "Do you have any previous experience in tis committie?",
+    name: "hrPrevExp",
+    options: [true, false],
+    required: true,
+  },
+  hrHrPrevExp: {
+    type: "textarea",
+    value: "",
+    label: "Please mention them",
+    name: "hrHrPrevExp",
+    placeholder: "I Joined...",
+    prerequisite: true,
+    required: false,
   },
 };
 
@@ -178,6 +202,23 @@ export const prInfo = {
     name: "prAction",
     placeholder: "I'm gonna...",
     required: true,
+  },
+  prPrevExp: {
+    type: "select",
+    value: "",
+    label: "Do you have any previous experience in tis committie?",
+    name: "prPrevExp",
+    options: [true, false],
+    required: true,
+  },
+  hrPrPrevExp: {
+    type: "textarea",
+    value: "",
+    label: "Please mention them",
+    name: "hrPrPrevExp",
+    placeholder: "I Joined...",
+    prerequisite: true,
+    required: false,
   },
 };
 
@@ -332,6 +373,23 @@ export const operationsInfo = {
     name: "logisticsImpo",
     placeholder: "It's very important due to...",
     required: true,
+  },
+  operationsPrevExp: {
+    type: "select",
+    value: "",
+    label: "Do you have any previous experience in tis committie?",
+    name: "operationsPrevExp",
+    options: [true, false],
+    required: true,
+  },
+  operationsPrPrevExp: {
+    type: "textarea",
+    value: "",
+    label: "Please mention them",
+    name: "ifOperationsPrevExp",
+    placeholder: "I Joined...",
+    prerequisite: true,
+    required: false,
   },
 };
 
