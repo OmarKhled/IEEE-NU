@@ -68,12 +68,13 @@ const IEEEDay = () => {
   return (
     <div className="px-5" style={{ minHeight: "90vh", margin: "auto" }}>
       <div className="showcase mt-3 m-auto" style={{ maxWidth: "50rem" }}>
+        <h3 className="mb-3">IEEE Day</h3>
         {/* <form
           action="https://send.pageclip.co/EkGSRbgnXNZfSlDpgwXIMjhNzxA19ZPm/IEEE-Day"
           method="post"
           className="mt-3 pageclip-form"
         >
-          <h3 className="mb-3">IEEE Day</h3>
+          
           {Object.keys(fields).map((key) => (
             <div className="mb-3">
               <h5 className="ms-2">
