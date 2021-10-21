@@ -55,7 +55,7 @@ const BoardRecruitment = () => {
             ) : committie === "Operations" ? (
               <Operations setStage={setStage} />
             ) : (
-              <Media />
+              <Media setStage={setStage} />
             )}
           </>
         )}
