@@ -33,7 +33,7 @@ const RegistrationBot = () => {
   };
   const [data, setData] = useState(
     localStorage.getItem("recrutmentData")
-      ? JSON.parse(localStorage.getItem("recrutmentData"))
+      ? { ...initData, ...JSON.parse(localStorage.getItem("recrutmentData")) }
       : initData
   );
 
