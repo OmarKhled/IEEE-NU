@@ -48,9 +48,17 @@ const ApplicantsData = () => {
 
   useEffect(() => {
     setVisualizedApplicants(applicants);
+    console.log(applicants);
   }, [applicants]);
 
-  const fields = ["name", "email", "phone", "universty", "faculty"];
+  const fields = [
+    "name",
+    "email",
+    "phone",
+    "universty",
+    "faculty",
+    "committee",
+  ];
 
   return (
     <div
@@ -92,7 +100,9 @@ const ApplicantsData = () => {
                             }}
                             to={`/admin/recruitment/applicants/${applicant._id}`}
                           >
-                            {applicant.data[field].value}
+                            {applicant.data[field].value
+                              ? applicant.data[field].value
+                              : "None"}
                           </Link>
                         </td>
                       ))}

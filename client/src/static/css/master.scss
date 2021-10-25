@@ -1067,7 +1067,7 @@ h1, h2, h3, h4, h5, h6, p, label {
 
     .applicants-table {
         @media 
-        only screen and (max-width: 700px),
+        only screen and (max-width: 900px),
         (min-device-width: 768px) and (max-device-width: 1024px)  {
             table, thead, tbody, th, td, tr { 
                 display: block; 
@@ -1112,6 +1112,7 @@ h1, h2, h3, h4, h5, h6, p, label {
             td:nth-of-type(4):before { content: "Phone"; }
             td:nth-of-type(5):before { content: "Universty"; }
             td:nth-of-type(6):before { content: "Faculty"; }
+            td:nth-of-type(7):before { content: "Committee"; }
         }
     }
 
