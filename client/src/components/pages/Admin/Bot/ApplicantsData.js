@@ -59,7 +59,7 @@ const ApplicantsData = () => {
 
   useEffect(() => {
     setVisualizedApplicants(applicants);
-    console.log(applicants);
+    // console.log(applicants);
   }, [applicants]);
 
   const fields = [
