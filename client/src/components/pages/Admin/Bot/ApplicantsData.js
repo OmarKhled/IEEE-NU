@@ -12,6 +12,12 @@ const ApplicantsData = () => {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(0);
 
+  const config = {
+    headers: {
+      auth: localStorage.getItem("token"),
+    },
+  };
+
   const csvData = {
     data: visualizedApplicants.map((applicant) => {
       const returned = {};
@@ -31,13 +37,18 @@ const ApplicantsData = () => {
     filename: "Applicants.csv",
   };
 
+  const deleteApplicant = async (id) => {
+    const res = await axios.delete(`/api/recruitment/${id}`, config);
+    if (res.status === 200) {
+      setApplicants(applicants.filter((applicant) => applicant._id !== id));
+      console.log("deleted");
+    } else {
+      console.log(res.data.msg);
+    }
+  };
+
   useEffect(async () => {
     try {
-      const config = {
-        headers: {
-          auth: localStorage.getItem("token"),
-        },
-      };
       const res = await axios.get("/api/recruitment", config);
       setApplicants(res.data.applicants.reverse());
       setLoading(false);
@@ -82,6 +93,7 @@ const ApplicantsData = () => {
                 {fields.map((field) => (
                   <th>{_.capitalize(field)}</th>
                 ))}
+                <th>Delete</th>
               </thead>
               <tbody>
                 {visualizedApplicants
@@ -106,6 +118,14 @@ const ApplicantsData = () => {
                           </Link>
                         </td>
                       ))}
+                      <td>
+                        <span
+                          style={{ color: "red", cursor: "pointer" }}
+                          onClick={() => deleteApplicant(applicant._id)}
+                        >
+                          Delete
+                        </span>
+                      </td>
                     </tr>
                   ))}
               </tbody>

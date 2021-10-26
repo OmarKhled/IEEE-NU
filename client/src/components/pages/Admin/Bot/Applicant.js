@@ -1,17 +1,39 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import LoadingComponent from "../../../Loading";
 import _ from "lodash";
 import axios from "axios";
-import { Alert } from "react-bootstrap";
-
+import { Alert, Button } from "react-bootstrap";
+import { FaTrashAlt } from "react-icons/fa";
 const Applicant = ({
   match: {
     params: { id },
   },
 }) => {
+  const history = useHistory();
+
   const [applicant, setApplicant] = useState({ data: {} });
   const [loading, setLoading] = useState(true);
   const [alerts, setAlerts] = useState([]);
+
+  const config = {
+    headers: {
+      auth: localStorage.getItem("token"),
+    },
+  };
+
+  const deleteApplicant = async (id) => {
+    const res = await axios.delete(`/api/recruitment/${id}`, config);
+    if (res.status === 200) {
+      console.log("deleted");
+      setAlerts([...alerts, { msg: "Deleted Successfully", color: "success" }]);
+      setTimeout(() => {
+        history.goBack();
+      }, [500]);
+    } else {
+      console.log(res.data.msg);
+    }
+  };
 
   useEffect(async () => {
     try {
@@ -21,11 +43,16 @@ const Applicant = ({
         },
       };
       const res = await axios.get(`/api/recruitment/${id}`, config);
-      setApplicant(res.data.applicant);
-      setLoading(false);
+      if (res.data.applicant) {
+        setApplicant(res.data.applicant);
+        setLoading(false);
+      } else {
+        setAlerts([{ msg: "Applicant not found" }]);
+        setLoading(false);
+      }
     } catch (err) {
       console.log(err);
-      setAlerts([err.msg]);
+      setAlerts([{ msg: err.msg }]);
     }
   }, []);
 
@@ -39,9 +66,29 @@ const Applicant = ({
       ) : (
         <>
           <div>
-            {alerts.length > 0
-              ? alerts.map((alert) => <Alert variant="danger">{alert}</Alert>)
-              : Object.keys(applicant.data).map((key, index) => (
+            {alerts.length > 0 ? (
+              alerts.map((alert) => (
+                <Alert variant={`${alert.color ? alert.color : "danger"}`}>
+                  {alert.msg}
+                </Alert>
+              ))
+            ) : (
+              <>
+                <div className="d-flex justify-content-between align-items-center flex-wrap">
+                  <p>
+                    Ref num: <small>{applicant._id}</small>
+                  </p>
+                  <div className="d-flex gap-2 align-items-center">
+                    <Button
+                      onClick={() => deleteApplicant(applicant._id)}
+                      variant="danger"
+                    >
+                      <FaTrashAlt />
+                    </Button>
+                    {/* <p>Delete Applicant</p> */}
+                  </div>
+                </div>
+                {Object.keys(applicant.data).map((key, index) => (
                   <div key={index} className="mb-3">
                     {typeof applicant.data[key] === "boolean" ? (
                       <>
@@ -80,7 +127,9 @@ const Applicant = ({
                       )
                     )}
                   </div>
-                ))}
+                ))}{" "}
+              </>
+            )}
           </div>
         </>
       )}

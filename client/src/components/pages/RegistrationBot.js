@@ -14,12 +14,14 @@ import {
 } from "../Bot/data";
 import RecruitmentForm from "../Bot/RecruitmentForm";
 import axios from "axios";
+import LoadingComponent from "../Loading";
 
 const RegistrationBot = () => {
   const [stage, setStage] = useState(1);
   const [newComerStage, setNewComerStage] = useState(1);
   const [dataStage, setDataStage] = useState(1);
   const [botSrc, setBotSrc] = useState(zaki);
+  const [loading, setLoading] = useState(false);
   const initData = {
     newComer: false,
     ...generalInfo,
@@ -59,12 +61,16 @@ const RegistrationBot = () => {
   };
 
   const onSubmit = async () => {
+    setLoading(true);
     const res = await axios.post("/api/recruitment", data);
-    if (res.data.application) {
-      setStage(4);
-    } else {
-      console.log(res);
-    }
+    setTimeout(() => {
+      if (res.data.application) {
+        setStage(4);
+      } else {
+        console.log(res);
+      }
+      setLoading(false);
+    }, [3000]);
   };
 
   const reset = () => {
@@ -111,8 +117,13 @@ const RegistrationBot = () => {
                 >
                   Back
                 </button>
-                <button className="button button-primary" onClick={onSubmit}>
-                  Submit
+                <button
+                  className="button button-primary d-flex align-items-center gap-auto"
+                  onClick={onSubmit}
+                  disabled={loading}
+                >
+                  <span>Submit </span>
+                  {loading && <LoadingComponent color={"secondary"} border />}
                 </button>
               </div>
             </>

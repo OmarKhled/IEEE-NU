@@ -58,4 +58,18 @@ router.post("/", async (req, res) => {
   }
 });
 
+// @desc    Remove Applicant
+// @route   GET /api/events
+// @access  Protected
+router.delete("/:id", auth, async (req, res) => {
+  const id = req.params.id;
+  const deleted = await Applicants.findByIdAndDelete(id);
+
+  if (deleted) {
+    res.status(200).json({ msg: "Deleted" });
+  } else {
+    res.status(404).json({ msg: "Not found" });
+  }
+});
+
 export default router;
