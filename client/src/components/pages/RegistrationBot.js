@@ -88,6 +88,18 @@ const RegistrationBot = () => {
           />
         </div>
         <div className="content px-4">
+          <p
+            style={{
+              textAlign: "center",
+              fontWeight: "bold",
+              fontSize: "1.5rem",
+            }}
+          >
+            I'm sorry to inform you that there is no services that I can offer
+            to you now, Check back later!
+          </p>
+        </div>
+        {/* <div className="content px-4">
           {stage === 1 ? (
             <Newcomer
               setOuterStage={setStage}
@@ -143,7 +155,7 @@ const RegistrationBot = () => {
               </>
             )
           )}
-        </div>
+        </div> */}
       </div>
       <img
         style={{ display: "none", width: "2px" }}
