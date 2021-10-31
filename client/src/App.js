@@ -43,6 +43,7 @@ import IEEEDay from "./components/pages/IEEEDay";
 import Vr from "./components/pages/Vr";
 import EEDPlatform from "./components/pages/EEDPlatform";
 import BoardRecruitment from "./components/pages/BoardRecruitment";
+import AcademyRegistration from "./components/pages/AcademyRegistration";
 
 function App() {
   const [themeState, setTheme] = useState(localStorage.getItem("theme"));
@@ -128,6 +129,11 @@ function App() {
                 component={VerficationForm}
               />
               <Route exact path="/recruitmentForm" component={Recruitment} />
+              <Route
+                exact
+                path="/IEEEAcademy"
+                component={AcademyRegistration}
+              />
               <Route
                 exact
                 path="/boardRecruitment"
