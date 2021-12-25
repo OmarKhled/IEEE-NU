@@ -29,11 +29,15 @@ router.get("/attendance/:id", async (req, res, next) => {
         });
       }
     } else {
-      res.status(200).json({ msg: "Attendee not found", type: "danger" });
+      res
+        .status(200)
+        .json({ msg: "Attendee not found", type: "danger", err: true });
     }
   } catch (err) {
     console.log(err);
-    res.status(200).json({ msg: "Please check qr code", type: "danger" });
+    res
+      .status(200)
+      .json({ msg: "Please check qr code", type: "danger", err: true });
   }
 });
 export default router;
