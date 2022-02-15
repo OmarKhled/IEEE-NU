@@ -1,0 +1,139 @@
+// Color Pallette Variables
+:root {
+  // Base Colors
+  --pantoneBlue:  #1A89B9;
+  --violetBlue: #441AB9;
+  --greenVogue: #032B52;
+  --aquaSqueeze: #E8F0F5;
+  --deapSea: #008472;
+  --fireBush: #EB9A28;
+  // Shades
+    // Pantone Blue
+    --pantoneBlue-100: #93cbec;
+    --pantoneBlue-200: #63b4e1;
+    --pantoneBlue-300: #359ed7;
+    --pantoneBlue-400: #1b88b9;
+    --pantoneBlue-500: #066e9c;
+    --pantoneBlue-600: #005480;
+    --pantoneBlue-700: #003b65;
+    --pantoneBlue-700: #01244e;
+
+    // Violet Blue
+    --violetBlue-100: #b190e9;
+    --violetBlue-200: #8f62df;
+    --violetBlue-300: #735bd4;
+    --violetBlue-400: #5a56cb;
+    --violetBlue-500: #4845a8;
+    --violetBlue-600: #3b3686;
+    --violetBlue-700: #2b2663;
+    --violetBlue-700: #201d4e;
+
+    // Green Vogue
+    --greenVogue-100: #b4cce4;
+    --greenVogue-200: #a2bdd8;
+    --greenVogue-300: #85a9cb;
+    --greenVogue-400: #6c96bc;
+    --greenVogue-500: #5781a9;
+    --greenVogue-600: #3b6892;
+    --greenVogue-700: #22517b;
+    --greenVogue-700: #103d67;
+
+    // Aqua Squeeze
+
+    // Deap Sea
+    --violetBlue-100: #9bdad2;
+    --violetBlue-200: #7ccec2;
+    --violetBlue-300: #60c0b2;
+    --violetBlue-400: #4ab6a7;
+    --violetBlue-500: #43a99a;
+    --violetBlue-600: #3e9d8c;
+    --violetBlue-700: #3a927f;
+    --violetBlue-700: #2b7263;
+}
+
+// Typography - Work Sans
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body, * {
+  font-family: "Work Sans", Helvetica, Verdana, Garamond, sans-serif, 'Times New Roman', serif;
+}
+* {
+  line-height: calc(1em + 0.5rem);
+}
+p, h1, h2, h3, h4, h5, h6, small {
+  color: var(--greenVogue);
+}
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.125rem);
+  font-weight: 800;
+}
+h2 {
+  font-size: clamp(1.857rem, 4vw, 2.5rem);
+  font-weight: 700;
+}
+h3 {
+  font-size: clamp(1.75rem, 3vw, 2rem);
+  font-weight: 700;
+}
+h4 {
+  font-size: clamp(1.375rem, 3vw, 1.75rem);
+  font-weight: 600;
+}
+h5 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 500;
+}
+h6 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+p {
+  font-size: clamp(1rem, 2vw, 1.225rem);
+  font-weight: 400;
+}
+
+// CSS Reset
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+// Removing Browser Defaults
+a, a:focus, a:hover {
+  text-decoration: none;
+}
+a, a:focus{
+  color: var(--greenVogue);
+  transition: all 150ms;
+}
+a:hover {
+  opacity: 0.9;
+}
+
+// Containers
+.__root {
+  width: min(90%, 72.5rem);
+  margin: 3.3rem auto;
+}
+
+// Component Styles
+@import "./button";
