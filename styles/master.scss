@@ -85,7 +85,7 @@ html, body, * {
   font-family: "Work Sans", Helvetica, Verdana, Garamond, sans-serif, 'Times New Roman', serif;
 }
 * {
-  line-height: calc(1em + 0.5rem);
+  line-height: calc(1.1em + 0.5rem);
 }
 p, h1, h2, h3, h4, h5, h6, small {
   color: var(--greenVogue);
@@ -115,7 +115,7 @@ h6 {
   font-weight: 500;
 }
 p {
-  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-size: clamp(1rem, 2vw, 1.0075rem);
   font-weight: 400;
 }
 
@@ -128,6 +128,7 @@ p {
 }
 html, body {
   height: 100%;
+  overflow-x: hidden;
 }
 body {
   line-height: 1.5;
@@ -170,6 +171,12 @@ a:hover {
 .flex {
   display: flex
 }
+.block {
+  display: block !important;
+}
+.gap-h-dot5>*+* {
+  margin-left: 0.5rem;
+}
 .gap-h-1>*+* {
   margin-left: 1rem;
 }
@@ -179,20 +186,17 @@ a:hover {
 .gap-h-3>*+* {
   margin-left: 3rem;
 }
-.gap-v-4>*+* {
-  margin-bottom: 4rem;
-}
 .gap-v-1>*+* {
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 .gap-v-2>*+* {
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .gap-v-3>*+* {
-  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 .gap-v-4>*+* {
-  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 .light {
   font-weight: 200;
@@ -209,6 +213,29 @@ a:hover {
 .text-center {
   text-align: center;
 }
+.w-100 {
+  width: 100% !important;
+}
+.w-75 {
+  width: 75% !important;
+}
+.w-50 {
+  width: 50% !important;
+}
+.w-25 {
+  width: 25% !important;
+}
+.link {
+  transition: 300ms all;
+}
+.link:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+.board-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
 
 // Global Styles
 .gray-info {
@@ -223,8 +250,12 @@ a:hover {
 section {
   .section-title {
     text-align: center;
+    margin-bottom: 2rem;
   }
   margin-top: 9.5vw
+}
+.row>* {
+  padding: 0 !important;
 }
 
 // Component Styles
@@ -234,4 +265,5 @@ section {
 @import "./counter";
 @import "./carousel";
 @import "./updates";
-@import "./_members-card";
+@import "./members-card";
+@import "./inputs";

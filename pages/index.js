@@ -80,7 +80,7 @@ export default function Home() {
             Join Now!
           </Button>
         </div>
-        <div className="globe">
+        <div className="hero-img">
           <img src="/images/Globe.svg" alt="globe" />
         </div>
       </header>
@@ -90,13 +90,13 @@ export default function Home() {
         <section className="achivments">
           <h3 className="section-title">We've Achieved</h3>
           <div className="counters row justify-content-center">
-            <div className="col-12 col-sm-6 col-lg-4 mt-5">
+            <div className="col-12 col-sm-6 col-lg-4 mt-4">
               <CounterCard number="15" info="Event" />
             </div>
-            <div className="col-12 col-sm-6 col-lg-4 mt-5">
+            <div className="col-12 col-sm-6 col-lg-4 mt-4">
               <CounterCard number="500" info="Member" />
             </div>
-            <div className="col-12 col-sm-6 col-lg-4 mt-5">
+            <div className="col-12 col-sm-6 col-lg-4 mt-4">
               <CounterCard number="10" info="Awards" />
             </div>
           </div>
@@ -113,19 +113,19 @@ export default function Home() {
               title="Hosting of IEEE Egypt Section Closing Ceremony"
               date="25/12/2021"
               img="/images/updates/closing-ceremony.png"
-              className="col-12 col-sm-6 col-lg-4 mt-5"
+              className="col-12 col-sm-6 col-lg-4 mt-3"
             />
             <UpdatesCard
               title="Partnering with Nile Preneurs Explore Program"
               date="29/11/2022"
               img="/images/updates/explore.jpg"
-              className="col-12 col-sm-6 col-lg-4 mt-5"
+              className="col-12 col-sm-6 col-lg-4 mt-3"
             />
             <UpdatesCard
               title="Opening 2022 Members Recruitment Application"
               date="27/10/2021"
               img="/images/updates/recruitment.jpg"
-              className="col-12 col-sm-6 col-lg-4 mt-5 m-auto"
+              className="col-12 col-sm-6 col-lg-4 mt-3"
             />
           </div>
         </section>
@@ -133,7 +133,10 @@ export default function Home() {
           <h3 className="section-title">Excutive Officers</h3>
           <div className="row">
             {board.map((officer) => (
-              <div className="col-12 col-sm-6 col-lg-4">
+              <div
+                className="col-12 col-sm-6 col-lg-4 mt-5"
+                key={officer.position}
+              >
                 <MembersCard
                   name={officer.name}
                   position={officer.position}
@@ -144,16 +147,16 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section>
-          <div>
+        <section className="news-letter">
+          <div className="info gap-v-1">
             <h1>Subscribe to Our Monthly Newsletter!</h1>
-            <input type="text" placeholder="Email" />
-            <Button type="link" color="secondary" href="#">
+            <input type="text" placeholder="Email" className="w-75" />
+            <Button type="link" color="secondary" href="#" className="block">
               Subscribe
             </Button>
           </div>
-          <div>
-            <img src="#" />
+          <div className="envelope">
+            <img src="/images/Envelope-amico.svg" />
           </div>
         </section>
       </main>

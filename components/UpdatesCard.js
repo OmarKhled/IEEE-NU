@@ -8,9 +8,9 @@ const UpdatesCard = ({ img, title, date, link, className }) => {
         <img src={img} alt="title" />
       </div>
       <div className="info mt-3">
-        <Link href={link}>
+        <a href={link} className="link">
           <h6 className="bold">{title}</h6>
-        </Link>
+        </a>
         <p>{date}</p>
       </div>
     </card>

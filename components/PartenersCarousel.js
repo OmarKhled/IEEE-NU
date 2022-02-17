@@ -23,7 +23,7 @@ const PartenersCarousel = ({ items }) => {
         breakPoints={breakPoints}
         pagination={false}
         renderArrow={myArrow}
-        className="mt-4"
+        // className="mt-4"
       >
         {items.map((item) => (
           <div key={item.img} className={`partener`}>

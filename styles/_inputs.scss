@@ -1,0 +1,10 @@
+input[type="text"] {
+  padding: 1rem 2rem;
+  border: var(--greenVogue) solid 1px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+input[type="text"]::placeholder {
+  font-weight: 300;
+  color: var(--greenVogue);
+}

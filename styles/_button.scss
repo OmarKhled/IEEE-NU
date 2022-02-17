@@ -5,9 +5,25 @@
   color: white;
   border-radius: 1.5rem;
   z-index: 1;
+  width: fit-content;
 }
 .btn:active, .btn:focus {
   color: white !important;
+}
+.btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: all 2000ms;
+  border-radius: 1.5rem;
+}
+.btn:hover::before {
+  opacity: 1;
 }
 // Primarry Button
 .btn-primary {
@@ -21,12 +37,6 @@
   );
 }
 .btn-primary::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   background-image: linear-gradient(
     90deg,
     hsl(198deg 84% 45%) 0%,
@@ -35,11 +45,19 @@
     hsl(226deg 60% 44%) 63%,
     hsl(256deg 90% 34%) 100%
   );
-  z-index: -1;
-  opacity: 0;
-  transition: all 2000ms;
-  border-radius: 1.5rem;
 }
-.btn-primary:hover::before {
-  opacity: 1;
+// Secondary Button
+.btn-secondary {
+  background-image: linear-gradient(
+      270deg,
+      #1292ca 0%,
+      #1b5993 100%
+    );
+}
+.btn-secondary::before {
+  background-image: linear-gradient(
+      90deg,
+      #1292ca 0%,
+      #1b5993 100%
+    );
 }
