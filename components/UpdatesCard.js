@@ -1,15 +1,15 @@
 import React from "react";
 import Link from "next/link";
 
-const UpdatesCard = ({ img, title, date, link }) => {
+const UpdatesCard = ({ img, title, date, link, className }) => {
   return (
-    <card className="updates-card">
-      <div className="maing-img">
-        <img src={img} />
+    <card className={`updates-card ${className ? className : ""}`}>
+      <div className="main-img">
+        <img src={img} alt="title" />
       </div>
-      <div className="info">
+      <div className="info mt-3">
         <Link href={link}>
-          <h4>{title}</h4>
+          <h6 className="bold">{title}</h6>
         </Link>
         <p>{date}</p>
       </div>

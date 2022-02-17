@@ -5,11 +5,14 @@ const Button = ({ type, color, href, children, className }) => {
   return (
     <>
       {type === "button" ? (
-        <button className={`btn-${color} ${className}`}>{children}</button>
+        <button className={`btn btn-${color} ${className}`}>{children}</button>
       ) : (
-        <Link href={href} className={`btn-${color} ${className}`}>
+        <a
+          href={href}
+          className={`btn btn-${color} ${className ? className : ""}`}
+        >
           {children}
-        </Link>
+        </a>
       )}
     </>
   );

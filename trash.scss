@@ -1,0 +1,48 @@
+.hero {
+  &>*+* {
+    margin-left: 2vw;
+  }
+  @extend .flex;
+  align-items: flex-start;
+  height: 97vh;
+  padding-top: 15vh;
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vw;
+    .main-title {
+      max-width: 30rem;
+    }
+  }
+  .globe {
+    // height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    img {
+      height: 100%;
+    }
+  }
+  @media screen and (max-width: 1035px) {
+    padding-top: 0;
+    flex-direction: column-reverse;
+    &>*+* {
+      margin-bottom: 2rem;
+      margin-left: 0;
+    }
+    .info {
+      margin-top: 0;
+      .main-title {
+        max-width: 100%;
+      }
+      align-items: center;
+      text-align: center;
+    }
+    .globe {
+      justify-content: center;
+      img {
+        height: 100%;
+      }
+    }
+  }
+}

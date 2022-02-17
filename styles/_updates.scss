@@ -1,0 +1,21 @@
+.updates-card {
+  padding: 0 10px;
+  .main-img {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+      // width: 90%;
+      border-radius: 1.6rem;
+      margin: 0 !important;
+      box-shadow: var(--shadow-elevation-high);
+    }
+  }
+  .info {
+    width: 86%;
+    margin: auto;
+  }
+}

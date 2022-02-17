@@ -1,0 +1,45 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 1.75rem 3.5rem;
+  color: white;
+  border-radius: 1.5rem;
+  z-index: 1;
+}
+.btn:active, .btn:focus {
+  color: white !important;
+}
+// Primarry Button
+.btn-primary {
+  background-image: linear-gradient(
+    245deg,
+    hsl(198deg 84% 45%) 0%,
+    hsl(204deg 74% 45%) 21%,
+    hsl(212deg 66% 45%) 40%,
+    hsl(226deg 60% 44%) 63%,
+    hsl(256deg 90% 34%) 100%
+  );
+}
+.btn-primary::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    90deg,
+    hsl(198deg 84% 45%) 0%,
+    hsl(204deg 74% 45%) 21%,
+    hsl(212deg 66% 45%) 40%,
+    hsl(226deg 60% 44%) 63%,
+    hsl(256deg 90% 34%) 100%
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: all 2000ms;
+  border-radius: 1.5rem;
+}
+.btn-primary:hover::before {
+  opacity: 1;
+}

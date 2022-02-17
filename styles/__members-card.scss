@@ -1,0 +1,26 @@
+.member-card {
+  display: block;
+  background-color: #fff;
+  margin: 2rem;
+  border-radius: 3.125rem;
+  .top-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    background: var(--pantoneBlue);
+    border-radius: 3.125rem 3.125rem 0 0;
+    .member-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+  }
+  .body {
+    text-align: center;
+    padding: 1rem 2rem 3rem 2rem;
+  }
+}
+.member-card.board {
+  
+}

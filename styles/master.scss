@@ -49,6 +49,33 @@
     --violetBlue-600: #3e9d8c;
     --violetBlue-700: #3a927f;
     --violetBlue-700: #2b7263;
+
+  // Shadows
+  --shadow-color: 204deg 14% 75%;
+  --shadow-elevation-low:
+    0.1px 0.4px 0.6px hsl(var(--shadow-color) / 0.06),
+    0.2px 0.6px 0.9px -0.4px hsl(var(--shadow-color) / 0.13),
+    0.3px 1.2px 1.7px -0.9px hsl(var(--shadow-color) / 0.2);
+  --shadow-elevation-medium:
+    0.1px 0.4px 0.6px hsl(var(--shadow-color) / 0.05),
+    0.3px 1.1px 1.6px -0.2px hsl(var(--shadow-color) / 0.09),
+    0.5px 1.9px 2.7px -0.4px hsl(var(--shadow-color) / 0.12),
+    0.9px 3.3px 4.7px -0.7px hsl(var(--shadow-color) / 0.16),
+    1.6px 5.9px 8.3px -0.9px hsl(var(--shadow-color) / 0.19);
+  --shadow-elevation-high:
+    0.1px 0.4px 0.6px hsl(var(--shadow-color) / 0.05),
+    0.4px 1.6px 2.3px -0.1px hsl(var(--shadow-color) / 0.06),
+    0.7px 2.6px 3.7px -0.2px hsl(var(--shadow-color) / 0.08),
+    1px 3.7px 5.2px -0.3px hsl(var(--shadow-color) / 0.1),
+    1.4px 5px 7.1px -0.4px hsl(var(--shadow-color) / 0.11),
+    1.8px 6.6px 9.3px -0.5px hsl(var(--shadow-color) / 0.13),
+    2.4px 8.7px 12.3px -0.6px hsl(var(--shadow-color) / 0.15),
+    3.2px 11.5px 16.3px -0.7px hsl(var(--shadow-color) / 0.16),
+    4.2px 15.1px 21.4px -0.8px hsl(var(--shadow-color) / 0.18),
+    5.4px 19.6px 27.8px -0.9px hsl(var(--shadow-color) / 0.2);
+}
+html, body {
+  background: var(--aquaSqueeze)
 }
 
 // Typography - Work Sans
@@ -84,11 +111,11 @@ h5 {
   font-weight: 500;
 }
 h6 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 p {
-  font-size: clamp(1rem, 2vw, 1.225rem);
+  font-size: clamp(1rem, 2vw, 1.125rem);
   font-weight: 400;
 }
 
@@ -131,9 +158,80 @@ a:hover {
 
 // Containers
 .__root {
-  width: min(90%, 72.5rem);
-  margin: 3.3rem auto;
+  width: min(90%, 83.125rem);
+  margin: 10rem auto;
+  @media screen and (max-width: 51.25rem) {
+    margin: 5rem auto;
+  }
+  // background-color: #d5edfd;
+}
+
+// Utility Classes
+.flex {
+  display: flex
+}
+.gap-h-1>*+* {
+  margin-left: 1rem;
+}
+.gap-h-2>*+* {
+  margin-left: 2rem;
+}
+.gap-h-3>*+* {
+  margin-left: 3rem;
+}
+.gap-v-4>*+* {
+  margin-bottom: 4rem;
+}
+.gap-v-1>*+* {
+  margin-bottom: 1rem;
+}
+.gap-v-2>*+* {
+  margin-bottom: 2rem;
+}
+.gap-v-3>*+* {
+  margin-bottom: 3rem;
+}
+.gap-v-4>*+* {
+  margin-bottom: 4rem;
+}
+.light {
+  font-weight: 200;
+}
+.regular {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+.text-center {
+  text-align: center;
+}
+
+// Global Styles
+.gray-info {
+  color: #585858;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.16rem
+}
+.circle {
+  border-radius: 50%;
+}
+section {
+  .section-title {
+    text-align: center;
+  }
+  margin-top: 9.5vw
 }
 
 // Component Styles
 @import "./button";
+@import "./hero";
+@import "./home";
+@import "./counter";
+@import "./carousel";
+@import "./updates";
+@import "./_members-card";

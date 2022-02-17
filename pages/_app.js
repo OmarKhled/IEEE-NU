@@ -1,5 +1,6 @@
 import Head from "next/head";
 import "../styles/master.scss";
+import "../styles/bootstrap-grid.css";
 
 function MyApp({ Component, pageProps }) {
   return (
