@@ -1,8 +1,9 @@
 .member-card {
   display: block;
   background-color: #fff;
-  margin: 0rem auto;
-  width: min(90vw, 280px);
+  // width: 70%;
+  margin: auto auto;
+  width: min(95%, 280px);
   height: 100%;
   border-radius: 3.125rem;
   box-shadow: var(--shadow-elevation-high);
@@ -11,7 +12,7 @@
     justify-content: center;
     align-items: center;
     height: 250px;
-    // background: var(--pantoneBlue);
+    background: var(--pantoneBlue);
     border-radius: 3.125rem 3.125rem 0 0;
     .member-img {
       width: 150px;
@@ -32,7 +33,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 1.8rem;
+    padding-bottom: 2.3rem;
     .social-link {
       filter: grayscale(1)
     }

@@ -1,34 +1,40 @@
 .hero {
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   display: flex;
-  flex-direction: column-reverse;
   align-items: center;
+  flex-direction: column-reverse;
   text-align: center;
   margin-bottom: 2rem;
+  margin-top: 8rem;
   height: fit-content;
-  &>*+* {
+  .hero-img {
     margin-bottom: 2rem;
   }
   @media screen and (min-width: 51.25rem) {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
     text-align: left;
-    margin-top: 4rem;
+    margin-top: 12rem;
     &>*+* {
       margin-left: 2rem;
     }
     .hero-img {
       width: 100%;
-      height: 100%;
+      // height: 100%;
+      // image-size: cover;
+      aspect-ratio: 1/1;
+      margin-bottom: 0rem;
       max-height: 35rem;
       display: flex;
       justify-content: flex-end;
-      img {
+      img, canvas {
         height: 100%;
         // min-width: 380px;
       }
     }
     .info {
-      margin-top: 4vw;
+      margin-top: 2vw;
       .main-title {
         max-width: 30rem;
       }

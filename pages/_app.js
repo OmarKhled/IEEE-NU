@@ -1,6 +1,7 @@
 import Head from "next/head";
 import "../styles/master.scss";
 import "../styles/bootstrap-grid.css";
+import Navbar from "../components/Navbar";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -32,9 +33,8 @@ function MyApp({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <div className="__root">
-        <Component {...pageProps} />
-      </div>
+      <Navbar />
+      <Component {...pageProps} />
     </>
   );
 }

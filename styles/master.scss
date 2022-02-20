@@ -84,6 +84,9 @@ html, body {
 html, body, * {
   font-family: "Work Sans", Helvetica, Verdana, Garamond, sans-serif, 'Times New Roman', serif;
 }
+body {
+  position: relative;
+}
 * {
   line-height: calc(1.1em + 0.5rem);
 }
@@ -166,6 +169,12 @@ a:hover {
   }
   // background-color: #d5edfd;
 }
+
+// THREEJS 
+.dg {
+  top: 90px !important;
+} 
+
 
 // Utility Classes
 .flex {
@@ -252,7 +261,10 @@ section {
     text-align: center;
     margin-bottom: 2rem;
   }
-  margin-top: 9.5vw
+  margin-top: min(8rem, 10.3vw)
+}
+section:first-of-type {
+  margin-top: 10vw;
 }
 .row>* {
   padding: 0 !important;
@@ -267,3 +279,4 @@ section {
 @import "./updates";
 @import "./members-card";
 @import "./inputs";
+@import "./navbar";

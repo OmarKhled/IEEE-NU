@@ -1,4 +1,10 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
+import { Suspense, useEffect, useRef, useState } from "react";
+
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, useTexture, useAspect } from "@react-three/drei";
+
 import Button from "../components/Button";
 import CounterCard from "../components/CounterCard";
 import MembersCard from "../components/MembersCard";
@@ -54,8 +60,60 @@ export default function Home() {
       img: "/images/board/omar.png",
     },
   ];
+  const globeMeshRef = useRef();
+
+  const Globe = () => {
+    const worldMap = useTexture("textures/123.png");
+    const globe = document.querySelector(".hero-img");
+    const [scale, setScale] = useState(
+      globe.clientWidth < 446.875 ? globe.clientWidth / 446.875 : 1
+    );
+    window.addEventListener("resize", () => {
+      setScale(globe.clientWidth < 446.875 ? globe.clientWidth / 446.875 : 1);
+      // console.log(scale);
+    });
+
+    useEffect(() => {
+      // console.log(globeMeshRef.current.rotation.x);
+      import("dat.gui").then((dat) => {
+        const gui = new dat.GUI();
+        gui.destroy();
+        gui
+          .add(globeMeshRef.current.rotation, "x")
+          .min(2 * -3.14159)
+          .max(2 * 3.14159)
+          .step(0.01)
+          .name("SphereXRotation");
+        gui
+          .add(globeMeshRef.current.rotation, "y")
+          .min(2 * -3.14159)
+          .max(2 * 3.14159)
+          .step(0.01)
+          .name("SphereYRotation");
+        gui
+          .add(globeMeshRef.current.rotation, "z")
+          .min(2 * -3.14159)
+          .max(2 * 3.14159)
+          .step(0.01)
+          .name("SphereZRotation");
+      });
+    }, []);
+
+    return (
+      <>
+        <ambientLight intensity={0.4} />
+        <pointLight position={[537, 555, 0]} intensity={1} color={0x5ec8f6} />
+        <mesh scale={scale} ref={globeMeshRef}>
+          <sphereGeometry args={[3, 50, 50]} />
+          <meshStandardMaterial map={worldMap} />
+          {/* <meshLambertMaterial color={"blue"}  map={worldMap} /> */}
+        </mesh>
+      </>
+    );
+  };
+
   return (
-    <div>
+    <div className="__root">
       {/* Meta Tags */}
       <Head>
         <title>IEEENU - Home</title>
@@ -81,7 +139,18 @@ export default function Home() {
           </Button>
         </div>
         <div className="hero-img">
-          <img src="/images/Globe.svg" alt="globe" />
+          {/* <img src="/images/Globe.svg" alt="globe" /> */}
+          <Canvas camera={{}}>
+            <OrbitControls
+              enablePan={false}
+              enableZoom={false}
+              rotateSpeed={0.3}
+              autoRotateSpeed={0.5}
+            />
+            <Suspense fallback={null}>
+              <Globe />
+            </Suspense>
+          </Canvas>
         </div>
       </header>
       {/* Main Content */}
