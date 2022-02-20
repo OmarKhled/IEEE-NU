@@ -157,7 +157,7 @@ export default function Home() {
       <main>
         {/* Counters */}
         <section className="achivments">
-          <h3 className="section-title">We've Achieved</h3>
+          <h3 className="section-title">We have Achieved</h3>
           <div className="counters row justify-content-center">
             <div className="col-12 col-sm-6 col-lg-4 mt-4">
               <CounterCard number="15" info="Event" />
