@@ -160,6 +160,11 @@ a:hover {
   opacity: 0.9;
 }
 
+::selection {
+  background-color: var(--pantoneBlue-300);
+  // color: var(--fireBush);
+}
+
 // Containers
 .__root {
   width: min(90%, 83.125rem);

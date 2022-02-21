@@ -5,7 +5,7 @@ const UpdatesCard = ({ img, title, date, link, className }) => {
   return (
     <card className={`updates-card ${className ? className : ""}`}>
       <div className="main-img">
-        <img src={img} alt="title" />
+        <img src={img} alt="title" className="img" />
       </div>
       <div className="info mt-3">
         <a href={link} className="link">

@@ -20,10 +20,9 @@ export default function Home() {
       {/* Meta Tags */}
       <Head>
         <title>IEEENU - Home</title>
-        <meta
-          name="description"
-          content="Engage and empower NU community, through technology, to develop their communities. IEEE NU | Visualize The Future"
-        />
+        <meta property="og:title" content="IEEENU Home" />
+        <meta name="og:title" content="IEEENU Home" />
+        <meta name="twitter:title" content="IEEENU Home" />
       </Head>
       {/* Hero Section */}
       <header className="hero">
@@ -62,13 +61,13 @@ export default function Home() {
         <section className="achivments">
           <h3 className="section-title">We have Achieved</h3>
           <div className="counters row justify-content-center">
-            <div className="col-12 col-sm-6 col-lg-4 mt-4">
+            <div className="col-12 col-sm-6 col-lg-4 mt-5">
               <CounterCard number="15" info="Event" />
             </div>
-            <div className="col-12 col-sm-6 col-lg-4 mt-4">
+            <div className="col-12 col-sm-6 col-lg-4 mt-5">
               <CounterCard number="500" info="Member" />
             </div>
-            <div className="col-12 col-sm-6 col-lg-4 mt-4">
+            <div className="col-12 col-sm-6 col-lg-4 mt-5">
               <CounterCard number="10" info="Awards" />
             </div>
           </div>

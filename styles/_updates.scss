@@ -12,6 +12,11 @@
       border-radius: 1.6rem;
       margin: 0 !important;
       box-shadow: var(--shadow-elevation-high);
+      transition: all 300ms;
+      cursor: pointer;
+    }
+    .img:hover {
+      filter: grayscale(0.4);
     }
   }
   .info {
