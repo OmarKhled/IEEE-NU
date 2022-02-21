@@ -1,120 +1,20 @@
 import Head from "next/head";
-import dynamic from "next/dynamic";
-import { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense } from "react";
 
-import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls, useTexture } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
 
 import Button from "../components/Button";
 import CounterCard from "../components/CounterCard";
 import MembersCard from "../components/MembersCard";
 import PartenersCarousel from "../components/PartenersCarousel";
 import UpdatesCard from "../components/UpdatesCard";
+import Globe from "../components/THREEJS/Globe";
+
+import board from "../data/board";
+import partners from "../data/partners";
 
 export default function Home() {
-  const items = [
-    {
-      img: "/images/partners/academy.png",
-      alt: "academy",
-    },
-    {
-      img: "/images/partners/Auc-Robotics.jpg",
-      alt: "Auc Robotics",
-      circle: true,
-    },
-    {
-      img: "/images/partners/helwan.jpg",
-      alt: "IEEE Helwan",
-      circle: true,
-    },
-    {
-      img: "/images/partners/nilepreneurs.png",
-      alt: "Nile Preneurs",
-    },
-    {
-      img: "/images/partners/nileuniversty.png",
-      alt: "Nile University",
-    },
-    {
-      img: "/images/partners/research.png",
-      alt: "NU Research Office",
-    },
-  ];
-  const board = [
-    {
-      name: "Youssef Nasser",
-      position: "Chairman",
-      school: "Faculty Of Engineering",
-      img: "/images/board/nasser.png",
-    },
-    {
-      name: "Yasmeen Yehia",
-      position: "Vice Chairman",
-      school: "Faculty Of Computer Science",
-      img: "/images/board/yasmeen.png",
-    },
-    {
-      name: "Omar Khaled",
-      position: "Technical Director",
-      school: "Faculty Of Engineering",
-      img: "/images/board/omar.png",
-    },
-  ];
-  const globeMeshRef = useRef();
-
-  const Globe = () => {
-    const state = useThree();
-
-    const worldMap = useTexture("textures/123.png");
-    const globe = document.querySelector(".hero-img");
-    const [scale, setScale] = useState(
-      globe.clientWidth < 446.875 ? globe.clientWidth / 446.875 : 1
-    );
-    window.addEventListener("resize", () => {
-      setScale(globe.clientWidth < 446.875 ? globe.clientWidth / 446.875 : 1);
-      // console.log(scale);
-    });
-
-    useEffect(() => {
-      state.setDpr(window.devicePixelRatio);
-
-      import("dat.gui").then((dat) => {
-        const gui = new dat.GUI();
-        gui.destroy();
-        gui
-          .add(globeMeshRef.current.rotation, "x")
-          .min(2 * -3.14159)
-          .max(2 * 3.14159)
-          .step(0.01)
-          .name("SphereXRotation");
-        gui
-          .add(globeMeshRef.current.rotation, "y")
-          .min(2 * -3.14159)
-          .max(2 * 3.14159)
-          .step(0.01)
-          .name("SphereYRotation");
-        gui
-          .add(globeMeshRef.current.rotation, "z")
-          .min(2 * -3.14159)
-          .max(2 * 3.14159)
-          .step(0.01)
-          .name("SphereZRotation");
-      });
-    }, []);
-
-    return (
-      <>
-        <ambientLight intensity={0.4} />
-        <pointLight position={[537, 555, 0]} intensity={1} color={0x5ec8f6} />
-        <mesh scale={scale} ref={globeMeshRef}>
-          <sphereGeometry args={[3, 50, 50]} />
-          <meshStandardMaterial map={worldMap} />
-          {/* <meshLambertMaterial color={"blue"}  map={worldMap} /> */}
-        </mesh>
-      </>
-    );
-  };
-
   return (
     <div className="__root">
       {/* Meta Tags */}
@@ -176,7 +76,7 @@ export default function Home() {
         {/* Past Partners */}
         <section className="text-center">
           <h3 className="section-title">Past Partners</h3>
-          <PartenersCarousel items={items} />
+          <PartenersCarousel items={partners} />
         </section>
         <section>
           <h3 className="section-title">Branch Updates</h3>
