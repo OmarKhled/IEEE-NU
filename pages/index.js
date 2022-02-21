@@ -2,8 +2,8 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import { Suspense, useEffect, useRef, useState } from "react";
 
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useTexture, useAspect } from "@react-three/drei";
+import { Canvas, useThree } from "@react-three/fiber";
+import { OrbitControls, useTexture } from "@react-three/drei";
 
 import Button from "../components/Button";
 import CounterCard from "../components/CounterCard";
@@ -61,8 +61,11 @@ export default function Home() {
     },
   ];
   const globeMeshRef = useRef();
+  const devicePixelRatio = useState();
 
   const Globe = () => {
+    const state = useThree();
+
     const worldMap = useTexture("textures/123.png");
     const globe = document.querySelector(".hero-img");
     const [scale, setScale] = useState(
@@ -74,7 +77,8 @@ export default function Home() {
     });
 
     useEffect(() => {
-      // console.log(globeMeshRef.current.rotation.x);
+      state.setDpr(window.devicePixelRatio);
+
       import("dat.gui").then((dat) => {
         const gui = new dat.GUI();
         gui.destroy();
@@ -140,7 +144,7 @@ export default function Home() {
         </div>
         <div className="hero-img">
           {/* <img src="/images/Globe.svg" alt="globe" /> */}
-          <Canvas camera={{}}>
+          <Canvas dpr={devicePixelRatio}>
             <OrbitControls
               enablePan={false}
               enableZoom={false}
