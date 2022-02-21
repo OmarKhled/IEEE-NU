@@ -61,7 +61,6 @@ export default function Home() {
     },
   ];
   const globeMeshRef = useRef();
-  // const devicePixelRatio = useState();
 
   const Globe = () => {
     const state = useThree();
