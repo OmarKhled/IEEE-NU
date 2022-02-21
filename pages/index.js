@@ -61,7 +61,7 @@ export default function Home() {
     },
   ];
   const globeMeshRef = useRef();
-  const devicePixelRatio = useState();
+  // const devicePixelRatio = useState();
 
   const Globe = () => {
     const state = useThree();
@@ -144,7 +144,7 @@ export default function Home() {
         </div>
         <div className="hero-img">
           {/* <img src="/images/Globe.svg" alt="globe" /> */}
-          <Canvas dpr={devicePixelRatio}>
+          <Canvas>
             <OrbitControls
               enablePan={false}
               enableZoom={false}
