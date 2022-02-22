@@ -20,9 +20,24 @@ export default function Home() {
       {/* Meta Tags */}
       <Head>
         <title>IEEENU - Home</title>
-        <meta property="og:title" content="IEEENU Home" />
+        {/* <meta property="og:title" content="IEEENU Home" />
         <meta name="og:title" content="IEEENU Home" />
-        <meta name="twitter:title" content="IEEENU Home" />
+        <meta name="twitter:title" content="IEEENU Home" /> */}
+        <meta
+          property="og:title"
+          content="IEEE @ Nile University Student Branch"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://dev.ieeenu.com" />
+        <meta
+          property="og:image"
+          content="https://i.ibb.co/xM8HvGb/cover.png"
+        />
+        <meta
+          property="og:description"
+          content="Engage and empower NU community, through technology, to develop their
+          communities. IEEE NU | Visualize The Future"
+        />
       </Head>
       {/* Hero Section */}
       <header className="hero">
@@ -48,6 +63,7 @@ export default function Home() {
               enableZoom={false}
               rotateSpeed={0.3}
               autoRotateSpeed={0.5}
+              autoRotate
             />
             <Suspense fallback={null}>
               <Globe />

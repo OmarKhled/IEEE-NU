@@ -2,6 +2,7 @@ import Head from "next/head";
 import "../styles/master.scss";
 import "../styles/bootstrap-grid.css";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -54,23 +55,11 @@ function MyApp({ Component, pageProps }) {
           content="Engage and empower NU community, through technology, to develop their
           communities. IEEE NU | Visualize The Future"
         />
-        <meta
-          name="twitter:title"
-          content="IEEE @ Nile University Student Branch"
-        />
-        <meta
-          name="twitter:description"
-          content="Engage and empower NU community, through technology, to develop their
-          communities. IEEE NU | Visualize The Future"
-        />
-        <meta
-          name="twitter:image"
-          content="https://i.ibb.co/xM8HvGb/cover.png"
-        />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

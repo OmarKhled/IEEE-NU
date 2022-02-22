@@ -162,7 +162,9 @@ a:hover {
 
 ::selection {
   background-color: var(--pantoneBlue-300);
+  // color: #4ab6a7;
   // color: var(--fireBush);
+  // background: linear-gradient(red, blue);
 }
 
 // Containers
@@ -261,14 +263,14 @@ a:hover {
 .circle {
   border-radius: 50%;
 }
-section {
+.__root section {
   .section-title {
     text-align: center;
     margin-bottom: 2rem;
   }
   margin-top: min(8rem, 10.3vw)
 }
-section:first-of-type {
+.__root section:first-of-type {
   margin-top: 10vw;
 }
 .row>* {
@@ -285,3 +287,4 @@ section:first-of-type {
 @import "./members-card";
 @import "./inputs";
 @import "./navbar";
+@import "./footer";
