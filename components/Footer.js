@@ -41,22 +41,42 @@ const Footer = () => {
           <h2 className="mb-3">External Links</h2>
           <ul>
             <li>
-              <a target="_blank" href="https://ieee.org" className="link">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://ieee.org"
+                className="link"
+              >
                 IEEE.org
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://ieee.org" className="link">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://ieee.org"
+                className="link"
+              >
                 IEEE Explore Digital Library
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://ieee.org" className="link">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://ieee.org"
+                className="link"
+              >
                 IEEE Standards
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://ieee.org" className="link">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://ieee.org"
+                className="link"
+              >
                 IEEE Spectrum
               </a>
             </li>
@@ -65,13 +85,25 @@ const Footer = () => {
         <section className="contacts col-12 col-md-6 col-lg-4 mt-4">
           <h2>Contact Us</h2>
           <div className="socialLinks">
-            <a target="_blank" href="https://www.facebook.com/IEEENUSB">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.facebook.com/IEEENUSB"
+            >
               <FaFacebook />
             </a>
-            <a target="_blank" href="https://www.instagram.com/ieeenusb/">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.instagram.com/ieeenusb/"
+            >
               <FaInstagram />
             </a>
-            <a target="_blank" href="mailto:ieeenu@nu.edu.eg">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="mailto:ieeenu@nu.edu.eg"
+            >
               <FaEnvelope />
             </a>
           </div>
