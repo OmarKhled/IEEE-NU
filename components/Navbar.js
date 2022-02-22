@@ -25,7 +25,9 @@ const Navbar = () => {
   };
   return (
     <nav>
-      <img src="/logo.svg" className="logo" />
+      <Link href="/">
+        <img src="/logo.svg" className="logo" />
+      </Link>
       <div className="section">
         <Link href="/">
           <a className="link">Home</a>

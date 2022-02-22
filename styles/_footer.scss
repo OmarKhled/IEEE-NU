@@ -24,7 +24,7 @@ footer {
   }
   background: var(--greenVogue);
   color: var(--aquaSqueeze);
-  h2, a {
+  h2, a, a:focus, a:hover {
     color: var(--aquaSqueeze);
   }
   padding: 2rem 4rem 4rem 4rem;

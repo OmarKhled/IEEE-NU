@@ -7,7 +7,7 @@ const Globe = () => {
   const state = useThree();
 
   const globeMeshRef = useRef();
-  const worldMap = useTexture("textures/124.png");
+  const worldMap = useTexture("textures/125.png");
   const globe = document.querySelector(".hero-img");
   const [scale, setScale] = useState(
     globe.clientWidth < 446.875 ? globe.clientWidth / 446.875 : 1
@@ -49,7 +49,7 @@ const Globe = () => {
       <ambientLight intensity={0.4} />
       <pointLight position={[537, 555, 0]} intensity={1} color={0x5ec8f6} />
       <mesh scale={scale} ref={globeMeshRef} position={[0, 0, 0]}>
-        <sphereGeometry args={[3, 50, 50]} />
+        <sphereGeometry args={[3, 100, 100]} />
         <meshStandardMaterial map={worldMap} />
         {/* <meshLambertMaterial color={"blue"}  map={worldMap} /> */}
       </mesh>
