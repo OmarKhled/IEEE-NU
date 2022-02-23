@@ -8,7 +8,7 @@ const Globe = () => {
 
   const globeMeshRef = useRef();
   const worldMap = useTexture("textures/125.png");
-  const globe = document.querySelector(".hero-img");
+  const globe = document.querySelector(".globe");
   const [scale, setScale] = useState(
     globe.clientWidth < 446.875 ? globe.clientWidth / 446.875 : 1
   );

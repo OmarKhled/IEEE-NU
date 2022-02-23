@@ -1,54 +1,62 @@
-footer {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  h2 {
-    text-align: center;
+.footer {
+  .round {
+    width: 100%;
   }
-  ul {
-    width: fit-content;
-  }
-  ul>* {
-    width: fit-content;
-  }
-  section {
+  footer {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  justify-content: center;
-  align-items: center;
-  * {
-    margin: 0;
-  }
-  background: var(--greenVogue);
-  color: var(--aquaSqueeze);
-  h2, a, a:focus, a:hover {
-    color: var(--aquaSqueeze);
-  }
-  padding: 2rem 4rem 4rem 4rem;
-  .contacts {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    .socialLinks {
+    flex-wrap: wrap;
+    .round {
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+    }
+    ul {
+      width: fit-content;
+    }
+    ul>* {
+      width: fit-content;
+    }
+    section {
       display: flex;
-      width: 120px;
-      margin: auto;
-      justify-content: space-between;
-      margin: 1.6rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    justify-content: center;
+    align-items: center;
+    * {
+      margin: 0;
+    }
+    background: var(--greenVogue);
+    color: var(--aquaSqueeze);
+    h2, a, a:focus, a:hover {
+      color: var(--aquaSqueeze);
+    }
+    padding: 2rem 4rem 4rem 4rem;
+    .contacts {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      .socialLinks {
+        display: flex;
+        width: 120px;
+        margin: auto;
+        justify-content: space-between;
+        margin: 1.6rem;
+      }
     }
   }
-}
-.footerTail {
-  background: #25486A;
-  *, p {
-    color: var(--aquaSqueeze);
+  .footerTail {
+    background: #25486A;
+    *, p {
+      color: var(--aquaSqueeze);
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem;
   }
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.6rem;
 }
