@@ -1,4 +1,4 @@
-.thingsWeDo-card {
+.info-card {
   overflow: hidden;
   display: block;
   background-color: #fff;
@@ -6,12 +6,12 @@
   width: min(95%, 280px);
   height: 100%;
   border-radius: 3.125rem;
-  box-shadow: var(--shadow-elevation-high);
+  box-shadow: var(--shadow-elevation-medium);
   .body {
     position: relative;
-    padding: 72px 25px 30px;
+    padding: 80px 25px 30px;
     text-align: center;
-    .thingsWeDo-secondaryimg {
+    .secondaryimg {
       position: absolute;
       right: 0;
       left: 0;
@@ -19,16 +19,17 @@
       margin-right: auto;
       top: -72px;
       background-color: #fff;
-      padding: 10px;
+      padding: 20px;
       border-radius: 50%;
+      box-shadow: 0px 0px 20px 2px #7fd2fc44;
     }
-    .numbers-container {
+    .counters-container {
       display: flex;
       div {
         width: 50%;
       }
-      h6 {
-        font-size: 1rem;
+      .title {
+        margin: 0;
         color: var(--greenVogue-200);
         text-transform: uppercase;
       }

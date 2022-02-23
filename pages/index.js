@@ -37,7 +37,7 @@ export default function Home() {
             Join Now!
           </Button>
         </div>
-        <div className="hero-img">
+        <div className="globe">
           {/* <img src="/images/Globe.svg" alt="globe" /> */}
           <Canvas>
             <OrbitControls

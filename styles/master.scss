@@ -273,6 +273,9 @@ a:hover {
 .link {
   transition: 300ms all;
 }
+.blue {
+  color: blue;
+}
 .link:hover {
   text-decoration: underline;
   opacity: 0.9;
@@ -308,14 +311,15 @@ a:hover {
 
 // Component Styles
 @import "./button";
-@import "./hero";
+@import "./globeHero";
+@import "./aboutHero";
 @import "./home";
 @import "./counter";
 @import "./carousel";
 @import "./updates";
-@import "./members-card";
-@import "./thingsWeDo-card";
 @import "./previousMember-card";
+@import "./membersCard";
+@import "./infoCard";
 @import "./inputs";
 @import "./navbar";
 @import "./footer";

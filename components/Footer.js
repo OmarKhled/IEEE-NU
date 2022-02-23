@@ -9,8 +9,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <>
-      <img src="/assets/Footer.svg" />
+    <div className="footer">
+      <img src="/assets/Footer.svg" className="round" />
       <footer className="row">
         <section className="navigation col-12 col-md-6 col-lg-4 mt-4">
           <h2 className="mb-3">Navigation</h2>
@@ -115,7 +115,7 @@ const Footer = () => {
           <p>in IEEENU</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
