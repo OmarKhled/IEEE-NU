@@ -38,6 +38,7 @@ const Logo = () => {
   });
 
   useEffect(() => {
+    state.setDpr(window.devicePixelRatio);
     if (!model) {
       setModel(loadedModel);
     }
