@@ -1,10 +1,11 @@
 import React from "react";
-import ThingsWeDoCard from "../components/ThingsWeDoCard";
+import InfoCard from "../components/InfoCard";
+import PreviousMemberCard from "../components/PreviousMemberCard";
 
 export default function about() {
   return (
     <div>
-      <ThingsWeDoCard
+      <InfoCard
         mainImg="/images/thingsWeDo/Background.svg"
         secondaryImg="/images/thingsWeDo/Brainstorming-amico.svg"
         title="Events"
@@ -14,6 +15,7 @@ export default function about() {
         secondNumberTitle="Event"
         paragraph="We are good at making events. Egyptian space summit, one of the stunning events in the space era is powered by IEEENU. "
       />
+      <PreviousMemberCard />
     </div>
   );
 }

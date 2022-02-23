@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ThingsWeDoCard({
+export default function InfoCard({
   mainImg,
   secondaryImg,
   title,
