@@ -1,69 +1,66 @@
 // Color Pallette Variables
 :root {
   // Base Colors
-  --pantoneBlue:  #1A89B9;
-  --violetBlue: #441AB9;
-  --greenVogue: #032B52;
-  --aquaSqueeze: #E8F0F5;
+  --pantoneBlue: #1a89b9;
+  --violetBlue: #441ab9;
+  --greenVogue: #032b52;
+  --aquaSqueeze: #e8f0f5;
   --deapSea: #008472;
-  --fireBush: #EB9A28;
+  --fireBush: #eb9a28;
   // Shades
-    // Pantone Blue
-    --pantoneBlue-100: #93cbec;
-    --pantoneBlue-200: #63b4e1;
-    --pantoneBlue-300: #359ed7;
-    --pantoneBlue-400: #1b88b9;
-    --pantoneBlue-500: #066e9c;
-    --pantoneBlue-600: #005480;
-    --pantoneBlue-700: #003b65;
-    --pantoneBlue-700: #01244e;
+  // Pantone Blue
+  --pantoneBlue-100: #93cbec;
+  --pantoneBlue-200: #63b4e1;
+  --pantoneBlue-300: #359ed7;
+  --pantoneBlue-400: #1b88b9;
+  --pantoneBlue-500: #066e9c;
+  --pantoneBlue-600: #005480;
+  --pantoneBlue-700: #003b65;
+  --pantoneBlue-700: #01244e;
 
-    // Violet Blue
-    --violetBlue-100: #b190e9;
-    --violetBlue-200: #8f62df;
-    --violetBlue-300: #735bd4;
-    --violetBlue-400: #5a56cb;
-    --violetBlue-500: #4845a8;
-    --violetBlue-600: #3b3686;
-    --violetBlue-700: #2b2663;
-    --violetBlue-700: #201d4e;
+  // Violet Blue
+  --violetBlue-100: #b190e9;
+  --violetBlue-200: #8f62df;
+  --violetBlue-300: #735bd4;
+  --violetBlue-400: #5a56cb;
+  --violetBlue-500: #4845a8;
+  --violetBlue-600: #3b3686;
+  --violetBlue-700: #2b2663;
+  --violetBlue-700: #201d4e;
 
-    // Green Vogue
-    --greenVogue-100: #b4cce4;
-    --greenVogue-200: #a2bdd8;
-    --greenVogue-300: #85a9cb;
-    --greenVogue-400: #6c96bc;
-    --greenVogue-500: #5781a9;
-    --greenVogue-600: #3b6892;
-    --greenVogue-700: #22517b;
-    --greenVogue-700: #103d67;
+  // Green Vogue
+  --greenVogue-100: #b4cce4;
+  --greenVogue-200: #a2bdd8;
+  --greenVogue-300: #85a9cb;
+  --greenVogue-400: #6c96bc;
+  --greenVogue-500: #5781a9;
+  --greenVogue-600: #3b6892;
+  --greenVogue-700: #22517b;
+  --greenVogue-700: #103d67;
 
-    // Aqua Squeeze
+  // Aqua Squeeze
 
-    // Deap Sea
-    --violetBlue-100: #9bdad2;
-    --violetBlue-200: #7ccec2;
-    --violetBlue-300: #60c0b2;
-    --violetBlue-400: #4ab6a7;
-    --violetBlue-500: #43a99a;
-    --violetBlue-600: #3e9d8c;
-    --violetBlue-700: #3a927f;
-    --violetBlue-700: #2b7263;
+  // Deap Sea
+  --violetBlue-100: #9bdad2;
+  --violetBlue-200: #7ccec2;
+  --violetBlue-300: #60c0b2;
+  --violetBlue-400: #4ab6a7;
+  --violetBlue-500: #43a99a;
+  --violetBlue-600: #3e9d8c;
+  --violetBlue-700: #3a927f;
+  --violetBlue-700: #2b7263;
 
   // Shadows
   --shadow-color: 204deg 14% 75%;
-  --shadow-elevation-low:
-    0.1px 0.4px 0.6px hsl(var(--shadow-color) / 0.06),
+  --shadow-elevation-low: 0.1px 0.4px 0.6px hsl(var(--shadow-color) / 0.06),
     0.2px 0.6px 0.9px -0.4px hsl(var(--shadow-color) / 0.13),
     0.3px 1.2px 1.7px -0.9px hsl(var(--shadow-color) / 0.2);
-  --shadow-elevation-medium:
-    0.1px 0.4px 0.6px hsl(var(--shadow-color) / 0.05),
+  --shadow-elevation-medium: 0.1px 0.4px 0.6px hsl(var(--shadow-color) / 0.05),
     0.3px 1.1px 1.6px -0.2px hsl(var(--shadow-color) / 0.09),
     0.5px 1.9px 2.7px -0.4px hsl(var(--shadow-color) / 0.12),
     0.9px 3.3px 4.7px -0.7px hsl(var(--shadow-color) / 0.16),
     1.6px 5.9px 8.3px -0.9px hsl(var(--shadow-color) / 0.19);
-  --shadow-elevation-high:
-    0.1px 0.4px 0.6px hsl(var(--shadow-color) / 0.05),
+  --shadow-elevation-high: 0.1px 0.4px 0.6px hsl(var(--shadow-color) / 0.05),
     0.4px 1.6px 2.3px -0.1px hsl(var(--shadow-color) / 0.06),
     0.7px 2.6px 3.7px -0.2px hsl(var(--shadow-color) / 0.08),
     1px 3.7px 5.2px -0.3px hsl(var(--shadow-color) / 0.1),
@@ -74,15 +71,19 @@
     4.2px 15.1px 21.4px -0.8px hsl(var(--shadow-color) / 0.18),
     5.4px 19.6px 27.8px -0.9px hsl(var(--shadow-color) / 0.2);
 }
-html, body {
-  background: var(--aquaSqueeze)
+html,
+body {
+  background: var(--aquaSqueeze);
 }
 
 // Typography - Work Sans
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-html, body, * {
-  font-family: "Work Sans", Helvetica, Verdana, Garamond, sans-serif, 'Times New Roman', serif;
+html,
+body,
+* {
+  font-family: "Work Sans", Helvetica, Verdana, Garamond, sans-serif,
+    "Times New Roman", serif;
 }
 body {
   position: relative;
@@ -90,7 +91,14 @@ body {
 * {
   line-height: calc(1.1em + 0.5rem);
 }
-p, h1, h2, h3, h4, h5, h6, small {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
   color: var(--greenVogue);
 }
 h1 {
@@ -123,13 +131,16 @@ p {
 }
 
 // CSS Reset
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 * {
   margin: 0;
 }
-html, body {
+html,
+body {
   height: 100%;
   overflow-x: hidden;
 }
@@ -137,14 +148,27 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -152,10 +176,13 @@ p, h1, h2, h3, h4, h5, h6 {
 a {
   cursor: pointer;
 }
-a, a:focus, a:hover {
+a,
+a:focus,
+a:hover {
   text-decoration: none;
 }
-a, a:focus{
+a,
+a:focus {
   color: var(--greenVogue);
   transition: all 150ms;
 }
@@ -180,41 +207,40 @@ a:hover {
   // background-color: #d5edfd;
 }
 
-// THREEJS 
+// THREEJS
 .dg {
   top: 90px !important;
-} 
-
+}
 
 // Utility Classes
 .flex {
-  display: flex
+  display: flex;
 }
 .block {
   display: block !important;
 }
-.gap-h-dot5>*+* {
+.gap-h-dot5 > * + * {
   margin-left: 0.5rem;
 }
-.gap-h-1>*+* {
+.gap-h-1 > * + * {
   margin-left: 1rem;
 }
-.gap-h-2>*+* {
+.gap-h-2 > * + * {
   margin-left: 2rem;
 }
-.gap-h-3>*+* {
+.gap-h-3 > * + * {
   margin-left: 3rem;
 }
-.gap-v-1>*+* {
+.gap-v-1 > * + * {
   margin-top: 1rem;
 }
-.gap-v-2>*+* {
+.gap-v-2 > * + * {
   margin-top: 2rem;
 }
-.gap-v-3>*+* {
+.gap-v-3 > * + * {
   margin-top: 3rem;
 }
-.gap-v-4>*+* {
+.gap-v-4 > * + * {
   margin-top: 4rem;
 }
 .light {
@@ -261,7 +287,7 @@ a:hover {
   color: #585858;
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 0.16rem
+  letter-spacing: 0.16rem;
 }
 .circle {
   border-radius: 50%;
@@ -271,12 +297,12 @@ a:hover {
     text-align: center;
     margin-bottom: 2rem;
   }
-  margin-top: min(8rem, 10.3vw)
+  margin-top: min(8rem, 10.3vw);
 }
 .__root section:first-of-type {
   margin-top: 10vw;
 }
-.row>* {
+.row > * {
   padding: 0 !important;
 }
 
@@ -288,6 +314,7 @@ a:hover {
 @import "./carousel";
 @import "./updates";
 @import "./members-card";
+@import "./thingsWeDo-card";
 @import "./inputs";
 @import "./navbar";
 @import "./footer";

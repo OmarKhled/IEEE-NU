@@ -1,0 +1,40 @@
+.thingsWeDo-card {
+  overflow: hidden;
+  display: block;
+  background-color: #fff;
+  margin: auto auto;
+  width: min(95%, 280px);
+  height: 100%;
+  border-radius: 3.125rem;
+  box-shadow: var(--shadow-elevation-high);
+  .body {
+    position: relative;
+    padding: 72px 25px 30px;
+    text-align: center;
+    .thingsWeDo-secondaryimg {
+      position: absolute;
+      right: 0;
+      left: 0;
+      margin-left: auto;
+      margin-right: auto;
+      top: -72px;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 50%;
+    }
+    .numbers-container {
+      display: flex;
+      div {
+        width: 50%;
+      }
+      h6 {
+        font-size: 1rem;
+        color: var(--greenVogue-200);
+        text-transform: uppercase;
+      }
+    }
+    p {
+      margin-top: 10px;
+    }
+  }
+}
