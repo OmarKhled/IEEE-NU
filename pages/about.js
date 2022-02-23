@@ -55,7 +55,7 @@ const Logo = () => {
         />
         <mesh>
           <primitive
-            position={[0, 0.7, 0]}
+            position={[0, 0.5, 0]}
             scale={[8, 8, 8]}
             object={model.scene}
             dispose={null}
@@ -77,7 +77,7 @@ export default function about() {
       {/* Hero Section */}
       <header className="hero about">
         <div className="info gap-v-1">
-          <h1 className="main-title">IEEENU isn't Just a Student Club!</h1>
+          <h1 className="main-title">IEEENU isnot Just a Student Club!</h1>
           <p className="more-info">
             Beside to the many skills you learn and the knowledge you gain in
             IEEENU, also you become a part of a bigger family that looks like
