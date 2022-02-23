@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PreviousMemberCard() {
   return (
-    <div className="py-5 previousMember-card px-4">
+    <div className=" previousMember-card ">
       <div className="p-3 body  d-flex">
         <div className="img">
           <img src="/images/prevMember/mohabHafez.png" />
