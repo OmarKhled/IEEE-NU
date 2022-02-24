@@ -61,7 +61,7 @@ const Logo = () => {
         />
         <mesh ref={logoMeshRef}>
           <primitive
-            position={[0, 0, 0]}
+            position={[0, 0.2, 0]}
             scale={[scale, scale, scale]}
             object={model.scene}
             dispose={null}

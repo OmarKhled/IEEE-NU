@@ -5,14 +5,19 @@ import Logo from "../components/THREEJS/Logo";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 
+import infoCards from "../data/infoCards";
+import previousMembers from "../data/previousMembers";
+import board from "../data/board";
 import Button from "../components/Button";
 import PreviousMemberCard from "../components/PreviousMemberCard";
-// import InfoCard from "../components/InforCard";
+import InfoCard from "../components/InforCard";
+import MembersCard from "../components/MembersCard";
 
 export default function About() {
   const controlsRef = useRef();
+
   return (
-    <div className="__root">
+    <div className="__root about">
       {/* Meta Tags */}
       <Head>
         <title>IEEENU - About</title>
@@ -20,7 +25,7 @@ export default function About() {
       {/* Hero Section */}
       <header className="hero about">
         <div className="info gap-v-1">
-          <h1 className="main-title">IEEENU isnot Just a Student Club!</h1>
+          <h1 className="main-title">IEEENU isn&#39;t Just a Student Club!</h1>
           <p className="more-info">
             Beside to the many skills you learn and the knowledge you gain in
             IEEENU, also you become a part of a bigger family that looks like
@@ -50,7 +55,38 @@ export default function About() {
         </div>
       </header>
       {/* Main Content */}
-      <main></main>
+      <main>
+        <section>
+          <h3 className="section-title">Things We Do</h3>
+          <div className="row">
+            {infoCards.map((card) => (
+              <div className="col-12 col-sm-6 col-lg-4 mt-5">
+                <InfoCard {...card}>{card.txt}</InfoCard>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section>
+          <h3 className="section-title">Previous Members</h3>
+          <div className="row">
+            {previousMembers.map((card) => (
+              <div className="col-12 col-sm-6 mt-5">
+                <PreviousMemberCard {...card} />
+              </div>
+            ))}
+          </div>
+        </section>
+        <section>
+          <h3 className="section-title">Excutive Officers</h3>
+          <div className="row">
+            {board.map((card) => (
+              <div className="col-12 col-sm-6 col-lg-4 mt-5">
+                <MembersCard {...card} />
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
     </div>
   );
 }

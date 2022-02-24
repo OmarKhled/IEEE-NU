@@ -14,13 +14,13 @@ const MembersCard = ({ name, position, school, img, className }) => {
       </div>
       <div className="tail gap-h-dot5">
         <a href="#">
-          <img src="/images/Facebook.svg" className="social-link" />
+          <img src="/images/icons/Facebook.svg" className="social-link" />
         </a>
         <a href="#">
-          <img src="/images/Instagram.svg" className="social-link" />
+          <img src="/images/icons/Instagram.svg" className="social-link" />
         </a>
         <a href="#">
-          <img src="/images/Linkedin.svg" className="social-link" />
+          <img src="/images/icons/Linkedin.svg" className="social-link" />
         </a>
       </div>
     </card>

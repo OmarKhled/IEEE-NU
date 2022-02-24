@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ThingsWeDoCard({
+export default function InfoCard({
   mainImg,
   avatar,
   title,
@@ -23,16 +23,28 @@ export default function ThingsWeDoCard({
           <div className="counters-container">
             <div>
               <h5 className="bold">{firstCounter.value}</h5>
-              <p className="bold title">{firstCounter.title}</p>
+              <small className="bold title">{firstCounter.title}</small>
             </div>
             <div>
               <h5 className="bold">{secondCounter.value}</h5>
-              <p className="bold title">{secondCounter.title}</p>
+              <small className="bold title">{secondCounter.title}</small>
             </div>
           </div>
-          {children}
+          <p className="description">{children}</p>
         </div>
       </div>
     </div>
   );
 }
+
+InfoCard.defaultProps = {
+  mainImg: "/images/Conference.png",
+  avatar: "/images/icons/speaker.svg",
+  title: "Events",
+  firstCounter: { title: "Atendees", value: "100" },
+  secondCounter: { title: "Events", value: "15" },
+  txt: `We are good at making events.
+        Egyptian space summit
+    , one of the stunning events in the space era is powered by
+    IEEENU.`,
+};
