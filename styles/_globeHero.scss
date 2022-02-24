@@ -1,4 +1,4 @@
-.hero {
+.hero.home {
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
@@ -22,7 +22,6 @@
     .globe {
       width: 100%;
       height: auto !important;
-      aspect-ratio: 1/1;
       margin-bottom: 0rem;
       max-height: 35rem;
       display: flex;
@@ -30,6 +29,19 @@
       img, canvas {
         height: 100%;
         // min-width: 380px;
+      }
+    }
+    @supports not (aspect-ratio: 1 / 1) {
+      .globe::before {
+        float: left;
+        padding-top: 100%;
+        content: "";
+      }
+    
+      .globe::after {
+        display: block;
+        content: "";
+        clear: both;
       }
     }
     .info {

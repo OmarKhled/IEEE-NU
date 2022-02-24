@@ -22,7 +22,7 @@ export default function Home() {
         <title>IEEENU - Home</title>
       </Head>
       {/* Hero Section */}
-      <header className="hero">
+      <header className="hero home">
         <div className="info gap-v-1">
           <p className="gray-info">since 1963</p>
           <h1 className="main-title">
