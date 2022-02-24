@@ -60,7 +60,7 @@ export default function About() {
           <h3 className="section-title">Things We Do</h3>
           <div className="row">
             {infoCards.map((card) => (
-              <div className="col-12 col-sm-6 col-lg-4 mt-5">
+              <div key={card.title} className="col-12 col-sm-6 col-lg-4 mt-5">
                 <InfoCard {...card}>{card.txt}</InfoCard>
               </div>
             ))}
@@ -70,7 +70,7 @@ export default function About() {
           <h3 className="section-title">Previous Members</h3>
           <div className="row">
             {previousMembers.map((card) => (
-              <div className="col-12 col-sm-6 mt-5">
+              <div key={card.name} className="col-12 col-sm-6 mt-5">
                 <PreviousMemberCard {...card} />
               </div>
             ))}
@@ -80,7 +80,7 @@ export default function About() {
           <h3 className="section-title">Excutive Officers</h3>
           <div className="row">
             {board.map((card) => (
-              <div className="col-12 col-sm-6 col-lg-4 mt-5">
+              <div key={card.name} className="col-12 col-sm-6 col-lg-4 mt-5">
                 <MembersCard {...card} />
               </div>
             ))}
