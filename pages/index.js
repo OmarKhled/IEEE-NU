@@ -83,7 +83,7 @@ export default function Home() {
           <PartenersCarousel items={partners} />
         </section>
         <section>
-          <h3 className="section-title">Branch Updates</h3>
+          <h3 className="section-title mb-3">Branch Updates</h3>
           <div className="row gap-4">
             <UpdatesCard
               title="Hosting of IEEE Egypt Section Closing Ceremony"
@@ -108,7 +108,7 @@ export default function Home() {
         <section>
           <h3 className="section-title">Excutive Officers</h3>
           <div className="row">
-            {board.map((officer) => (
+            {board.slice(0, 3).map((officer) => (
               <div
                 className="col-12 col-sm-6 col-lg-4 mt-5"
                 key={officer.position}
