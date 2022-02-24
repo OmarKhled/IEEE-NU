@@ -91,7 +91,7 @@ const Logo = () => {
           <meshLambertMaterial color={"#0000FF"} /> */}
           <primitive
             position={[0, 0, 0]}
-            scale={[7.4, 7.4, 7.4]}
+            scale={[7.8, 7.8, 7.8]}
             object={model.scene}
             dispose={null}
           ></primitive>
