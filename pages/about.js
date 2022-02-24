@@ -1,9 +1,10 @@
-import { Suspense, useState, useEffect } from "react";
+import { Suspense, useState, useEffect, useRef } from "react";
 import Head from "next/head";
 
 import { Canvas, useLoader, useThree } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import * as THREE from "three";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 
 import Button from "../components/Button";
@@ -24,27 +25,57 @@ const Logo = () => {
 
   const state = useThree();
 
-  // const globeMeshRef = useRef();
-  // const worldMap = useTexture("textures/125.png");
-  const globe = document.querySelector(".logo");
-  const [scale, setScale] = useState(
-    globe.clientWidth < 446.875 ? 1 + globe.clientWidth / 446.875 : 0.8
-  );
-  window.addEventListener("resize", () => {
-    setScale(
-      globe.clientWidth < 446.875 ? 1 + globe.clientWidth / 446.875 : 0.8
-    );
-    // console.log(scale);
+  useThree(({ camera }) => {
+    // camera.lookAt(0, 0, 0);
+    camera.rotation.y += 0.01;
+    // camera.rotation.set(0, 2 * 3, 0);
+    // camera.rotateOnWorldAxis(new THREE.Vector3(0, 0, 0), 1);
+    // camera.rotateOnAxis(new THREE.Vector3(0, 0, 0), 2);
   });
+
+  const logoMeshRef = useRef();
 
   useEffect(() => {
     state.setDpr(window.devicePixelRatio);
     if (!model) {
       setModel(loadedModel);
     }
+
+    import("dat.gui").then((dat) => {
+      const gui = new dat.GUI();
+      gui.destroy();
+      gui
+        .add(logoMeshRef.current.rotation, "x")
+        .min(2 * -3.14159)
+        .max(2 * 3.14159)
+        .step(0.01)
+        .name("XRotation");
+      gui
+        .add(logoMeshRef.current.rotation, "y")
+        .min(2 * -3.14159)
+        .max(2 * 3.14159)
+        .step(0.01)
+        .name("YRotation");
+      gui
+        .add(logoMeshRef.current.rotation, "z")
+        .min(2 * -3.14159)
+        .max(2 * 3.14159)
+        .step(0.01)
+        .name("ZRotation");
+    });
+
+    const clock = new THREE.Clock();
+    const autoRotate = () => {
+      logoMeshRef.current.rotation.y = Math.sin(clock.elapsedTime);
+      requestAnimationFrame(autoRotate);
+    };
+    setTimeout(() => {
+      // autoRotate();
+    }, 100);
   }, []);
 
   if (model) {
+    console.log(model);
     return (
       <>
         <ambientLight intensity={0.4} />
@@ -54,10 +85,12 @@ const Logo = () => {
           intensity={1}
           color={0x5ec8f6}
         />
-        <mesh>
+        <mesh ref={logoMeshRef}>
+          {/* <boxBufferGeometry args={[3, 3, 3]} />
+          <meshLambertMaterial color={"#0000FF"} /> */}
           <primitive
-            position={[0, 0.5, 0]}
-            scale={[8, 8, 8]}
+            position={[0, 0, 0]}
+            scale={[7.4, 7.4, 7.4]}
             object={model.scene}
             dispose={null}
           ></primitive>
@@ -69,6 +102,22 @@ const Logo = () => {
 };
 
 export default function about() {
+  const controlsRef = useRef();
+  const rotate = () => {
+    if (controlsRef.current) {
+      console.log(controlsRef.current);
+      // controlsRef.current.rotation = new THREE.Euler(
+      //   0,
+      //   controlsRef.current.rotation.y + 0.001,
+      //   0
+      // );
+      // controlsRef.current.update();
+    }
+    // window.requestAnimationFrame(rotate);
+  };
+  // useEffect(() => {
+  //   rotate();
+  // }, []);
   return (
     <div className="__root">
       {/* Meta Tags */}
@@ -89,15 +138,26 @@ export default function about() {
           </Button>
         </div>
         <div className="logo">
-          {/* <img src="/images/Globe.svg" alt="globe" /> */}
           <Canvas>
-            {/* <AxesHelperProps /> */}
             <OrbitControls
-              // enablePan={false}
-              // enableZoom={false}
+              ref={controlsRef}
+              enablePan={false}
+              enableZoom={false}
               rotateSpeed={0.3}
-              autoRotateSpeed={0.5}
-              autoRotate
+              // enableRotate={false}
+              // autoRotateSpeed={100}
+              // autoRotate
+              maxAzimuthAngle={Math.PI / 3}
+              minAzimuthAngle={-Math.PI / 3}
+              rotation={new THREE.Euler(1, 1, 1)}
+              onChange={() => console.log(controlsRef)}
+            />
+            <PerspectiveCamera
+              makeDefault
+              position={[0, 0, 7]}
+              // rotateY={Math.PI / 2.3}
+              // rotateX={Math.PI / 3}
+              // rotateZ={Math.PI / 3}
             />
             <Suspense fallback={null}>
               <Logo />

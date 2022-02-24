@@ -20,35 +20,35 @@ const Globe = () => {
   useEffect(() => {
     state.setDpr(window.devicePixelRatio);
 
-    import("dat.gui").then((dat) => {
-      const gui = new dat.GUI();
-      gui.destroy();
-      gui
-        .add(globeMeshRef.current.rotation, "x")
-        .min(2 * -3.14159)
-        .max(2 * 3.14159)
-        .step(0.01)
-        .name("SphereXRotation");
-      gui
-        .add(globeMeshRef.current.rotation, "y")
-        .min(2 * -3.14159)
-        .max(2 * 3.14159)
-        .step(0.01)
-        .name("SphereYRotation");
-      gui
-        .add(globeMeshRef.current.rotation, "z")
-        .min(2 * -3.14159)
-        .max(2 * 3.14159)
-        .step(0.01)
-        .name("SphereZRotation");
-    });
+    // import("dat.gui").then((dat) => {
+    //   const gui = new dat.GUI();
+    //   gui.destroy();
+    //   gui
+    //     .add(globeMeshRef.current.rotation, "x")
+    //     .min(2 * -3.14159)
+    //     .max(2 * 3.14159)
+    //     .step(0.01)
+    //     .name("SphereXRotation");
+    //   gui
+    //     .add(globeMeshRef.current.rotation, "y")
+    //     .min(2 * -3.14159)
+    //     .max(2 * 3.14159)
+    //     .step(0.01)
+    //     .name("SphereYRotation");
+    //   gui
+    //     .add(globeMeshRef.current.rotation, "z")
+    //     .min(2 * -3.14159)
+    //     .max(2 * 3.14159)
+    //     .step(0.01)
+    //     .name("SphereZRotation");
+    // });
   }, []);
 
   return (
     <>
       <ambientLight intensity={0.4} />
       <pointLight position={[537, 555, 0]} intensity={1} color={0x5ec8f6} />
-      <mesh scale={scale} ref={globeMeshRef} position={[0, 0, 0]}>
+      <mesh scale={scale} position={[0, 0, 0]}>
         <sphereGeometry args={[3, 100, 100]} />
         <meshStandardMaterial map={worldMap} />
         {/* <meshLambertMaterial color={"blue"}  map={worldMap} /> */}
