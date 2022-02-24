@@ -8,6 +8,7 @@ import * as THREE from "three";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 
 import Button from "../components/Button";
+import PreviousMemberCard from "../components/PreviousMemberCard";
 // import InfoCard from "../components/InforCard";
 
 const Logo = () => {
@@ -167,6 +168,7 @@ export default function about() {
       </header>
       {/* Main Content */}
       <main></main>
+      <PreviousMemberCard />
     </div>
   );
 }
