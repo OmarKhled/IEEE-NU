@@ -25,6 +25,13 @@ const Globe = () => {
   });
 
   useEffect(() => {
+    setScale(
+      globe.clientWidth < 446.875 && window.innerWidth >= 540
+        ? globe.clientWidth / 446.875
+        : globe.clientWidth < 446.875 && window.innerWidth < 400
+        ? (globe.clientWidth / 446.875) * 1.3
+        : 1
+    );
     state.setDpr(window.devicePixelRatio);
 
     import("dat.gui").then((dat) => {
