@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Suspense } from "react";
 
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera, Html } from "@react-three/drei";
 
 import Button from "../components/Button";
 import CounterCard from "../components/CounterCard";
@@ -47,14 +47,13 @@ export default function Home() {
               autoRotateSpeed={0.5}
               autoRotate
             />
-            {/* <PerspectiveCamera
-              makeDefault
-              position={[0, 0, 6]}
-              rotateY={1}
-              rotateX={1}
-              rotateZ={2}
-            /> */}
-            <Suspense fallback={null}>
+            <Suspense
+              fallback={
+                <Html>
+                  <h4>Loading...</h4>
+                </Html>
+              }
+            >
               <Globe />
             </Suspense>
           </Canvas>

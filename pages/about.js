@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import Logo from "../components/THREEJS/Logo";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { Html, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 
 import infoCards from "../data/infoCards";
 import previousMembers from "../data/previousMembers";
@@ -48,7 +48,13 @@ export default function About() {
               minPolarAngle={Math.PI - 2}
             />
             <PerspectiveCamera makeDefault position={[0, 0, 7]} />
-            <Suspense fallback={null}>
+            <Suspense
+              fallback={
+                <Html>
+                  <h4>Loading...</h4>
+                </Html>
+              }
+            >
               <Logo />
             </Suspense>
           </Canvas>

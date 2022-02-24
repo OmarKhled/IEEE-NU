@@ -13,35 +13,44 @@ const Globe = () => {
     globe.clientWidth < 446.875 ? globe.clientWidth / 446.875 : 1
   );
   window.addEventListener("resize", () => {
-    setScale(globe.clientWidth < 446.875 ? globe.clientWidth / 446.875 : 1);
+    setScale(
+      globe.clientWidth < 446.875 && window.innerWidth >= 540
+        ? globe.clientWidth / 446.875
+        : globe.clientWidth < 446.875 && window.innerWidth < 400
+        ? (globe.clientWidth / 446.875) * 1.46
+        : 1
+    );
+    console.log(scale);
     // console.log(scale);
   });
 
   useEffect(() => {
     state.setDpr(window.devicePixelRatio);
 
-    // import("dat.gui").then((dat) => {
-    //   const gui = new dat.GUI();
-    //   gui.destroy();
-    //   gui
-    //     .add(globeMeshRef.current.rotation, "x")
-    //     .min(2 * -3.14159)
-    //     .max(2 * 3.14159)
-    //     .step(0.01)
-    //     .name("SphereXRotation");
-    //   gui
-    //     .add(globeMeshRef.current.rotation, "y")
-    //     .min(2 * -3.14159)
-    //     .max(2 * 3.14159)
-    //     .step(0.01)
-    //     .name("SphereYRotation");
-    //   gui
-    //     .add(globeMeshRef.current.rotation, "z")
-    //     .min(2 * -3.14159)
-    //     .max(2 * 3.14159)
-    //     .step(0.01)
-    //     .name("SphereZRotation");
-    // });
+    import("dat.gui").then((dat) => {
+      const gui = new dat.GUI();
+      gui.destroy();
+      if (globeMeshRef.current) {
+        gui
+          .add(globeMeshR.ef.current.rotation, "x")
+          .min(2 * -3.14159)
+          .max(2 * 3.14159)
+          .step(0.01)
+          .name("SphereXRotation");
+        gui
+          .add(globeMeshRef.current.rotation, "y")
+          .min(2 * -3.14159)
+          .max(2 * 3.14159)
+          .step(0.01)
+          .name("SphereYRotation");
+        gui
+          .add(globeMeshRef.current.rotation, "z")
+          .min(2 * -3.14159)
+          .max(2 * 3.14159)
+          .step(0.01)
+          .name("SphereZRotation");
+      }
+    });
   }, []);
 
   return (
