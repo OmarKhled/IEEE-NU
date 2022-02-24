@@ -102,7 +102,7 @@ const Logo = () => {
   } else return null;
 };
 
-export default function about() {
+export default function About() {
   const controlsRef = useRef();
   const rotate = () => {
     if (controlsRef.current) {
