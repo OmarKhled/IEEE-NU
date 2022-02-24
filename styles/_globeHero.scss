@@ -15,7 +15,8 @@
     flex-direction: row;
     align-items: stretch;
     text-align: left;
-    margin-top: 12rem;
+    // height: 80vh;
+    margin-top: 10vw;
     &>*+* {
       margin-left: 2rem;
     }
