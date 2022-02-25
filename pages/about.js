@@ -17,13 +17,13 @@ export default function About() {
   const controlsRef = useRef();
 
   return (
-    <div className="__root about">
+    <div className="__root logo">
       {/* Meta Tags */}
       <Head>
         <title>IEEENU - About</title>
       </Head>
       {/* Hero Section */}
-      <header className="hero about">
+      <header className="hero logo">
         <div className="info gap-v-1">
           <h1 className="main-title">IEEENU isn&#39;t Just a Student Club!</h1>
           <p className="more-info">
@@ -35,7 +35,7 @@ export default function About() {
             Consider Joining!
           </Button>
         </div>
-        <div className="logo">
+        <div className="drei">
           <Canvas>
             <OrbitControls
               ref={controlsRef}
@@ -47,7 +47,7 @@ export default function About() {
               maxPolarAngle={Math.PI - 1}
               minPolarAngle={Math.PI - 2}
             />
-            <PerspectiveCamera makeDefault position={[0, 0, 7]} />
+            <PerspectiveCamera makeDefault position={[0, 0, 7]} aspect={1} />
             <Suspense
               fallback={
                 <Html>

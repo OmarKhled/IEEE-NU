@@ -38,7 +38,7 @@ const Navbar = () => {
         <Link href="/lounge">
           <a className="link">Technical Lounge</a>
         </Link>
-        <Link href="/spacesummmit">
+        <Link href="/spacesummit">
           <a className="link">Egyptian Space Summit</a>
         </Link>
       </div>
@@ -80,7 +80,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/spacesummmit">
+              <Link href="/spacesummit">
                 <a className="link">Egyptian Space Summit</a>
               </Link>
             </li>

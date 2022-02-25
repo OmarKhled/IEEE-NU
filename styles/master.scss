@@ -200,9 +200,10 @@ a:hover {
 // Containers
 .__root {
   width: min(90%, 83.125rem);
-  margin: 10rem auto;
+  margin: auto;
+  padding: calc(10rem + 1vh)  0;
   @media screen and (max-width: 51.25rem) {
-    margin: 5rem auto;
+    padding: 6rem 0;
   }
   // background-color: #d5edfd;
 }
@@ -311,8 +312,10 @@ a:hover {
 
 // Component Styles
 @import "./button";
-@import "./globeHero";
-@import "./aboutHero";
+@import "./HeroSections/hero";
+@import "./HeroSections/globeHero";
+@import "./HeroSections/logoHero";
+@import "./HeroSections/summitHero";
 @import "./home";
 @import "./about";
 @import "./counter";

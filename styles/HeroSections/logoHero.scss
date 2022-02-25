@@ -1,0 +1,11 @@
+.hero.logo {
+  .drei {
+    margin-top: -3vw;
+  }
+  @media screen and (min-width: 51.875rem) {
+    .drei {
+      height: 30vw;
+    margin-top: -3vw;
+    }
+  }
+}

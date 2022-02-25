@@ -22,7 +22,7 @@ export default function Home() {
         <title>IEEENU - Home</title>
       </Head>
       {/* Hero Section */}
-      <header className="hero home">
+      <header className="hero globe">
         <div className="info gap-v-1">
           <p className="gray-info">since 1963</p>
           <h1 className="main-title">
@@ -37,7 +37,7 @@ export default function Home() {
             Join Now!
           </Button>
         </div>
-        <div className="globe">
+        <div className="drei">
           {/* <img src="/images/Globe.svg" alt="globe" /> */}
           <Canvas>
             <OrbitControls
