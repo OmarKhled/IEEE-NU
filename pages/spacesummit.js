@@ -63,4 +63,4 @@ const Summit = () => {
   );
 };
 
-export default spacesummit;
+export default Summit;
