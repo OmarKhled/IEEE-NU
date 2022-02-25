@@ -8,7 +8,7 @@ import { Html, OrbitControls } from "@react-three/drei";
 
 import Button from "../components/Button";
 
-const spacesummit = () => {
+const Summit = () => {
   const controlsRef = useRef();
   const polarAngle = Math.PI / 2 - 0.2;
   return (
