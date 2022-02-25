@@ -19,21 +19,26 @@ const Rocket = () => {
   const logoMeshRef = useRef();
 
   const rocket = document.querySelector(".rocket.hero .drei");
-  const initialScale = 1.4;
+  const initialScale =
+    window.innerWidth < 980 && window.innerWidth >= 831 ? 1.9 : 1.4;
   const [scale, setScale] = useState(
-    rocket.clientWidth < 325 ? (rocket.clientWidth / 325) * 1.4 : initialScale
+    rocket.clientWidth < 325
+      ? (rocket.clientWidth / 325) * initialScale
+      : initialScale
   );
   window.addEventListener("resize", () => {
+    initialScale =
+      window.innerWidth < 980 && window.innerWidth >= 831 ? 1.9 : 1.4;
     setScale(
       rocket.clientWidth < 325 && window.innerWidth >= 540
-        ? (rocket.clientWidth / 325) * 1.4
+        ? (rocket.clientWidth / 325) * initialScale
         : initialScale
     );
-    if (rocket.clientWidth < 310 && window.innerWidth > 830) {
-      rocket.style.marginTop = `-${4.8 * Math.pow(scale, -1)}rem`;
-    } else {
-      rocket.style.marginTop = `0rem`;
-    }
+    // if (rocket.clientWidth < 310 && window.innerWidth > 830) {
+    //   rocket.style.marginTop = `-${4.8 * Math.pow(scale, -1)}rem`;
+    // } else {
+    //   rocket.style.marginTop = `0rem`;
+    // }
     // console.log(scale);
   });
 

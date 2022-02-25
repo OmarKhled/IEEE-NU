@@ -36,8 +36,8 @@ const Summit = () => {
                   enablePan={false}
                   enableZoom={false}
                   rotateSpeed={0.5}
-                  // autoRotate
-                  autoRotateSpeed={0.6}
+                  autoRotate
+                  autoRotateSpeed={0.9}
                   maxPolarAngle={polarAngle}
                   minPolarAngle={polarAngle}
                 />
@@ -54,6 +54,7 @@ const Summit = () => {
               </Canvas>
             </div>
           </div>
+          <div className="stars"></div>
         </div>
 
         {/* <img src="/assets/Stars.svg" className="stars" /> */}

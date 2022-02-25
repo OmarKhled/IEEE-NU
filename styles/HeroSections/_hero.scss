@@ -8,7 +8,8 @@
   .drei {
     margin-bottom: 2rem;
     width: 100%;
-    height: 70vw
+    height: 70vw;
+    z-index: 3;
   }
   @media screen and (min-width: 51.875rem) {
     flex-direction: row;
@@ -19,7 +20,6 @@
       justify-content: flex-end;
       width: 100%;
       margin-bottom: 0rem;
-      z-index: 2;
       img, canvas {
         height: 100%;
       }
