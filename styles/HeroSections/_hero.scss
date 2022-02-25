@@ -10,7 +10,7 @@
     width: 100%;
     height: 70vw
   }
-  @media screen and (min-width: 51.25rem) {
+  @media screen and (min-width: 51.875rem) {
     flex-direction: row;
     align-items: stretch;
     text-align: left;
@@ -19,12 +19,14 @@
       justify-content: flex-end;
       width: 100%;
       margin-bottom: 0rem;
+      z-index: 2;
       img, canvas {
         height: 100%;
       }
     }
     .info {
       margin-top: 2vw;
+      height: 100%;
       .main-title {
         max-width: 30rem;
       }

@@ -8,7 +8,7 @@ const Globe = () => {
 
   const globeMeshRef = useRef();
   const worldMap = useTexture("textures/125.png");
-  const globe = document.querySelector(".globe");
+  const globe = document.querySelector(".globe .drei");
   const [scale, setScale] = useState(
     globe.clientWidth < 446.875 ? globe.clientWidth / 446.875 : 1
   );
@@ -20,7 +20,6 @@ const Globe = () => {
         ? (globe.clientWidth / 446.875) * 1.3
         : 1
     );
-    console.log(scale);
     // console.log(scale);
   });
 

@@ -1,8 +1,51 @@
-.hero.logo {
-  .drei {
+.spacesummit {
+  position: relative;
+  .round {
+    width: 100%;
+    margin-top: -2px;
   }
-  @media screen and (min-width: 51.875rem) {
-    .drei {
-    }
+  .stars {
+    top: 0;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+  }
+  .cont {
+    background: linear-gradient(180deg, var(--greenVogue), #010910);
+    .hero {
+        width: min(90%, 83.125rem);
+        margin: auto;
+        margin-bottom: 0 !important;
+        padding: 7rem 0 4rem 0;
+        * {
+          color: var(--aquaSqueeze);
+        }
+        .drei {
+          height: 400px;
+        }
+        .info {
+          margin-top: -50px;
+        }
+        @media screen and (min-width: 51.875rem) {
+          // height: 82.6vh;
+          &>*+* {
+            margin-left: 4rem;
+          }
+          padding: 7rem 0 3rem 0;
+          .drei {
+            width: 60vw;
+            height: 600px;
+          }
+          .info {
+            margin-top: 6vw;
+          }
+        }
+      }
   }
 }
