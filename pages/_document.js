@@ -18,7 +18,7 @@ export default function Document() {
         <meta property="og:url" content="http://dev.ieeenu.com" />
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/ieeenu/image/upload/v1645572827/cover_u3aypu.png"
+          content="https://i.ibb.co/D1BHjTd/cover.png"
         />
         <meta
           property="og:description"
