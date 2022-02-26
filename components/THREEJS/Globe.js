@@ -12,18 +12,19 @@ const Globe = () => {
   const [scale, setScale] = useState(
     globe.clientWidth < 446.875 ? globe.clientWidth / 446.875 : 1
   );
-  window.addEventListener("resize", () => {
-    setScale(
-      globe.clientWidth < 446.875 && window.innerWidth >= 540
-        ? globe.clientWidth / 446.875
-        : globe.clientWidth < 446.875 && window.innerWidth < 400
-        ? (globe.clientWidth / 446.875) * 1.3
-        : 1
-    );
-    // console.log(scale);
-  });
 
   useEffect(() => {
+    window.addEventListener("resize", () => {
+      state.setDpr(window.devicePixelRatio);
+      setScale(
+        globe.clientWidth < 446.875 && window.innerWidth >= 540
+          ? globe.clientWidth / 446.875
+          : globe.clientWidth < 446.875 && window.innerWidth < 400
+          ? (globe.clientWidth / 446.875) * 1.3
+          : 1
+      );
+      // console.log(scale);
+    });
     setScale(
       globe.clientWidth < 446.875 && window.innerWidth >= 540
         ? globe.clientWidth / 446.875

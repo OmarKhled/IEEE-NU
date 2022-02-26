@@ -5,7 +5,7 @@ import { useLoader, useThree } from "@react-three/fiber";
 
 const Logo = () => {
   const url = "/models/LOGO3.glb";
-  const scale = 7.8;
+  // const scale = 7.8;
   const [model, setModel] = useState();
 
   const loadedModel = useLoader(GLTFLoader, url, (loader) => {
@@ -19,7 +19,29 @@ const Logo = () => {
   const state = useThree();
   const logoMeshRef = useRef();
 
+  const logo = document.querySelector(".logo.hero .drei");
+  const initialScale = 9;
+  const breakPoint = 450;
+  const [scale, setScale] = useState(
+    logo.clientWidth < breakPoint
+      ? (logo.clientWidth / breakPoint) * initialScale
+      : initialScale
+  );
+
   useEffect(() => {
+    window.addEventListener("resize", () => {
+      state.setDpr(window.devicePixelRatio);
+      setScale(
+        logo.clientWidth < breakPoint
+          ? (logo.clientWidth / breakPoint) * 1.01 * initialScale
+          : initialScale
+      );
+      if (logo.clientWidth < breakPoint && window.innerWidth > 830) {
+        logo.style.marginTop = `-${Math.pow(8, 1) - Math.pow(scale, 0.8)}rem`;
+      } else {
+        logo.style.removeProperty("margin-top");
+      }
+    });
     state.setDpr(window.devicePixelRatio);
     if (!model) {
       setModel(loadedModel);

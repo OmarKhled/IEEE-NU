@@ -42,8 +42,8 @@ export default function About() {
               enablePan={false}
               enableZoom={false}
               rotateSpeed={0.3}
-              maxAzimuthAngle={Math.PI / 3}
-              minAzimuthAngle={-Math.PI / 3}
+              maxAzimuthAngle={Math.PI / 5}
+              minAzimuthAngle={-Math.PI / 4}
               maxPolarAngle={Math.PI - 1}
               minPolarAngle={Math.PI - 2}
             />

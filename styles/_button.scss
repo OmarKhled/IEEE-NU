@@ -10,6 +10,9 @@
 .btn:active, .btn:focus {
   color: white !important;
 }
+.btn:hover {
+  opacity: 1 !important;
+}
 .btn::before {
   position: absolute;
   content: "";
@@ -23,7 +26,7 @@
   border-radius: 1.5rem;
 }
 .btn:hover::before {
-  opacity: 1;
+  opacity: 2;
 }
 // Primarry Button
 .btn-primary {

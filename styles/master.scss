@@ -304,7 +304,7 @@ a:hover {
   margin-top: min(8rem, 10.3vw);
 }
 .__root section:first-of-type {
-  margin-top: 10vw;
+  margin-top: min(10vw, 14rem);
 }
 .row > * {
   padding: 0 !important;

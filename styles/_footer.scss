@@ -7,6 +7,9 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    .cont {
+      width: min(90%, 83.125rem);
+    }
     .round {
       width: 100%;
     }
