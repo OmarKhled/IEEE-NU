@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SpaceSummitInfoCard({ img, title, paragraph }) {
   return (
-    <div className=" py-3 col-12 col-xs-6 col-md-4 col-lg-3">
+    <div className="col py-3 d-flex justify-content-center">
       <div className="SpaceSummitInfoCard">
         <svg className="svg">
           <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
@@ -25,7 +25,7 @@ export default function SpaceSummitInfoCard({ img, title, paragraph }) {
 }
 
 SpaceSummitInfoCard.defaultProps = {
-  img: "/images/spaceSummitInfoCard/stars.svg",
+  img: "/images/spaceSummitInfoCard/stars-background.svg",
   title: `Talks`,
   paragraph: ` Every Year, The Egyptian Space Summit invites talented speakers from
   the industry to discuss the new issues and updates`,

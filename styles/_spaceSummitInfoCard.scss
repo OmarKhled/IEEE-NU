@@ -1,4 +1,10 @@
 .SpaceSummitInfoCard {
+  width: 354px;
+  max-width: 100%;
+  .row {
+    width: 100%;
+    justify-content: space-between;
+  }
   .svg {
     position: absolute;
     width: 0;
@@ -9,7 +15,7 @@
     display: block;
     background-color: #fff;
     margin: auto auto;
-    width: min(95%, 370px);
+
     height: 100%;
     border-radius: 3.125rem;
     box-shadow: var(--shadow-elevation-medium);

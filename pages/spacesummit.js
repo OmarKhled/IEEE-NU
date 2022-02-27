@@ -71,11 +71,7 @@ const Summit = () => {
         </section>
       </main>
       <section className="round container hero">
-        <div className="row">
-          <SpaceSummitInfoCard />
-          <SpaceSummitInfoCard />
-          <SpaceSummitInfoCard />
-          <SpaceSummitInfoCard />
+        <div className="row  mx-auto">
           <SpaceSummitInfoCard />
           <SpaceSummitInfoCard />
         </div>
