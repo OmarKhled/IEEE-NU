@@ -1,0 +1,64 @@
+.SpaceSummitInfoCard {
+  .svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+  .infoCard {
+    overflow: hidden;
+    display: block;
+    background-color: #fff;
+    margin: auto auto;
+    width: min(95%, 280px);
+    height: 100%;
+    border-radius: 3.125rem;
+    box-shadow: var(--shadow-elevation-medium);
+
+    .clipped-img {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      background-size: cover;
+      -webkit-clip-path: url(#my-clip-path);
+      clip-path: url(#my-clip-path);
+      background-image: linear-gradient(
+        45deg,
+        hsl(209deg 81% 10%) 0%,
+        hsl(209deg 83% 13%) 11%,
+        hsl(209deg 84% 15%) 22%,
+        hsl(209deg 86% 17%) 33%,
+        hsl(210deg 88% 19%) 44%,
+        hsl(210deg 90% 21%) 56%,
+        hsl(210deg 92% 23%) 67%,
+        hsl(210deg 93% 24%) 78%,
+        hsl(210deg 95% 26%) 89%,
+        hsl(210deg 97% 28%) 100%
+      );
+      .secondary-img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        right: 0;
+        left: 0;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 50%;
+        width: 160px;
+        height: 160px;
+        box-shadow: 0px 0px 20px 2px #7fd2fc6c;
+      }
+    }
+    .body {
+      position: relative;
+      padding: 30px 25px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin-top: 10px;
+      }
+    }
+  }
+}

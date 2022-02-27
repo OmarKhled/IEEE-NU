@@ -10,6 +10,7 @@ import Button from "../components/Button";
 import PartenersCarousel from "../components/PartenersCarousel";
 
 import partners from "../data/summitPartners";
+import SpaceSummitInfoCard from "../components/SpaceSummitInfoCard";
 
 const Summit = () => {
   const controlsRef = useRef();
@@ -69,6 +70,16 @@ const Summit = () => {
           <PartenersCarousel items={partners} />
         </section>
       </main>
+      <section className="round container hero">
+        <div className="row">
+          <SpaceSummitInfoCard />
+          <SpaceSummitInfoCard />
+          <SpaceSummitInfoCard />
+          <SpaceSummitInfoCard />
+          <SpaceSummitInfoCard />
+          <SpaceSummitInfoCard />
+        </div>
+      </section>
     </>
   );
 };
