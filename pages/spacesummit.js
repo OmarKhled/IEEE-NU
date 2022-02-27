@@ -71,7 +71,7 @@ const Summit = () => {
         </section>
       </main>
       <section className="round container hero">
-        <div className="row  mx-auto">
+        <div className="row w-100 mx-auto d-flex justify-content-space-between">
           <SpaceSummitInfoCard />
           <SpaceSummitInfoCard />
         </div>

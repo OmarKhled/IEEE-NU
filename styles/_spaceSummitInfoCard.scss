@@ -61,10 +61,14 @@
       text-align: center;
       display: flex;
       flex-direction: column;
-
       p {
         margin-top: 10px;
       }
     }
+  }
+}
+@media (max-width: 576px) {
+  .SpaceSummitInfoCard {
+    max-width: 310px;
   }
 }
