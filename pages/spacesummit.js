@@ -7,12 +7,15 @@ import { Canvas } from "@react-three/fiber";
 import { Html, OrbitControls } from "@react-three/drei";
 
 import Button from "../components/Button";
+import PartenersCarousel from "../components/PartenersCarousel";
+
+import partners from "../data/summitPartners";
 
 const Summit = () => {
   const controlsRef = useRef();
   const polarAngle = Math.PI / 2 - 0.2;
   return (
-    <div>
+    <>
       <header className="spacesummit">
         <div className="cont">
           <div className="rocket hero">
@@ -60,7 +63,13 @@ const Summit = () => {
         {/* <img src="/assets/Stars.svg" className="stars" /> */}
         <img src="/assets/SummitRound.svg" className="round" />
       </header>
-    </div>
+      <main className="__root spacesummit">
+        <section className="text-center">
+          <h3 className="section-title">Main Partners</h3>
+          <PartenersCarousel items={partners} />
+        </section>
+      </main>
+    </>
   );
 };
 

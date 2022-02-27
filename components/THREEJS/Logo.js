@@ -21,26 +21,23 @@ const Logo = () => {
 
   const logo = document.querySelector(".logo.hero .drei");
   const initialScale = 9;
+  const mobileScale = 7;
   const breakPoint = 450;
   const [scale, setScale] = useState(
-    logo.clientWidth < breakPoint
-      ? (logo.clientWidth / breakPoint) * initialScale
-      : initialScale
+    window.innerWidth < 830 ? mobileScale : initialScale
   );
+  const [xPosition, setXPosition] = useState(logo.clientWidth < 440 ? 0 : 0);
+
+  useEffect(() => {
+    console.log(xPosition);
+    console.log(scale);
+  }, [xPosition, scale]);
 
   useEffect(() => {
     window.addEventListener("resize", () => {
+      setScale(window.innerWidth < 830 ? mobileScale : initialScale);
       state.setDpr(window.devicePixelRatio);
-      setScale(
-        logo.clientWidth < breakPoint
-          ? (logo.clientWidth / breakPoint) * 1.01 * initialScale
-          : initialScale
-      );
-      if (logo.clientWidth < breakPoint && window.innerWidth > 830) {
-        logo.style.marginTop = `-${Math.pow(8, 1) - Math.pow(scale, 0.8)}rem`;
-      } else {
-        logo.style.removeProperty("margin-top");
-      }
+      setXPosition(logo.clientWidth < 440 ? (logo.clientWidth - 440) / 340 : 0);
     });
     state.setDpr(window.devicePixelRatio);
     if (!model) {
@@ -83,7 +80,7 @@ const Logo = () => {
         />
         <mesh ref={logoMeshRef}>
           <primitive
-            position={[0, 0.2, 0]}
+            position={[xPosition, 0.2, 0]}
             scale={[scale, scale, scale]}
             object={model.scene}
             dispose={null}
