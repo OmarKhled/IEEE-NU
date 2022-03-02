@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SpaceSummitInfoCard({ img, title, paragraph }) {
   return (
-    <div className="col py-3 d-flex justify-content-center">
+    <div className="col py-3 d-flex justify-content-around">
       <div className="SpaceSummitInfoCard">
         <svg className="svg">
           <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
