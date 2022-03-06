@@ -1,5 +1,6 @@
 .hero.globe {
   @media screen and (min-width: 51.25rem) {
+    margin-top: 2rem;
     &>*+* {
       margin-left: 2rem;
     }
