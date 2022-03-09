@@ -1,6 +1,6 @@
 .SpaceSummitInfoCard {
   width: 354px;
-  max-width: 100%;
+  max-width: 90%;
   .row {
     width: 100%;
     justify-content: space-between;
@@ -48,7 +48,7 @@
         right: 0;
         left: 0;
         background-color: #fff;
-        padding: 10px;
+        padding: 1.3rem;
         border-radius: 50%;
         width: 160px;
         height: 160px;
@@ -57,9 +57,10 @@
     }
     .body {
       position: relative;
-      padding: 30px 25px;
+      padding: 1.8rem 1.7rem 3rem 1.7rem;
       text-align: center;
       display: flex;
+      align-items: center;
       flex-direction: column;
       p {
         margin-top: 10px;

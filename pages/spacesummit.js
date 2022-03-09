@@ -11,12 +11,17 @@ import PartenersCarousel from "../components/PartenersCarousel";
 
 import partners from "../data/summitPartners";
 import SpaceSummitInfoCard from "../components/SpaceSummitInfoCard";
+import Trophies from "../components/Trophies";
 
 const Summit = () => {
   const controlsRef = useRef();
   const polarAngle = Math.PI / 2 - 0.2;
+
   return (
     <>
+      <Head>
+        <title>Egyptian Space Summit</title>
+      </Head>
       <header className="spacesummit">
         <div className="cont">
           <div className="rocket hero">
@@ -69,13 +74,45 @@ const Summit = () => {
           <h3 className="section-title">Main Partners</h3>
           <PartenersCarousel items={partners} />
         </section>
+        <section>
+          <h3 className="section-title">The Summit Consists Of</h3>
+          <div className="container row w-100 mx-auto d-flex justify-content-space-between">
+            <SpaceSummitInfoCard
+              avatar={"/images/icons/Conference.svg"}
+              className="mt-4"
+            />
+            <SpaceSummitInfoCard
+              className="mt-4"
+              avatar={"/images/icons/to-stars.svg"}
+              title={"Competition"}
+              description={
+                "Egypt still has a lot of challenges to build its space station, and you may be the one who facilitates it. It is your chance to brainstorm a solution to those challenges and pitch your idea."
+              }
+            />
+          </div>
+        </section>
+        <section>
+          <h3 className="section-title">Competition Prizes</h3>
+          <div className="row justify-content-center align-items-end trophies">
+            <Trophies place={3} id="bronze" />
+            <Trophies place={1} id="gold" />
+            <Trophies place={2} id="silver" />
+          </div>
+          <div className="row gap-h-2 justify-content-center align-items-center mt-5">
+            <h3 className="col-auto text-center m-auto mb-3">
+              Competition Regulations and Criteria
+            </h3>
+            <Button
+              type="link"
+              color="primary"
+              href="#"
+              className="w-auto mb-3"
+            >
+              Learn More!
+            </Button>
+          </div>
+        </section>
       </main>
-      <section className="round container hero">
-        <div className="row w-100 mx-auto d-flex justify-content-space-between">
-          <SpaceSummitInfoCard />
-          <SpaceSummitInfoCard />
-        </div>
-      </section>
     </>
   );
 };

@@ -6,7 +6,6 @@ import { useLoader, useThree } from "@react-three/fiber";
 const Rocket = () => {
   const url = "/models/rocket.glb";
   const [model, setModel] = useState();
-
   const loadedModel = useLoader(GLTFLoader, url, (loader) => {
     const dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderPath(

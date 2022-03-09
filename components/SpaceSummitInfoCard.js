@@ -1,8 +1,13 @@
 import React from "react";
 
-export default function SpaceSummitInfoCard({ img, title, paragraph }) {
+export default function SpaceSummitInfoCard({
+  title,
+  description,
+  avatar,
+  className,
+}) {
   return (
-    <div className="col py-3 d-flex justify-content-around">
+    <div className={`col py-3 d-flex justify-content-around ${className}`}>
       <div className="SpaceSummitInfoCard">
         <svg className="svg">
           <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
@@ -11,12 +16,15 @@ export default function SpaceSummitInfoCard({ img, title, paragraph }) {
         </svg>
         <div className="infoCard">
           <div className="clipped-img">
-            <img className="secondary-img" src="/images/icons/speaker.svg" />
-            <img className=" w-100 h-100" src={img} />
+            <img className="secondary-img" src={avatar} />
+            <img
+              className=" w-100 h-100"
+              src="/images/spaceSummitInfoCard/stars-background.svg"
+            />
           </div>
           <div className="body">
             <h5 className="bold">{title}</h5>
-            <p>{paragraph}</p>
+            <p>{description}</p>
           </div>
         </div>
       </div>
@@ -25,8 +33,9 @@ export default function SpaceSummitInfoCard({ img, title, paragraph }) {
 }
 
 SpaceSummitInfoCard.defaultProps = {
-  img: "/images/spaceSummitInfoCard/stars-background.svg",
+  avatar: "/images/icons/speaker.svg",
   title: `Talks`,
-  paragraph: ` Every Year, The Egyptian Space Summit invites talented speakers from
+  description: ` Every Year, The Egyptian Space Summit invites talented speakers from
   the industry to discuss the new issues and updates`,
+  className: "",
 };
