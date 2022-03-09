@@ -28,8 +28,18 @@ export default function Document() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <body>
+        <script
+          async
+          defer
+          src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"
+        ></script>
         <Main />
         <NextScript />
+        {/* <script
+          async
+          defer
+          src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"
+        ></script> */}
       </body>
     </Html>
   );

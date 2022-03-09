@@ -12,6 +12,7 @@ import PartenersCarousel from "../components/PartenersCarousel";
 import partners from "../data/summitPartners";
 import SpaceSummitInfoCard from "../components/SpaceSummitInfoCard";
 import Trophies from "../components/Trophies";
+import CounterCard from "../components/CounterCard";
 
 const Summit = () => {
   const controlsRef = useRef();
@@ -99,7 +100,7 @@ const Summit = () => {
             <Trophies place={2} id="silver" />
           </div>
           <div className="row gap-h-2 justify-content-center align-items-center mt-5">
-            <h3 className="col-auto text-center m-auto mb-3">
+            <h3 className="col-auto text-center mb-4">
               Competition Regulations and Criteria
             </h3>
             <Button
@@ -110,6 +111,50 @@ const Summit = () => {
             >
               Learn More!
             </Button>
+          </div>
+        </section>
+        <section className="summit-video">
+          {/* <div
+            className="col-auto fb-video"
+            data-href="https://www.facebook.com/IEEENUSB/videos/1214948912349613"
+            data-width="540"
+            data-show-text="false"
+          ></div> */}
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              className="fb-video"
+              src="https://www.youtube.com/embed/IVakM-cz4hc"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div className="col description gap-v-1 mt-3">
+            <h3>Memories of 2021 Edition</h3>
+            <p>
+              Because we know how much memories mean, we made sure that it was
+              saved and taken care of by our team. IEEENU would like to thank
+              the Egyptian Space Agency and the other sponsors for their
+              remarkable efforts and support.
+            </p>
+          </div>
+        </section>
+        <section>
+          <h3 className="section-title">We Have Achieved</h3>
+          <div className="counters row justify-content-center">
+            <div className="col-12 col-sm-6 col-lg-4 mt-5">
+              <CounterCard number="2" info="Editions" />
+            </div>
+            <div className="col-12 col-sm-6 col-lg-4 mt-5">
+              <CounterCard number="300" info="Atendee" />
+            </div>
+            <div className="col-12 col-sm-6 col-lg-4 mt-5">
+              <CounterCard number="15" info="Teams" />
+            </div>
           </div>
         </section>
       </main>
