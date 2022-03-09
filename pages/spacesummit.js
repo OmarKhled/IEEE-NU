@@ -120,7 +120,7 @@ const Summit = () => {
             data-width="540"
             data-show-text="false"
           ></div> */}
-          <div>
+          <div className="video">
             <iframe
               width="560"
               height="315"
