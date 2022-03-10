@@ -26,7 +26,9 @@ const Navbar = () => {
   return (
     <nav>
       <Link href="/">
-        <img src="/logo.svg" className="logo" />
+        <a>
+          <img src="/logo.svg" className="logo" />
+        </a>
       </Link>
       <div className="section">
         <Link href="/">

@@ -5,5 +5,6 @@ module.exports = {
     concurrentFeatures: true,
     serverComponents: true,
     runtime: true,
+    reactRoot: true,
   },
 };

@@ -1,10 +1,31 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import "../styles/master.scss";
 import "../styles/bootstrap-grid.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
+  const { pathname, history } = useRouter();
+
+  useEffect(() => {
+    console.log("first");
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.addEventListener(
+      "wheel",
+      function (e) {
+        e.preventDefault(); // does nothing since the listener is passive
+      },
+      {
+        passive: true,
+      }
+    );
+  }, []);
+
   return (
     <>
       <Head>
