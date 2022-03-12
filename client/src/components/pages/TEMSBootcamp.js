@@ -43,6 +43,7 @@ const TEMSBootcamp = () => {
         "Buisness Adminstration",
         "Computer Science",
         "Engineering and Applied Science",
+        "Biotechnology",
       ],
       required: true,
     },
