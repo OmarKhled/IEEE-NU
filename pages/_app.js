@@ -7,23 +7,29 @@ import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
-  const { pathname, history } = useRouter();
-
-  useEffect(() => {
-    console.log("first");
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  const { pathname } = useRouter();
 
   useEffect(() => {
     document.addEventListener(
       "wheel",
       function (e) {
-        e.preventDefault(); // does nothing since the listener is passive
+        e.preventDefault();
       },
       {
         passive: true,
       }
     );
+    let lastMove = Date.now();
+    document.addEventListener("scroll", (e) => {
+      console.log("hi");
+      if (Date.now() - lastMove < 31) {
+        e.preventDefault();
+        // 32 frames a second
+        return;
+      } else {
+        lastMove = Date.now();
+      }
+    });
   }, []);
 
   return (
