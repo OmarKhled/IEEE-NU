@@ -35,10 +35,22 @@ const TEMSBootcamp = () => {
       required: true,
     },
     faculty: {
-      type: "text",
+      type: "select",
       name: "faculty",
       placeholder: "Faculty",
       label: "Faculty",
+      options: [
+        "Buisness Adminstration",
+        "Computer Science",
+        "Engineering and Applied Science",
+      ],
+      required: true,
+    },
+    major: {
+      type: "text",
+      name: "major",
+      placeholder: "Major",
+      label: "Major",
       value: "",
       required: true,
     },
@@ -47,6 +59,15 @@ const TEMSBootcamp = () => {
       name: "Why intersted?",
       placeholder: "Why you're interested to join the bootcamp?",
       label: "Why you're interested to join the bootcamp?",
+      required: true,
+    },
+    idea: {
+      type: "textarea",
+      name: "idea",
+      placeholder:
+        "Do you have an idea that you'd like to develop or are looking to learn how to develop one?",
+      label:
+        "Do you have an idea that you'd like to develop or are looking to learn how to develop one?",
       required: true,
     },
     food: {
@@ -81,23 +102,6 @@ const TEMSBootcamp = () => {
         "Business Model",
         "Pitching: technical presentation skills on PowerPoint, Canva, and more",
       ],
-      required: true,
-    },
-    sessionsPeriod: {
-      type: "select",
-      name: "sessionsPeriod",
-      label:
-        "Is it prefeable for you to take two sessions per week, 3-4 hours per session?",
-      options: ["Yes", "No"],
-      required: true,
-    },
-    interest: {
-      type: "textarea",
-      name: "idea",
-      placeholder:
-        "Do you have an idea that you'd like to develop or are looking to learn how to develop one?",
-      label:
-        "Do you have an idea that you'd like to develop or are looking to learn how to develop one?",
       required: true,
     },
   };
