@@ -44,6 +44,7 @@ import Vr from "./components/pages/Vr";
 import EEDPlatform from "./components/pages/EEDPlatform";
 import BoardRecruitment from "./components/pages/BoardRecruitment";
 import AcademyRegistration from "./components/pages/AcademyRegistration";
+import TEMSBootcamp from "./components/pages/TEMSBootcamp";
 
 function App() {
   const [themeState, setTheme] = useState(localStorage.getItem("theme"));
@@ -138,6 +139,11 @@ function App() {
                 exact
                 path="/boardRecruitment"
                 component={BoardRecruitment}
+              />
+              <Route
+                exact
+                path="/entrepreneurshipBootcamp"
+                component={TEMSBootcamp}
               />
               <Route exact path="/IEEEDay" component={IEEEDay} />
               <Route exact path="/spaceSummit" component={SpaceSummit} />
