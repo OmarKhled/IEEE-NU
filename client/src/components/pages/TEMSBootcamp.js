@@ -198,8 +198,7 @@ const TEMSBootcamp = () => {
               )}
             </div>
           ))}
-          <div className="d-flex justify-content-between mt-3">
-            <button className="btn-subscribe">Previous</button>
+          <div className="d-flex justify-content-center mt-3">
             <input type="submit" className="btn-subscribe" />
           </div>
         </form>
