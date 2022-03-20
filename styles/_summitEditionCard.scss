@@ -1,0 +1,22 @@
+.edition {
+  position: relative;
+  max-width: 600px;
+  
+  width: 100%;
+  margin: auto;
+  .edition-img {
+    aspect-ratio: 14/9;
+    width: 100%;
+    border-radius: clamp(10px, 5vw, 50px);
+  }
+
+  .body {
+    position: absolute;
+    bottom: clamp(10px, 5vw, 30px);
+    left: clamp(10px, 5vw, 30px);
+    h3, h6, p { color: #fff !important;}
+    .link {
+      color: #fff !important;
+    }
+  }
+}

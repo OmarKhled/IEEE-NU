@@ -13,6 +13,7 @@ import partners from "../data/summitPartners";
 import SpaceSummitInfoCard from "../components/SpaceSummitInfoCard";
 import Trophies from "../components/Trophies";
 import CounterCard from "../components/CounterCard";
+import Edition from "../components/Edition";
 
 const Summit = () => {
   const controlsRef = useRef();
@@ -40,7 +41,7 @@ const Summit = () => {
               </Button>
             </div>
             <div className="drei">
-              <Canvas>
+              <Canvas dpr={[1, 2]} className="canvas">
                 <OrbitControls
                   ref={controlsRef}
                   enablePan={false}
@@ -59,7 +60,6 @@ const Summit = () => {
                   }
                 >
                   <Rocket />
-                  <axesHelper />
                 </Suspense>
               </Canvas>
             </div>
@@ -154,6 +154,21 @@ const Summit = () => {
             </div>
             <div className="col-12 col-sm-6 col-lg-4 mt-5">
               <CounterCard number="15" info="Teams" />
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 className="section-title">Previous Editions</h3>
+          <div className="row">
+            <div className="col-12 col-md-6 mt-3 p-4">
+              <Edition />
+            </div>
+            <div className="col-12 col-md-6 mt-3 p-4">
+              <Edition
+                edition={"Edition 2"}
+                date={"01/07/2022"}
+                img={"/images/edition2.png"}
+              />
             </div>
           </div>
         </section>
