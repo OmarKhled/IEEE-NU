@@ -34,7 +34,7 @@ export default function membership() {
         </div>
         <div className="drei">
           {/* <img src="/images/Globe.svg" alt="globe" /> */}
-          <Canvas>
+          <Canvas dpr={[1, 2]}>
             <OrbitControls
               enablePan={false}
               enableZoom={false}

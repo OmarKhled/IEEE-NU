@@ -36,7 +36,7 @@ export default function About() {
           </Button>
         </div>
         <div className="drei">
-          <Canvas>
+          <Canvas dpr={[1, 2]}>
             <OrbitControls
               ref={controlsRef}
               enablePan={false}
