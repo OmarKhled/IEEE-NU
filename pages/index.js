@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Suspense } from "react";
 
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera, Html } from "@react-three/drei";
+import { OrbitControls, Html } from "@react-three/drei";
 
 import Button from "../components/Button";
 import CounterCard from "../components/CounterCard";

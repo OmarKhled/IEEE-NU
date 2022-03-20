@@ -99,16 +99,12 @@ const Summit = () => {
             <Trophies place={1} id="gold" />
             <Trophies place={2} id="silver" />
           </div>
-          <div className="row gap-h-2 justify-content-center align-items-center mt-5">
-            <h3 className="col-auto text-center mb-4">
+          <div className="row criteria justify-content-center align-items-center mt-5">
+            <h3 className="col-auto text-center m-3">
               Competition Regulations and Criteria
             </h3>
-            <Button
-              type="link"
-              color="primary"
-              href="#"
-              className="w-auto mb-3"
-            >
+
+            <Button type="link" color="primary" href="#" className="w-auto m-3">
               Learn More!
             </Button>
           </div>

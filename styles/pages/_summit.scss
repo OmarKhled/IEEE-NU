@@ -3,6 +3,13 @@
   section:first-of-type {
     margin-top: 2rem !important;
   }
+  .criteria {
+    // @media (min-width: 840px) {
+    //   &> * + * {
+    //     margin-left: 2rem;
+    //   }
+    // }
+  }
 }
 .trophies {
   @media screen and (max-width:767px){

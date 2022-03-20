@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Head from "next/head";
 import "../styles/master.scss";
 import "../styles/bootstrap-grid.css";
@@ -8,29 +7,6 @@ import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
-
-  useEffect(() => {
-    document.addEventListener(
-      "wheel",
-      function (e) {
-        e.preventDefault();
-      },
-      {
-        passive: true,
-      }
-    );
-    let lastMove = Date.now();
-    document.addEventListener("scroll", (e) => {
-      console.log("hi");
-      if (Date.now() - lastMove < 31) {
-        e.preventDefault();
-        // 32 frames a second
-        return;
-      } else {
-        lastMove = Date.now();
-      }
-    });
-  }, []);
 
   return (
     <>

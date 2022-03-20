@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import { useState, useEffect, useRef } from "react";
 import { useThree } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";

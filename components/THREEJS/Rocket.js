@@ -1,111 +1,61 @@
-import { useState, useEffect, useRef } from "react";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
-import { useLoader, useThree } from "@react-three/fiber";
+import { useState, useEffect } from "react";
+import { useGLTF } from "@react-three/drei";
 
 const Rocket = () => {
-  const url = "/models/rocket.glb";
-  const [model, setModel] = useState();
-  const loadedModel = useLoader(GLTFLoader, url, (loader) => {
-    const dracoLoader = new DRACOLoader();
-    dracoLoader.setDecoderPath(
-      "https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/js/libs/draco/"
-    );
-    loader.setDRACOLoader(dracoLoader);
-  });
-
-  const state = useThree();
-  const logoMeshRef = useRef();
-
-  const rocket = document.querySelector(".rocket.hero .drei");
-  const initialScale =
+  const { scene } = useGLTF("/models/rocket.glb");
+  let initialScale =
     window.innerWidth < 980 && window.innerWidth >= 831 ? 1.9 : 1.4;
+  const rocket = document.querySelector(".rocket.hero .drei");
   const [scale, setScale] = useState(
     rocket.clientWidth < 325
       ? (rocket.clientWidth / 325) * initialScale
       : initialScale
   );
 
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      state.setDpr(window.devicePixelRatio);
-      initialScale =
-        window.innerWidth < 980 && window.innerWidth >= 831 ? 1.9 : 1.4;
-      setScale(
-        rocket.clientWidth < 325 && window.innerWidth >= 540
-          ? (rocket.clientWidth / 325) * initialScale
-          : initialScale
-      );
-    });
-    state.setDpr(window.devicePixelRatio);
-    if (!model) {
-      setModel(loadedModel);
-    }
+  const resize = () => {
+    initialScale =
+      window.innerWidth < 980 && window.innerWidth >= 831 ? 1.9 : 1.4;
+    setScale(
+      rocket.clientWidth < 325 && window.innerWidth >= 540
+        ? (rocket.clientWidth / 325) * initialScale
+        : initialScale
+    );
+  };
 
-    import("dat.gui").then((dat) => {
-      const gui = new dat.GUI();
-      gui.destroy();
-      gui
-        .add(logoMeshRef.current.rotation, "x")
-        .min(2 * -Math.PI)
-        .max(2 * Math.PI)
-        .step(0.01)
-        .name("XRotation");
-      gui
-        .add(logoMeshRef.current.rotation, "y")
-        .min(2 * -Math.PI)
-        .max(2 * Math.PI)
-        .step(0.01)
-        .name("YRotation");
-      gui
-        .add(logoMeshRef.current.rotation, "z")
-        .min(2 * -Math.PI)
-        .max(2 * Math.PI)
-        .step(0.01)
-        .name("ZRotation");
-    });
+  useEffect(() => {
+    window.addEventListener("resize", resize);
+    resize();
   }, []);
 
-  if (model) {
-    return (
-      <>
-        <ambientLight intensity={0.6} />
+  const pointLights = [
+    { intensity: 1, position: [0, 0, 4] },
+    { intensity: 0.5, position: [0, 2, -4] },
+    { intensity: 0.4, position: [4, 0, 0] },
+    { intensity: 0.4, position: [-4, -2, 0] },
+  ];
+
+  return (
+    <>
+      <ambientLight intensity={0.6} />
+      {pointLights.map((pointLight, i) => (
         <pointLight
           castShadow
-          position={[0, 0, 4]}
-          intensity={1}
+          key={i}
+          position={pointLight.position}
+          intensity={pointLight.intensity}
           color={0x5ec8f6}
         />
-        <pointLight
-          castShadow
-          position={[0, 2, -4]}
-          intensity={0.5}
-          color={0x5ec8f6}
-        />
-        <pointLight
-          castShadow
-          position={[4, 0, 0]}
-          intensity={0.4}
-          color={0x5ec8f6}
-        />
-        <pointLight
-          castShadow
-          position={[-4, -2, 0]}
-          intensity={0.4}
-          color={0x5ec8f6}
-        />
-        <mesh ref={logoMeshRef}>
-          <primitive
-            scale={[scale, scale, scale]}
-            position={[0, -0.3, 0]}
-            object={model.scene}
-            dispose={null}
-          ></primitive>
-        </mesh>
-        {/* <axesHelper /> */}
-      </>
-    );
-  } else return null;
+      ))}
+      <mesh>
+        <primitive
+          scale={[scale, scale, scale]}
+          position={[0, -0.3, 0]}
+          object={scene}
+          dispose={null}
+        ></primitive>
+      </mesh>
+    </>
+  );
 };
 
 export default Rocket;

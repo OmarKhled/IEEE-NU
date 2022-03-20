@@ -7,29 +7,30 @@ export default function InfoCard({
   firstCounter,
   secondCounter,
   children,
+  noCounter,
 }) {
   return (
     <div className="info-card">
       <div className="top-image">
         <img className="mainimg" src={mainImg} />
-        <div className="body">
-          <img
-            width="144px"
-            height="144px"
-            className="secondaryimg"
-            src={avatar}
-          />
+        <div className={`body ${noCounter ? "tall" : ""}`}>
+          <img width="144px" height="144px" className="avatar" src={avatar} />
           <h4 className="bold">{title}</h4>
-          <div className="counters-container">
-            <div>
-              <h5 className="bold">{firstCounter.value}</h5>
-              <small className="bold title">{firstCounter.title}</small>
+          {!noCounter ? (
+            <div className="counters-container">
+              <div>
+                <h5 className="bold">{firstCounter.value}</h5>
+                <small className="bold title">{firstCounter.title}</small>
+              </div>
+              <div>
+                <h5 className="bold">{secondCounter.value}</h5>
+                <small className="bold title">{secondCounter.title}</small>
+              </div>
             </div>
-            <div>
-              <h5 className="bold">{secondCounter.value}</h5>
-              <small className="bold title">{secondCounter.title}</small>
-            </div>
-          </div>
+          ) : (
+            <></>
+          )}
+
           <p className="description">{children}</p>
         </div>
       </div>
@@ -43,7 +44,7 @@ InfoCard.defaultProps = {
   title: "Events",
   firstCounter: { title: "Atendees", value: "100" },
   secondCounter: { title: "Events", value: "15" },
-  txt: `We are good at making events.
+  children: `We are good at making events.
         Egyptian space summit
     , one of the stunning events in the space era is powered by
     IEEENU.`,

@@ -1,7 +1,6 @@
 .edition {
   position: relative;
   max-width: 600px;
-  
   width: 100%;
   margin: auto;
   .edition-img {
@@ -9,7 +8,6 @@
     width: 100%;
     border-radius: clamp(10px, 5vw, 50px);
   }
-
   .body {
     position: absolute;
     bottom: clamp(10px, 5vw, 30px);

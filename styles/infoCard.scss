@@ -2,17 +2,25 @@
   overflow: hidden;
   background-color: #fff;
   margin: auto auto;
-  width: min(95%, 280px);
+  width: min(95%, 300px);
   height: 100%;
   border-radius: 3.125rem;
   box-shadow: var(--shadow-elevation-medium);
+  .mainimg {
+    height: 200px;
+    width: 100%;
+  }
   .body {
     position: relative;
-    padding: 80px 25px 30px;
+    padding: 90px 20px 40px;
+    &.tall {
+      // height: 300px ;
+    }
     text-align: center;
     display: flex;
     flex-direction: column;
-    .secondaryimg {
+    justify-content: center;
+    .avatar {
       position: absolute;
       right: 0;
       left: 0;
