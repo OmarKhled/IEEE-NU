@@ -9,28 +9,28 @@ const Navbar = () => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
+    const nav = document.querySelector("nav");
     window.addEventListener("resize", () => {
       setWindowWidth(window.innerWidth);
     });
     // Self Closing Beahviour
     const handleRouteChange = (url) => {
+      nav.classList.remove("opened");
       setOpened(false);
     };
     router.events.on("routeChangeComplete", handleRouteChange);
   }, []);
 
-  const switchMenuStatus = () => {
+  const openMenu = () => {
     const nav = document.querySelector("nav");
     if (nav.classList.contains("opened")) {
       nav.classList.remove("opened");
+      setOpened(false);
     } else {
       nav.classList.add("opened");
+      setOpened(true);
     }
   };
-
-  useEffect(() => {
-    switchMenuStatus();
-  }, [opened]);
   return (
     <nav>
       <Link href="/">
@@ -57,10 +57,7 @@ const Navbar = () => {
           <a className="link">Membership</a>
         </Link>
       </div>
-      <span
-        id="menu"
-        onClick={() => (opened ? setOpened(false) : setOpened(true))}
-      >
+      <span id="menu" onClick={openMenu}>
         <svg
           height="32px"
           id="hamburgerMenu"
