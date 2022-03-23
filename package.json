@@ -13,6 +13,7 @@
     "@react-three/fiber": "^7.0.26",
     "dat.gui": "^0.7.9",
     "next": "^12.1.0",
+    "nprogress": "^0.2.0",
     "react": "^18.0.0-rc.0",
     "react-dom": "^18.0.0-rc.0",
     "react-elastic-carousel": "^0.11.5",

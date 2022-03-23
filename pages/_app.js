@@ -1,10 +1,11 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import "../styles/master.scss";
 import "../styles/bootstrap-grid.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import NProgress from "nprogress";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -31,7 +32,27 @@ function MyApp({ Component, pageProps }) {
         });
       }
     });
-  });
+  }, []);
+
+  useEffect(() => {
+    const handleStart = (url) => {
+      console.log(`Loading: ${url}`);
+      NProgress.start();
+    };
+    const handleStop = () => {
+      NProgress.done();
+    };
+
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleStop);
+    router.events.on("routeChangeError", handleStop);
+
+    return () => {
+      router.events.off("routeChangeStart", handleStart);
+      router.events.off("routeChangeComplete", handleStop);
+      router.events.off("routeChangeError", handleStop);
+    };
+  }, [router]);
 
   return (
     <>
