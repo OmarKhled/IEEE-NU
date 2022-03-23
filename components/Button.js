@@ -7,12 +7,11 @@ const Button = ({ type, color, href, children, className }) => {
       {type === "button" ? (
         <button className={`btn btn-${color} ${className}`}>{children}</button>
       ) : (
-        <a
-          href={href}
-          className={`btn btn-${color} ${className ? className : ""}`}
-        >
-          {children}
-        </a>
+        <Link href={href}>
+          <a className={`btn btn-${color} ${className ? className : ""}`}>
+            {children}
+          </a>
+        </Link>
       )}
     </>
   );

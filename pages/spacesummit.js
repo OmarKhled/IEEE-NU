@@ -36,7 +36,7 @@ const Summit = () => {
                 area is powered by IEEENU. The event takes place at Nile
                 University every year in September.
               </p>
-              <Button type="link" color="primary" href="#">
+              <Button type="link" color="primary" href="#aboutsummit">
                 Learn More!
               </Button>
             </div>
@@ -75,7 +75,7 @@ const Summit = () => {
           <h3 className="section-title">Main Partners</h3>
           <PartenersCarousel items={partners} />
         </section>
-        <section>
+        <section id="aboutsummit">
           <h3 className="section-title">The Summit Consists Of</h3>
           <div className="container row w-100 mx-auto d-flex justify-content-space-between">
             <SpaceSummitInfoCard

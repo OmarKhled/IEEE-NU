@@ -28,7 +28,7 @@ const Globe = () => {
     <>
       <ambientLight intensity={0.4} />
       <pointLight position={[537, 555, 0]} intensity={1} color={0x5ec8f6} />
-      <mesh scale={scale} position={[0, 0, 0]}>
+      <mesh scale={scale} position={[0, 0, 0]} rotateY={90}>
         <sphereGeometry args={[2.7, 100, 100]} />
         <meshLambertMaterial map={worldMap} />
       </mesh>

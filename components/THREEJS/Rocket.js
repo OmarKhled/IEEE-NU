@@ -29,10 +29,10 @@ const Rocket = () => {
   }, []);
 
   const pointLights = [
-    { intensity: 1.6, position: [0, 0, 4] },
-    { intensity: 1, position: [0, 2, -4] },
-    // { intensity: 0.4, position: [4, 0, 0] },
-    // { intensity: 0.4, position: [-4, -2, 0] },
+    { intensity: 1, position: [0, 0, 4] },
+    { intensity: 0.5, position: [0, 2, -4] },
+    { intensity: 0.4, position: [4, 0, 0] },
+    { intensity: 0.4, position: [-4, -2, 0] },
   ];
 
   return (

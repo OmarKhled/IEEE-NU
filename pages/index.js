@@ -33,7 +33,7 @@ export default function Home() {
             place. Join IEEE @ Nile Universty Student Branch and Start the
             learning Journey!
           </p>
-          <Button type="link" color="primary" href="#">
+          <Button type="link" color="primary" href="/forms/recruitment">
             Join Now!
           </Button>
         </div>

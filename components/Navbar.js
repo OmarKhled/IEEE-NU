@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
+  const router = useRouter();
+
   const [opened, setOpened] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
 
@@ -9,20 +12,25 @@ const Navbar = () => {
     window.addEventListener("resize", () => {
       setWindowWidth(window.innerWidth);
     });
+    // Self Closing Beahviour
+    const handleRouteChange = (url) => {
+      setOpened(false);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
   }, []);
 
-  const openMenu = () => {
+  const switchMenuStatus = () => {
     const nav = document.querySelector("nav");
     if (nav.classList.contains("opened")) {
-      // console.log("open");
       nav.classList.remove("opened");
-      setOpened(false);
     } else {
-      // console.log("not");
       nav.classList.add("opened");
-      setOpened(true);
     }
   };
+
+  useEffect(() => {
+    switchMenuStatus();
+  }, [opened]);
   return (
     <nav>
       <Link href="/">
@@ -49,7 +57,10 @@ const Navbar = () => {
           <a className="link">Membership</a>
         </Link>
       </div>
-      <span id="menu" onClick={openMenu}>
+      <span
+        id="menu"
+        onClick={() => (opened ? setOpened(false) : setOpened(true))}
+      >
         <svg
           height="32px"
           id="hamburgerMenu"

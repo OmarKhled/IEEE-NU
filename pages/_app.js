@@ -4,9 +4,30 @@ import "../styles/bootstrap-grid.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
-  const { pathname } = useRouter();
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      window.scrollTo(0, 0);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    // Smooth href Scorlling
+    document.querySelectorAll("a").forEach((anchor) => {
+      if (anchor.href.includes("#")) {
+        const elm = anchor.href.slice(anchor.href.indexOf("#"));
+        console.log(elm);
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(elm).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      }
+    });
+  });
 
   return (
     <>

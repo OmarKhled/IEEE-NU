@@ -31,7 +31,7 @@ export default function About() {
             IEEENU, also you become a part of a bigger family that looks like
             you!
           </p>
-          <Button type="link" color="secondary" href="#">
+          <Button type="link" color="secondary" href="/forms/recruitment">
             Consider Joining!
           </Button>
         </div>
