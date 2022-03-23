@@ -141,14 +141,11 @@ p {
 * {
   margin: 0;
 }
-html { height: 100%;
-  overflow-x: hidden; }
-body { height: 100%; }
-// html,
-// body {
-//   height: 100%;
-//   overflow-x: hidden;
-// }
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;

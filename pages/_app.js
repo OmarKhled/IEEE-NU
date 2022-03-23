@@ -10,8 +10,12 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChange = (url) => {
-      window.scrollTo(0, 0);
+    const handleRouteChange = () => {
+      setTimeout(() => {
+        document.querySelector("#top").scrollIntoView({
+          behavior: "smooth",
+        });
+      }, 2);
     };
     router.events.on("routeChangeComplete", handleRouteChange);
     // Smooth href Scorlling
@@ -58,6 +62,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta name="msapplication-TileColor" content="#da532c" />
       </Head>
+      <span id="top"></span>
       <Navbar />
       <Component {...pageProps} />
       <Footer />
