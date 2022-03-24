@@ -20,6 +20,10 @@ export default function Home() {
       {/* Meta Tags */}
       <Head>
         <title>IEEENU - Home</title>
+        {/* <meta
+          property="og:title"
+          content="IEEE @ Nile University Student Branch"
+        /> */}
       </Head>
       {/* Hero Section */}
       <header className="hero globe">
