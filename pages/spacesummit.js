@@ -68,7 +68,11 @@ const Summit = () => {
         </div>
 
         {/* <img src="/assets/Stars.svg" className="stars" /> */}
-        <img src="/assets/SummitRound.svg" className="round" />
+        <img
+          src="/assets/SummitRound.svg"
+          className="round"
+          fetchpriority={"Highest"}
+        />
       </header>
       <main className="__root spacesummit">
         <section className="text-center">
