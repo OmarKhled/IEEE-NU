@@ -93,7 +93,7 @@ function MyApp({ Component, pageProps }) {
           content="IEEE @ Nile University Student Branch"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://dev.ieeenu.com" />
+        <meta property="og:url" content="http://dev.ieeenu.com/spacesummit" />
         <meta
           property="og:image"
           content="https://i.ibb.co/D1BHjTd/cover.png"
