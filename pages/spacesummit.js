@@ -33,6 +33,7 @@ const Summit = () => {
         <meta
           property="og:image"
           content="http://ieeenu.com/static/media/EgyptianSummit.db872a21.png"
+          key={"image"}
         />
         <meta
           property="og:description"

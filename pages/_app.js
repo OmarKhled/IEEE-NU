@@ -97,6 +97,7 @@ function MyApp({ Component, pageProps }) {
         <meta
           property="og:image"
           content="https://i.ibb.co/D1BHjTd/cover.png"
+          key={"image"}
         />
         <meta
           property="og:description"
