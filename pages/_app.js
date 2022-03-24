@@ -88,12 +88,11 @@ function MyApp({ Component, pageProps }) {
           name="description"
           content="Engage and empower NU community, through technology, to develop their communities. IEEE NU | Visualize The Future"
         />
-        <meta
+        {/* <meta
           property="og:title"
           content="IEEE @ Nile University Student Branch"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://dev.ieeenu.com/spacesummit" />
+        /> */}
+        <link rel="canonical" href="http://example.com/post-permalink" />
         <meta
           property="og:image"
           content="https://i.ibb.co/D1BHjTd/cover.png"
