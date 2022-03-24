@@ -23,6 +23,21 @@ const Summit = () => {
     <>
       <Head>
         <title>Egyptian Space Summit</title>
+        <meta
+          name="description"
+          content="The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. You can register as an attendee or participant through the below form."
+        />
+        <meta property="og:title" content="Egyptian Space Summit" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://dev.ieeenu.com/spacesummit" />
+        <meta
+          property="og:image"
+          content="http://ieeenu.com/static/media/EgyptianSummit.db872a21.png"
+        />
+        <meta
+          property="og:description"
+          content="The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. You can register as an attendee or participant through the below form."
+        />
       </Head>
       <header className="spacesummit">
         <div className="cont">

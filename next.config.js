@@ -2,9 +2,9 @@
 module.exports = {
   reactStrictMode: true,
   experimental: {
-    concurrentFeatures: true,
-    serverComponents: true,
-    runtime: true,
-    reactRoot: true,
+    // concurrentFeatures: true,
+    // serverComponents: true,
+    // runtime: true,
+    // reactRoot: true,
   },
 };
