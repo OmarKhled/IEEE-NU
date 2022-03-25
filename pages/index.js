@@ -22,6 +22,7 @@ export default function Home() {
       <Head>
         <title>IEEENU - Home</title>
         <meta property="og:title" content="IEEENU - Home" key={"title"} />
+        <link rel="preload" href="/textures/globe.webp" as="image" />
       </Head>
       {/* Hero Section */}
       <header className="hero globe">

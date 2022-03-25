@@ -64,6 +64,8 @@ const SEO = () => {
         key={"stdata"}
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <link rel="preload" href="/assets/SummitRound.svg" as="image" />
+      <link rel="preload" href="/assets/Stars.svg" as="image" />
     </Head>
   );
 };

@@ -3,7 +3,7 @@ import { useThree } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 
 const Globe = () => {
-  const worldMap = useTexture("textures/125.png");
+  const worldMap = useTexture("textures/globe.webp");
   const globe = document.querySelector(".globe .drei");
   const [scale, setScale] = useState(
     globe.clientWidth < 446.875 ? globe.clientWidth / 446.875 : 1

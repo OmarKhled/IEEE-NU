@@ -1,6 +1,6 @@
 .SpaceSummitInfoCard {
-  width: 354px;
-  max-width: 90%;
+  width: 345px;
+  max-width: min(90%, 350px) ;
   .row {
     width: 100%;
     justify-content: space-between;

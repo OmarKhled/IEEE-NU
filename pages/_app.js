@@ -119,6 +119,8 @@ function MyApp({ Component, pageProps }) {
           key={"stdata"}
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <link rel="preload" href="/logo.svg" as="image" />
+        <link rel="preload" href="/assets/Footer.svg" as="image" />
       </Head>
       <span id="top"></span>
       <Navbar />
