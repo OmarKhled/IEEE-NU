@@ -16,7 +16,8 @@ export default function membership() {
     <div className="__root">
       {/* Meta Tags */}
       <Head>
-        <title>IEEENU - Home</title>
+        <title>IEEENU - Membership</title>
+        <meta property="og:title" content="IEEENU - Membership" key={"title"} />
       </Head>
       {/* Hero Section */}
       <header className="hero shirt">

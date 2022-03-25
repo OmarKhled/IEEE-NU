@@ -54,6 +54,13 @@ function MyApp({ Component, pageProps }) {
     };
   }, [router]);
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    url: "https://dev.ieeenu.com",
+    logo: "http://ieeenu.com/static/media/IEEE-NU-Logo.ec810f88.png",
+  };
+
   return (
     <>
       <Head>
@@ -87,12 +94,14 @@ function MyApp({ Component, pageProps }) {
         <meta
           name="description"
           content="Engage and empower NU community, through technology, to develop their communities. IEEE NU | Visualize The Future"
+          key={"descripton"}
         />
-        {/* <meta
+        <meta
           property="og:title"
           content="IEEE @ Nile University Student Branch"
-        /> */}
-        <link rel="canonical" href="http://example.com/post-permalink" />
+          key={"title"}
+        />
+        <link rel="canonical" href="https://dev.ieeenu.com" />
         <meta
           property="og:image"
           content="https://i.ibb.co/D1BHjTd/cover.png"
@@ -102,8 +111,14 @@ function MyApp({ Component, pageProps }) {
           property="og:description"
           content="Engage and empower NU community, through technology, to develop their
           communities. IEEE NU | Visualize The Future"
+          key={"ogdescription"}
         />
         <meta name="twitter:card" content="summary_large_image" />
+        <script
+          type="application/ld+json"
+          key={"stdata"}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </Head>
       <span id="top"></span>
       <Navbar />

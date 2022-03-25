@@ -21,6 +21,7 @@ export default function About() {
       {/* Meta Tags */}
       <Head>
         <title>IEEENU - About</title>
+        <meta property="og:title" content="About IEEE NU" key={"title"} />
       </Head>
       {/* Hero Section */}
       <header className="hero logo">

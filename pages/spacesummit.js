@@ -15,31 +15,66 @@ import Trophies from "../components/Trophies";
 import CounterCard from "../components/CounterCard";
 import Edition from "../components/Edition";
 
+const SEO = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: "Egyptian Space Summit",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    location: {
+      "@type": "Place",
+      name: "Nile University",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "26th of July Corridor",
+        addressLocality: "6th of october",
+        postalCode: "12677",
+        addressCountry: "EG",
+      },
+    },
+    description:
+      "The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. You can register as an attendee or participant through the below form.",
+    organizer: {
+      "@type": "Organization",
+      name: "IEEE NU",
+      url: "https://ieeenu.com",
+    },
+  };
+  return (
+    <Head>
+      <title>Egyptian Space Summit</title>
+      <meta
+        name="description"
+        content="The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. You can register as an attendee or participant through the below form."
+        key={"descripton"}
+      />
+      <meta property="og:title" content="Egyptian Space Summit" key={"title"} />
+      <meta
+        property="og:image"
+        content="http://ieeenu.com/static/media/EgyptianSummit.db872a21.png"
+        key={"image"}
+      />
+      <meta
+        property="og:description"
+        content="The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. You can register as an attendee or participant through the below form."
+        key={"ogdescription"}
+      />
+      <script
+        type="application/ld+json"
+        key={"stdata"}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+    </Head>
+  );
+};
+
 const Summit = () => {
   const controlsRef = useRef();
   const polarAngle = Math.PI / 2 - 0.2;
 
   return (
     <>
-      <Head>
-        <title>Egyptian Space Summit</title>
-        <meta
-          name="description"
-          content="The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. You can register as an attendee or participant through the below form."
-        />
-        {/* <meta property="og:title" content="Egyptian Space Summit" /> */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://dev.ieeenu.com/spacesummit" />
-        <meta
-          property="og:image"
-          content="http://ieeenu.com/static/media/EgyptianSummit.db872a21.png"
-          key={"image"}
-        />
-        <meta
-          property="og:description"
-          content="The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. You can register as an attendee or participant through the below form."
-        />
-      </Head>
+      <SEO />
       <header className="spacesummit">
         <div className="cont">
           <div className="rocket hero">
