@@ -72,7 +72,7 @@ export default function Home() {
               <CounterCard number="15" info="Event" />
             </div>
             <div className="col-12 col-sm-6 col-lg-4 mt-5">
-              <CounterCard number="500" info="Member" />
+              <CounterCard number="90" info="Member" />
             </div>
             <div className="col-12 col-sm-6 col-lg-4 mt-5">
               <CounterCard number="10" info="Awards" />

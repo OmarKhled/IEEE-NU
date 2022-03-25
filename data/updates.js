@@ -5,7 +5,7 @@ export default [
     img: "/images/updates/bootcamp.webp",
   },
   {
-    title: "WIE Capter Launch",
+    title: "WIE Affinity Group Launch",
     date: "08/03/2022",
     img: "/images/updates/wie.webp",
   },
