@@ -13,6 +13,7 @@ import Globe from "../components/THREEJS/Globe";
 
 import board from "../data/board";
 import partners from "../data/partners";
+import updates from "../data/updates";
 
 export default function Home() {
   return (
@@ -85,24 +86,13 @@ export default function Home() {
         <section>
           <h3 className="section-title mb-3">Branch Updates</h3>
           <div className="row gap-4">
-            <UpdatesCard
-              title="Hosting of IEEE Egypt Section Closing Ceremony"
-              date="25/12/2021"
-              img="/images/updates/closing-ceremony.png"
-              className="col-12 col-sm-6 col-lg-4 mt-3"
-            />
-            <UpdatesCard
-              title="Partnering with Nile Preneurs Explore Program"
-              date="29/11/2022"
-              img="/images/updates/explore.jpg"
-              className="col-12 col-sm-6 col-lg-4 mt-3"
-            />
-            <UpdatesCard
-              title="Opening 2022 Members Recruitment Application"
-              date="27/10/2021"
-              img="/images/updates/recruitment.jpg"
-              className="col-12 col-sm-6 col-lg-4 mt-3"
-            />
+            {updates.slice(0, 3).map((update) => (
+              <UpdatesCard
+                {...update}
+                key={update.title}
+                className="col-12 col-sm-6 col-lg-4 mt-3"
+              />
+            ))}
           </div>
         </section>
         <section>
@@ -127,13 +117,18 @@ export default function Home() {
           <div className="info gap-v-1">
             <h1>Subscribe to Our Monthly Newsletter!</h1>
             <input type="text" placeholder="Email" className="w-75" />
-            <Button type="link" color="secondary" href="#" className="block">
+            <Button
+              type="link"
+              color="secondary"
+              href="#"
+              className="block mx-auto"
+            >
               Subscribe
             </Button>
           </div>
-          <div className="envelope">
+          {/* <div className="envelope">
             <img src="/images/Envelope-amico.svg" />
-          </div>
+          </div> */}
         </section>
       </main>
     </div>

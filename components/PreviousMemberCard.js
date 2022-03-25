@@ -5,7 +5,7 @@ export default function PreviousMemberCard({ img, name, txt }) {
     <div className=" previousMember-card ">
       <div className="p-3 body  d-flex">
         <div className="img">
-          <img src={img} />
+          <img src={img} alt={name} />
         </div>
         <div className="px-3">
           <p className="bold">{name}</p>

@@ -12,7 +12,8 @@ const Trophies = ({ place, id, className }) => {
             className="
       mx-auto"
             width={"80"}
-            src="/illustrations/bronze.png"
+            src="/illustrations/bronze.webp"
+            alt={"Bornze Trophy"}
           />
           <h5>3rd Place</h5>
           <h6>1000 EGP</h6>
@@ -25,7 +26,8 @@ const Trophies = ({ place, id, className }) => {
           <img
             className="mx-auto"
             width={"260"}
-            src="/illustrations/gold.png"
+            src="/illustrations/gold.webp"
+            alt={"Gold Trophy"}
           />
           <h3>1st Place</h3>
           <h4>5000 EGP</h4>
@@ -38,7 +40,8 @@ const Trophies = ({ place, id, className }) => {
           <img
             className="mx-auto"
             width={"120"}
-            src="/illustrations/silver.png"
+            src="/illustrations/silver.webp"
+            alt={"Silver Trophy"}
           />
           <h4>2nd Place</h4>
           <h5>3000 EGP</h5>
@@ -51,7 +54,7 @@ const Trophies = ({ place, id, className }) => {
 };
 
 Trophies.defaultProps = {
-  img: "/illustrations/gold.png",
+  img: "/illustrations/gold.webp",
   width: "200",
   place: "1",
   id: "",

@@ -77,7 +77,7 @@ export default function About() {
           <h3 className="section-title">Previous Members</h3>
           <div className="row">
             {previousMembers.map((card) => (
-              <div key={card.name} className="col-12 col-sm-6 mt-5">
+              <div key={card.name} className="col-12 col-sm-6 mt-5 p-2">
                 <PreviousMemberCard {...card} />
               </div>
             ))}

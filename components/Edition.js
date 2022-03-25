@@ -4,7 +4,7 @@ import React from "react";
 const Edition = ({ date, edition, img }) => {
   return (
     <div className="edition">
-      <img src={img} className="edition-img" />
+      <img src={img} alt={`Space Summit ${edition}`} className="edition-img" />
       <div className="body">
         <Link href="#">
           <a className="link">
@@ -20,7 +20,7 @@ const Edition = ({ date, edition, img }) => {
 Edition.defaultProps = {
   date: "01/07/2021",
   edition: "Edition 1",
-  img: "/images/edition1.png",
+  img: "/images/edition1.webp",
 };
 
 export default Edition;

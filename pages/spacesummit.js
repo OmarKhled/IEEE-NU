@@ -118,10 +118,10 @@ const Summit = () => {
           <div className="stars"></div>
         </div>
 
-        {/* <img src="/assets/Stars.svg" className="stars" /> */}
         <img
           src="/assets/SummitRound.svg"
           className="round"
+          alt="bottom"
           fetchpriority={"Highest"}
         />
       </header>
@@ -134,12 +134,12 @@ const Summit = () => {
           <h3 className="section-title">The Summit Consists Of</h3>
           <div className="container row w-100 mx-auto d-flex justify-content-space-between">
             <SpaceSummitInfoCard
-              avatar={"/images/icons/Conference.svg"}
+              avatar={"/images/icons/Conference.webp"}
               className="mt-4"
             />
             <SpaceSummitInfoCard
               className="mt-4"
-              avatar={"/images/icons/to-stars.svg"}
+              avatar={"/images/icons/to-stars.webp"}
               title={"Competition"}
               description={
                 "Egypt still has a lot of challenges to build its space station, and you may be the one who facilitates it. It is your chance to brainstorm a solution to those challenges and pitch your idea."
@@ -218,7 +218,7 @@ const Summit = () => {
               <Edition
                 edition={"Edition 2"}
                 date={"01/07/2022"}
-                img={"/images/edition2.png"}
+                img={"/images/edition2.webp"}
               />
             </div>
           </div>

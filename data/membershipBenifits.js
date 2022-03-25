@@ -1,34 +1,34 @@
 export default [
   {
-    mainImg: "/images/membership/explore.png",
-    avatar: "/images/icons/globe.svg",
+    mainImg: "/images/membership/explore.webp",
+    avatar: "/images/icons/globe.webp",
     title: "IEEE Xplore",
-    txt: `One of the most powerful IEEE Xplore resources to discover scientific and technical content published by the IEEE and its partners.`,
+    children: `One of the most powerful IEEE Xplore resources to discover scientific and technical content published by the IEEE and its partners.`,
   },
   {
-    mainImg: "/images/membership/library.png",
-    avatar: "/images/icons/knowledge.svg",
+    mainImg: "/images/membership/library.webp",
+    avatar: "/images/icons/knowledge.webp",
     title: "Digital Library",
-    txt: `Nile university students like to have sessions made by us as
+    children: `Nile university students like to have sessions made by us as
     IEEENU always put great effort in preparing the content.`,
   },
   {
-    mainImg: "/images/membership/tv.png",
-    avatar: "/images/icons/player.svg",
+    mainImg: "/images/membership/tv.webp",
+    avatar: "/images/icons/player.webp",
     title: "IEEE TV",
-    txt: `One of the things that make us gain knowledge and skills at
+    children: `One of the things that make us gain knowledge and skills at
     IEEENU is the great competitions we enter with such a great team`,
   },
   {
-    mainImg: "/images/membership/ebook.png",
-    avatar: "/images/icons/ebook.svg",
+    mainImg: "/images/membership/ebook.webp",
+    avatar: "/images/icons/ebook.webp",
     title: "Ebooks",
-    txt: `IEEE members have access to 353 eBooks from the IEEE Press collection through IEEE Xplore®. The eBook collection spans several tech topics.`,
+    children: `IEEE members have access to 353 eBooks from the IEEE Press collection through IEEE Xplore®. The eBook collection spans several tech topics.`,
   },
   {
-    mainImg: "/images/membership/pay.png",
-    avatar: "/images/icons/discount.svg",
+    mainImg: "/images/membership/pay.webp",
+    avatar: "/images/icons/discount.webp",
     title: "Member discounts",
-    txt: `Being an IEEE student member provides you with the same benefits as professional members, such as many discounts on technical resources.`,
+    children: `Being an IEEE student member provides you with the same benefits as professional members, such as many discounts on technical resources.`,
   },
 ];

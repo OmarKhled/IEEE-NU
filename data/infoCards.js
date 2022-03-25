@@ -1,6 +1,6 @@
 export default [
   {
-    mainImg: "/images/Conference.png",
+    mainImg: "/images/Conference.webp",
     avatar: "/images/icons/speaker.svg",
     title: "Events",
     firstCounter: { title: "Atendees", value: "100" },
@@ -11,7 +11,7 @@ export default [
     IEEENU.`,
   },
   {
-    mainImg: "/images/Academy.png",
+    mainImg: "/images/Academy.webp",
     avatar: "/images/icons/Brainstorming.svg",
     title: "Academies",
     firstCounter: { title: "Atendees", value: "730" },
@@ -20,7 +20,7 @@ export default [
     IEEENU always put great effort in preparing the content.`,
   },
   {
-    mainImg: "/images/Projects.png",
+    mainImg: "/images/Projects.webp",
     avatar: "/images/icons/Project.svg",
     title: "Projects",
     firstCounter: { title: "Project", value: "50" },

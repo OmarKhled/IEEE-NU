@@ -10,7 +10,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="footer">
-      <img src="/assets/Footer.svg" className="round" />
+      <img src="/assets/Footer.svg" alt={"footer"} className="round" />
       <footer className="row">
         <div className="cont row">
           <section className="navigation col-12 col-md-6 col-lg-4 mt-4">

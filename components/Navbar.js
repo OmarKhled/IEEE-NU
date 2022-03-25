@@ -35,7 +35,7 @@ const Navbar = () => {
     <nav>
       <Link href="/">
         <a>
-          <img src="/logo.svg" className="logo" />
+          <img src="/logo.svg" className="logo" alt="IEEE NU Logo" />
         </a>
       </Link>
       <div className="section">

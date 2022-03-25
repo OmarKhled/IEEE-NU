@@ -12,9 +12,15 @@ export default function InfoCard({
   return (
     <div className="info-card">
       <div className="top-image">
-        <img className="mainimg" src={mainImg} />
+        <img className="mainimg" src={mainImg} alt={title} />
         <div className={`body ${noCounter ? "tall" : ""}`}>
-          <img width="144px" height="144px" className="avatar" src={avatar} />
+          <img
+            width="144px"
+            height="144px"
+            className="avatar"
+            alt="title"
+            src={avatar}
+          />
           <h4 className="bold">{title}</h4>
           {!noCounter ? (
             <div className="counters-container">

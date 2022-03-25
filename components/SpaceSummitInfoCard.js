@@ -16,7 +16,7 @@ export default function SpaceSummitInfoCard({
         </svg>
         <div className="infoCard">
           <div className="clipped-img">
-            <img className="secondary-img" src={avatar} />
+            <img className="secondary-img" src={avatar} alt={title} />
             <img
               className=" w-100 h-100"
               src="/images/spaceSummitInfoCard/stars-background.svg"
