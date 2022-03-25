@@ -9,21 +9,19 @@ export default [
     mainImg: "/images/membership/library.webp",
     avatar: "/images/icons/knowledge.webp",
     title: "Digital Library",
-    children: `Nile university students like to have sessions made by us as
-    IEEENU always put great effort in preparing the content.`,
+    children: `The IEEE Member Digital Library brought to you via the IEEE Xplore digital Library, gives you instant access to all IEEE journal articles.`,
   },
   {
     mainImg: "/images/membership/tv.webp",
     avatar: "/images/icons/player.webp",
     title: "IEEE TV",
-    children: `One of the things that make us gain knowledge and skills at
-    IEEENU is the great competitions we enter with such a great team`,
+    children: `IEEE tv is an award-winning. Internet-based television network. We produce and deliver special-interest programming about technology.`,
   },
   {
     mainImg: "/images/membership/ebook.webp",
     avatar: "/images/icons/ebook.webp",
     title: "Ebooks",
-    children: `IEEE members have access to 353 eBooks from the IEEE Press collection through IEEE Xplore®. The eBook collection spans several tech topics.`,
+    children: `IEEE members have access to 353 eBooks from the IEEE Press collection through IEEE Xplores. The eBook collection spans several tech topics.`,
   },
   {
     mainImg: "/images/membership/pay.webp",

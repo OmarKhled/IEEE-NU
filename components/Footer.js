@@ -27,7 +27,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/Membership">
+                <Link href="/membership">
                   <a className="link">Membership</a>
                 </Link>
               </li>
@@ -55,7 +55,7 @@ const Footer = () => {
                 <a
                   rel="noopener noreferrer"
                   target="_blank"
-                  href="https://ieee.org"
+                  href="https://ieeexplore.ieee.org/Xplore/home.jsp"
                   className="link"
                 >
                   IEEE Explore Digital Library
@@ -65,7 +65,7 @@ const Footer = () => {
                 <a
                   rel="noopener noreferrer"
                   target="_blank"
-                  href="https://ieee.org"
+                  href="https://standards.ieee.org/?_ga=2.166069502.1382483501.1627826864-1802152504.1622396110"
                   className="link"
                 >
                   IEEE Standards
@@ -75,7 +75,7 @@ const Footer = () => {
                 <a
                   rel="noopener noreferrer"
                   target="_blank"
-                  href="https://ieee.org"
+                  href="https://spectrum.ieee.org/?_ga=2.202702929.1382483501.1627826864-1802152504.1622396110"
                   className="link"
                 >
                   IEEE Spectrum

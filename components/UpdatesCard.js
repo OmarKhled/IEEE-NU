@@ -10,11 +10,11 @@ const UpdatesCard = ({ img, title, date, link, className }) => {
         <img src={img} alt={title} className="img" layout={"fixed"} />
       </div>
       <div className="info mt-3">
-        <Link href={link}>
-          <a className="link">
-            <h6 className="bold">{title}</h6>
-          </a>
-        </Link>
+        {/* <Link href={link}> */}
+        {/* <a className="link"> */}
+        <h6 className="bold">{title}</h6>
+        {/* </a> */}
+        {/* </Link> */}
         <p>{date}</p>
       </div>
     </card>
