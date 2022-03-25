@@ -51,7 +51,7 @@ const SEO = () => {
       <meta property="og:title" content="Egyptian Space Summit" key={"title"} />
       <meta
         property="og:image"
-        content="http://ieeenu.com/static/media/EgyptianSummit.db872a21.png"
+        content="https://i.ibb.co/bKby9F3/Egyptian-Summit-db872a21.png"
         key={"image"}
       />
       <meta
