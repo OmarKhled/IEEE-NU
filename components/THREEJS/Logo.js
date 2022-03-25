@@ -3,7 +3,7 @@ import { useGLTF } from "@react-three/drei";
 
 const Logo = () => {
   const scales = {
-    initialScale: 9,
+    initialScale: 8.7,
     mobileScale: 7,
   };
   const logo = document.querySelector(".logo.hero .drei");
@@ -18,12 +18,15 @@ const Logo = () => {
     setScale(
       window.innerWidth < 830 ? scales.mobileScale : scales.initialScale
     );
-    setXPosition(logo.clientWidth < 440 ? (logo.clientWidth - 440) / 340 : 0);
+    setXPosition(logo.clientWidth < 440 ? (logo.clientWidth - 450) / 340 : 0);
   };
 
   useEffect(() => {
     window.addEventListener("resize", resize);
   }, []);
+  useEffect(() => {
+    console.log(xPosition, scale);
+  }, [xPosition, scale]);
   return (
     <>
       <ambientLight intensity={0.4} />
