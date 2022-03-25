@@ -101,7 +101,7 @@ function MyApp({ Component, pageProps }) {
           content="IEEE @ Nile University Student Branch"
           key={"title"}
         />
-        <link rel="canonical" href="https://dev.ieeenu.com" />
+        {/* <link rel="canonical" href="https://dev.ieeenu.com" /> */}
         <meta
           property="og:image"
           content="https://i.ibb.co/D1BHjTd/cover.png"
