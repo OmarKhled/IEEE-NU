@@ -25,4 +25,12 @@ export default [
     img: "/images/partners/research.webp",
     alt: "NU Research Office",
   },
+  {
+    img: "/images/partners/nokia.webp",
+    alt: "Nokia",
+  },
+  {
+    img: "/images/partners/nekhely.webp",
+    alt: "Nekhely",
+  },
 ];

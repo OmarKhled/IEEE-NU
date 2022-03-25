@@ -41,6 +41,8 @@ export default function membership() {
               rotateSpeed={0.3}
               maxPolarAngle={polarAngle}
               minPolarAngle={polarAngle}
+              autoRotate
+              autoRotateSpeed={0.5}
               // maxAzimuthAngle={0.7}
               // minAzimuthAngle={2 * Math.PI - 0.7}
             />

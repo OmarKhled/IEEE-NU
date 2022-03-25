@@ -3,17 +3,24 @@
   .main-img {
     width: 90%;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    padding-top: 56.25%;
+    position: relative;
     img {
-      // width: 90%;
+      width: 90%;
       border-radius: 1.6rem;
       margin: 0 !important;
       box-shadow: var(--shadow-elevation-high);
       transition: all 300ms;
       cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
     .img:hover {
       filter: grayscale(0.4);

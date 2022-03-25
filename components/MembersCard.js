@@ -2,7 +2,7 @@ import React from "react";
 
 const MembersCard = ({ name, position, school, img, className }) => {
   return (
-    <card className={`member-card board ${className ? className : ""}`}>
+    <div className={`member-card board ${className ? className : ""}`}>
       <div className="top-section">
         <img src={img} alt={name} className="member-img" />
       </div>
@@ -13,7 +13,7 @@ const MembersCard = ({ name, position, school, img, className }) => {
         style={{ userSelect: "none" }}
       />
       <div className="body">
-        <h4 className="bold">{name}</h4>
+        <h5 className="bold">{name}</h5>
         <p>{position}</p>
         <small>{school}</small>
       </div>
@@ -40,7 +40,7 @@ const MembersCard = ({ name, position, school, img, className }) => {
           />
         </a>
       </div>
-    </card>
+    </div>
   );
 };
 

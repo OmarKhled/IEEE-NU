@@ -30,7 +30,7 @@ export default [
     name: "Omnia Yasser",
     position: "Treasurer",
     school: "Faculty Of Engineering",
-    img: "/images/board/omnia.jpg",
+    img: "/images/board/omnia.webp",
   },
   {
     name: "Ahmed El-Sayed",
@@ -39,7 +39,7 @@ export default [
     img: "/images/board/sayed.webp",
   },
   {
-    name: "Ahmed Naggar",
+    name: "Ahmed El-Naggar",
     position: "Operations Head",
     school: "Faculty Of Engineering",
     img: "/images/board/naggar.webp",
@@ -55,5 +55,41 @@ export default [
     position: "PR Head",
     school: "Faculty Of Computer Science",
     img: "/images/board/marwan.webp",
+  },
+  {
+    name: "Mohand Atef",
+    position: "Marketing Head",
+    school: "Faculty Of Computer Science",
+    img: "/images/board/hunda.webp",
+  },
+  {
+    name: "Amir Atef",
+    position: "TEMS Chairman",
+    school: "Faculty Of Buisness Adminstration",
+    img: "/images/board/amir.webp",
+  },
+  {
+    name: "Salma Hadad",
+    position: "TEMS Vice Chairman",
+    school: "Faculty Of Buisness Adminstration",
+    img: "/images/board/salma.webp",
+  },
+  {
+    name: "Youssef Radwan",
+    position: "CIS Chairman",
+    school: "Faculty Of Engineering",
+    img: "/images/board/kanady.webp",
+  },
+  {
+    name: "Maryam Aly",
+    position: "WIE Chairlady",
+    school: "Faculty Of Computer Science",
+    img: "/images/board/maryamaly.webp",
+  },
+  {
+    name: "Habiba Mohamed",
+    position: "WIE Vice Chairlady",
+    school: "Faculty Of Computer Science",
+    img: "/images/board/habiba.webp",
   },
 ];
