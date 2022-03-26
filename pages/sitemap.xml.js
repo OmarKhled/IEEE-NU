@@ -6,7 +6,7 @@ const Sitemap = () => {};
 export const getServerSideProps = ({ res }) => {
   const baseUrl = {
     development: "http://localhost:3000",
-    production: "https://mydomain.com",
+    production: "https://dev.ieeenu.com",
   }[process.env.NODE_ENV];
 
   // const staticPages = fs
