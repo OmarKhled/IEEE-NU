@@ -63,7 +63,7 @@ export default [
     img: "/images/board/hunda.webp",
   },
   {
-    name: "Amir Atef",
+    name: "Amir Mansy",
     position: "TEMS Chairman",
     school: "Faculty Of Buisness Adminstration",
     img: "/images/board/amir.webp",
@@ -79,6 +79,12 @@ export default [
     position: "CIS Chairman",
     school: "Faculty Of Engineering",
     img: "/images/board/kanady.webp",
+  },
+  {
+    name: "Antony Emil",
+    position: "CIS Vice Chairman",
+    school: "Faculty Of Computer Science",
+    img: "/images/board/tony.webp",
   },
   {
     name: "Maryam Aly",

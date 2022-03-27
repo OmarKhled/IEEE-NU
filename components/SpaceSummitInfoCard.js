@@ -20,6 +20,7 @@ export default function SpaceSummitInfoCard({
             <img
               className=" w-100 h-100"
               src="/images/spaceSummitInfoCard/stars-background.svg"
+              alt="stars-bck"
             />
           </div>
           <div className="body">
