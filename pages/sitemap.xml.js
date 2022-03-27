@@ -4,30 +4,11 @@ import path from "path";
 const Sitemap = () => {};
 
 export const getServerSideProps = ({ res }) => {
-  const baseUrl = {
-    development: "http://localhost:3000",
-    production: "https://dev.ieeenu.com",
-  }[process.env.NODE_ENV];
-
-  // const staticPages = fs
-  //   .readdirSync("pages")
-  //   .filter((staticPage) => {
-  //     return ![
-  //       "_app.js",
-  //       "_document.js",
-  //       "_error.js",
-  //       "sitemap.xml.js",
-  //       "404.js",
-  //       "api",
-  //     ].includes(staticPage);
-  //   })
-  //   .map((staticPagePath) => {
-  //     if (staticPagePath == "index.js") {
-  //       return `${baseUrl}/`;
-  //     } else {
-  //       return `${baseUrl}/${staticPagePath.split(".")[0]}`;
-  //     }
-  //   });
+  const baseUrl = "https://dev.ieeenu.com";
+  //  {
+  //   development: "http://localhost:3000",
+  //   production: "https://dev.ieeenu.com",
+  // }[process.env.NODE_ENV];
 
   const staticPages = globbySync("pages", {
     expandDirectories: {
