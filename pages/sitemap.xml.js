@@ -10,11 +10,13 @@ export const getServerSideProps = ({ res }) => {
   //   production: "https://dev.ieeenu.com",
   // }[process.env.NODE_ENV];
 
-  const staticPages = globbySync("pages", {
+  let staticPages = globbySync("pages", {
     expandDirectories: {
       extensions: ["js"],
     },
-  })
+  });
+  console.log("pages", staticPages);
+  staticPages = staticPages
     .filter((staticPage) => {
       let valid = true;
       ["_app", "_document", "sitemap", "404", "api", "forms"].forEach((key) => {
