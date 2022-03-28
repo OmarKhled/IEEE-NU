@@ -1,6 +1,20 @@
 import React from "react";
 
-const MembersCard = ({ name, position, school, img, className }) => {
+const MembersCard = ({
+  name,
+  position,
+  school,
+  img,
+  className,
+  facebook,
+  twitter,
+  linkedin,
+}) => {
+  const socialLinks = [
+    { val: facebook, img: "/images/icons/Facebook.webp" },
+    { val: twitter, img: "/images/icons/Twitter.webp" },
+    { val: linkedin, img: "/images/icons/Linkedin.webp" },
+  ];
   return (
     <div className={`member-card board ${className ? className : ""}`}>
       <div className="top-section">
@@ -18,27 +32,31 @@ const MembersCard = ({ name, position, school, img, className }) => {
         <small>{school}</small>
       </div>
       <div className="tail gap-h-dot5">
-        <a href="#">
-          <img
-            src="/images/icons/Facebook.webp"
-            className="social-link"
-            alt={`Facebook Profile Link of ${name}`}
-          />
-        </a>
-        <a href="#">
-          <img
-            src="/images/icons/Instagram.webp"
-            className="social-link"
-            alt={`Instagram Profile Link of ${name}`}
-          />
-        </a>
-        <a href="#">
-          <img
-            src="/images/icons/Linkedin.svg"
-            className="social-link"
-            alt={`Linkedin Profile Link of ${name}`}
-          />
-        </a>
+        {socialLinks.map((link) =>
+          link.val ? (
+            <a
+              key={
+                link.img
+                  .split("/")
+                  [link.img.split("/").length - 1].split(".")[0]
+              }
+              href={link.val}
+            >
+              <img
+                src={link.img}
+                className="social-link"
+                alt={`${
+                  link.img
+                    .split("/")
+                    [link.img.split("/").length - 1].split(".")[0]
+                } Profile Link of ${name}`}
+                width="23"
+              />
+            </a>
+          ) : (
+            <></>
+          )
+        )}
       </div>
     </div>
   );

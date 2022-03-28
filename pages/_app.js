@@ -19,19 +19,6 @@ function MyApp({ Component, pageProps }) {
       }, 2);
     };
     router.events.on("routeChangeComplete", handleRouteChange);
-    // Smooth href Scorlling
-    document.querySelectorAll("a").forEach((anchor) => {
-      if (anchor.href.includes("#")) {
-        const elm = anchor.href.slice(anchor.href.indexOf("#"));
-        console.log(elm);
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          document.querySelector(elm).scrollIntoView({
-            behavior: "smooth",
-          });
-        });
-      }
-    });
   }, []);
 
   useEffect(() => {
@@ -53,13 +40,6 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeError", handleStop);
     };
   }, [router]);
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    url: "https://dev.ieeenu.com",
-    logo: "http://ieeenu.com/static/media/IEEE-NU-Logo.ec810f88.png",
-  };
 
   return (
     <>
@@ -90,7 +70,6 @@ function MyApp({ Component, pageProps }) {
         />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
-        <meta name="robots" content="noindex" />
         <meta
           name="description"
           content="Engage and empower NU community, through technology, to develop their communities. IEEE NU | Visualize The Future"
@@ -114,11 +93,6 @@ function MyApp({ Component, pageProps }) {
           key={"ogdescription"}
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <script
-          type="application/ld+json"
-          key={"stdata"}
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
         <link rel="preload" href="/logo.svg" as="image" />
         <link rel="preload" href="/assets/Footer.svg" as="image" />
       </Head>

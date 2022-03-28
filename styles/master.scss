@@ -146,6 +146,11 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
+@media (prefers-reduced-motion: no-preference) {
+  html, body {
+    scroll-behavior: smooth;
+  }
+}
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;

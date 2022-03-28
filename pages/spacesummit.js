@@ -32,6 +32,7 @@ const SEO = () => {
         addressCountry: "EG",
       },
     },
+    image: ["https://ieeenu.com/images/summit.webp"],
     description:
       "The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. You can register as an attendee or participant through the below form.",
     organizer: {
@@ -89,7 +90,12 @@ const Summit = () => {
                 area is powered by IEEENU. The event takes place at Nile
                 University every year in September.
               </p>
-              <Button type="link" color="primary" href="#aboutsummit">
+              <Button
+                name={"Summit call to action"}
+                type="link"
+                color="primary"
+                href="#aboutsummit"
+              >
                 Learn More!
               </Button>
             </div>
@@ -161,7 +167,13 @@ const Summit = () => {
               Competition Regulations and Criteria
             </h3>
 
-            <Button type="link" color="primary" href="#" className="w-auto m-3">
+            <Button
+              type="link"
+              color="primary"
+              href="#"
+              className="w-auto m-3"
+              name={"Competition Regulations and Criteria"}
+            >
               Learn More!
             </Button>
           </div>

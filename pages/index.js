@@ -16,6 +16,13 @@ import partners from "../data/partners";
 import updates from "../data/updates";
 
 export default function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    url: "https://ieeenu.com",
+    logo: "http://ieeenu.com/logo.svg",
+  };
+
   return (
     <div className="__root">
       {/* Meta Tags */}
@@ -23,6 +30,12 @@ export default function Home() {
         <title>IEEENU - Home</title>
         <meta property="og:title" content="IEEENU - Home" key={"title"} />
         <link rel="preload" href="/textures/globe.webp" as="image" />
+
+        <script
+          type="application/ld+json"
+          key={"stdata"}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </Head>
       {/* Hero Section */}
       <header className="hero globe">
@@ -36,7 +49,12 @@ export default function Home() {
             place. Join IEEE @ Nile Universty Student Branch and Start the
             learning Journey!
           </p>
-          <Button type="link" color="primary" href="/forms/recruitment">
+          <Button
+            type="link"
+            color="primary"
+            href="/forms/recruitment"
+            name={"Recruitment call to action"}
+          >
             Join Now!
           </Button>
         </div>
@@ -104,12 +122,7 @@ export default function Home() {
                 className="col-12 col-sm-6 col-lg-4 mt-5"
                 key={officer.position}
               >
-                <MembersCard
-                  name={officer.name}
-                  position={officer.position}
-                  school={officer.school}
-                  img={officer.img}
-                />
+                <MembersCard {...officer} />
               </div>
             ))}
           </div>
@@ -123,6 +136,7 @@ export default function Home() {
               color="secondary"
               href="#"
               className="block mx-auto"
+              name={"Newsletter call to action"}
             >
               Subscribe
             </Button>

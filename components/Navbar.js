@@ -34,27 +34,35 @@ const Navbar = () => {
   return (
     <nav>
       <Link href="/">
-        <a>
+        <a name="link">
           <img src="/logo.svg" className="logo" alt="IEEE NU Logo" />
         </a>
       </Link>
       <div className="section">
         <Link href="/">
-          <a className="link">Home</a>
+          <a name="link" className="link">
+            Home
+          </a>
         </Link>
         <Link href="/about">
-          <a className="link">About</a>
+          <a name="link" className="link">
+            About
+          </a>
         </Link>
         {/* <Link href="/lounge">
-          <a className="link">Technical Lounge</a>
+          <a name="link" className="link">Technical Lounge</a>
         </Link> */}
         <Link href="/spacesummit">
-          <a className="link">Egyptian Space Summit</a>
+          <a name="link" className="link">
+            Egyptian Space Summit
+          </a>
         </Link>
       </div>
       <div className="section">
         <Link href="/membership">
-          <a className="link">Membership</a>
+          <a name="link" className="link">
+            Membership
+          </a>
         </Link>
       </div>
       <span id="menu" onClick={openMenu}>
@@ -76,27 +84,35 @@ const Navbar = () => {
           <ul className="gap-v-1">
             <li>
               <Link href="/">
-                <a className="link">Home</a>
+                <a name="link" className="link">
+                  Home
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/about">
-                <a className="link">About</a>
+                <a name="link" className="link">
+                  About
+                </a>
               </Link>
             </li>
             {/* <li>
               <Link href="/lounge">
-                <a className="link">Technical Lounge</a>
+                <a name="link" className="link">Technical Lounge</a>
               </Link>
             </li> */}
             <li>
               <Link href="/spacesummit">
-                <a className="link">Egyptian Space Summit</a>
+                <a name="link" className="link">
+                  Egyptian Space Summit
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/membership">
-                <a className="link">Membership</a>
+                <a name="link" className="link">
+                  Membership
+                </a>
               </Link>
             </li>
           </ul>

@@ -47,6 +47,7 @@ const Footer = () => {
                   target="_blank"
                   href="https://ieee.org"
                   className="link"
+                  name="IEEE.org"
                 >
                   IEEE.org
                 </a>
@@ -57,6 +58,7 @@ const Footer = () => {
                   target="_blank"
                   href="https://ieeexplore.ieee.org/Xplore/home.jsp"
                   className="link"
+                  name="IEEE Explore Digital Library"
                 >
                   IEEE Explore Digital Library
                 </a>
@@ -67,6 +69,7 @@ const Footer = () => {
                   target="_blank"
                   href="https://standards.ieee.org/?_ga=2.166069502.1382483501.1627826864-1802152504.1622396110"
                   className="link"
+                  name="IEEE Standards"
                 >
                   IEEE Standards
                 </a>
@@ -77,6 +80,7 @@ const Footer = () => {
                   target="_blank"
                   href="https://spectrum.ieee.org/?_ga=2.202702929.1382483501.1627826864-1802152504.1622396110"
                   className="link"
+                  name="IEEE Spectrum"
                 >
                   IEEE Spectrum
                 </a>
@@ -90,6 +94,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 target="_blank"
                 href="https://www.facebook.com/IEEENUSB"
+                name="IEEE NU Facebook Page"
               >
                 <FaFacebook />
               </a>
@@ -97,6 +102,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 target="_blank"
                 href="https://www.instagram.com/ieeenusb/"
+                name="IEEE NU Instagram Profile"
               >
                 <FaInstagram />
               </a>
@@ -104,6 +110,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 target="_blank"
                 href="mailto:ieeenu@nu.edu.eg"
+                name="IEEE NU Official Mail"
               >
                 <FaEnvelope />
               </a>
@@ -113,8 +120,7 @@ const Footer = () => {
       </footer>
       <div>
         <div className="footerTail gap-h-dot5">
-          <p>Made with</p> <FaHeart /> <p>and</p> <FaMugHot />
-          <p>in IEEENU</p>
+          <p>All Rights Reserved to IEEENU</p>
         </div>
       </div>
     </div>
