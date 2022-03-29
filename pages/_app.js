@@ -70,6 +70,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+        <meta name="robots" content="noindex" />
         <meta
           name="description"
           content="Engage and empower NU community, through technology, to develop their communities. IEEE NU | Visualize The Future"
