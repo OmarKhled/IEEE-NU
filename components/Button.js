@@ -26,7 +26,7 @@ Button.defaultProps = {
   type: "button",
   href: "#",
   color: "primary",
-  children: "",
+  children: "Click Here",
 };
 
 export default Button;
