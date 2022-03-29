@@ -1,0 +1,53 @@
+.info-card {
+  overflow: hidden;
+  background-color: #fff;
+  margin: auto auto;
+  width: min(95%, 300px);
+  height: 100%;
+  border-radius: 3.125rem;
+  box-shadow: var(--shadow-elevation-medium);
+  .mainimg {
+    height: 200px;
+    width: 100%;
+  }
+  .body {
+    position: relative;
+    padding: 90px 20px 40px;
+    &.tall {
+      // height: 300px ;
+    }
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .avatar {
+      position: absolute;
+      right: 0;
+      left: 0;
+      margin-left: auto;
+      margin-right: auto;
+      top: -72px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 50%;
+      box-shadow: 0px 0px 20px 2px #7fd2fc44;
+    }
+    .counters-container {
+      display: flex;
+      div {
+        width: 50%;
+      }
+      .title {
+        margin: 0;
+        color: #9b9b9b;
+        text-transform: uppercase;
+        &::selection {
+          color: white;
+        }
+      }
+    }
+    p {
+      margin-top: 10px;
+    }
+  }
+}

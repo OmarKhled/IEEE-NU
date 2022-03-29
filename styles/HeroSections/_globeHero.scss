@@ -1,0 +1,26 @@
+.hero.globe {
+  @media screen and (min-width: 51.25rem) {
+    margin-top: 2rem;
+    &>*+* {
+      margin-left: 2rem;
+    }
+    .drei {
+      width: 100%;
+      height: auto !important;
+      aspect-ratio: 1 / 1;
+      max-height: 35rem;
+      @supports not (aspect-ratio: 1 / 1) {
+        &::before {
+          float: left;
+          padding-top: 100%;
+          content: "";
+        }
+        &::after {
+          display: block;
+          content: "";
+          clear: both;
+        }
+      }
+    }
+  }
+}

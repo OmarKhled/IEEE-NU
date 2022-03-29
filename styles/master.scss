@@ -1,0 +1,356 @@
+// Color Pallette Variables
+:root {
+  // Base Colors
+  --pantoneBlue: #1a89b9;
+  --violetBlue: #441ab9;
+  --greenVogue: #032b52;
+  --aquaSqueeze: #e8f0f5;
+  --deapSea: #008472;
+  --fireBush: #eb9a28;
+  // Shades
+  // Pantone Blue
+  --pantoneBlue-100: #93cbec;
+  --pantoneBlue-200: #63b4e1;
+  --pantoneBlue-300: #359ed7;
+  --pantoneBlue-400: #1b88b9;
+  --pantoneBlue-500: #066e9c;
+  --pantoneBlue-600: #005480;
+  --pantoneBlue-700: #003b65;
+  --pantoneBlue-700: #01244e;
+
+  // Violet Blue
+  --violetBlue-100: #b190e9;
+  --violetBlue-200: #8f62df;
+  --violetBlue-300: #735bd4;
+  --violetBlue-400: #5a56cb;
+  --violetBlue-500: #4845a8;
+  --violetBlue-600: #3b3686;
+  --violetBlue-700: #2b2663;
+  --violetBlue-700: #201d4e;
+
+  // Green Vogue
+  --greenVogue-100: #b4cce4;
+  --greenVogue-200: #a2bdd8;
+  --greenVogue-300: #85a9cb;
+  --greenVogue-400: #6c96bc;
+  --greenVogue-500: #5781a9;
+  --greenVogue-600: #3b6892;
+  --greenVogue-700: #22517b;
+  --greenVogue-700: #103d67;
+
+  // Aqua Squeeze
+
+  // Deap Sea
+  --deapSea-50: #f8fffe;
+  --deapSea-100: #9bdad2;
+  --deapSea-200: #7ccec2;
+  --deapSea-300: #60c0b2;
+  --deapSea-400: #4ab6a7;
+  --deapSea-500: #43a99a;
+  --deapSea-600: #3e9d8c;
+  --deapSea-700: #3a927f;
+  --deapSea-700: #2b7263;
+  
+
+  // Shadows
+  --shadow-color: 204deg 14% 75%;
+  --shadow-elevation-low: 0.1px 0.4px 0.6px hsl(var(--shadow-color) / 0.06),
+    0.2px 0.6px 0.9px -0.4px hsl(var(--shadow-color) / 0.13),
+    0.3px 1.2px 1.7px -0.9px hsl(var(--shadow-color) / 0.2);
+  --shadow-elevation-medium: 0.1px 0.4px 0.6px hsl(var(--shadow-color) / 0.05),
+    0.3px 1.1px 1.6px -0.2px hsl(var(--shadow-color) / 0.09),
+    0.5px 1.9px 2.7px -0.4px hsl(var(--shadow-color) / 0.12),
+    0.9px 3.3px 4.7px -0.7px hsl(var(--shadow-color) / 0.16),
+    1.6px 5.9px 8.3px -0.9px hsl(var(--shadow-color) / 0.19);
+  --shadow-elevation-high: 0.1px 0.4px 0.6px hsl(var(--shadow-color) / 0.05),
+    0.4px 1.6px 2.3px -0.1px hsl(var(--shadow-color) / 0.06),
+    0.7px 2.6px 3.7px -0.2px hsl(var(--shadow-color) / 0.08),
+    1px 3.7px 5.2px -0.3px hsl(var(--shadow-color) / 0.1),
+    1.4px 5px 7.1px -0.4px hsl(var(--shadow-color) / 0.11),
+    1.8px 6.6px 9.3px -0.5px hsl(var(--shadow-color) / 0.13),
+    2.4px 8.7px 12.3px -0.6px hsl(var(--shadow-color) / 0.15),
+    3.2px 11.5px 16.3px -0.7px hsl(var(--shadow-color) / 0.16),
+    4.2px 15.1px 21.4px -0.8px hsl(var(--shadow-color) / 0.18),
+    5.4px 19.6px 27.8px -0.9px hsl(var(--shadow-color) / 0.2);
+}
+html,
+body {
+  background: var(--aquaSqueeze);
+}
+
+// Typography - Work Sans
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html,
+body,
+* {
+  font-family: "Work Sans", Helvetica, Verdana, Garamond, sans-serif,
+    "Times New Roman", serif;
+}
+body {
+  position: relative;
+}
+* {
+  line-height: calc(1.1em + 0.5rem);
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+  color: var(--greenVogue);
+}
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.125rem);
+  font-weight: 800;
+}
+h2 {
+  font-size: clamp(1.857rem, 4vw, 2.5rem);
+  font-weight: 700;
+}
+h3 {
+  font-size: clamp(1.75rem, 3vw, 2rem);
+  font-weight: 700;
+}
+h4 {
+  font-size: clamp(1.375rem, 3vw, 1.75rem);
+  font-weight: 600;
+}
+h5 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 500;
+}
+h6 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+p {
+  font-size: clamp(1rem, 2vw, 1.0075rem);
+  font-weight: 400;
+}
+
+// CSS Reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html, body {
+    scroll-behavior: smooth;
+  }
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+// Removing Browser Defaults
+a {
+  cursor: pointer;
+}
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+a,
+a:focus {
+  color: var(--greenVogue);
+  transition: all 150ms;
+}
+a:hover {
+  opacity: 0.9;
+}
+
+::selection {
+  background-color: var(--pantoneBlue-300);
+  // color: #4ab6a7;
+  // color: var(--fireBush);
+  // background: linear-gradient(red, blue);
+}
+
+// Containers
+.__root {
+  width: min(87%, 83.125rem);
+  margin: auto;
+  padding: calc(10rem + 1vh) 0;
+  @media screen and (max-width: 51.25rem) {
+    padding: 6rem 0;
+  }
+  min-height: 90vh;
+  // background-color: #d5edfd;
+}
+
+// THREEJS
+.dg {
+  top: 90px !important;
+}
+
+// Utility Classes
+.flex {
+  display: flex;
+}
+.block {
+  display: block !important;
+}
+.gap-h-dot5 > * + * {
+  margin-left: 0.5rem;
+}
+.gap-h-1 > * + * {
+  margin-left: 1rem;
+}
+.gap-h-2 > * + * {
+  margin-left: 2rem;
+}
+.gap-h-3 > * + * {
+  margin-left: 3rem;
+}
+.gap-v-1 > * + * {
+  margin-top: 1rem;
+}
+.gap-v-2 > * + * {
+  margin-top: 2rem;
+}
+.gap-v-3 > * + * {
+  margin-top: 3rem;
+}
+.gap-v-4 > * + * {
+  margin-top: 4rem;
+}
+.light {
+  font-weight: 200;
+}
+.regular {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+.text-center {
+  text-align: center;
+}
+.w-100 {
+  width: 100% !important;
+}
+.w-75 {
+  width: 75% !important;
+}
+.w-50 {
+  width: 50% !important;
+}
+.w-25 {
+  width: 25% !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+.h-75 {
+  height: 75% !important;
+}
+.h-50 {
+  height: 50% !important;
+}
+.h-25 {
+  height: 25% !important;
+}
+.link {
+  transition: 300ms all;
+}
+.blue {
+  color: blue;
+}
+.link:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+.board-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+// Global Styles
+.gray-info {
+  color: #585858;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.16rem;
+}
+.circle {
+  border-radius: 50%;
+}
+.__root section {
+  .section-title {
+    text-align: center;
+    // margin-bottom: 2rem;
+  }
+  margin-top: min(8rem, 10.3vw);
+}
+.__root section:first-of-type {
+  margin-top: min(10vw, 14rem);
+}
+.row > * {
+  padding: 0 !important;
+}
+
+// Component Styles
+@import "./button";
+@import "./HeroSections/hero";
+@import "./HeroSections/globeHero";
+@import "./HeroSections/logoHero";
+@import "./HeroSections/rocketHero";
+@import "./HeroSections/shirtHero";
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/summit";
+@import "./counter";
+@import "./carousel";
+@import "./updates";
+@import "./previousMemberCard";
+@import "./membersCard";
+@import "./infoCard";
+@import "./inputs";
+@import "./navbar";
+@import "./footer";
+@import "./spaceSummitInfoCard";
+@import "./facebookPlayer";
+@import "./summitEditionCard";
+@import "./forms/basic";
+@import "./loading";

@@ -1,0 +1,54 @@
+header.spacesummit {
+  .round {
+    width: 100%;
+    margin-top: -2px;
+  }
+  .cont {
+    position: relative;
+    .stars {
+      position: absolute;
+      top: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("/assets/Stars.svg");
+      filter: blur(2px);
+    }
+    background: linear-gradient(180deg, var(--greenVogue), #010910);
+    .hero {
+        width: min(90%, 83.125rem);
+        margin: auto;
+        margin-bottom: 0 !important;
+        padding: 7rem 0 4rem 0;
+        * {
+          color: var(--aquaSqueeze);
+        }
+        .drei {
+          height: 400px;
+        }
+        .info {
+          margin-top: -50px;
+        }
+        @media screen and (min-width: 51.875rem) {
+          // height: 82.6vh;
+          &>*+* {
+            margin-left: 4rem;
+          }
+          padding: 7rem 0 3rem 0;
+          .drei {
+            width: 60%;
+            height: 600px;
+            @media (max-width: 1200px) {
+              height: 500px;
+            }
+            @media (max-width: 980px) {
+              height: 430px;
+            }
+          }
+          .info {
+            margin-top: 8%;
+          }
+        }
+      }
+  }
+}
