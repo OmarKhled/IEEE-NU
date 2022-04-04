@@ -27,14 +27,15 @@ const SEO = () => {
       address: {
         "@type": "PostalAddress",
         streetAddress: "26th of July Corridor",
-        addressLocality: "6th of october",
+        addressLocality: "Sheikh Zayed City",
         postalCode: "12677",
+        addressRegion: "Cairo",
         addressCountry: "EG",
       },
     },
     image: ["https://ieeenu.com/images/summit.webp"],
     description:
-      "The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. You can register as an attendee or participant through the below form.",
+      "The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. It also includes competition providing participants with business and technical workshops and valuable prizes offered to the first three winners. Prizes worth up to 30,000 EGP!",
     organizer: {
       "@type": "Organization",
       name: "IEEE NU",
@@ -46,9 +47,10 @@ const SEO = () => {
       <title>Egyptian Space Summit</title>
       <meta
         name="description"
-        content="The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. You can register as an attendee or participant through the below form."
+        content="The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. It also includes competition providing participants with business and technical workshops and valuable prizes offered to the first three winners. Prizes worth up to 30,000 EGP!"
         key={"descripton"}
       />
+      <meta property="og:type" content="activity" />
       <meta property="og:title" content="Egyptian Space Summit" key={"title"} />
       <meta
         property="og:image"
@@ -60,13 +62,16 @@ const SEO = () => {
         content="The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. You can register as an attendee or participant through the below form."
         key={"ogdescription"}
       />
+      <meta property="og:url" content="https://ieeenu.com/spacesummit" />
       <script
         type="application/ld+json"
         key={"stdata"}
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        // dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <link rel="preload" href="/assets/SummitRound.svg" as="image" />
       <link rel="preload" href="/assets/Stars.svg" as="image" />
+
+      <meta property="og:site_name" content="IEEE NU" />
     </Head>
   );
 };
