@@ -42,7 +42,7 @@ const MembersCard = ({
               }
               href={link.val}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <img
                 src={link.img}
