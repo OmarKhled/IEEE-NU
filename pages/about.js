@@ -8,6 +8,8 @@ import { Html, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import infoCards from "../data/infoCards";
 import previousMembers from "../data/previousMembers";
 import board from "../data/board";
+import supervisors from "../data/supervisors";
+
 import Button from "../components/Button";
 import PreviousMemberCard from "../components/PreviousMemberCard";
 import InfoCard from "../components/InforCard";
@@ -84,6 +86,16 @@ export default function About() {
             {previousMembers.map((card) => (
               <div key={card.name} className="col-12 col-sm-6 mt-5 p-2">
                 <PreviousMemberCard {...card} />
+              </div>
+            ))}
+          </div>
+        </section>
+        <section>
+          <h3 className="section-title">Branch Supervisors</h3>
+          <div className="row justify-content-center">
+            {supervisors.map((card) => (
+              <div key={card.name} className="col-12 col-sm-6 col-lg-4 mt-5">
+                <MembersCard {...card} />
               </div>
             ))}
           </div>

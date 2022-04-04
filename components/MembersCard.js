@@ -41,6 +41,7 @@ const MembersCard = ({
                   [link.img.split("/").length - 1].split(".")[0]
               }
               href={link.val}
+              target="_blank"
             >
               <img
                 src={link.img}
