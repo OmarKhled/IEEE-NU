@@ -21,6 +21,7 @@ export default function Home() {
     "@type": "Organization",
     url: "https://ieeenu.com",
     logo: "http://ieeenu.com/logo.svg",
+    name: "IEEE NU",
   };
 
   return (
