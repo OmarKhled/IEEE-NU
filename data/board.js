@@ -3,7 +3,7 @@ export default [
     name: "Youssef Nasser",
     position: "Chairman",
     school: "Faculty Of Engineering",
-    img: "/images/board/nasser2.webp",
+    img: "/images/board/nasser.webp",
     facebook: "https://www.facebook.com/yossef.naser.9",
     twitter: "",
     linkedin: "",
