@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 import NProgress from "nprogress";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
