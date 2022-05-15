@@ -43,6 +43,11 @@ const Gpapredictor = () => {
           content="See your GPA now with IEEENU Predictor!"
           key={"title"}
         />
+        <meta
+          property="og:image"
+          content="https://i.ibb.co/0qZ3ygR/Screenshot-from-2022-05-15-20-09-57.png"
+          key={"image"}
+        />
       </Head>
       <div className="__root gpa">
         <main>
@@ -133,14 +138,16 @@ const Gpapredictor = () => {
                       <img src="/images/predictor/2.png" />
                     </div>
                   </div>
-                  <h2>My GPA will remain at</h2>
-                  <h3>{res.PCGPA.split("[")[1].split("]")[0]}</h3>
+                  <h3 className="mt-3">
+                    See your GPA now with IEEE CIS Predictor!
+                  </h3>
+                  {/* <h3>{res.PCGPA.split("[")[1].split("]")[0]}</h3> */}
 
-                  <h5>
+                  {/* <h5>
                     {res.Carries
                       ? "And I even Carry my friends in the projects!"
                       : "And I don't Carry My friends in the projects"}
-                  </h5>
+                  </h5> */}
                 </div>
                 <div className="bg"></div>
               </section>
