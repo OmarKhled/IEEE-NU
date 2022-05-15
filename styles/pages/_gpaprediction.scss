@@ -4,7 +4,13 @@
   .gpaForm {
     margin-top: 5rem;
     padding-bottom: 2rem;
+    &.form {
+      .cover {
+        background-image: url("https://i.ibb.co/0qZ3ygR/Screenshot-from-2022-05-15-20-09-57.png");
+      }
+    }
     &.result {
+      border-radius: 1.2rem;
       width: 100%;
       max-width: 60rem;
       margin: auto;
@@ -24,6 +30,8 @@
       align-items: center;
       position: relative;
       .bg {
+      border-radius: 1.2rem;
+
         background-image: url("https://www.thespruce.com/thmb/UOpECLHT4yUK8YIvkaOwdzYlp7Y=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1015513528-dbda7175b9ef477b83f18e2a0bea1f75.jpg");
         position: absolute;
         width: 100%;
