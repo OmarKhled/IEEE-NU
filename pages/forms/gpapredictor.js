@@ -138,13 +138,13 @@ const Gpapredictor = () => {
                       <img src="/images/predictor/2.png" />
                     </div>
                   </div>
-                  <h3 className="mt-3">Your GPA Will remain at</h3>
+                  <h3 className="mt-3">Your gpa will end up at</h3>
                   <h3>{res.PCGPA.split("[")[1].split("]")[0]}</h3>
 
                   <h5>
                     {res.Carries
-                      ? "And you will be even carrying your friends in the projects!"
-                      : "And you won't be carrying your friends in the projects"}
+                      ? "And you will carry your friends in the projects!"
+                      : "And you won't carry your friends in the projects!"}
                   </h5>
                 </div>
                 <div className="bg"></div>
