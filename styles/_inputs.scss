@@ -1,10 +1,60 @@
-input[type="text"] {
-  padding: 1rem 2rem;
-  border: var(--greenVogue) solid 1px;
-  border-radius: 20px;
-  font-weight: 600;
+input, select {
+  border: none;
+  margin: 0.5rem 0;
+  width: min(100%);
+  outline: none;
 }
-input[type="text"]::placeholder {
-  font-weight: 300;
+
+label {
+  display: block;
+  // margin: 0 0.9rem 0;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"] {
+  border: var(--pantoneBlue-700) solid 1px;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
   color: var(--greenVogue);
+  @extend .medium;
+  &::selection {
+    background-color: var(--pantoneBlue);
+    color: var(--aquaSqueeze);
+  }
+  &::placeholder {
+    @extend .regular;
+    font-size: 13px;
+  }
+  &:active, &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.14rem var(--greenVogue-200);
+  }
+}
+.err {
+  border: red solid 1px !important;
+  box-shadow: 0 0 1px 0px red;
+  &:active, &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.14rem rgba(202, 0, 0, 0.288) !important;
+  }
+}
+input[type="submit"] {
+  cursor: pointer;
+}
+select {
+  border: var(--pantoneBlue-700) solid 1px;
+  border-radius: 10px;
+  height: fit-content;
+  padding: 0.8rem 1rem;
+  color: var(--deapSea-900);
+  background-color: white;
+  @extend .regular;
+  font-size: 13px;
+  &::selection {
+    background-color: var(--pantoneBlue);
+    color: var(--aquaSqueeze);
+  }
+  &:active, &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.14rem var(--greenVogue-200);
+  }
 }

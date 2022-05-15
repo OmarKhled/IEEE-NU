@@ -8,49 +8,51 @@
   --deapSea: #008472;
   --fireBush: #eb9a28;
   // Shades
-  // Pantone Blue
-  --pantoneBlue-100: #93cbec;
-  --pantoneBlue-200: #63b4e1;
-  --pantoneBlue-300: #359ed7;
-  --pantoneBlue-400: #1b88b9;
-  --pantoneBlue-500: #066e9c;
-  --pantoneBlue-600: #005480;
-  --pantoneBlue-700: #003b65;
-  --pantoneBlue-700: #01244e;
+    // Pantone Blue
+    --pantoneBlue-100: #93cbec;
+    --pantoneBlue-200: #63b4e1;
+    --pantoneBlue-300: #359ed7;
+    --pantoneBlue-400: #1b88b9;
+    --pantoneBlue-500: #066e9c;
+    --pantoneBlue-600: #005480;
+    --pantoneBlue-700: #003b65;
+    --pantoneBlue-700: #01244e;
 
-  // Violet Blue
-  --violetBlue-100: #b190e9;
-  --violetBlue-200: #8f62df;
-  --violetBlue-300: #735bd4;
-  --violetBlue-400: #5a56cb;
-  --violetBlue-500: #4845a8;
-  --violetBlue-600: #3b3686;
-  --violetBlue-700: #2b2663;
-  --violetBlue-700: #201d4e;
+    // Violet Blue
+    --violetBlue-100: #b190e9;
+    --violetBlue-200: #8f62df;
+    --violetBlue-300: #735bd4;
+    --violetBlue-400: #5a56cb;
+    --violetBlue-500: #4845a8;
+    --violetBlue-600: #3b3686;
+    --violetBlue-700: #2b2663;
+    --violetBlue-700: #201d4e;
 
-  // Green Vogue
-  --greenVogue-100: #b4cce4;
-  --greenVogue-200: #a2bdd8;
-  --greenVogue-300: #85a9cb;
-  --greenVogue-400: #6c96bc;
-  --greenVogue-500: #5781a9;
-  --greenVogue-600: #3b6892;
-  --greenVogue-700: #22517b;
-  --greenVogue-700: #103d67;
+    // Green Vogue
+    --greenVogue-100: #b4cce4;
+    --greenVogue-200: #a2bdd8;
+    --greenVogue-300: #85a9cb;
+    --greenVogue-400: #6c96bc;
+    --greenVogue-500: #5781a9;
+    --greenVogue-600: #3b6892;
+    --greenVogue-700: #22517b;
+    --greenVogue-700: #103d67;
 
-  // Aqua Squeeze
+    // Aqua Squeeze
+    --aquaSqueeze-50: #ebeef0;
 
-  // Deap Sea
-  --deapSea-50: #f8fffe;
-  --deapSea-100: #9bdad2;
-  --deapSea-200: #7ccec2;
-  --deapSea-300: #60c0b2;
-  --deapSea-400: #4ab6a7;
-  --deapSea-500: #43a99a;
-  --deapSea-600: #3e9d8c;
-  --deapSea-700: #3a927f;
-  --deapSea-700: #2b7263;
-  
+
+    // Deap Sea
+    --deapSea-50: #f8fffe;
+    --deapSea-100: #9bdad2;
+    --deapSea-200: #7ccec2;
+    --deapSea-300: #60c0b2;
+    --deapSea-400: #4ab6a7;
+    --deapSea-500: #43a99a;
+    --deapSea-600: #3e9d8c;
+    --deapSea-700: #3a927f;
+    --deapSea-700: #2b7263;
+    
 
   // Shadows
   --shadow-color: 204deg 14% 75%;
@@ -340,6 +342,7 @@ a:hover {
 @import "./pages/home";
 @import "./pages/about";
 @import "./pages/summit";
+@import "./pages/gpaprediction";
 @import "./counter";
 @import "./carousel";
 @import "./updates";
@@ -352,5 +355,5 @@ a:hover {
 @import "./spaceSummitInfoCard";
 @import "./facebookPlayer";
 @import "./summitEditionCard";
-@import "./forms/basic";
 @import "./loading";
+@import "./forms/base";

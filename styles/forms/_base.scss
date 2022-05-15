@@ -1,0 +1,21 @@
+.form {
+  background: var(--deapSea-50);
+  max-width: 50rem;
+  min-height: 10rem;
+  box-shadow: var(--shadow-elevation-medium);
+  border-radius: clamp(0.5rem, 5vw, 2.5rem);
+  .cover {
+    width: 100%;
+    border-radius: clamp(0.5rem, 5vw, 2.5rem) clamp(0.5rem, 5vw, 2.5rem) 0 0;
+    opacity: 0.9;
+    height: 25vw;
+    max-height: 10rem;
+    background-image: url("https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .body {
+    padding: 40px 50px 15px 50px;
+  }
+
+}
