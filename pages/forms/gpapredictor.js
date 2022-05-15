@@ -143,8 +143,8 @@ const Gpapredictor = () => {
 
                   <h5>
                     {res.Carries
-                      ? "And you even Carry my friends in the projects!"
-                      : "And you don't Carry My friends in the projects"}
+                      ? "And you will be even carrying your friends in the projects!"
+                      : "And you won't be carrying your friends in the projects"}
                   </h5>
                 </div>
                 <div className="bg"></div>
