@@ -12,20 +12,16 @@ export default [
     type: "select",
     options: [
       {
-        name: "<17",
+        name: "17-19",
         value: 0,
       },
       {
-        name: "17-19",
+        name: "20-23",
         value: 1,
       },
       {
-        name: "20-23",
-        value: 2,
-      },
-      {
         name: ">24",
-        value: 3,
+        value: 2,
       },
     ],
     label: "Age",
@@ -170,12 +166,12 @@ export default [
     type: "select",
     options: [
       {
-        name: "1",
-        value: 1,
-      },
-      {
         name: "0",
         value: 0,
+      },
+      {
+        name: "1",
+        value: 1,
       },
       {
         name: "2",

@@ -1,7 +1,65 @@
 .__root.gpa {
-  padding: calc(3rem + 1vh) 0 3em 0;
+  padding: calc(3rem + 1vh) 0 5em 0;
+  min-height: fit-content;
   .gpaForm {
     margin-top: 5rem;
     padding-bottom: 2rem;
+    &.result {
+      width: 100%;
+      max-width: 60rem;
+      margin: auto;
+      margin-top: 5rem;
+      padding-bottom: 0rem;
+      background-color: rgb(41, 172, 212);
+      img {
+        width: 100%;
+        max-width: 200px;
+      }
+      &>* {
+        z-index: 3;
+      }
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      .bg {
+        background-image: url("https://www.thespruce.com/thmb/UOpECLHT4yUK8YIvkaOwdzYlp7Y=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1015513528-dbda7175b9ef477b83f18e2a0bea1f75.jpg");
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        z-index: 0 !important;
+      }
+      text-align: center;
+      h1, h2, h3 ,h4, h5, h6, p {
+        color: rgb(218, 248, 255) !important;
+        font-weight: 900;
+        text-shadow:
+       2px 2px 0 #000,
+      -2.3px -2.3px 0 #000,  
+       2.3px -2.3px 0 #000,
+      -2.3px 2.3px 0 #000,
+       2.3px 2.3px 0 #000;
+      }
+      h6 {
+        font-weight:700 !important;
+      }
+      .body {
+        padding: 1rem;
+      }
+    }
+  }
+  .result {
+    height: 30rem;
+    width: 50rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    position: relative;
+    .body {
+      
+    }
   }
 }
