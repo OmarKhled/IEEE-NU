@@ -2,7 +2,7 @@ import data from "../../data/gpaForm";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
-const gpapredictor = () => {
+const Gpapredictor = () => {
   const {
     register,
     formState: { errors },
@@ -97,4 +97,4 @@ const gpapredictor = () => {
   );
 };
 
-export default gpapredictor;
+export default Gpapredictor;
