@@ -12,7 +12,7 @@ module.exports = {
   webpack: (config) => {
     config.resolve.alias["pdfjs-dist"] = path.join(
       __dirname,
-      "./node_modules/pdfjs-dist/legacy/build/pdf"
+      "./node_modules/pdfjs-dist/legacy/build/pdf.js"
     );
     return config;
   },
