@@ -39,7 +39,7 @@ const SpaceSummitDetails = () => {
         <section style={{ minHeight: "80vh", maxWidth: "80%", margin: "auto" }}>
           <h3 className="section-title mt-4">Space Summit Regulations and Criteria</h3>
           <div className="mt-4">
-            <Worker theme='dark' workerUrl="https://unpkg.com/pdfjs-dist@2.14.305/build/pdf.worker.min.js">
+            <Worker theme='dark' workerUrl="https://unpkg.com/pdfjs-dist@2.14.305/legacy/build/pdf.worker.js">
               <div
                 style={{
                   border: "1px solid rgba(0, 0, 0, 0.3)",
