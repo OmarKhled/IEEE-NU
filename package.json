@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-pdf-viewer/core": "^3.5.0",
-    "@react-pdf-viewer/default-layout": "^3.5.0",
     "@react-three/drei": "^8.10.1",
     "@react-three/fiber": "^7.0.26",
     "axios": "^0.27.2",

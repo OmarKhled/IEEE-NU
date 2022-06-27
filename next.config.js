@@ -9,11 +9,4 @@ module.exports = {
     // runtime: true,
     // reactRoot: true,
   },
-  webpack: (config) => {
-    config.resolve.alias["pdfjs-dist"] = path.join(
-      __dirname,
-      "./node_modules/pdfjs-dist/legacy/build/pdf.js"
-    );
-    return config;
-  },
 };
