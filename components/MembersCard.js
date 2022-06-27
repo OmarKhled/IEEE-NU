@@ -32,32 +32,31 @@ const MembersCard = ({
         <small>{school}</small>
       </div>
       <div className="tail gap-h-dot5">
-        {socialLinks.map((link) =>
-          link.val ? (
-            <a
-              key={
-                link.img
-                  .split("/")
-                  [link.img.split("/").length - 1].split(".")[0]
-              }
-              href={link.val}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={link.img}
-                className="social-link"
-                alt={`${
+        {socialLinks.map(
+          (link) =>
+            link.val && (
+              <a
+                key={
                   link.img
                     .split("/")
                     [link.img.split("/").length - 1].split(".")[0]
-                } Profile Link of ${name}`}
-                width="23"
-              />
-            </a>
-          ) : (
-            <></>
-          )
+                }
+                href={link.val}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={link.img}
+                  className="social-link"
+                  alt={`${
+                    link.img
+                      .split("/")
+                      [link.img.split("/").length - 1].split(".")[0]
+                  } Profile Link of ${name}`}
+                  width="23"
+                />
+              </a>
+            )
         )}
       </div>
     </div>
