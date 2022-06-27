@@ -18,5 +18,9 @@
   .body {
     padding: 20px 50px 15px 50px;
   }
+  &.contain {
+    min-height: 0rem;
+    padding: 1.8rem;
+  }
 
 }
