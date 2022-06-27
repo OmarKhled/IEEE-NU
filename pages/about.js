@@ -100,7 +100,7 @@ export default function About() {
             ))}
           </div>
         </section>
-        <section>
+        <section id="officers">
           <h3 className="section-title">Excutive Officers</h3>
           <div className="row">
             {board.map((card) => (

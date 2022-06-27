@@ -12,11 +12,17 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChange = () => {
+    const handleRouteChange = (url) => {
       setTimeout(() => {
-        document.querySelector("#top").scrollIntoView({
-          behavior: "smooth",
-        });
+        if (!url.includes("#")) {
+          document.querySelector("#top").scrollIntoView({
+            behavior: "smooth",
+          });
+        } else {
+          document.querySelector(`#${url.split("#")[1]}`).scrollIntoView({
+            behavior: "smooth",
+          });
+        }
       }, 2);
     };
     router.events.on("routeChangeComplete", handleRouteChange);

@@ -127,6 +127,15 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <Button
+            type="link"
+            color="secondary"
+            href="/about#officers"
+            name={"Recruitment call to action"}
+            className="mt-5 mx-auto d-block"
+          >
+            See All Officers
+          </Button>
         </section>
         <section className="news-letter">
           <div className="info gap-v-1">
@@ -134,7 +143,7 @@ export default function Home() {
             <input type="text" placeholder="Email" className="w-75" />
             <Button
               type="link"
-              color="secondary"
+              color="primary"
               href="#"
               className="block mx-auto"
               name={"Newsletter call to action"}
@@ -142,9 +151,6 @@ export default function Home() {
               Subscribe
             </Button>
           </div>
-          {/* <div className="envelope">
-            <img src="/images/Envelope-amico.svg" />
-          </div> */}
         </section>
       </main>
     </div>

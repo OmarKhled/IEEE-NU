@@ -2,18 +2,18 @@ import { Suspense, useRef } from "react";
 import Head from "next/head";
 
 import React from "react";
-import Rocket from "../components/THREEJS/Rocket";
+import Rocket from "../../components/THREEJS/Rocket";
 import { Canvas } from "@react-three/fiber";
 import { Html, OrbitControls } from "@react-three/drei";
 
-import Button from "../components/Button";
-import PartenersCarousel from "../components/PartenersCarousel";
+import Button from "../../components/Button";
+import PartenersCarousel from "../../components/PartenersCarousel";
 
-import partners from "../data/summitPartners";
-import SpaceSummitInfoCard from "../components/SpaceSummitInfoCard";
-import Trophies from "../components/Trophies";
-import CounterCard from "../components/CounterCard";
-import Edition from "../components/Edition";
+import partners from "../../data/summitPartners";
+import SpaceSummitInfoCard from "../../components/SpaceSummitInfoCard";
+import Trophies from "../../components/Trophies";
+import CounterCard from "../../components/CounterCard";
+import Edition from "../../components/Edition";
 
 const SEO = () => {
   const structuredData = {
@@ -59,14 +59,14 @@ const SEO = () => {
       />
       <meta
         property="og:description"
-        content="The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. You can register as an attendee or participant through the below form."
+        content="The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development."
         key={"ogdescription"}
       />
       <meta property="og:url" content="https://ieeenu.com/spacesummit" />
       <script
         type="application/ld+json"
         key={"stdata"}
-        // dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <link rel="preload" href="/assets/SummitRound.svg" as="image" />
       <link rel="preload" href="/assets/Stars.svg" as="image" />
@@ -175,7 +175,7 @@ const Summit = () => {
             <Button
               type="link"
               color="primary"
-              href="#"
+              href="/spacesummit/criteria"
               className="w-auto m-3"
               name={"Competition Regulations and Criteria"}
             >
