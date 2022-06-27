@@ -30,9 +30,8 @@ export default function About() {
         <div className="info gap-v-1">
           <h1 className="main-title">IEEENU isn&#39;t Just a Student Club!</h1>
           <p className="more-info">
-            Beside to the many skills you learn and the knowledge you gain in
-            IEEENU, also you become a part of a bigger family that looks like
-            you!
+            IEEE NU is a perfect place for engineers and computer science
+            enthusiasts aiming to improve thier technical skills.
           </p>
           <Button
             type="link"

@@ -56,7 +56,7 @@ const Navbar = () => {
         </Link>
         <Link href="http://ieeestore.nu.edu.eg">
           <a name="link" className="link" target="_blank">
-            IEEE Store
+            IEEE NU Store
           </a>
         </Link>
       </div>
@@ -115,7 +115,7 @@ const Navbar = () => {
             <li>
               <Link href="http://ieeestore.nu.edu.eg">
                 <a name="link" className="link" target="_blank">
-                  IEEE Store
+                  IEEE NU Store
                 </a>
               </Link>
             </li>

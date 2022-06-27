@@ -2,8 +2,8 @@ export default [
   {
     mainImg: "/images/membership/explore.webp",
     avatar: "/images/icons/globe.webp",
-    title: "IEEE Xplore",
-    children: `One of the most powerful IEEE Xplore resources to discover scientific and technical content published by the IEEE and its partners.`,
+    title: "Extracurricular activities",
+    children: `For IEEE NU members, your achievements at IEEE NU is documented in your graduation certificate, by nominating your efforts to be considered in your academic life.`,
   },
   {
     mainImg: "/images/membership/library.webp",

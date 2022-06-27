@@ -114,6 +114,15 @@ export default function Home() {
               />
             ))}
           </div>
+          <Button
+            type="link"
+            color="secondary"
+            href="/updates"
+            name={"Explore Updates"}
+            className="mt-2 mx-auto d-block"
+          >
+            Explore Previous Updates
+          </Button>
         </section>
         <section>
           <h3 className="section-title">Excutive Officers</h3>
@@ -131,7 +140,7 @@ export default function Home() {
             type="link"
             color="secondary"
             href="/about#officers"
-            name={"Recruitment call to action"}
+            name={"See All Officers"}
             className="mt-5 mx-auto d-block"
           >
             See All Officers

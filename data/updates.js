@@ -1,5 +1,15 @@
 export default [
   {
+    title: "IEEE Store relaunch",
+    date: "17/03/2022",
+    img: "/images/updates/store.webp",
+  },
+  {
+    title: "CIS Chapter Launch",
+    date: "31/03/2022",
+    img: "/images/updates/cis.webp",
+  },
+  {
     title: "IEEENU TEMS Entreprenuership Bootcamp",
     date: "17/03/2022",
     img: "/images/updates/bootcamp.webp",
