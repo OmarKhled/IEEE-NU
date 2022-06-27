@@ -62,8 +62,9 @@ const Summit = () => {
               </h1>
               <p className="more-info">
                 It is time for Egypt to find its way into the space industry.
-                The Egyptian Space Summit aspires to leave Egypt's mark in the
-                space industry by investing in its youth's creative ideas.
+                The Egyptian Space Summit aspires to leave Egypt&apos;s mark in
+                the space industry by investing in its youth&apos;s creative
+                ideas.
               </p>
               <Button
                 name={"Summit call to action"}
