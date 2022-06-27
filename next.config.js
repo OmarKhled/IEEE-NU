@@ -10,12 +10,10 @@ module.exports = {
     // reactRoot: true,
   },
   webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      "pdfjs-dist": path.resolve(
-        "./node_modules/pdfjs-dist/legacy/build/pdf.js"
-      ),
-    };
+    config.resolve.alias["pdfjs-dist"] = path.join(
+      __dirname,
+      "./node_modules/pdfjs-dist/legacy/build/pdf"
+    );
     return config;
   },
 };
