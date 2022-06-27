@@ -49,12 +49,14 @@ const Navbar = () => {
             About
           </a>
         </Link>
-        {/* <Link href="/lounge">
-          <a name="link" className="link">Technical Lounge</a>
-        </Link> */}
         <Link href="/spacesummit">
           <a name="link" className="link">
             Egyptian Space Summit
+          </a>
+        </Link>
+        <Link href="http://ieeestore.nu.edu.eg">
+          <a name="link" className="link" target="_blank">
+            IEEE Store
           </a>
         </Link>
       </div>
@@ -96,11 +98,6 @@ const Navbar = () => {
                 </a>
               </Link>
             </li>
-            {/* <li>
-              <Link href="/lounge">
-                <a name="link" className="link">Technical Lounge</a>
-              </Link>
-            </li> */}
             <li>
               <Link href="/spacesummit">
                 <a name="link" className="link">
@@ -112,6 +109,13 @@ const Navbar = () => {
               <Link href="/membership">
                 <a name="link" className="link">
                   Membership
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="http://ieeestore.nu.edu.eg">
+                <a name="link" className="link" target="_blank">
+                  IEEE Store
                 </a>
               </Link>
             </li>
