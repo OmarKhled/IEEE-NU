@@ -6,16 +6,23 @@
   height: 100%;
   border-radius: 3.125rem;
   box-shadow: var(--shadow-elevation-medium);
-  .mainimg {
-    height: 200px;
-    width: 100%;
+  .mianimg-container {
+    position: relative;
+    .mainimg {
+      height: 200px;
+      width: 100%;
+    }
+    .starsOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
   .body {
     position: relative;
     padding: 90px 20px 40px;
-    &.tall {
-      // height: 300px ;
-    }
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -28,9 +35,18 @@
       margin-right: auto;
       top: -72px;
       background-color: #fff;
-      padding: 20px;
+      padding: 28px;
       border-radius: 50%;
       box-shadow: 0px 0px 20px 2px #7fd2fc44;
+      width: 144px;
+      height: 144px;
+      .round {
+        border-radius: 50%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
     .counters-container {
       display: flex;

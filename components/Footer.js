@@ -36,6 +36,13 @@ const Footer = () => {
                   <a className="link">Egyptian Space Summit</a>
                 </Link>
               </li>
+              <li>
+                <Link href="http://ieeestore.nu.edu.eg">
+                  <a className="link" target="_blank">
+                    IEEE NU Store
+                  </a>
+                </Link>
+              </li>
             </ul>
           </section>
           <section className="links col-12 col-md-6 col-lg-4 mt-4">

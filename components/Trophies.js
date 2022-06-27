@@ -16,7 +16,7 @@ const Trophies = ({ place, id, className }) => {
             alt={"Bornze Trophy"}
           />
           <h5>3rd Place</h5>
-          <h6>1000 EGP</h6>
+          <h6>5000 EGP</h6>
         </div>
       ) : place == 1 ? (
         <div
@@ -30,7 +30,7 @@ const Trophies = ({ place, id, className }) => {
             alt={"Gold Trophy"}
           />
           <h3>1st Place</h3>
-          <h4>5000 EGP</h4>
+          <h4>15000 EGP</h4>
         </div>
       ) : place == 2 ? (
         <div
@@ -44,7 +44,7 @@ const Trophies = ({ place, id, className }) => {
             alt={"Silver Trophy"}
           />
           <h4>2nd Place</h4>
-          <h5>3000 EGP</h5>
+          <h5>10000 EGP</h5>
         </div>
       ) : (
         <></>

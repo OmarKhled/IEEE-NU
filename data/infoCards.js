@@ -3,7 +3,7 @@ export default [
     mainImg: "/images/Conference.webp",
     avatar: "/images/icons/speaker.svg",
     title: "Events",
-    firstCounter: { title: "Atendees", value: "100" },
+    firstCounter: { title: "Atendees", value: "1200" },
     secondCounter: { title: "Events", value: "15" },
     txt: `We are good at making events.
         Egyptian space summit

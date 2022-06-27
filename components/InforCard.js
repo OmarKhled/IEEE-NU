@@ -8,20 +8,36 @@ export default function InfoCard({
   secondCounter,
   children,
   noCounter,
+  noPadding,
+  starsOverlay,
+  secondaryTitle,
+  round,
 }) {
   return (
     <div className="info-card">
       <div className="top-image">
-        <img className="mainimg" src={mainImg} alt={title} />
+        <div className="mianimg-container">
+          <img className="mainimg" src={mainImg} alt={title} />
+          {starsOverlay && (
+            <img
+              className="starsOverlay"
+              src={"/images/spacesummit/card-stars.svg"}
+              alt="stars"
+            />
+          )}
+        </div>
         <div className={`body ${noCounter ? "tall" : ""}`}>
-          <img
-            width="144px"
-            height="144px"
-            className="avatar"
-            alt="title"
-            src={avatar}
-          />
-          <h4 className="bold">{title}</h4>
+          <div className={`avatar ${noPadding ? "p-0" : ""}`}>
+            <img
+              width="144px"
+              className={`${round ? "round" : ""}`}
+              height="144px"
+              alt="title"
+              src={avatar}
+            />
+          </div>
+          <h5 className="bold">{title}</h5>
+          <h6>{secondaryTitle}</h6>
           {!noCounter ? (
             <div className="counters-container">
               <div>
@@ -54,4 +70,8 @@ InfoCard.defaultProps = {
         Egyptian space summit
     , one of the stunning events in the space era is powered by
     IEEENU.`,
+  noPadding: false,
+  starsOverlay: false,
+  secondaryTitle: "",
+  round: false,
 };

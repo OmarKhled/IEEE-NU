@@ -16,32 +16,6 @@ import CounterCard from "../../components/CounterCard";
 import Edition from "../../components/Edition";
 
 const SEO = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: "Egyptian Space Summit",
-    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    location: {
-      "@type": "Place",
-      name: "Nile University",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "26th of July Corridor",
-        addressLocality: "Sheikh Zayed City",
-        postalCode: "12677",
-        addressRegion: "Cairo",
-        addressCountry: "EG",
-      },
-    },
-    image: ["https://ieeenu.com/images/summit.webp"],
-    description:
-      "The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. It also includes competition providing participants with business and technical workshops and valuable prizes offered to the first three winners. Prizes worth up to 30,000 EGP!",
-    organizer: {
-      "@type": "Organization",
-      name: "IEEE NU",
-      url: "https://ieeenu.com",
-    },
-  };
   return (
     <Head>
       <title>Egyptian Space Summit</title>
@@ -63,11 +37,7 @@ const SEO = () => {
         key={"ogdescription"}
       />
       <meta property="og:url" content="https://ieeenu.com/spacesummit" />
-      <script
-        type="application/ld+json"
-        key={"stdata"}
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+      <script type="application/ld+json" key={"stdata"} />
       <link rel="preload" href="/assets/SummitRound.svg" as="image" />
       <link rel="preload" href="/assets/Stars.svg" as="image" />
 
@@ -91,9 +61,9 @@ const Summit = () => {
                 The Most Powerful Space Event in The Solar System!
               </h1>
               <p className="more-info">
-                Egyptian space summit, one of the stunning events in the space
-                area is powered by IEEENU. The event takes place at Nile
-                University every year in September.
+                It is time for Egypt to find its way into the space industry.
+                The Egyptian Space Summit aspires to leave Egypt's mark in the
+                space industry by investing in its youth's creative ideas.
               </p>
               <Button
                 name={"Summit call to action"}
@@ -232,15 +202,15 @@ const Summit = () => {
           <h3 className="section-title">Previous Editions</h3>
           <div className="row">
             <div className="col-12 col-md-6 mt-3 p-4">
-              <Edition />
+              <Edition url={"/spacesummit/editions/1"} />
             </div>
-            <div className="col-12 col-md-6 mt-3 p-4">
+            {/* <div className="col-12 col-md-6 mt-3 p-4">
               <Edition
                 edition={"Edition 2"}
                 date={"01/07/2022"}
                 img={"/images/edition2.webp"}
               />
-            </div>
+            </div> */}
           </div>
         </section>
       </main>

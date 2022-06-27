@@ -1,18 +1,22 @@
-import Link from "next/link";
 import React from "react";
 
-const Edition = ({ date, edition, img }) => {
+const Edition = ({ date, edition, img, url }) => {
   return (
     <div className="edition">
-      <img src={img} alt={`Space Summit ${edition}`} className="edition-img" />
-      <div className="body">
-        <Link href="#">
-          <a className="link">
+      <a href={url}>
+        <>
+          <img
+            src={img}
+            alt={`Space Summit ${edition}`}
+            className="edition-img"
+          />
+          <div className="body">
             <h3 className="title">{edition}</h3>
-          </a>
-        </Link>
-        <p className="date">{date}</p>
-      </div>
+
+            <p className="date">{date}</p>
+          </div>
+        </>
+      </a>
     </div>
   );
 };
@@ -21,6 +25,7 @@ Edition.defaultProps = {
   date: "01/07/2021",
   edition: "Edition 1",
   img: "/images/edition1.webp",
+  url: "/spacesummit/editions/1",
 };
 
 export default Edition;
