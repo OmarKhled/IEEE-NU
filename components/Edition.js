@@ -1,10 +1,11 @@
+import Link from "next/link";
 import React from "react";
 
 const Edition = ({ date, edition, img, url }) => {
   return (
     <div className="edition">
-      <a href={url}>
-        <>
+      <Link href={url}>
+        <a>
           <img
             src={img}
             alt={`Space Summit ${edition}`}
@@ -15,8 +16,8 @@ const Edition = ({ date, edition, img, url }) => {
 
             <p className="date">{date}</p>
           </div>
-        </>
-      </a>
+        </a>
+      </Link>
     </div>
   );
 };
