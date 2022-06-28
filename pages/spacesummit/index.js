@@ -167,7 +167,7 @@ const Summit = () => {
               width="560"
               height="315"
               className="fb-video"
-              src="https://www.youtube.com/embed/IVakM-cz4hc"
+              src="https://www.youtube.com/embed/NWt2ozTsTTM"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

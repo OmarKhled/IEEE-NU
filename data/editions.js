@@ -51,7 +51,7 @@ export default [
       "2nd": { name: "Green Builders", value: 10000 },
     },
     video: {
-      url: "https://www.youtube.com/embed/IVakM-cz4hc",
+      url: "https://www.youtube.com/embed/NWt2ozTsTTM",
       name: "Memories of 2021 Edition",
       description:
         "Because we know how much memories mean, we made sure that it was saved and taken care of by our team. IEEENU would like to thank the Egyptian Space Agency and the other sponsors for their remarkable efforts and support.",
