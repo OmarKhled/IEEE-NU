@@ -6,7 +6,7 @@ import InfoCard from "../../../components/InforCard.js";
 
 import editions from "../../../data/editions.js";
 
-const SEO = ({ date }) => {
+const SEO = ({ date, name }) => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Event",
@@ -38,14 +38,14 @@ const SEO = ({ date }) => {
   };
   return (
     <Head>
-      <title>Egyptian Space Summit</title>
+      <title>{name}</title>
       <meta
         name="description"
-        content="The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. It also includes competition providing participants with business and technical workshops and valuable prizes offered to the first three winners. Prizes worth up to 30,000 EGP!"
+        content="The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development."
         key={"descripton"}
       />
       <meta property="og:type" content="activity" />
-      <meta property="og:title" content="Egyptian Space Summit" key={"title"} />
+      <meta property="og:title" content={name} key={"title"} />
       <meta
         property="og:image"
         content="https://i.ibb.co/bKby9F3/Egyptian-Summit-db872a21.png"
@@ -80,7 +80,7 @@ const Summit = ({ editions }) => {
 
   return (
     <>
-      <SEO date={date} />
+      <SEO date={date} name={name} />
       <header className="spacesummit">
         <div className="cont">
           <div className="rocket hero">
