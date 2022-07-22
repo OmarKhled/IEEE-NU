@@ -10,7 +10,7 @@ export default [
       },
       {
         name: "Teams",
-        value: "10",
+        value: "15",
       },
     ],
     speakers: [

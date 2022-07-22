@@ -189,7 +189,7 @@ const Summit = () => {
           <h3 className="section-title">We Have Achieved</h3>
           <div className="counters row justify-content-center">
             <div className="col-12 col-sm-6 col-lg-4 mt-5">
-              <CounterCard number="2" info="Editions" />
+              <CounterCard number="1" info="Editions" />
             </div>
             <div className="col-12 col-sm-6 col-lg-4 mt-5">
               <CounterCard number="300" info="Atendee" />
