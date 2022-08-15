@@ -28,7 +28,7 @@ const EventDay = () => {
 
     var config = {
       method: "put",
-      url: "https://api.pageclip.co/",
+      url: "https://api.pageclip.co/data/space-summit-event-day-second-edition",
       headers: {
         "Content-Type": "application/json",
         Authorization:
