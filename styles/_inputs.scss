@@ -1,4 +1,4 @@
-input, select {
+input, select, textarea {
   border: none;
   margin: 0.5rem 0;
   width: min(100%);
@@ -10,7 +10,7 @@ label {
   // margin: 0 0.9rem 0;
 }
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="number"] {
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
   border: var(--pantoneBlue-700) solid 1px;
   border-radius: 10px;
   padding: 0.5rem 1rem;
@@ -28,6 +28,9 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="number"]
     outline: none;
     box-shadow: 0 0 0 0.14rem var(--greenVogue-200);
   }
+}
+textarea {
+  border-bottom-right-radius: 0;
 }
 .err {
   border: red solid 1px !important;

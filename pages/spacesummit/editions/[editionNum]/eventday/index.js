@@ -26,7 +26,10 @@ const EventDay = () => {
   } = useForm();
 
   const submitAction = async (data) => {
-    const res = await axios.post("/api/spacesummitforms", data);
+    const res = await axios.post("/api/spacesummitforms", {
+      data: data,
+      form: "egyptianSpaceSummitSecondEditionEventDay",
+    });
     setSuccess(res.data.success == true ? true : false);
     res.data.success && document.getElementById("top").scrollIntoView();
     window.onbeforeunload = null;
@@ -102,7 +105,7 @@ const EventDay = () => {
       ) : (
         <div className="form mx-auto summitForm d-flex justify-content-center align-items-center flex-column">
           <p className="text-center">
-            Thanks for registering, your response has been recorded
+            Thanks for registering, your response has been recorded!
           </p>
           <small
             style={{
