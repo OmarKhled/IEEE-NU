@@ -5,6 +5,7 @@ import axios from "axios";
 
 import editions from "../../../../../data/editions";
 import Button from "../../../../../components/Button";
+import Head from "next/head";
 
 const EventDay = () => {
   const { query } = useRouter();
@@ -27,11 +28,15 @@ const EventDay = () => {
   const submitAction = async (data) => {
     const res = await axios.post("/api/spacesummitforms", data);
     setSuccess(res.data.success == true ? true : false);
+    res.data.success && document.getElementById("top").scrollIntoView();
     window.onbeforeunload = null;
   };
 
   return (
     <main className="__root">
+      <Head>
+        <title key={"title"}>Space Summit Registration Form</title>
+      </Head>
       {!success ? (
         <form
           style={{ maxWidth: "60rem", margin: "auto" }}
@@ -40,9 +45,7 @@ const EventDay = () => {
           method="post"
         >
           <div className="body">
-            <h3 className="text-center mb-4">
-              Space Summit Event Registration
-            </h3>
+            <h3 className="text-center mb-4">Space Summit Registration</h3>
             {form?.map((field) => (
               <div key={field?.label}>
                 <label style={{ fontWeight: "600" }}>
@@ -97,10 +100,20 @@ const EventDay = () => {
           </div>
         </form>
       ) : (
-        <div className="form mx-auto summitForm d-flex justify-content-center align-items-center">
+        <div className="form mx-auto summitForm d-flex justify-content-center align-items-center flex-column">
           <p className="text-center">
             Thanks for registering, your response has been recorded
           </p>
+          <small
+            style={{
+              textDecoration: "underline",
+              marginTop: "0.4rem",
+              cursor: "pointer",
+            }}
+            onClick={() => location.reload()}
+          >
+            Submit another response
+          </small>
         </div>
       )}
     </main>

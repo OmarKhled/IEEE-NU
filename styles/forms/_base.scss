@@ -16,7 +16,7 @@
     background-position: center;
   }
   .body {
-    padding: 20px 50px 15px 50px;
+    padding: 15px clamp(20px, 3.75vw + 1.25px, 50px);
   }
   &.contain {
     min-height: 0rem;
