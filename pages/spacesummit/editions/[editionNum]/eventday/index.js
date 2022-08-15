@@ -11,6 +11,7 @@ const EventDay = () => {
   const { query } = useRouter();
   const [form, setForm] = useState(undefined);
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (query !== undefined && query.editionNum) {
@@ -26,12 +27,16 @@ const EventDay = () => {
   } = useForm();
 
   const submitAction = async (data) => {
+    setLoading(true);
     const res = await axios.post("/api/spacesummitforms", {
       data: data,
       form: "egyptianSpaceSummitSecondEditionEventDay",
     });
-    setSuccess(res.data.success == true ? true : false);
-    res.data.success && document.getElementById("top").scrollIntoView();
+    if (res.data.success == true) {
+      setSuccess(true);
+      document.getElementById("top").scrollIntoView();
+      setLoading(false);
+    }
     window.onbeforeunload = null;
   };
 
@@ -74,7 +79,7 @@ const EventDay = () => {
                   <select
                     {...register(field.label, {
                       required: {
-                        value: field.required,
+                        value: field?.required,
                         message: `${field.label} Field is required`,
                       },
                     })}
@@ -96,7 +101,11 @@ const EventDay = () => {
               </div>
             ))}
             {form && (
-              <Button type={"submit"} className="ms-auto mt-4 m-auto d-block">
+              <Button
+                type={"submit"}
+                className="ms-auto mt-4 m-auto d-block"
+                disabled={loading && "disabled"}
+              >
                 Submit
               </Button>
             )}

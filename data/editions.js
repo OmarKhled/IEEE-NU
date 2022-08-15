@@ -164,16 +164,16 @@ export default [
       },
       {
         type: "number",
-        placeholder: "Your 9-digits NU ID",
+        placeholder: "Your NU ID",
         label: "NU ID",
-        note: "For Nile University Student only",
+        note: "For Nile University Students only",
         validation: {
           maxLength: {
             value: 9,
             message: "Please enter a valid NU ID",
           },
           minLength: {
-            value: 9,
+            value: 7,
             message: "Please enter a valid NU ID",
           },
         },

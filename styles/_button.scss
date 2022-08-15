@@ -32,6 +32,10 @@
 .btn:hover::before {
   opacity: 2;
 }
+.btn:disabled {
+  opacity: 0.4 !important;
+  cursor: not-allowed;
+}
 // Primarry Button
 .btn-primary {
   background-image: linear-gradient(
