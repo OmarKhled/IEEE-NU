@@ -28,8 +28,6 @@ export default async function handler(req, res) {
     pageclip
       .send(pageclipForm, req.body.data)
       .then(async (response) => {
-        res.send({ success: response.status == 200 ? true : false });
-        console.log(response.status, response.data, response.form);
         try {
           const docRef = await addDoc(collection(db, document), {
             ...req.body.data,
@@ -38,6 +36,8 @@ export default async function handler(req, res) {
         } catch (error) {
           console.log(error);
         }
+        console.log(response.status, response.data, response.form);
+        res.send({ success: response.status == 200 ? true : false });
         res.end();
       })
       .catch(async (error) => {
