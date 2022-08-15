@@ -16,6 +16,13 @@ const Button = ({
         <button {...props} className={`btn btn-${color} ${className}`}>
           {children}
         </button>
+      ) : type === "submit" ? (
+        <input
+          {...props}
+          className={`btn btn-${color} ${className}`}
+          type="submit"
+          value={children}
+        />
       ) : type == "link" && download ? (
         <a
           {...props}

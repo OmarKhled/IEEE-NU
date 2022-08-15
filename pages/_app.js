@@ -117,6 +117,10 @@ function MyApp({ Component, pageProps }) {
           gtag('config', 'G-B8YNHREF4V');
         `}
       </Script>
+      <Script
+        src="https://s.pageclip.co/v1/pageclip.js"
+        charset="utf-8"
+      ></Script>
       <Component {...pageProps} />
       <Footer />
     </>
