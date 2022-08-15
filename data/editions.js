@@ -173,10 +173,16 @@ export default [
         required: false,
       },
       {
+        label:
+          "Will you be able to attend the event on thursday, 1st september",
+        type: "select",
+        options: ["Select Option", "Yes", "No", "Maybe"],
+        required: true,
+      },
+      {
         type: "text",
-        placeholder: "Ex: IEEE NU",
-        label: "IEEE Branch",
-        note: "If you are a member in any IEEE SB, write your branch",
+        placeholder: "Comments...",
+        label: "Comments",
         required: false,
       },
     ],
