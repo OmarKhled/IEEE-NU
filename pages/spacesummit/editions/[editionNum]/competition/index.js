@@ -57,7 +57,7 @@ const Competition = () => {
               </h3>
               <a
                 name="link"
-                className="link s-block text-center mb-3"
+                className="link d-block text-center mb-3"
                 href="https://ieeenu.com/pdfs/criteria.pdf"
               >
                 Download the competition criteria

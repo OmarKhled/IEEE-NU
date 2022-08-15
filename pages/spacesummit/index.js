@@ -147,7 +147,7 @@ const Summit = () => {
             <Button
               type="link"
               color="primary"
-              href="/pdfs/Space_Summit_Criteria.pdf"
+              href="/pdfs/criteria.pdf"
               download={true}
               className="w-auto m-3"
               name={"Competition Regulations and Criteria"}
