@@ -108,6 +108,13 @@ export default [
         required: true,
         value: "18",
       },
+
+      {
+        type: "text",
+        label: "Governorate",
+        placeholder: "Governorate",
+        required: true,
+      },
       {
         type: "text",
         placeholder: "Your University / School",
@@ -188,16 +195,6 @@ export default [
     ],
     competitionForm: {
       firstStage: [
-        {
-          type: "select",
-          label: "Level",
-          options: [
-            "Select Level",
-            "Junior | High School and Elemantry School Students",
-            "Advanced | Undergrad Students",
-          ],
-          required: true,
-        },
         {
           type: "text",
           label: "Team Name",
@@ -300,6 +297,16 @@ export default [
           placeholder: "Fourth Team Member Email",
           required: false,
         },
+        {
+          type: "select",
+          label: "Level",
+          options: [
+            "Select Level",
+            "Junior | High School and Elemantry School Students",
+            "Advanced | Undergrad Students",
+          ],
+          required: true,
+        },
       ],
       secondStage: {
         junior: [
@@ -336,6 +343,7 @@ export default [
             type: "textarea",
             label: "Problem Definition | 150 to 200 words",
             placeholder: "Problem Definition | 150 to 200 words",
+            note: "Identify the problem clearly and state why it matters",
             required: true,
           },
           {
@@ -343,6 +351,7 @@ export default [
             type: "textarea",
             label: "Problem Solution | 150 to 300 words",
             placeholder: "Problem Solution | 150 to 300 words",
+            note: "Describe your idea, and define its coherence",
             required: true,
           },
           {
@@ -350,6 +359,15 @@ export default [
             type: "textarea",
             label: "Methodology | 200 to 400 words",
             placeholder: "Methodology | 200 to 400 words",
+            note: "Describe the technicalities you used to in your project",
+            required: true,
+          },
+          {
+            type: "select",
+            label:
+              "Will you attend the workshops (28-30 August) before the event",
+            placeholder: "Methodology | 200 to 400 words",
+            options: ["Choose Option", "Yes", "No", "Maybe"],
             required: true,
           },
         ],

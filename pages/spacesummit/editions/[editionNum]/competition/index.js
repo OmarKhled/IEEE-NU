@@ -52,9 +52,16 @@ const Competition = () => {
             method="post"
           >
             <div className="body">
-              <h3 className="text-center mb-4">
+              <h3 className="text-center mb-1">
                 Space Summit Competition Registration
               </h3>
+              <a
+                name="link"
+                className="link s-block text-center mb-3"
+                href="https://ieeenu.com/pdfs/criteria.pdf"
+              >
+                Download the competition criteria
+              </a>
               {stage === 1 ? (
                 <form onSubmit={handleSubmit(submitAction)}>
                   {form?.firstStage?.map((field) => (
