@@ -14,6 +14,7 @@ import SpaceSummitInfoCard from "../../components/SpaceSummitInfoCard";
 import Trophies from "../../components/Trophies";
 import CounterCard from "../../components/CounterCard";
 import Edition from "../../components/Edition";
+import editions from "../../data/editions";
 
 const SEO = () => {
   return (
@@ -202,9 +203,17 @@ const Summit = () => {
         <section>
           <h3 className="section-title">Previous Editions</h3>
           <div className="row">
-            <div className="col-12 col-md-6 mt-3 p-4">
-              <Edition url={"/spacesummit/editions/1"} />
-            </div>
+            {editions.map((edition) => (
+              <div className="col-12 col-md-6 mt-3 p-4" key={edition.id}>
+                <Edition
+                  edition={`Edition ${edition.id}`}
+                  date={edition.date}
+                  img={edition.img}
+                  url={`/spacesummit/editions/${edition.id}`}
+                />
+              </div>
+            ))}
+            <div className="col-12 col-md-6 mt-3 p-4"></div>
             {/* <div className="col-12 col-md-6 mt-3 p-4">
               <Edition
                 edition={"Edition 2"}

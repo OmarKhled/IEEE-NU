@@ -1,7 +1,7 @@
 export default [
   {
     id: "1",
-    date: "01/09/2021",
+    date: "02/09/2021",
     name: "2021 Editon of the Egyptian Space Summit",
     numbers: [
       {
@@ -61,6 +61,7 @@ export default [
       description:
         "Because we know how much memories mean, we made sure that it was saved and taken care of by our team. IEEENU would like to thank the Egyptian Space Agency and the other sponsors for their remarkable efforts and support.",
     },
+    img: "/images/edition1.webp",
     toBeAnnouncedSoon: false,
   },
   {
@@ -70,6 +71,7 @@ export default [
     toBeAnnouncedSoon: true,
     eventFacebookLink:
       "https://www.facebook.com/events/1702767603419516/?active_tab=discussion",
+    img: "/images/edition2.webp",
     eventDayForm: [
       {
         type: "text",
