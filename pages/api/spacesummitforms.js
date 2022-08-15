@@ -1,13 +1,55 @@
 import { spawn } from "child_process";
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 import Pageclip from "pageclip";
 const pageclip = new Pageclip("api_enM7l7GWwLLzJvrkRfESsfSdte5N3Zrt");
 
-export default function handler(req, res) {
+const firebaseConfig = {
+  apiKey: "AIzaSyB7EedYToCVQMKEYFClGT-sRrx6o2DsJXM",
+  authDomain: "ieee-nu.firebaseapp.com",
+  projectId: "ieee-nu",
+  storageBucket: "ieee-nu.appspot.com",
+  messagingSenderId: "482944964315",
+  appId: "1:482944964315:web:7df6dc9efda403dc1a5efe",
+  measurementId: "G-MJFMV4NGHL",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+export default async function handler(req, res) {
   if (req.method == "POST") {
-    pageclip.send(req.body.form, req.body.data).then((response) => {
-      res.send({ success: response.status == 200 ? true : false });
-      res.end();
-      console.log(response.status, response.data, response.form); // => 200, [Item, Item]
-    });
+    console.log(process.env.NODE_ENV, "node_env");
+    const document =
+      process.env.NODE_ENV == "development" ? "mockAtendees" : "atendees";
+    const pageclipForm =
+      process.env.NODE_ENV == "development" ? "test" : req.body.form;
+    pageclip
+      .send(pageclipForm, req.body.data)
+      .then(async (response) => {
+        res.send({ success: response.status == 200 ? true : false });
+        console.log(response.status, response.data, response.form);
+        try {
+          const docRef = await addDoc(collection(db, document), {
+            ...req.body.data,
+          });
+          console.log("Document written with ID: ", docRef.id);
+        } catch (error) {
+          console.log(error);
+        }
+        res.end();
+      })
+      .catch(async (error) => {
+        try {
+          const docRef = await addDoc(collection(db, document), {
+            ...req.body.data,
+          });
+          console.log("Document written with ID: ", docRef.id);
+        } catch (error) {
+          console.log(error);
+        }
+        console.log(error, "error");
+      });
   }
 }
