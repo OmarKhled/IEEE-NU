@@ -7,11 +7,11 @@ import InfoCard from "../../../../components/InforCard.js";
 
 import editions from "../../../../data/editions.js";
 
-const SEO = ({ date, name }) => {
+const SEO = ({ date, name, img }) => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Event",
-    name: "Egyptian Space Summit",
+    name: name,
     startDate: `${date}T9:00:00`,
     endDate: `${date}T18:00:00`,
     eventStatus: "https://schema.org/EventScheduled",
@@ -28,7 +28,7 @@ const SEO = ({ date, name }) => {
         addressCountry: "EG",
       },
     },
-    image: ["https://ieeenu.com/images/summit.webp"],
+    image: [`https://ieeenu.com${img}`],
     description:
       "The Egyptian Space Summit aspires to leave Egypt's mark in the space industry by investing in its youth's creative ideas. IEEENU, in collaboration with the Egyptian Space Agency, gives you the chance to be part of the upcoming space development. It also includes competition providing participants with business and technical workshops and valuable prizes offered to the first three winners. Prizes worth up to 30,000 EGP!",
     organizer: {
@@ -49,7 +49,7 @@ const SEO = ({ date, name }) => {
       <meta property="og:title" content={name} key={"title"} />
       <meta
         property="og:image"
-        content="https://i.ibb.co/bKby9F3/Egyptian-Summit-db872a21.png"
+        content={`https://ieeenu.com${img}`}
         key={"image"}
       />
       <meta
@@ -85,11 +85,12 @@ const Summit = ({ editions }) => {
     video,
     toBeAnnouncedSoon,
     eventFacebookLink,
+    img,
   } = editions.find((elem) => elem.id == editionNum);
 
   return (
     <>
-      <SEO date={date} name={name} />
+      <SEO date={date} name={name} img={img} />
       <header className="spacesummit">
         <div className="cont">
           <div className="rocket hero">
