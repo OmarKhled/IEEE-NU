@@ -25,21 +25,25 @@ const EventDay = () => {
 
   const submitAction = async (data) => {
     console.log(data);
-    const res = await axios.put(
-      "https://api.pageclip.co/data/space-summit-event-day-second-edition",
-      data,
-      {
-        auth: {
-          username: "api_enM7l7GWwLLzJvrkRfESsfSdte5N3Zrt",
-        },
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Headers":
-            "Content-Type, Authorization, X-Requested-With",
-        },
-      }
-    );
+
+    var config = {
+      method: "put",
+      url: "https://api.pageclip.co/",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization:
+          "Basic YXBpX2VuTTdsN0dXd0xMekp2cmtSZkVTc2ZTZHRlNU4zWnJ0Og==",
+      },
+      data: JSON.stringify(data),
+    };
+
+    axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
     window.onbeforeunload = null;
   };
 
