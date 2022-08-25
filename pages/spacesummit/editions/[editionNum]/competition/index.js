@@ -55,63 +55,73 @@ const Competition = () => {
               <h3 className="text-center mb-1">
                 Space Summit Competition Registration
               </h3>
-              <a
-                name="link"
-                className="link d-block text-center mb-3"
-                href="https://ieeenu.com/pdfs/criteria.pdf"
-              >
-                Download the competition criteria
-              </a>
-              {stage === 1 ? (
-                <form onSubmit={handleSubmit(submitAction)}>
-                  {form?.firstStage?.map((field) => (
-                    <InputField key={field?.label} field={field} />
-                  ))}
-                  <Button
-                    type={"submit"}
-                    className="ms-auto mt-4 m-auto d-block"
+              {form?.open === true ? (
+                <>
+                  <a
+                    name="link"
+                    className="link d-block text-center mb-3"
+                    href="https://ieeenu.com/pdfs/criteria.pdf"
                   >
-                    Next
-                  </Button>
-                </form>
-              ) : (
-                <form onSubmit={handleSubmit(finalSubmitAction)}>
-                  {getValues("Level") ===
-                  "Junior | High School and Elemantry School Students" ? (
-                    <>
-                      {form?.secondStage?.junior?.map((field) => (
+                    Download the competition criteria
+                  </a>
+                  {stage === 1 ? (
+                    <form onSubmit={handleSubmit(submitAction)}>
+                      {form?.firstStage?.map((field) => (
                         <InputField key={field?.label} field={field} />
                       ))}
-                    </>
+                      <Button
+                        type={"submit"}
+                        className="ms-auto mt-4 m-auto d-block"
+                      >
+                        Next
+                      </Button>
+                    </form>
                   ) : (
-                    <>
-                      {form?.secondStage?.advanced?.map((field) => (
+                    <form onSubmit={handleSubmit(finalSubmitAction)}>
+                      {getValues("Level") ===
+                      "Junior | High School and Elemantry School Students" ? (
+                        <>
+                          {form?.secondStage?.junior?.map((field) => (
+                            <InputField key={field?.label} field={field} />
+                          ))}
+                        </>
+                      ) : (
+                        <>
+                          {form?.secondStage?.advanced?.map((field) => (
+                            <InputField key={field?.label} field={field} />
+                          ))}
+                        </>
+                      )}
+                      {form?.secondStage?.rest?.map((field) => (
                         <InputField key={field?.label} field={field} />
                       ))}
-                    </>
+                      <div className="d-flex justify-content-between align-items-center flex-wrap gap-1">
+                        <Button
+                          type={"button"}
+                          className="mt-4 mx-auto d-block"
+                          onClick={() => {
+                            setStage(stage - 1);
+                            document.getElementById("top").scrollIntoView();
+                          }}
+                        >
+                          Previous
+                        </Button>
+                        <Button
+                          type={"submit"}
+                          className="mt-4 mx-auto mb-0 d-block"
+                        >
+                          Submit
+                        </Button>
+                      </div>
+                    </form>
                   )}
-                  {form?.secondStage?.rest?.map((field) => (
-                    <InputField key={field?.label} field={field} />
-                  ))}
-                  <div className="d-flex justify-content-between align-items-center flex-wrap gap-1">
-                    <Button
-                      type={"button"}
-                      className="mt-4 mx-auto d-block"
-                      onClick={() => {
-                        setStage(stage - 1);
-                        document.getElementById("top").scrollIntoView();
-                      }}
-                    >
-                      Previous
-                    </Button>
-                    <Button
-                      type={"submit"}
-                      className="mt-4 mx-auto mb-0 d-block"
-                    >
-                      Submit
-                    </Button>
-                  </div>
-                </form>
+                </>
+              ) : (
+                <>
+                  <p className="text-center mt-3">
+                    This form is no longer accepting responses.
+                  </p>
+                </>
               )}
             </div>
           </div>
