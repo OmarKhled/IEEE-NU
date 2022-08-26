@@ -118,9 +118,13 @@ const Competition = () => {
                 </>
               ) : (
                 <>
-                  <p className="text-center mt-3">
-                    This form is no longer accepting responses.
-                  </p>
+                  {form !== undefined ? (
+                    <p className="text-center mt-3">
+                      This form is no longer accepting responses.
+                    </p>
+                  ) : (
+                    <></>
+                  )}
                 </>
               )}
             </div>
