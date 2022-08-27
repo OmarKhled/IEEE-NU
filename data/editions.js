@@ -194,7 +194,7 @@ export default [
       },
     ],
     competitionForm: {
-      open: true,
+      open: false,
       firstStage: [
         {
           type: "text",
