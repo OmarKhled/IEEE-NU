@@ -21,34 +21,17 @@ const db = getFirestore(app);
 export default async function handler(req, res) {
   if (req.method == "POST") {
     console.log(process.env.NODE_ENV, "node_env");
-    const document =
-      process.env.NODE_ENV == "development" ? "mockAtendees" : "atendees";
     const pageclipForm =
       process.env.NODE_ENV == "development" ? "test" : req.body.form;
     pageclip
       .send(pageclipForm, req.body.data)
       .then(async (response) => {
-        try {
-          const docRef = await addDoc(collection(db, document), {
-            ...req.body.data,
-          });
-          console.log("Document written with ID: ", docRef.id);
-        } catch (error) {
-          console.log(error);
-        }
         console.log(response.status, response.data, response.form);
         res.send({ success: response.status == 200 ? true : false });
         res.end();
       })
       .catch(async (error) => {
-        try {
-          const docRef = await addDoc(collection(db, document), {
-            ...req.body.data,
-          });
-          console.log("Document written with ID: ", docRef.id);
-        } catch (error) {
-          console.log(error);
-        }
+        res.send({ success: false });
         console.log(error, "error");
       });
   }
