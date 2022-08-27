@@ -66,6 +66,10 @@ export default async function handler(req, res) {
             html: SpaceSummitMail(data.name),
           });
           console.log(`Message sent: ${data.email} ${info.messageId}`);
+          const ref = doc(db, "attendees", docRef.id);
+          await updateDoc(ref, {
+            emailSent: true,
+          });
           if (info) {
             res.send({ success: true });
             res.end();
