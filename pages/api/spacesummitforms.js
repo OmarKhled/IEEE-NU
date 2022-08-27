@@ -24,6 +24,7 @@ const db = getFirestore(app);
 export default async function handler(req, res) {
   if (req.method == "POST") {
     console.log(process.env.NODE_ENV, "node_env");
+    const data = req.body.data;
     const pageclipForm =
       process.env.NODE_ENV == "development" ? "test" : req.body.form;
     pageclip
