@@ -133,8 +133,16 @@ const EventDay = () => {
         )
       ) : (
         <div className="form mx-auto summitForm d-flex justify-content-center align-items-center flex-column">
-          <h3 className="text-center mb-2">Space Summit Registration</h3>
-          <p>This form is no longer accepting responses</p>
+          {form !== undefined ? (
+            <>
+              <h3 className="text-center mb-2 text-center">
+                Space Summit Registration
+              </h3>
+              <p>This form is no longer accepting responses</p>
+            </>
+          ) : (
+            <></>
+          )}
         </div>
       )}
     </main>
