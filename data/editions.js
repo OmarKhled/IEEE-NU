@@ -72,7 +72,7 @@ export default [
     eventFacebookLink:
       "https://www.facebook.com/events/1702767603419516/?active_tab=discussion",
     img: "/images/edition2.webp",
-    eventForm: true,
+    eventForm: false,
     eventDayForm: [
       {
         type: "text",
