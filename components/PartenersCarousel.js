@@ -11,7 +11,12 @@ const PartenersCarousel = ({ items }) => {
   const myArrow = ({ type, onClick, isEdge }) => {
     const pointer = type === "PREV" ? <FaChevronLeft /> : <FaChevronRight />;
     return (
-      <button className="arrow" onClick={onClick} disabled={isEdge}>
+      <button
+        className="arrow"
+        onClick={onClick}
+        disabled={isEdge}
+        aria-label="arrow"
+      >
         {pointer}
       </button>
     );
