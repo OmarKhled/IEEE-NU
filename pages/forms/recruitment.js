@@ -12,7 +12,7 @@ const Recruitment = () => {
       </Head>
       <div className="__root">
         <main>
-          <section className="m-auto mt-5">
+          <section className="m-auto">
             <div className="form mx-auto summitForm">
               <div
                 style={{ maxWidth: "60rem", margin: "auto" }}
