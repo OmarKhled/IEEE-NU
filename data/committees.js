@@ -34,8 +34,7 @@ export default [
   {
     mainImg: "/images/committees/social.webp",
     avatar: "/images/committees/icons/social.webp",
-    title: "Social Media",
-    children: `To spread the branding identity of the branch, you need to a passionate team for graphic designers and editors to visualize the mission of the branch.
-    `,
+    title: "Media",
+    children: `To spread the branding identity of the branch, you need to a passionate team of graphic designers and editors to visualize the mission of the branch.`,
   },
 ];

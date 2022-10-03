@@ -1,6 +1,7 @@
 import Head from "next/head.js";
 import committees from "../../data/committees.js";
 import InfoCard from "../../components/InforCard.js";
+import RecruitmentForm from "../../components/RecruitmentForm.js";
 
 const Recruitment = () => {
   return (
@@ -11,24 +12,28 @@ const Recruitment = () => {
       </Head>
       <div className="__root">
         <main>
-          <section className="mt-4">
-            <h3 className="section-title">Branch Committies</h3>
+          <section className="m-auto mt-5">
+            <div className="form mx-auto summitForm">
+              <div
+                style={{ maxWidth: "60rem", margin: "auto" }}
+                className="body"
+                method="post"
+              >
+                <h3 className="text-center mb-1">2022 / 2023 Recruitment</h3>
+                <RecruitmentForm />
+              </div>
+            </div>
+          </section>
+          <section className="mt-5 pt-5">
+            <h3 className="section-title">
+              Know more about the branch committies
+            </h3>
             <div className="row">
               {committees.map((card) => (
                 <div key={card.title} className="col-12 col-sm-6 col-lg-4 mt-5">
                   <InfoCard {...card} noCounter />
                 </div>
               ))}
-            </div>
-          </section>
-          <section className="d-flex justify-content-center mx-4">
-            <div className="form contain">
-              <div className="body text-center ">
-                <h5 className="m-auto">
-                  The Recuitment Form is closed for now, check again later ...
-                </h5>
-                <p>Recruitment usually opens in October</p>
-              </div>
             </div>
           </section>
         </main>

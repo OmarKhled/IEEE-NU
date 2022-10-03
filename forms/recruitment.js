@@ -1,0 +1,92 @@
+export default [
+  {
+    type: "text",
+    placeholder: "Enter your name",
+    label: "name",
+    required: true,
+    value: "Omar Khaled",
+  },
+  {
+    type: "email",
+    placeholder: "example@domain.com",
+    label: "email",
+    required: true,
+    value: "omrcorc@gmail.com",
+  },
+  {
+    type: "select",
+    options: ["Select Gender", "Male", "Female"],
+    label: "Gender",
+    required: true,
+    value: "Male",
+  },
+  {
+    type: "tel",
+    placeholder: "01XXXXXXXXX",
+    label: "Phone",
+    required: true,
+    value: "01068405513",
+  },
+  {
+    type: "number",
+    placeholder: "Your Age",
+    label: "Age",
+    required: true,
+    value: "18",
+  },
+  {
+    type: "select",
+    options: [
+      "Select School",
+      "Engineering & Applied Science",
+      "Computer Science",
+      "Business",
+      "Biotechnology",
+      "Other",
+    ],
+    label: "School",
+    required: true,
+    value: "Male",
+  },
+  {
+    type: "text",
+    placeholder: "ex: Civil",
+    label: "Major",
+    required: false,
+  },
+  {
+    label: "Academic Year",
+    type: "select",
+    options: [
+      "Select Academic Year",
+      "Freshman",
+      "Sophomore",
+      "Junior",
+      "Senior",
+      "Graduating Senior",
+    ],
+    required: true,
+  },
+  {
+    type: "number",
+    placeholder: "Your NU ID",
+    label: "NU ID",
+    validation: {
+      maxLength: {
+        value: 9,
+        message: "Please enter a valid NU ID",
+      },
+      minLength: {
+        value: 7,
+        message: "Please enter a valid NU ID",
+      },
+    },
+    required: true,
+  },
+  {
+    type: "text",
+    placeholder: "Comments...",
+    label: "Comments",
+    required: false,
+  },
+];
