@@ -86,17 +86,7 @@ export default [
     type: "number",
     placeholder: "Your NU ID",
     label: "NU ID",
-    validation: {
-      maxLength: {
-        value: 9,
-        message: "Please enter a valid NU ID",
-      },
-      minLength: {
-        value: 7,
-        message: "Please enter a valid NU ID",
-      },
-    },
-    required: true,
+    required: false,
   },
   {
     type: "text",
