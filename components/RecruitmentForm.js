@@ -15,7 +15,7 @@ const RecruitmentForm = () => {
     console.log(data);
     const res = await axios.post("/api/formSubmit", {
       data: data,
-      form: "recruitment2023",
+      form: "recruitmentsecondphase23",
     });
     setSuccess(res.data.success == true ? true : false);
     setLoading(false);
