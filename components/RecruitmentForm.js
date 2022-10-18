@@ -75,7 +75,7 @@ const InputField = ({ field }) => {
           />
         ) : (
           <textarea
-            {...register(field?.name, {
+            {...register(field?.label, {
               required: {
                 value: field?.required,
                 message: `${field?.name} Field is required`,
@@ -84,8 +84,8 @@ const InputField = ({ field }) => {
             })}
             style={{ width: "100%", maxWidth: "100%" }}
             rows="7"
-            name={field?.name}
-            className={`${errors[field?.name] ? "err" : ""}`}
+            name={field?.label}
+            className={`${errors[field?.label] ? "err" : ""}`}
           ></textarea>
         )
       ) : (
