@@ -44,7 +44,6 @@ export function getStaticProps({ params }) {
 
 export function getStaticPaths() {
   const paths = getPaths({ dirName: "forms" });
-  // console.log(paths);
   return { paths, fallback: false };
 }
 
