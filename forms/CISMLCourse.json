@@ -75,6 +75,18 @@
       },
       {
         "type": "text",
+        "placeholder": "Nile University ID",
+        "label": "NU ID",
+        "required": false
+      },
+      {
+        "type": "text",
+        "placeholder": "Your University",
+        "label": "University",
+        "required": true
+      },
+      {
+        "type": "text",
         "placeholder": "Comments...",
         "label": "Comments",
         "required": false
