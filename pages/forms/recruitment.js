@@ -2,7 +2,7 @@ import Head from "next/head.js";
 import committees from "../../data/committees.js";
 import InfoCard from "../../components/InforCard.js";
 import Form from "../../components/Form.js";
-import data from "../../forms/recruitment.json";
+import data from "../../forms/recruitment.ignore.json";
 
 const Recruitment = () => {
   const { form, title, pageClipId } = data;

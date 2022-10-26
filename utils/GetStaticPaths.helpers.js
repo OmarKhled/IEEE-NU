@@ -1,4 +1,5 @@
 import fs from "fs";
+import _ from "lodash";
 import path from "path";
 
 export const getPaths = ({ dirName, ext = "json" }) => {
@@ -8,7 +9,10 @@ export const getPaths = ({ dirName, ext = "json" }) => {
   if (files) {
     files.forEach((file) => {
       if (path.extname(file) == `.${ext}`) {
-        paths.push({ params: { slug: file.replace(`.${ext}`, "") } });
+        const slug = file.replace(`.${ext}`, "");
+        if (_.last(slug.split(".") !== "ignore")) {
+          paths.push({ params: { slug } });
+        }
       }
     });
     // console.log(paths);
