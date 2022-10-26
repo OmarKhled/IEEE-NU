@@ -3,7 +3,7 @@
   "pageClipId": "cismachinelearningcourse",
   "ogImage": "https://ieeenu.com/images/og/ML-Course.jpg",
   "form": {
-    "closed": true,
+    "closed": false,
     "fields": [
       {
         "type": "text",

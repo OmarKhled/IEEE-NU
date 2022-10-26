@@ -2,7 +2,7 @@
   "title": "Recruitment Registration",
   "pageClipId": "recruitmentsecondphase23",
   "form": {
-    "closed": false,
+    "closed": true,
     "fields": [
       {
         "type": "text",
