@@ -5,11 +5,15 @@ import _ from "lodash";
 import { getFileData, getPaths } from "../../utils/GetStaticPaths.helpers";
 
 const FormPage = ({ slug, data }) => {
-  const { title, form, pageClipId } = data;
+  const { title, form, pageClipId, ogImage } = data;
   return (
     <>
       <Head>
         <title key="title">{title}</title>
+        <meta property="og:title" content={title} key={"title"} />
+        {ogImage && (
+          <meta property="og:image" content={ogImage} key={"image"} />
+        )}
       </Head>
       <div className="__root">
         <main>
