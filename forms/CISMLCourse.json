@@ -41,17 +41,9 @@
         "value": "01068405513"
       },
       {
-        "label": "Academic Year",
-        "type": "select",
-        "options": [
-          "Select Academic Year",
-          "Freshman",
-          "Sophomore",
-          "Junior",
-          "Senior",
-          "Graduating Senior"
-        ],
-        "value": "Select Academic Year",
+        "type": "text",
+        "placeholder": "Your University",
+        "label": "University",
         "required": true
       },
       {
@@ -68,10 +60,18 @@
         "value": "Select School"
       },
       {
-        "type": "text",
-        "placeholder": "ex: Mechanical",
-        "label": "Major",
-        "required": false
+        "label": "Academic Year",
+        "type": "select",
+        "options": [
+          "Select Academic Year",
+          "Freshman",
+          "Sophomore",
+          "Junior",
+          "Senior",
+          "Graduating Senior"
+        ],
+        "value": "Select Academic Year",
+        "required": true
       },
       {
         "type": "text",
@@ -81,9 +81,9 @@
       },
       {
         "type": "text",
-        "placeholder": "Your University",
-        "label": "University",
-        "required": true
+        "placeholder": "ex: Mechanical",
+        "label": "Major",
+        "required": false
       },
       {
         "type": "text",
