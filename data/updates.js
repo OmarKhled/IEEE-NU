@@ -1,7 +1,27 @@
 export default [
   {
+    title: "2023 Members Recruitment",
+    date: "18/10/2022",
+    img: "/images/updates/recruitment23.webp",
+  },
+  {
+    title: "Chairpersons 2022/2023",
+    date: "12/10/2022",
+    img: "/images/updates/chairpersons23.webp",
+  },
+  {
+    title: "Egyptian Space Summit | V2",
+    date: "11/08/2022",
+    img: "/images/updates/summit2.webp",
+  },
+  {
+    title: "IEEE Website Launch",
+    date: "22/07/2022",
+    img: "/images/updates/website.webp",
+  },
+  {
     title: "IEEE Store relaunch",
-    date: "17/03/2022",
+    date: "17/05/2022",
     img: "/images/updates/store.webp",
   },
   {
