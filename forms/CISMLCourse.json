@@ -61,10 +61,7 @@
           "Engineering & Applied Science",
           "Computer Science",
           "Business Administration",
-          "Biotechnology",
-          "Medicine",
-          "Navigation Sciences and Space Technology",
-          "Other"
+          "Biotechnology"
         ],
         "label": "School",
         "required": true,

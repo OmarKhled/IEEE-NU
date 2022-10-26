@@ -9,7 +9,7 @@ const FormPage = ({ slug, data }) => {
   return (
     <>
       <Head>
-        <title key="title">{title}</title>
+        <title>{title}</title>
         <meta property="og:title" content={title} key={"title"} />
         {ogImage && (
           <meta property="og:image" content={ogImage} key={"image"} />
