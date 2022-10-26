@@ -1,5 +1,10 @@
 export default [
   {
+    title: "CIS NU Machine Learning Course",
+    date: "27/10/2022",
+    img: "/images/updates/mlcourse.webp",
+  },
+  {
     title: "2023 Members Recruitment",
     date: "18/10/2022",
     img: "/images/updates/recruitment23.webp",
