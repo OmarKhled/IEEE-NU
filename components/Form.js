@@ -1,21 +1,23 @@
 import { useState } from "react";
 import { FormProvider, useForm, useFormContext } from "react-hook-form";
-import form from "../forms/recruitment";
+// import form from "../forms/recruitment";
 import Button from "./Button";
 import axios from "axios";
 
-const RecruitmentForm = () => {
+const RecruitmentForm = ({ form, pageClipId }) => {
   const methods = useForm();
   const { handleSubmit } = methods;
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const { fields, closed } = form;
 
   const submitAction = async (data) => {
     setLoading(true);
     console.log(data);
     const res = await axios.post("/api/formSubmit", {
       data: data,
-      form: "recruitmentsecondphase23",
+      form: pageClipId,
     });
     setSuccess(res.data.success == true ? true : false);
     setLoading(false);
@@ -30,16 +32,24 @@ const RecruitmentForm = () => {
         <p className="text-center mt-2">Your record has been submitted</p>
       ) : (
         <form onSubmit={handleSubmit(submitAction)}>
-          {form?.map((field) => (
-            <InputField key={field?.label} field={field} />
-          ))}
-          <Button
-            type={"submit"}
-            disabled={loading}
-            className="ms-auto mt-4 m-auto d-block"
-          >
-            Submit
-          </Button>
+          {closed ? (
+            <p className="text-center mt-2">
+              This form is no longer accepting responses
+            </p>
+          ) : (
+            <>
+              {fields?.map((field) => (
+                <InputField key={field?.label} field={field} />
+              ))}
+              <Button
+                type={"submit"}
+                disabled={loading}
+                className="ms-auto mt-4 m-auto d-block"
+              >
+                Submit
+              </Button>
+            </>
+          )}
         </form>
       )}
     </FormProvider>

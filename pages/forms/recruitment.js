@@ -1,9 +1,11 @@
 import Head from "next/head.js";
 import committees from "../../data/committees.js";
 import InfoCard from "../../components/InforCard.js";
-import RecruitmentForm from "../../components/RecruitmentForm.js";
+import Form from "../../components/Form.js";
+import data from "../../forms/recruitment.json";
 
 const Recruitment = () => {
+  const { form, title, pageClipId } = data;
   return (
     <>
       <Head>
@@ -20,7 +22,7 @@ const Recruitment = () => {
                 method="post"
               >
                 <h3 className="text-center mb-1">2022 / 2023 Recruitment</h3>
-                <RecruitmentForm />
+                <Form form={form} pageClipId={pageClipId} />
               </div>
             </div>
           </section>
