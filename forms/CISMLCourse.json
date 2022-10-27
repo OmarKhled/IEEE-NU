@@ -53,7 +53,8 @@
           "Engineering & Applied Science",
           "Computer Science",
           "Business Administration",
-          "Biotechnology"
+          "Biotechnology",
+          "Other"
         ],
         "label": "School",
         "required": true,
