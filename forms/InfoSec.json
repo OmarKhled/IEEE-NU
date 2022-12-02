@@ -1,0 +1,96 @@
+{
+  "title": "Information & Cyber Security Lecture",
+  "pageClipId": "infosec",
+  "form": {
+    "closed": false,
+    "fields": [
+      {
+        "type": "text",
+        "placeholder": "Enter your name",
+        "label": "Name",
+        "required": true,
+        "value": "Omar Khaled"
+      },
+      {
+        "type": "number",
+        "placeholder": "Your Age",
+        "label": "Age",
+        "required": true,
+        "value": "18"
+      },
+      {
+        "type": "email",
+        "placeholder": "example@domain.com",
+        "label": "Email",
+        "required": true,
+        "value": "omrcorc@gmail.com"
+      },
+      {
+        "type": "select",
+        "options": ["Select Gender", "Male", "Female"],
+        "label": "Gender",
+        "required": true,
+        "value": "Male"
+      },
+      {
+        "type": "tel",
+        "placeholder": "01XXXXXXXXX",
+        "label": "Mobile Number",
+        "required": true,
+        "value": "01068405513"
+      },
+      {
+        "type": "text",
+        "placeholder": "Your University",
+        "label": "University",
+        "required": true
+      },
+      {
+        "type": "select",
+        "options": [
+          "Select School",
+          "Engineering & Applied Science",
+          "Computer Science",
+          "Business Administration",
+          "Biotechnology",
+          "Other"
+        ],
+        "label": "School",
+        "required": true,
+        "value": "Select School"
+      },
+      {
+        "label": "Academic Year",
+        "type": "select",
+        "options": [
+          "Select Academic Year",
+          "Freshman",
+          "Sophomore",
+          "Junior",
+          "Senior",
+          "Graduating Senior"
+        ],
+        "value": "Select Academic Year",
+        "required": true
+      },
+      {
+        "type": "text",
+        "placeholder": "Nile University ID",
+        "label": "NU ID",
+        "required": false
+      },
+      {
+        "type": "text",
+        "placeholder": "ex: Mechanical",
+        "label": "Major",
+        "required": false
+      },
+      {
+        "type": "text",
+        "placeholder": "Comments...",
+        "label": "Comments",
+        "required": false
+      }
+    ]
+  }
+}
