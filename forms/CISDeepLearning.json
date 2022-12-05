@@ -3,7 +3,7 @@
   "pageClipId": "deeplearning",
   "ogImage": "https://ieeenu.com/images/og/deep.jpg",
   "form": {
-    "closed": false,
+    "closed": true,
     "fields": [
       {
         "type": "text",

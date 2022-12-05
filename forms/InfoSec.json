@@ -2,7 +2,7 @@
   "title": "Information & Cyber Security Lecture",
   "pageClipId": "infosec",
   "form": {
-    "closed": false,
+    "closed": true,
     "fields": [
       {
         "type": "text",
