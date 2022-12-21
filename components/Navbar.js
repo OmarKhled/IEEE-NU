@@ -54,7 +54,7 @@ const Navbar = () => {
             Egyptian Space Summit
           </a>
         </Link>
-        <Link href="http://ieeestore.nu.edu.eg">
+        <Link href="https://store.ieeenu.com">
           <a name="link" className="link" target="_blank">
             IEEE NU Store
           </a>
@@ -113,7 +113,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="http://ieeestore.nu.edu.eg">
+              <Link href="https://store.ieeenu.com">
                 <a name="link" className="link" target="_blank">
                   IEEE NU Store
                 </a>
