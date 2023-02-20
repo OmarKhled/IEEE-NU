@@ -41,12 +41,6 @@
         "value": "01068405513"
       },
       {
-        "type": "text",
-        "placeholder": "Your University",
-        "label": "University",
-        "required": true
-      },
-      {
         "type": "select",
         "options": [
           "Select School",
@@ -78,7 +72,7 @@
         "type": "text",
         "placeholder": "Nile University ID",
         "label": "NU ID",
-        "required": false
+        "required": true
       },
       {
         "type": "text",
