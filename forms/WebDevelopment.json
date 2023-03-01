@@ -3,7 +3,7 @@
   "pageClipId": "webdevelopment",
   "ogImage": "https://ieeenu.com/images/og/web.jpg",
   "form": {
-    "closed": false,
+    "closed": true,
     "fields": [
       {
         "type": "text",
