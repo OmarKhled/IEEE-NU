@@ -57,7 +57,6 @@
       {
         "type": "number",
         "label": "National ID",
-        "required": true,
         "placeholder": "Your 14-digits National ID",
         "validation": {
           "maxLength": {
