@@ -1,0 +1,103 @@
+{
+  "title": "She Leads Event",
+  "pageClipId": "webdevelopment",
+  "ogImage": "https://ieeenu.com/images/og/web.jpg",
+  "form": {
+    "closed": false,
+    "fields": [
+      {
+        "type": "text",
+        "placeholder": "Enter your name",
+        "label": "name",
+        "required": true,
+        "value": "Omar Khaled"
+      },
+      {
+        "type": "email",
+        "placeholder": "example@domain.com",
+        "label": "email",
+        "required": true,
+        "value": "omrcorc@gmail.com"
+      },
+      {
+        "type": "select",
+        "options": ["Select Gender", "Male", "Female"],
+        "label": "Gender",
+        "required": true,
+        "value": "Male"
+      },
+      {
+        "type": "tel",
+        "placeholder": "01XXXXXXXXX",
+        "label": "Phone",
+        "required": true,
+        "value": "01068405513"
+      },
+      {
+        "type": "number",
+        "placeholder": "Your Age",
+        "label": "Age",
+        "required": true,
+        "value": "18"
+      },
+
+      {
+        "type": "text",
+        "label": "Governorate",
+        "placeholder": "Governorate",
+        "required": true
+      },
+      {
+        "type": "text",
+        "placeholder": "Your University / School",
+        "label": "University / School / Company",
+        "required": true
+      },
+      {
+        "type": "number",
+        "label": "National ID",
+        "required": true,
+        "placeholder": "Your 14-digits National ID",
+        "validation": {
+          "maxLength": {
+            "value": 14,
+            "message": "Please enter a valid National ID"
+          },
+          "minLength": {
+            "value": 14,
+            "message": "Please enter a valid National ID"
+          }
+        }
+      },
+      {
+        "type": "number",
+        "placeholder": "Your NU ID",
+        "label": "NU ID",
+        "note": "For Nile University Students only",
+        "validation": {
+          "maxLength": {
+            "value": 9,
+            "message": "Please enter a valid NU ID"
+          },
+          "minLength": {
+            "value": 7,
+            "message": "Please enter a valid NU ID"
+          }
+        },
+        "required": false
+      },
+      {
+        "label": "Will you be able to attend the event on wednesday, 15th of march?",
+        "type": "select",
+        "options": ["Select Option", "Yes", "No", "Maybe"],
+        "required": true
+      },
+      {
+        "type": "text",
+        "placeholder": "Comments...",
+        "label": "Comments",
+        "required": false
+      }
+    ]
+  }
+}
