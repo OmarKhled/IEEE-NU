@@ -1,6 +1,8 @@
 {
   "title": "She Leads Event",
   "pageClipId": "sheleads",
+  "ogImage": "https://ieeenu.com/images/og/shlog.jpg",
+
   "form": {
     "closed": false,
     "fields": [
