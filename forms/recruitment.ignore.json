@@ -57,7 +57,7 @@
         "type": "text",
         "placeholder": "Your Nile University ID",
         "label": "NU ID",
-        "required": true,
+        "required": true
       },
       {
         "type": "select",
