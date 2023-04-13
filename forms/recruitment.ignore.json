@@ -1,8 +1,8 @@
 {
   "title": "Recruitment Registration",
-  "pageClipId": "recruitmentsecondphase23",
+  "pageClipId": "recruitment23",
   "form": {
-    "closed": true,
+    "closed": false,
     "fields": [
       {
         "type": "text",
@@ -40,13 +40,6 @@
         "value": "01068405513"
       },
       {
-        "type": "text",
-        "placeholder": "Enter your university",
-        "label": "University",
-        "required": true,
-        "value": "Nile University"
-      },
-      {
         "label": "Academic Year",
         "type": "select",
         "options": [
@@ -61,16 +54,19 @@
         "required": true
       },
       {
+        "type": "text",
+        "placeholder": "Your Nile University ID",
+        "label": "NU ID",
+        "required": true,
+      },
+      {
         "type": "select",
         "options": [
           "Select School",
           "Engineering & Applied Science",
           "Computer Science",
           "Business Administration",
-          "Biotechnology",
-          "Medicine",
-          "Navigation Sciences and Space Technology",
-          "Other"
+          "Biotechnology"
         ],
         "label": "School",
         "required": true,
@@ -86,15 +82,10 @@
         "type": "select",
         "options": [
           "Select Committee",
-          "Marketing",
-          "Media",
+          "Content Writing",
+          "Graphics Designing",
+          "Photographing",
           "Operations",
-          "Technical - Web Development",
-          "Technical - Game Development",
-          "Technical - Robotics",
-          "Technical - Aerospace",
-          "Technical - Machine Learning & Deep Learning",
-          "HR",
           "PR"
         ],
         "label": "Committee",
