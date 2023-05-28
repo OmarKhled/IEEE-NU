@@ -51,7 +51,7 @@
       {
         "type": "text",
         "placeholder": "School",
-        "label": "Company",
+        "label": "School",
         "required": true
       },
       {
