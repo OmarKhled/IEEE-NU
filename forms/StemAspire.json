@@ -50,8 +50,8 @@
       },
       {
         "type": "text",
-        "placeholder": "Your University / School",
-        "label": "University / School / Company",
+        "placeholder": "School",
+        "label": "Company",
         "required": true
       },
       {
