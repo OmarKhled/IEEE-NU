@@ -57,7 +57,6 @@
         "type": "number",
         "placeholder": "Your NU ID",
         "label": "NU ID",
-        "note": "For Nile University Students only",
         "validation": {
           "maxLength": {
             "value": 9,
