@@ -1,7 +1,6 @@
 {
-  "title": "She Leads Event",
-  "pageClipId": "sheleads",
-  "ogImage": "https://ieeenu.com/images/og/shlog.jpg",
+  "title": "Bioverse",
+  "pageClipId": "bioverse",
 
   "form": {
     "closed": false,
@@ -51,12 +50,38 @@
       {
         "type": "text",
         "placeholder": "Your University / School",
-        "label": "University / School / Company",
+        "label": "University / School",
         "required": true
+      },
+      {
+        "type": "text",
+        "placeholder": "Your Faculty",
+        "label": "Faculty",
+        "required": false
+      },
+      {
+        "type": "text",
+        "placeholder": "ex: Civil",
+        "label": "Major",
+        "required": false
+      },
+      {
+        "label": "Academic Year",
+        "type": "select",
+        "options": [
+          "Select Academic Year",
+          "Freshman",
+          "Sophomore",
+          "Junior",
+          "Senior",
+          "Graduating Senior"
+        ],
+        "required": false
       },
       {
         "type": "number",
         "label": "National ID",
+        "required": true,
         "placeholder": "Your 14-digits National ID",
         "validation": {
           "maxLength": {
@@ -87,7 +112,7 @@
         "required": false
       },
       {
-        "label": "Will you be able to attend the event on wednesday, 15th of march?",
+        "label": "Will you be able to attend the event on saturday, 2nd september",
         "type": "select",
         "options": ["Select Option", "Yes", "No", "Maybe"],
         "required": true
