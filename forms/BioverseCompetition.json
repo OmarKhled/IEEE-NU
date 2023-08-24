@@ -1,0 +1,110 @@
+{
+  "title": "Bioverse Competition",
+  "pageClipId": "bioversecompetition",
+
+  "form": {
+    "closed": false,
+    "fields": [
+      {
+        "type": "text",
+        "label": "Team Name",
+        "placeholder": "Team Name",
+        "required": true
+      },
+      {
+        "type": "text",
+        "label": "Team Governorate",
+        "placeholder": "Team Governorate",
+        "required": true
+      },
+      {
+        "type": "text",
+        "label": "First Team Member Name",
+        "note": "You can participate in the competition individually",
+        "placeholder": "First Team Member Name",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "label": "First Team Member Phone",
+        "placeholder": "First Team Member Phone",
+        "required": true
+      },
+      {
+        "type": "email",
+        "label": "First Team Member Email",
+        "placeholder": "First Team Member Email",
+        "required": true
+      },
+      {
+        "type": "text",
+        "label": "Second Team Member Name",
+        "placeholder": "Second Team Member Name",
+        "required": false
+      },
+      {
+        "type": "tel",
+        "label": "Second Team Member Phone",
+        "placeholder": "Second Team Member Phone",
+        "required": false
+      },
+      {
+        "type": "email",
+        "label": "Second Team Member Email",
+        "placeholder": "Second Team Member Email",
+        "required": false
+      },
+      {
+        "type": "text",
+        "label": "Third Team Member Name",
+        "placeholder": "Third Team Member Name",
+        "required": false
+      },
+      {
+        "type": "tel",
+        "label": "Third Team Member Phone",
+        "placeholder": "Third Team Member Phone",
+        "required": false
+      },
+      {
+        "type": "email",
+        "label": "Third Team Member Email",
+        "placeholder": "Third Team Member Email",
+        "required": false
+      },
+      {
+        "type": "text",
+        "placeholder": "Team University",
+        "note": "In case of multiple universities, please write them",
+        "label": "University",
+        "required": true
+      },
+      {
+        "type": "text",
+        "placeholder": "Team Members Majors",
+        "note": "In case of multiple majors, please write them",
+        "label": "Major",
+        "required": true
+      },
+      {
+        "label": "Have you participated in similar hackathons before?",
+        "type": "select",
+        "options": ["Select Option", "Yes", "No"],
+        "required": true
+      },
+      {
+        "label": "Will you be able to attend the hackathon physically on thursday, 31 of august?",
+        "type": "select",
+        "options": ["Select Option", "Yes", "No", "Maybe"],
+        "required": true
+      },
+
+      {
+        "type": "text",
+        "placeholder": "Comments...",
+        "label": "Comments",
+        "required": false
+      }
+    ]
+  }
+}
