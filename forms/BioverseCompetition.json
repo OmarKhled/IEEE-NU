@@ -126,8 +126,7 @@
       },
       {
         "label": "Do you have prior ML experience",
-        "type": "select",
-        "options": ["Select Option", "Yes", "No"],
+        "type": "textarea",
         "required": true
       },
       {
