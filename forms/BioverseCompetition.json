@@ -37,6 +37,19 @@
         "required": true
       },
       {
+        "label": "First Team Member Academic Year",
+        "type": "select",
+        "options": [
+          "Select Academic Year",
+          "Freshman",
+          "Sophomore",
+          "Junior",
+          "Senior",
+          "Graduating Senior"
+        ],
+        "required": true
+      },
+      {
         "type": "text",
         "label": "Second Team Member Name",
         "placeholder": "Second Team Member Name",
@@ -52,6 +65,19 @@
         "type": "email",
         "label": "Second Team Member Email",
         "placeholder": "Second Team Member Email",
+        "required": false
+      },
+      {
+        "label": "Second Team Member Academic Year",
+        "type": "select",
+        "options": [
+          "Select Academic Year",
+          "Freshman",
+          "Sophomore",
+          "Junior",
+          "Senior",
+          "Graduating Senior"
+        ],
         "required": false
       },
       {
@@ -73,6 +99,19 @@
         "required": false
       },
       {
+        "label": "Third Team Member Academic Year",
+        "type": "select",
+        "options": [
+          "Select Academic Year",
+          "Freshman",
+          "Sophomore",
+          "Junior",
+          "Senior",
+          "Graduating Senior"
+        ],
+        "required": false
+      },
+      {
         "type": "text",
         "placeholder": "Team University",
         "note": "In case of multiple universities, please write them",
@@ -84,6 +123,12 @@
         "placeholder": "Team Members Majors",
         "note": "In case of multiple majors, please write them",
         "label": "Major",
+        "required": true
+      },
+      {
+        "label": "Do you have prior ML experience",
+        "type": "select",
+        "options": ["Select Option", "Yes", "No"],
         "required": true
       },
       {
