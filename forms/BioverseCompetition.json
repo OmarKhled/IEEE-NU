@@ -3,7 +3,7 @@
   "pageClipId": "bioversecompetition",
 
   "form": {
-    "closed": false,
+    "closed": true,
     "fields": [
       {
         "type": "text",
