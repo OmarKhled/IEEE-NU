@@ -3,7 +3,7 @@
   "pageClipId": "bioverse",
 
   "form": {
-    "closed": false,
+    "closed": true,
     "fields": [
       {
         "type": "text",
